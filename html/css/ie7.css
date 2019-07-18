@@ -1,0 +1,16 @@
+			#typeMobile .mgnb>li>a{display:block; padding:15px 0 0 5%; width:95% !important; height:35px !important; font-size:16px; color:#666; font-weight:600; text-decoration:none;}
+
+			.list_Area{}
+			.ul_ListType{width:100%;}
+			.ul_ListType:after{content:""; display:block; clear:both;}
+			.ul_ListType>li{float:left; padding:1%; width:31%;}
+
+			#typePc .ul_ListType{padding-left:1%; width:99%;;}
+			#typePc .ul_ListType:after{content:""; display:block; clear:both;}
+			#typePc .ul_ListType>li{float:left; padding:1%; width:31%  !important;;}
+
+			#typeTablet .list_Area{padding-left:1.5%; width:99% ;;}
+			#typeTablet .ul_ListType{width:100%;}
+			#typeTablet .ul_ListType>li{float:left; padding:1%; width:47%  !important;;}
+
+			#typeMobile .ul_ListType>li{float:left; width:96% !important; padding:1% 2%;}
