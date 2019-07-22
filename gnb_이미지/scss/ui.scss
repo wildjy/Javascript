@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "_config.scss";
+
+/* 변수 */
+$fullSize : 100%;
+
+@function lth-size($lth : 1){
+  @return $fullSize / $lth;
+}
+
+#wrap{
+  width:100%;
+}
+
+.gnbWrap{
+  width:1000px;
+  margin:0 auto;
+  background-color:#eee;
+  position: relative;
+}
+
+.gnb{
+  width:100%;
+
+  &:after{
+   @include after;
+  }
+
+  >li{
+    float:left;
+    margin-left:30px;
+    padding:10px 0;
+    /*width:lth-size(7) - 1%;*/
+    text-align:center;
+
+    &:first-child{
+      margin-left:10px;
+    }
+
+    >a{
+      display:block;
+    }
+  }
+}
+
+.sub{
+  position: absolute;
+  top:35px;
+  background-color: #999;
+
+  &:after{
+    @include after;
+  }
+
+  li{
+    float:left;
+    margin-left:10px;
+
+    &:first-child{
+      margin-left:0;
+    }
+
+    a{
+      display:block;
+      padding:10px 0;
+    }
+  }
+}

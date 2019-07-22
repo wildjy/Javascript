@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko" >
+	<head>
+		<title> :  : </title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+		<!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+		<meta name="format-detection" content="telephone=no">
+		<!-- <meta name="publisher" content="(주)신비웹,신비웹,sinbiweb,sinbiweb.com,www.sinbiweb.com,webmaster@sinbiweb.com" /> -->
+		<meta name="generator" content="editplus" />
+		<meta name="author" content="" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+		<!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="js/ui.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+		<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var ui = {
+			init : function(){
+				this.common.init();
+				this.main.init();
+				this.sub.init();
+			},
+
+			common : {
+				init : function(){
+					if($(".gnbWrap").length){
+						this.gnb();
+					}
+				}, 
+
+				gnb : function(){
+					console.log("gnb");
+				}
+			}, 
+			
+			main : {
+				init : function(){
+					this.module();
+				},
+
+				module : function(){
+					console.log("main");
+				}
+			}, 
+
+			sub : {
+				init : function(){
+					this.module();
+				},
+
+				module : function(){
+					console.log("sub");
+				}
+			}
+		}
+
+		$(document).ready(function(){
+			ui.init();
+		});
+		//]]>
+		</script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="gnbWrap">
+				<ul class="gnb">
+					<li class="selected"><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_01_off.png" alt="기업" /><span class="ico_new"></span></a>
+						<ul class="sub sb-1">
+							<li class="selected"><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_02.png" alt="추천기업" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_04.png" alt="테마기업" /><span class="ico_new"></span></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_03.png" alt="기업비교" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_01.png" alt="기업검색" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_05.png" alt="기업분석" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s1_06.png" alt="기업평판" /><span class="ico_new"></span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_02_off.png" alt="채용" /><span class="ico_new"></a>
+						<ul class="sub sb-2">
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s3_03.png" alt="2019 공채" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s3_01.png" alt="채용공고" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s3_04.png" alt="채용캘린더" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s3_02.png" alt="채용트렌드" /></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_03_off.png" alt="면접꿀팁" /><span class="ico_new"></a></li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_04_off.png" alt="캐치카페" /><span class="ico_new"></span></a>
+						<ul class="sub sb-4">
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s6_02.png" alt="이용안내" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s6_03.png" alt="프로그램" /><span class="ico_new"></span></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s6_06.png" alt="커뮤니티" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s6_05.png" alt="캐치설문" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s6_04.png" alt="My캐치" /></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_05_off.png" alt="캐치TV" /></a>
+						<!--<ul class="sm sm5">
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s2_04.png" alt="철수N존슨" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s2_05.png" alt="카드뉴스" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s2_02.png" alt="취업뉴스" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s2_03.png" alt="오늘의 캐치" /></a></li>
+							
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s2_01.png" alt="캐치뉴스" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s5_01.png" alt="캐치캐스트" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s5_02.png" alt="실전취업강의" /></a></li>
+						</ul>-->
+					</li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_06_off.png" alt="진단" /></a>
+						<ul class="sub sb-6">
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_01.png" alt="진단안내" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_02.png" alt="기업적합도" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_03.png" alt="조직인성" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_04.png" alt="선호직무탐색" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_05.png" alt="직무수행능력" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_06.png" alt="NCS직업기초능력" /></a></li>
+							<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb4_s4_07.png" alt="NCS취업준비도" /></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><img src="https://imgorg.catch.co.kr/job/corp/gnb_obj_07_off.png" alt="뉴스" /></a>
+						<ul class="sub sb-7">
+							<li><a href="#"><img src="http://imgorg.catch.co.kr/job/corp/gnb4_s2_01.png" alt="캐치뉴스" /></a></li>
+							<li><a href="#"><img src="http://imgorg.catch.co.kr/job/corp/gnb4_s2_02.png" alt="취업뉴스" /></a></li>					
+							<!--li><a href="#"><img src="http://imgorg.catch.co.kr/job/corp/gnb4_s2_03.png" alt="오늘의 캐치" /></a></li-->
+						</ul>
+					</li>
+				</ul>
+			</div><!-- end : id : gnbWrap -->
+			
+		</div><!-- end : id : wrap -->
+	</body>
+</html>
