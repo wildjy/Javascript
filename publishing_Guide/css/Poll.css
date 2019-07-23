@@ -1,0 +1,235 @@
+﻿/* Reset */
+html {-webkit-text-size-adjust:none;}
+body {background-color:#FFF; *word-break:break-all; -ms-word-break:break-all;}
+body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,fieldset,input,label,textarea,form,p,th,td,select {margin:0; padding:0; color:#666; font-size:13px; font-family:malgun Gothic,'맑은 고딕',Dotum,'돋움';}
+li {list-style:none;}
+img,fieldset,iframe {border:0;}
+img,input,select {vertical-align:middle;}
+select {font-size:14px; color:#333; font-weight:bold; width:100%; border:solid 1px #c7c7c7;}
+input[type="text"], select, textarea {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+hr {display:none;}
+em,address {font-style:normal;}
+button {cursor:pointer; _cursor /**/:hand;}
+	button * {position:relative;}
+	button img {left:-3px; *left:auto;}
+textarea {overflow:auto; border:solid 1px #c7c7c7; padding:10px; letter-spacing:0; font-size:14px; width:100%;}
+a {color:inherit; text-decoration:none;}
+	a:hover {color:inherit; text-decoration:none;}
+#skip {left:0; position:absolute; top:0; z-index:999;}
+	#skip a {left:-1000px; position:absolute; top:0;}
+	#skip a:focus, #skip a:hover, #skip a:active {display:block; width:160px; text-align:center; font-weight:bold; background:#FFF; border:solid 2px #407CD5; color:#000; font-size:14px; left:0; padding:1em 0; z-index:10;}
+caption, .reader {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
+legend {*width:0; display:none;}
+	:root legend {margin-top:-1px; font-size:0; line-height:0;}
+
+/* COMMON */
+.show {display:block;}
+.hide {display:none;}
+.ws {white-space:nowrap;}
+.msgDetail {display:none;}
+.tac {text-align:center;}
+.mt5 {margin-top:5px !important;}
+.mt10 {margin-top:10px !important;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt50 {margin-top:50px !important;}
+.input {border:solid 1px #c7c7c7; padding-left:10px; letter-spacing:0; font-size:14px; width:100%;}
+.clearfix:after{content:""; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix {*zoom:1;}
+
+/* LAYOUT */
+#wrapper {text-align:center;}
+#header {background:url(http://image.jinhak.com/job/poll/wrap_bg.gif);}
+	#header .core {position:relative; margin:0 auto; text-align:left;}
+	#header .core .t1 {color:#FFF; line-height:1.3;}
+	#header .core .t2 {color:#FFF; line-height:1.3;}
+	#header .core .t3 {color:#FFF;}
+	#header .core .logo {position:absolute; right:0; text-align:center; border:solid 1px #adadad; background-color:#FFF;}
+#container {position:relative; margin:0 auto; text-align:left; background:url(http://image.jinhak.com/job/poll/wrap_arr.gif) no-repeat 30px top;}
+	#container.noArr {background:none;}
+
+/* BOX */
+.box_fix {}
+.box1 {background-color:#f1f1f1;}
+	.box1 .t1 {font-size:13px; color:#6b489d; line-height:1.3; margin-top:10px;}
+	.box1 .t2 {font-size:14px; line-height:1.3;}
+	.box1 li {font-size:13px;}
+.box2 {background-color:#ededed; text-align:center; padding:20px 25px;}
+.box3 {overflow:hidden;}
+	.box3:after {content:""; clear:both; display:block;}
+	.box3 .divide {position:relative;}
+	.box3 .noDivide {position:relative; text-align:center;}
+	.box3 .sns {position:absolute; right:0; left:0; text-align:center;}
+	.box3 .count {position:absolute; text-align:center; color:#FFF; font-weight:bold; line-height:1.2; letter-spacing:-1px; left:0; right:0;}
+.box4 {border:solid 1px #333; margin-top:10px;}
+.box5 {border:solid 1px #d1d1d1; background-color:#EEE; padding:10px 15px;}
+.search {overflow:hidden;}
+	.search:after {content:""; clear:both; display:block;}
+	.search .input {float:left; width:75%; vertical-align:top;}
+	.search .btn3 {float:right; width:24%;}
+.star {margin-top:0px; text-align:center;}
+	.star .bg {width:250px; margin:0 auto; background:url(http://image.jinhak.com/job/poll/star.gif) repeat-x left top; height:42px; text-align:left; font-size:0; line-height:0; cursor:pointer;}
+	.star .bg span {display:inline-block; height:42px; width:20%;}
+	.star .bg span.ck {background:url(http://image.jinhak.com/job/poll/star_on.gif) repeat-x left top;}
+	.star .bg2 {margin:0 auto; background:url(http://image.jinhak.com/job/poll/end.gif) repeat-x left top; height:29px; text-align:left;}
+	.star .bg2 span {display:inline-block; background:url(http://image.jinhak.com/job/poll/end_on.gif) repeat-x left top; height:29px;}
+	.star .t1 {margin-top:25px; font-size:20px; font-weight:bold;}
+.open {margin-top:20px; text-align:center;}
+	
+/* BTN */
+.btn_left {position:absolute;}
+.btn_center {text-align:center;}
+.btn_right {text-align:right;}
+.btn_recom {text-align:center;}
+.btn1 {height:22px; line-height:22px; font-size:11px; color:#6b489d; display:inline-block; border:solid 1px #6b489d; padding:0 15px;}
+	.btn1:hover {color:#6b489d;}
+	.btn1.arr {background:url(http://image.jinhak.com/job/poll/arr1_down.gif) no-repeat right center; padding-right:30px;}
+	.btn1.arr.selected {background-image:url(http://image.jinhak.com/job/poll/arr1_up.gif);}
+.btn2 {color:#f8f8f8; display:inline-block; background-color:#6e4e99; text-align:center;}
+	.btn2:hover {color:#f8f8f8;}
+	.btn2 span {padding-right:22px; background:url(http://image.jinhak.com/job/poll/arr2_next.png) no-repeat right 8px;}
+.btn3 {font-size:20px; color:#FFF; display:inline-block; background-color:#6e4e99; text-align:center;}
+	.btn3:hover {color:#f8f8f8;}
+.btn4 {color:#6e4e99; display:inline-block; text-align:center; border:solid 1px #6e4e99;}
+	.btn4:hover {color:#6e4e99;}
+	.btn4 span {padding-left:22px; background:url(http://image.jinhak.com/job/poll/arr2_prev.png) no-repeat left 8px;}
+.btn5 {height:36px; line-height:36px; font-size:18px; color:#6b489d; display:inline-block; border:solid 1px #6b489d; padding:0 40px; font-weight:bold;}
+	.btn5:hover {color:#6b489d;}
+	
+/* LAYER */
+.layer {position:absolute; top:200px; width:280px; left:50%; margin-left:-140px; background:url(http://image.jinhak.com/job/poll/layer_bg.png); z-index:1;}
+	.layer .close {position:absolute; top:-3px; right:3px; cursor:pointer; z-index:2;}
+	.layer .cor {position:relative; left:-3px; top:-3px; background-color:#8760be; height:197px; text-align:center;}
+	.layer .lt1 {color:#FFF; font-size:18px; line-height:1.6; letter-spacing:-1px;}
+	.layer .btn {margin-top:15px;}
+	.layer .btn label {display:none;}
+	.layer .btn input[type="text"] {border:solid 1px #e5e5e5; background-color:#8760be; width:150px; height:34px; line-height:34px; vertical-align:top; text-align:center; color:#fefeff; font-size:16px; font-weight:bold;}
+	.layer .btn .bt {display:inline-block; font-size:17px; font-weight:bold; color:#8760be; height:32px; line-height:32px; border:solid 1px #FFF; background-color:#FFF; width:100px; vertical-align:top;}
+	.layer .btn .bt.type2 {color:#FFF; background-color:#8760be; border-color:#e5e5e5;}
+
+/* LIST */
+.list_decimal li {list-style-type:decimal; margin-left:20px; line-height:1.5;}
+.list_result {margin-top:10px; border:solid 1px #c7c7c7; padding:10px 0;}
+	.list_result li a {display:block; padding:3px 20px; font-size:14px;}
+.list_radio li a {display:block; border:solid 1px #c7c7c7; padding:0 20px; font-size:14px; color:#333; font-weight:bold; margin:5px 0;}
+	.list_radio li.selected a {background-color:#dedede;}
+.list_dot li {font-size:12px; color:#666; font-weight:bold; line-height:1.6; padding-left:10px; background:url(http://image.jinhak.com/job/poll/bl2.gif) no-repeat left 8px;}
+	.list_dot li span {font-weight:normal;}
+	.list_dot.fw_normal li {font-weight:normal;}
+
+/* TEXT */
+.txt1 {font-size:15px; line-height:1.3;}
+.txt2 {font-size:16px; color:#000; line-height:1.3; margin-top:10px; margin-bottom:5px;}
+	.txt2 label {font-size:inherit; color:inherit;}
+.txt3 {line-height:1.4;}
+.txt4 {font-size:20px; font-weight:bold; line-height:1.4; margin-bottom:10px;}
+	.txt4 span {color:#000;}
+.txt5 {font-size:20px; color:#6a499a; font-weight:bold; line-height:1.4; margin-bottom:10px; margin-top:30px; text-align:center;}
+.txt6 {font-size:12px; line-height:1.4;}
+
+/* media query */
+@media all and (max-width:420px) { /* mobile */
+	.btn_left.atRecom img {display:block;}
+}
+@media all and (max-width:768px) { /* mobile */
+	input[type="text"], textarea {border-radius:none; -webkit-border-radius:0; -webkit-appearance:none;}
+	input[type="checkbox"], input[type="radio"] {margin:-2px 3px 0 0;}
+	select {padding:10px 0 10px 20px; border-radius:none; -webkit-border-radius:0; -webkit-appearance:none; background:url(http://image.jinhak.com/job/poll/arr3_down.gif) no-repeat right center #FFF;}
+	#wrapper {min-width:320px;}
+	#header {background-size:auto 14px;}
+		#header .core {padding:5px 10px 10px 10px;}
+		#header .core h1 {height:27px; text-align:center; margin-bottom:5px;}
+		#header .core h1 img {height:27px;}
+		#header .core .t1 {font-size:12px;}
+		#header .core .t2 {font-size:14px;}
+		#header .core .t3 {font-size:15px; margin-top:8px;}
+		#header .core .t4 {text-align:center;}
+		#header .core .t4 img {width:307px;}
+		#header .core .logo {top:8px; right:8px; width:50px;}
+		#header .core .logo img {height:36px;}
+		#header .core.type2 h1 {position:absolute; top:13px; left:10px;}
+		#header .core.type2 .t1 {padding:14px 0 10px 70px;}
+	#container {padding:20px 10px; background-position-x:24px; background-size:auto 10px;}
+	#container.noArr {padding-top:4px;}
+	.box {border:solid 3px #FFF; padding:15px 12px; background:url(http://image.jinhak.com/job/poll/Gift_m.png) no-repeat right center; background-size:auto 86px; margin:10px 0;}
+	.box_fix {padding-bottom:40px;}
+	.box1 {padding:15px;}
+		.box1 .list_decimal {margin-top:5px;}
+	.box3 {margin-top:5px;}
+		.noArr .box3 {margin-top:0;}
+		.box3 .divide {text-align:center;}
+		.box3 .noDivide {margin-top:-5px;}
+		.box3 .sns {bottom:8px; /*top:397px;*/}
+		.box3 .sns img {width:120px;}
+		.box3 .count {top:104px; font-size:13px;}
+		.box3 .atPC {display:none;}	
+		.box3 .atM img {width:307px;}
+		.box3 .atComm img {width:307px;}
+		.noArr .box3 .atComm img {width:300px;}
+	.box4 {padding:15px;}
+	.btn_left {margin-top:-40px;}
+		.btn_left.atRecom img {width:110px; margin-bottom:10px;}
+	.btn_center {margin-top:30px;}
+	.btn_center2 {margin-top:10px; text-align:center;}
+	.btn_right {margin-top:30px;}
+	.btn_recom {margin-top:15px;}
+		.btn_recom img {width:110px;}
+	.input {height:38px; line-height:38px;}
+	.star .bg2 {width:300px; background-size:30px 29px;}
+	.star .bg2 span {background-size:30px 29px;}
+	.btn2 {height:40px; line-height:40px; font-size:20px; min-width:45%;}
+		.btn2 span {padding-right:15px; background-position-y:4px; background-size:auto 16px;}
+	.btn3 {height:38px; line-height:38px; font-size:18px;}
+	.btn4 {height:38px; line-height:38px; font-size:20px; min-width:45%;}
+		.btn4 span {padding-left:15px; background-position-y:4px; background-size:auto 16px;}
+	.list_radio li a {height:38px; line-height:38px;}
+	.list_dot li {font-size:11px;}
+	.open img {width:300px;}
+	.txt2 .bl {display:inline-block; margin-top:5px; }
+	.txt2 .bl:first-child {margin-right:50px;}
+	.wd300 img {width:300px;}
+}
+
+@media all and (min-width:769px) { /* PC */
+	* {letter-spacing:-1px;}
+	input[type="checkbox"], input[type="radio"] {margin:-3px 5px 0 0;}
+	select {padding:12px 0 12px 20px;}
+	#header .core {width:788px; padding:21px 0;}
+		#header .core h1 {position:absolute; top:21px; left:24px;}
+		#header .core .t1 {font-size:20px; padding-left:187px;}
+		#header .core .t2 {font-size:16px;}
+		#header .core .t3 {font-size:35px; margin-top:5px;}
+		#header .core .t4 img {margin:5px 0 0 187px;}
+		#header .core .logo {top:15px; width:98px;}
+		#header .core .logo img {height:62px;}
+		#header .core.type2 .t1 {padding-top:13px; padding-bottom:13px;}
+	#container {width:787px; padding:40px 0;}
+	#container.noArr {padding-top:4px;}
+	.box {border:solid 5px #FFF; padding:26px 25px 38px 25px; background:url(http://image.jinhak.com/job/poll/Gift_pc.png) no-repeat right center; margin:20px 0;}
+	.box_fix {height:300px;}
+	.box1 {padding:15px 25px;}
+		.box1 .list_decimal {margin-top:10px;}
+	.box3 {margin-top:10px;}
+		.noArr .box3 {margin-top:0;}
+		.box3 .divide {float:left; width:50%;}
+		.box3 .noDivide {margin-top:-10px;}
+		.box3 .noDivide:first-child {margin-top:0;}
+		.box3 .sns {bottom:25px;}
+		.box3 .count {top:/*224*/207px; font-size:/*28*/23px;}
+		.box3 .atM {display:none;}
+	.box4 {padding:15px 20px; overflow-y:auto; max-height:155px;}
+	.btn_left {margin-top:-45px;}
+	.btn_center {margin-top:50px;}
+	.btn_center2 {margin-top:20px; text-align:center;}
+	.btn_right {margin-top:50px;}
+	.btn_recom {margin-top:30px;}
+	.input {height:48px; line-height:48px;}
+	.star .bg2 {width:620px;}
+	.btn2 {height:52px; line-height:52px; font-size:26px; min-width:270px;}
+	.btn3 {height:48px; line-height:48px; font-size:20px;}
+	.btn4 {height:50px; line-height:50px; font-size:26px; min-width:270px;}
+	.list_result {overflow-y:auto; height:193px;}
+	.list_radio li a {height:46px; line-height:46px;}
+	.txt2 .bl {padding-left:50px;}
+		.txt2 .bl:first-child {padding-left:0;}
+}

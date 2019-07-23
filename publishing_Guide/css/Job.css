@@ -1,0 +1,2444 @@
+﻿@charset "utf-8";
+@import "./Default.css";
+
+/* tab */
+.tab_1 /* main - 이미지 텍스트만 있는 것 */ {overflow:hidden; margin-bottom:19px;}
+	.tab_1:after {content:""; clear:both; display:block;}
+	.tab_1 li {float:left; margin-right:20px; font-size:0; line-height:0;}
+	.tab_1.type2 {margin:0 0 15px 13px;}
+	#wrapper.member.wd960 .tab_1 {margin:0 auto; width:460px;}
+	#wrapper.member.wd960 .tab_1 li {margin:0 0 0 47px;}
+	#wrapper.member.wd960 .tab_1 li:first-child {margin-left:0;}
+.tab_3 /* 기업 - 2depth */ {overflow:hidden; margin-bottom:2px; height:48px; position:relative; background:url(http://image.jinhak.com/job/site/Tab_3_bg.gif) repeat-x left top;}
+	.tab_3:after {content:""; clear:both; display:block;}
+	.tab_3 li {float:left; width:160px; padding-top:6px;}
+	.tab_3 li a {display:block; height:37px; line-height:33px; text-align:center; border-left:solid 1px #6b489d; font-size:14px; color:#FFF; text-decoration:none;}
+	.tab_3 li:first-child a {border-left:0;}
+	.tab_3 li.selected a {background:#91c034; font-weight:bold;}
+.tab_5 /* 개인회원 - 앵커 탭 */ {overflow:hidden; margin-bottom:20px; margin-top:5px;}
+	.tab_5:after {content:""; clear:both; display:block;}
+	.tab_5 li {float:left;}
+	.tab_5 li a {display:block; text-align:center; height:28px; line-height:28px; border:solid 1px #e0e0e0; border-left:0; font-weight:bold;}
+	.tab_5 li a span {padding:0 9px 0 4px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 7px;}
+	.tab_5 li a:hover {text-decoration:none;}
+	.tab_5 li:first-child a {border-left:solid 1px #e0e0e0;}
+	.tab_5 li img {vertical-align:top; margin-top:7px; #vertical-align:middle; #margin-top:0;}
+	.tab_5.at6 li {width:133px;}
+	.tab_5.at6 li:first-child {width:135px;}
+.tab_6 /* 회색테두리+흰바탕+시스템폰트 */ {overflow:hidden; border-bottom:solid 1px #e0e0e0; margin-bottom:10px;}
+	.tab_6:after {content:""; clear:both; display:block;}
+	.tab_6 li {float:left;}
+	.tab_6 li a {display:block; text-align:center; height:28px; line-height:28px; border:solid 1px #e0e0e0; border-left:0; border-bottom:0; background:#FFF; padding:0 20px;}
+	.tab_6 li:first-child a {border-left:solid 1px #e0e0e0;}
+	.tab_6 li a:hover {text-decoration:none;}
+	.tab_6 li.selected a {font-weight:bold;}
+	.tab_6.type2 {height:38px; overflow:visible;}
+	.tab_6.type2 li a {height:37px; line-height:37px; padding:0 46px;}
+	.tab_6.type2 li.selected a {border-bottom:solid 1px #FFF;}
+.tab_7 /* 기업상세 - 시스템폰트 + 바 */ {overflow:hidden; padding:15px 0 0 21px;}
+	.tab_7:after {content:""; clear:both; display:block;}
+	.tab_7 li {float:left; color:#438ee9; margin-right:3px;}
+	.tab_7 li a {color:#438ee9;}
+	.tab_7 li.selected a {font-weight:bold;}
+.tab_9 /* 진단 메뉴 */ {overflow:hidden; margin-bottom:40px;}
+	.tab_9:after {content:""; clear:both; display:block;}
+	.tab_9 li {float:left; width:318px; height:190px; margin-left:3px; background:#dcd7e3;}
+	.tab_9 li:first-child {margin-left:0;}
+	.tab_9 li a {display:block; text-align:center; text-decoration:none;}
+	.tab_9 li a em {display:block; height:46px; line-height:49px; color:#8464b0; font-size:22px; font-weight:bold; background-color:#efefef; border-bottom:solid 2px #FFF;}
+	.tab_9 li a span {display:block; border-top:solid 3px #8464b0; color:#898989; line-height:1.5em;}
+	.tab_9 li a span strong {display:block; font-size:18px; padding:20px 0 10px 0;}
+	.tab_9 li a:hover em {background:url(http://image.jinhak.com/job/site/Ico_ck02.png) no-repeat right 13px #efefef;}
+	.tab_9 li.selected {background:#8464b0;}
+	.tab_9 li.selected a {cursor:default;}
+	.tab_9 li.selected a em {background:url(http://image.jinhak.com/job/site/Ico_ck02_on.png) no-repeat right 13px #91c034; color:#FFF;}
+	.tab_9 li.selected a span {color:#FFF;}
+	.tab_9.type2 li {float:none; width:100%; height:80px;}
+	.tab_9.type2 li a em {float:left; width:215px; height:80px; border-right:solid 3px #FFF;}
+	.tab_9.type2 li a span {float:left; width:742px; height:80px;}
+	.tab_9.type2 li a span strong {padding-top:13px;}
+	.tab_9.type3 {margin-bottom:20px;}
+	.tab_9.type3 li {height:51px;}
+	.tab_9.at2 li {width:478px;}
+.tab_10 {overflow:hidden; border-top:solid 1px #e5e5e5; border-left:solid 1px #e5e5e5; background:url(http://image.jinhak.com/job/site/line_gray02.gif) repeat-x left bottom; margin-bottom:20px;}
+	.tab_10 :after {content:""; clear:both; display:block;}
+	.tab_10 ul {background:url(http://image.jinhak.com/job/site/line_gray02.gif) repeat-y right top;}
+	.tab_10 li {float:left; width:20%;}
+	.tab_10 li a {display:block; height:48px; line-height:48px; text-align:center; border:solid 1px #e5e5e5; border-left:0; border-top:0; font-weight:bold; font-size:13px; text-decoration:none;}
+	.tab_10 li a:hover {color:#6b489d;}
+	.tab_10 li.selected a {color:#FFF; background:#81c624;}
+.tab_11 {overflow:hidden;}
+	.tab_11:after {content:""; clear:both; display:block;}
+	.tab_11 li {float:left; width:50%;}
+	.tab_11 li a {display:block; height:55px; text-align:center; background:#797979;}
+	.tab_11 li a img {margin-top:19px;}
+	.tab_11 li.selected a {background:#9aca3d;}
+.tab_12 /* NCS 연두 */ {overflow:hidden; background:#8cb739;}
+	.tab_12:after {content:""; clear:both; display:block;}
+	.tab_12 li {float:left; padding-top:6px;}
+	.tab_12 li a {display:block; height:37px; line-height:33px; border-left:solid 1px #70922e; font-size:14px; color:#FFF; text-decoration:none; text-align:center;}
+	.tab_12 li:first-child a {border-left-width:0;}
+	.tab_12 li.selected a {background:#FFF; color:#48680a;}
+	.tab_12 li.btn {background:#FFF; padding:0; float:right; }
+	.tab_12 li.btn .btn_type3 {height:41px; line-height:39px; border:solid 1px #000; padding:0;}
+	.tab_12.at3 li {width:33.3%;}
+	.tab_12.at4 li {width:25%;}
+	.tab_12.at5 li {width:20%;}
+	.tab_12.at6 li {width:16.6%;}
+	.tab_12.at7 li {width:14.2%;}
+	.tab_12.at8 li {width:12.5%;}
+	.tab_12.auto li a {padding:0 18px;}
+.tab_13 /* NCS 회색 */ {overflow:hidden;}
+	.tab_13:after {content:""; clear:both; display:block;}
+	.tab_13 li {float:left;}
+	.tab_13 li a {display:block; height:34px; line-height:34px; border:solid 1px #333; border-left-width:0; font-size:14px; color:#000; text-decoration:none; text-align:center; background:#f0f0f0;}
+	.tab_13 li:first-child a {border-left-width:1px;}
+	.tab_13 li.selected a {background:#FFF; border-bottom-color:#FFF;}
+	.tab_13.at8 li {width:12.5%;}
+	.tab_13.atPd30 {background:url(http://image.jinhak.com/job/site/tab_13_bg.gif) repeat-x left bottom;}
+	.tab_13.atPd30 li a {padding:0 30px;}
+.tab_14 {overflow:hidden;}
+	.tab_14:after {content:""; clear:both; display:block;}
+	.tab_14 li {float:left; margin:4px 4px 0 0;}
+	.tab_14 li a {display:block; text-align:center; height:32px; line-height:32px; border:solid 1px #cfcfcf; background:#ededed; padding:0 3px; font-size:12px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-decoration:none;}
+	.tab_14 li.selected a {border-color:#666; background:#949494; color:#FFF;}
+	.tab_14.type2 li p {border:solid 1px #bababa; height:52px; line-height:52px; text-align:center; font-weight:bold;}
+	.tab_14.wd1 li {width:180px;}
+	.tab_14.wd2 li {width:456px;}
+	.tab_14.wd3 li {width:302px;}
+.tab_15 {overflow:hidden;}
+	.tab_15:after {content:""; clear:both; display:block;}
+	.tab_15 li {float:left;}
+	.tab_15 li a {display:block; text-align:center; background-color:#cfcfcf; border:solid 1px #272727; border-left-width:0; font-size:14px; color:#333; font-weight:bold; height:44px; line-height:44px; text-decoration:none;}
+	.tab_15 li:first-child a {border-left-width:1px;}
+	.tab_15 li.selected a {background-color:#FFF; border-bottom-color:#FFF;}
+	.tab_15.at2 li {width:50%;}
+	.tab_15.at3 li {width:33.3%;}
+	.tab_15.at4 li {width:25%;}
+	.tab_15.at5 li {width:20%;}
+
+/* list */
+.list_dot {overflow:hidden;}
+	.list_dot:after {content:""; clear:both; display:block;}
+	.list_dot li {padding-left:9px; line-height:20px; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 10px;}
+	.list_dot li a:hover {color:#8d72e4;}
+	.list_dot.lh16 li {line-height:16px; background-position:left 8px;}
+.list_dot2 li {margin-bottom:5px; padding-left:9px; line-height:20px; background:url(http://image.jinhak.com/job/site/bl_dot04.gif) no-repeat left 9px;}
+.list_dotline li {padding:8px 0 5px 0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_dot02.gif) repeat-x left top;}
+.list_interview {overflow:hidden; margin-bottom:20px;}
+	.list_interview:after {content:""; clear:both;}
+	.list_interview li dl dt {position:relative;}
+	.list_interview li dl dt strong {display:block; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:75%;}
+	.list_interview li dl dt .with {position:absolute; font-weight:normal; top:0; right:0; width:57px; padding-left:7px; height:18px; line-height:18px; font-size:11px; color:#777; background:url(http://image.jinhak.com/job/site/with_bg.gif) no-repeat right top;}
+	.list_interview li dl dt .with span {position:absolute; right:6px; letter-spacing:0;}
+	.list_interview li dl dt.pic {margin-bottom:6px;}
+	.list_interview li dl dt.pic img {width:220px; height:120px;}
+	.list_interview li dl dd {margin-top:8px; line-height:18px;}
+	.list_interview li dl dd .bar {color:#AAA; padding-left:4px;}
+	.list_interview li:hover dd {text-decoration:underline;}
+.list_ck {overflow:hidden;}
+	.list_ck:after {content:""; clear:both; display:block;}
+	.list_ck li {float:left; padding:2px 40px 2px 0;}
+	.list_ck li label {white-space:nowrap;}
+	.list_ck li.br {float:none; display:block;}
+	.list_ck.wd100 li {width:100px; padding-right:0;}
+	.list_ck.wd140 li {width:140px; padding-right:0;}
+	.list_ck.wd190 li {width:180px; padding-right:10px;}
+	.list_ck.wd210 li {width:210px; padding-right:0;}
+	.list_ck.lipr10 li {padding-right:10px;}
+	.list_ck.type2 li {float:none; padding-right:0; padding-left:19px; white-space:normal; position:relative;}
+	.list_ck.type2 li input {position:absolute; left:0; top:8px;}
+	.list_ck.type2 li .ff_mal {font-size:11px; white-space:nowrap; vertical-align:middle; margin-top:-3px; display:inline-block;}
+	.list_ck.type3 li {padding-right:0; padding-left:30px;}
+	.list_ck.type3 li:first-child {padding-left:0;}
+.list_decimal>li {list-style-type:decimal; line-height:18px; margin-bottom:10px; margin-left:20px;}
+	.list_decimal.type2>li {margin-bottom:2px;}
+	.list_decimal.type3>li {margin-bottom:5px;}
+.list_bar>li {background:url(https://imgorg.catch.co.kr/job/site/bl_bar08.gif) no-repeat left 9px; line-height:18px; padding-left:9px;}
+.list_warning {margin:18px 0 0 18px;}
+	.list_warning li {background:url(http://image.jinhak.com/job/site/bl_warning03.png) no-repeat left 3px; padding-left:18px; padding-bottom:5px; margin-bottom:10px;}
+	.list_warning li a.arr {background:url(http://image.jinhak.com/job/site/bl_arr04_on.gif) no-repeat right 5px; padding:0 11px 0 15px; color:#438ee9;}
+.list_dangu {overflow:hidden;}
+	.list_dangu li {padding-left:14px; line-height:20px; background:url(http://image.jinhak.com/job/site/bl_star02.gif) no-repeat left 6px;}
+.list_bank {overflow:hidden;}
+	.list_bank:after {content:""; clear:both; display:block;}
+	.list_bank li {float:left; width:143px; padding-bottom:6px;}
+
+/* box */
+.box_gray {background:#f4f4f4; position:relative; padding:12px 30px;}
+	.box_gray .btn {position:absolute; top:8px; right:20px;}
+	.box_gray .btn_txt {position:absolute; top:8px; right:20px; background:#c5c5c5; width:268px; height:23px; line-height:23px; color:#FFF; font-weight:bold; text-align:center;}
+	.box_gray .btn_txt:hover {text-decoration:none;}
+	.box_gray.type2 {padding:8px 10px;}
+.box_gray2 {background:#ebebeb; padding:10px 15px;}
+.box_gray3 {background:#e8e8e8; text-align:center;}
+.box_gray4 {background:#efefef; text-align:center; padding:25px; font-size:15px; color:#333;}
+.box_gray5 {border:solid 1px #C9C9C9; padding:13px 18px;}
+.box_gray6 {position:relative; border:solid 1px #929292; background:#c9c9c9; padding:13px 20px;}
+	.box_gray6 .t1 {font-size:14px; color:#3a3a3a; font-weight:bold; letter-spacing:-2px;}
+	.box_gray6 .t1 a {color:inherit;}
+	.box_gray6 .btn {position:absolute; top:9px; right:13px;}
+	.box_gray6 .btn_txt {position:absolute; top:8px; right:13px; border:solid 1px #505050; background:#a777ec; padding:0 15px; height:26px; line-height:25px; font-size:13px; color:#FFF; font-weight:bold; text-align:center;}
+	.box_gray6 .btn_txt:hover {text-decoration:none;}
+.box_gray7 {background:#f6f6f6; border:solid 1px #c0c0c0; position:relative; padding:17px 10px;}
+	.box_gray7 .t1 {text-align:center; line-height:1.8;}
+.box_select {background:#ebebeb; padding:10px 34px; position:relative; overflow:hidden; text-align:right;}
+	.box_select:after {content:""; clear:both; display:block;}
+	.box_select select {vertical-align:baseline;}
+.box_violet {position:relative; background:#8464b0; padding:12px 0; color:#FFF; text-align:center;}
+	.box_violet a {color:#d7bcfd;}
+	.box_violet .t01 {position:absolute; right:25px;}
+.box_fav {border:solid 1px #6d99d0; text-align:center; padding:13px 15px; line-height:1.6;}
+	.box_fav a {color:#4f84c6; display:inline-block; padding:0 13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.box_fav a.selected {text-decoration:underline;}
+.box_orange {border:solid 1px #f9abab; padding:25px;}
+	.box_orange .logo {margin-bottom:10px;}
+	.box_orange .logo img {border:solid 1px #e8e8e8; width:85px; height:100px;}
+	.box_orange .t1 {font-size:14px; color:#333; line-height:1.5;}
+.box_line {border:solid 1px #333; padding:13px 20px;}
+
+/* table */
+table.th_normal th {font-weight:normal !important;}
+.tbl_result {width:100%; border:0; border-top:solid 1px #DDD; border-bottom:solid 1px #DDD; border-collapse:collapse; table-layout:fixed;}
+	.tbl_result td {padding:14px 0; border:0; border-top:solid 1px #ebebeb;}
+	.tbl_result tr:first-child td {border-top:none;}
+	.tbl_result thead th {text-align:center; padding:7px 0; font-weight:normal; border:solid 1px #e0e0e0; border-right:0; border-left:0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #ebebeb;}
+	.tbl_result thead th:first-child {border-left:solid 1px #e0e0e0;}
+	.tbl_result thead th.last {border-right:solid 1px #e0e0e0;}
+	.tbl_result tbody td {padding:12px 0 10px 0;}
+	.tbl_result tbody td.logo {padding:3px 0 0 0; line-height:0;}
+	.tbl_result tbody td .subj {font-weight:bold; line-height:14px; margin-bottom:4px;}
+	.tbl_result tbody td.logo img {width:44px; height:44px; border:solid 1px #e8e8e8;}
+	.tbl_result tbody td.btn {padding:0; line-height:0; text-align:center;}
+	.tbl_result tbody td.odd .company_info.type3 {border-right:solid 1px #dbdbdb;}
+	.tbl_result tbody td img {margin-bottom:3px;}
+	.tbl_result.td_vtop tbody td {vertical-align:top;}
+	.tbl_result tbody td.al_c {text-align:center;}
+.tbl_result2 {width:100%; border:0; border-top:solid 1px #d3d3d3; border-collapse:collapse; table-layout:fixed;}
+	.tbl_result2 td {padding:23px 10px 23px 10px; border:0; border-bottom:solid 1px #d3d3d3;}
+	.tbl_result2 td.logo {text-align:center; padding:0;}
+	.tbl_result2 td.cate {text-align:center; font-size:19px;}
+	.tbl_result2 td.bar {background:url(http://image.jinhak.com/job/site/bl_bar17.gif) no-repeat left center;}
+	.tbl_result2 td.session {text-align:center; padding-top:39px;}
+	.tbl_result2 td.down {font-size:17px; color:#634291; font-weight:bold; text-align:center;}
+	.tbl_result2 .subj {font-size:19px; font-weight:bold;}
+	.tbl_result2 .subj .bar {position:relative; padding-right:19px; margin-right:10px; vertical-align:middle;}
+	.tbl_result2 .subj .bar:after {content:""; display:block; position:absolute; top:8px; right:0; height:16px; width:2px; background-color:#6c6c6c;}
+	.tbl_result2 .subj2 {font-size:13px;font-weight:bold;}
+	.tbl_result2 .subj2 strong {color:#438ee9; font-size:11px;}
+	.tbl_result2 .exp {font-size:14px; margin-top:2px;}
+	.tbl_result2 .exp2 {font-size:13px; margin-top:2px;}
+	.tbl_result2 .exp2 span {padding-right:6px; background:url(http://image.jinhak.com/job/site/bl_bar16.gif) no-repeat right 3px; display:inline-block; white-space:nowrap;}
+	.tbl_result2 .exp2.type2 span {padding-right:18px; margin:5px 12px 5px 0;}
+	.tbl_result2 .exp2 span:last-child {background:none;}
+	.tbl_result2 .exp3 {font-size:12px; line-height:1.6; margin-top:5px;}
+.tbl_1 /* admin과 공동사용, th top만 흰색 */ {width:100%; border:0; border-bottom:solid 1px #DDD; border-collapse:collapse; table-layout:fixed;}
+	.tbl_1 thead th {color:#777; font-weight:normal; padding:9px 0; text-align:center; line-height:16px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #F2F2F2; border:solid 1px #e0e0e0; border-left:0; border-right:0;}
+	.tbl_1 thead th:first-child {border-left:solid 1px #e0e0e0;}
+	.tbl_1 thead th.last {border-right:solid 1px #e0e0e0;}
+	.tbl_1 tbody th,
+	.tbl_1 tbody td {color:#333; text-align:center; padding:7px 0; border:0; border-top:solid 1px #ebebeb; line-height:16px; background:#FFF;}
+	.tbl_1 tbody tr:first-child th,
+	.tbl_1 tbody tr:first-child td {border-top:0;}
+	.tbl_1 tbody td a {color:#333;}
+	.tbl_1 .al_l {text-align:left; padding-left:5px;}
+	.tbl_1 .al_r {text-align:right; padding-right:20px; padding-top:6px;}
+	.tbl_1 .img {padding:0 !important;}
+	.tbl_1 .img img {margin:2px 0;}
+	.tbl_1.nohead {border-top:solid 1px #DDD;}
+	.tbl_1 .detail {font-size:11px; padding-left:3px; padding-right:9px; background:url(http://image.jinhak.com/job/site/arr09_down.gif) no-repeat right 6px; color:#777; font-weight:normal !important;}
+	.tbl_1 td.view_td {padding:0 !important; border-top:0 !important;}
+	.tbl_1 .view_div {position:relative; border-top:solid 1px #ebebeb; text-align:left; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #f9f9f9; padding:20px 20px 15px 20px;}
+	.tbl_1 .view_div .tit {font-weight:bold; color:#333; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 7px; padding-left:9px; margin-top:16px; margin-bottom:7px;}
+	.tbl_1 .view_div .txt {padding-right:50px;}
+	.tbl_1 .view_div .close {position:absolute; right:20px; bottom:13px; cursor:pointer;}
+	.tbl_1 .hid .subj {font-weight:normal;}
+	.tbl_1 .hid .detail {background-image:url(http://image.jinhak.com/job/site/arr09_down.gif);}
+	.tbl_1 .sho .subj {font-weight:bold;}
+	.tbl_1 .sho .detail {background-image:url(http://image.jinhak.com/job/site/arr09_up.gif);}
+	.tbl_1.type2 /* popup, 상단회색 th */ {border:solid 1px #e0e0e0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_1.type2 tbody th {border:solid 1px #e0e0e0; padding:7px 6px; font-weight:bold; background:#f7f7f7; text-align:left;}
+	.tbl_1.type2 tbody td {border:solid 1px #e0e0e0; padding:7px 6px; text-align:left;}
+	.tbl_1.type2 .list_ck li {padding-top:3px; padding-bottom:2px;}
+	.tbl_1.type3 thead th {padding:7px 0; background:#fbfbfb; border-color:#ddd; font-size:11px;}
+	.tbl_1.type3 thead th:first-child {border-left:0;}
+	.tbl_1.type4 tbody td {font-size:13px; padding-top:15px; padding-bottom:15px;}
+	.tbl_1.type4 .view_div {background:none;}
+	.tbl_1.type4 td.view_td {line-height:2;}
+	.tbl_1.type5 thead th {border:solid 1px #e0e0e0;}
+	.tbl_1.type5 tbody td {border:solid 1px #e0e0e0; padding:15px 6px; font-size:13px;}
+	.tbl_1 .nowrap {display:inline-block; max-width:90%; vertical-align:top;}
+.tbl_2 /* popup, 회색 th */ {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_2 th,
+	.tbl_2 td {padding:7px 3px; border:solid 1px #e0e0e0; text-align:left; background:#FFF; line-height:16px;}
+	.tbl_2 th {padding-left:6px; font-weight:normal;}
+	.tbl_2 .al_c {text-align:center; padding-left:0; padding-right:0;}
+	.tbl_2 .td2 {text-align:center; padding:15px 0;}
+	.tbl_2 tr.bg td {background:#ebebeb;}
+	.tbl_2 thead th {text-align:center; background:#eff0f4;}
+	.tbl_2.type2 th {background:#F3F3F3; padding-left:20px;}
+	.tbl_2.type2 td {padding-left:20px;}
+	.tbl_2.type3 thead th {background:#f7f7f7; border:solid 1px #e7e7e7; padding:11px 0; text-align:center;}
+	.tbl_2.type3 tbody td {border:solid 1px #e7e7e7; text-align:center; padding-left:0; padding-right:0;}
+	.tbl_2.type4 tbody td {border:solid 1px #DDD; text-align:center; padding:12px 0;}
+	.tbl_2.type4 tbody td a {color:#999;}
+	.tbl_2.type5 thead th {background:#f8f8f8; color:#777;}
+	.tbl_2.type5 th,
+	.tbl_2.type5 td {padding:7px 15px 9px 15px;}
+	.tbl_2 a.selected {font-weight:bold; color:#438ee9 !important;}
+	.tbl_2.vtop td {vertical-align:top;}
+	.tbl_2 .t1 {position:absolute; right:15px; }
+.tbl_3 /* 이력서, 상단입체회색 th */ {width:100%; border:solid 1px #c8c8c8; border-bottom:solid 1px #e0e0e0; border-top:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_3 thead th {text-align:left; padding:5px 3px 5px 17px; font-weight:bold; border:0; border-top:solid 1px #e0e0e0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #ebebeb;}
+	.tbl_3 thead th select {vertical-align:baseline;}
+	.tbl_3 thead th .exp {font-weight:normal; color:#777;}
+	.tbl_3 thead .th2 {text-align:right; font-size:11px; color:#747d94; font-weight:normal; padding-right:18px; padding-left:4px;}
+	.tbl_3 tbody th,
+	.tbl_3 tbody td {text-align:left; padding:5px 3px 5px 17px; font-weight:normal; border:0; border-top:solid 1px #e0e0e0; vertical-align:top; line-height:20px; background-color:#FFF;}
+	.tbl_3 tbody th {color:#777;}
+	.tbl_3 tbody td {padding-left:4px;}
+	.tbl_3 tbody .th2 {padding-left:0; padding-right:0; color:#555; text-align:center;}
+	.tbl_3 tbody .th3 {color:#555;}
+	.tbl_3 tbody .th4 {border-right:solid 1px #e0e0e0;}
+	.tbl_3 tbody .td2 {padding:4px 17px;}
+	.tbl_3 tbody .al_r {text-align:right; padding-right:25px;}
+	.tbl_3 tbody .al_c {text-align:center; padding-right:0; padding-left:0;}
+	.tbl_3 tbody .bar {padding:0 3px;}
+	.tbl_3 tbody .file {white-space:nowrap; display:inline-block; padding:1px 5px 1px 0;}
+	.tbl_3 tbody tr.bg1 td {background-color:#f8f8f8;}
+	.tbl_3 tr.showhide {/*display:none;*/}
+	.tbl_3 tr.showhide th,
+	.tbl_3 tr.showhide td {padding:0; border-top:none;}
+	.tbl_3 tr.showhide .more {padding:9px 17px 7px 78px; border-top:solid 1px #e0e0e0; line-height:20px;}
+	.tbl_3.line thead th {border:solid 1px #e0e0e0; text-align:center; font-weight:normal; padding-left:0; padding-right:0;}
+	.tbl_3.line tbody td {border:solid 1px #e0e0e0;}
+.tbl_4 /* 양옆 뚫린, 하늘색 th */ {width:100%; border:0; border-bottom:solid 1px #dbdbdb; border-collapse:collapse; table-layout:fixed;}
+	.tbl_4 thead th {text-align:center; padding:7px 0; font-weight:normal; border:solid 1px #d3d4d8; border-right:0; border-bottom:0; line-height:16px; background-color:#e5f2fb; color:#777;}
+	.tbl_4 thead th:first-child {border-left:0;}
+	.tbl_4 thead tr:first-child th {background:url(http://image.jinhak.com/job/site/line_gray.gif) repeat-x left top #e5f2fb;}
+	.tbl_4 thead tr.sub th:first-child {border-left:solid 1px #d3d4d8;}
+	.tbl_4 tbody th,
+	.tbl_4 tbody td {text-align:left; padding:7px 3px 7px 17px; font-weight:normal; border:solid 1px #f0f0f0; border-right:0; border-bottom:0; line-height:16px;}
+	.tbl_4 tbody tr:first-child th,
+	.tbl_4 tbody tr:first-child td {border-top:0;}
+	.tbl_4 tbody th:first-child,
+	.tbl_4 tbody td.first {border-left:0;}
+	.tbl_4 tbody td.td2 {text-align:center; padding:22px 0; font-weight:bold; font-size:14px; color:#333;}
+	.tbl_4 tbody td.al_r {text-align:right; padding-right:45px; padding-left:4px}
+	.tbl_4 tbody td.al_r2 {text-align:right; padding-right:30px; padding-left:4px}
+	.tbl_4 tbody td.al_r3 {text-align:right; padding-right:13px; padding-left:4px}
+	.tbl_4 tbody td.al_c {text-align:center; padding-left:0; padding-right:0;}
+	.tbl_4 tbody tr.bg1 td,
+	.tbl_4 tbody td.bg1 {background:#e4ddf9; border-left:solid 1px #d9d3ed;}
+	.tbl_4.bd {border:solid 2px #9dccec;}
+	.tbl_4.tbody_noth td:first-child {border-left:0;}
+.tbl_5 /* 두꺼운 회색border, th에 dot */ {width:100%; border:0; border:solid 3px #e0e0e0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_5 th,
+	.tbl_5 td {text-align:left; padding:7px 3px 7px 30px; font-weight:normal; border:0; border-top:solid 1px #e0e0e0; vertical-align:top; line-height:20px;}
+	.tbl_5 th {background:url(http://image.jinhak.com/job/site/bl_dot02.gif) no-repeat 17px 16px;}
+	.tbl_5 td {padding-left:4px; color:#333;}
+.tbl_6 /* 입체회색 th */ {width:100%; border:solid 1px #ebebeb; border-spacing:1px; table-layout:fixed;}
+	.tbl_6 th,
+	.tbl_6 td {padding:11px 4px 11px 19px; text-align:left; border:0; border-top:solid 1px #ebebeb;}
+	.tbl_6 th {background:#f4f4f4;}
+	.tbl_6 tr:first-child th,
+	.tbl_6 tr:first-child td {border-top-width:0;}
+	.tbl_6 tr.th2 th {background:#EEE;}
+	.tbl_6 tr.th3 th {background:#FFF;}
+	.tbl_6 td.al_c {text-align:center; padding-right:0; padding-left:0;}
+	.tbl_6 td.al_l {text-align:left !important; padding-right:5px !important; padding-left:10px !important;}
+	.tbl_6 td.img {padding-top:0; padding-bottom:0;}
+	.tbl_6 td.img2 {padding-top:5px; padding-bottom:5px;}
+	.tbl_6 td.img3 {padding-top:7px; padding-bottom:7px;}
+	.tbl_6 td.bd_l {border-left-width:1px !important;}
+	.tbl_6.type2 {border:solid 1px #dcdcdc;}
+	.tbl_6.type2 th {background:#eeefef;}
+	.tbl_6.type2 th span.exp {font-weight:normal; padding-left:10px;}
+	.tbl_6.type2 th,
+	.tbl_6.type2 td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type2 tr:first-child td {border-top:solid 1px #dcdcdc;}
+	.tbl_6.type3 thead th {font-weight:normal; text-align:center; border-left:solid 1px #ebebeb;}
+	.tbl_6.type3 thead th:first-child {border-left:none;}
+	.tbl_6.type3 tbody th {font-weight:normal;}
+	.tbl_6.type3 tbody td {border-left:solid 1px #ebebeb;}
+	.tbl_6.type3 tbody tr:first-child th,
+	.tbl_6.type3 tbody tr:first-child td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type4 thead th {font-weight:normal; text-align:center; border-left:solid 1px #ebebeb; padding-right:0; padding-left:0;}
+	.tbl_6.type4 thead th:first-child {border-left:none;}
+	.tbl_6.type4 tbody th {font-weight:normal; background:none; text-align:center;}
+	.tbl_6.type4 tbody td {border-left:solid 1px #ebebeb;}
+	.tbl_6.type4 tbody tr:first-child th,
+	.tbl_6.type4 tbody tr:first-child td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type4 tbody tr.q th {text-align:left;}
+	.tbl_6.type5 {border-color:#c8c8c8;}
+	.tbl_6.type5 thead th {font-weight:normal; text-align:center; border-left:solid 1px #C8C8C8; padding-right:0; padding-left:0; background-color:#E2E2E2; font-size:13px;}
+	.tbl_6.type5 thead th:first-child {border-left:none;}
+	.tbl_6.type5 tbody th,
+	.tbl_6.type5 tbody td {border-left:solid 1px #C8C8C8; border-top:solid 1px #C8C8C8; font-size:13px; vertical-align:top;}
+	.tbl_6.type5 tbody th:first-child,
+	.tbl_6.type5 tbody td:first-child {border-left-width:0;}
+	.tbl_6.type5 td.img {vertical-align:middle;}
+	.ncs .tbl_6.type4,
+	.ncs .tbl_6.type4 tbody th,
+	.ncs .tbl_6.type4 tbody td,
+	.ncs .tbl_6.type4 tbody tr:first-child th,
+	.ncs .tbl_6.type4 tbody tr:first-child td {border-color:#cdcdcd;}
+	.ncs .tbl_6.type4 thead th {background-color:#e4e4e4;}
+	.tbl_6.nothead tbody tr:first-child th,
+	.tbl_6.nothead tbody tr:first-child td {border-top-width:0;}
+	.tbl_6 td .ico1 {float:right; display:inline-block; width:20px; height:20px; font-size:0; line-height:0; background:url(http://image.jinhak.com/job/site/arr27_down.gif) no-repeat center top;}
+	.tbl_6 td .ico1.selected {background-image:url(http://image.jinhak.com/job/site/arr27_up.gif);}
+	.tbl_6 td.view_td {padding:0; border:0 !important;}
+	.tbl_6 .view_div {padding:10px; border-top:solid 1px #c8c8c8;}
+.tbl_7 /* 양옆 뚫린, 왼쪽 회색 th, 회원정보변경 */ {width:100%; border:solid 1px #c7c7c7; border-right:0; border-left:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_7 th,
+	.tbl_7 td {padding:6px 20px; min-height:22px; border:0; border-top:solid 1px #e6e6e6; line-height:16px;}
+	.tbl_7 th {font-weight:normal; background:#f8f8f8; text-align:right;}
+	.tbl_7 tr:first-child th,
+	.tbl_7 tr:first-child td {border-top:none;}
+	.tbl_7 td img {margin-top:-3px;}
+	.tbl_7 th strong.pointc_5 {vertical-align:middle;}
+	.tbl_7.type2 th {text-align:left; font-size:11px; vertical-align:top;}
+.tbl_9 /* table 내 */ {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_9 thead th {text-align:center; font-weight:normal; padding:9px 0 5px 0; background:#ebebeb; color:#777; border:0; border-left:solid 1px #FFF;}
+	.tbl_9 thead th:first-child {border-left:0;}
+	.tbl_9 tbody td {text-align:center; padding:9px 0 5px 0; background:#FFF; color:#555; border:solid 1px #ebebeb;}
+	.tbl_9 .al_l {text-align:left; padding-left:9px;}
+.tbl_injea {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_injea thead th {text-align:center; font-weight:bold; color:#438ee9; font-size:16px; padding:22px 0; border:solid 3px #ebebeb;}
+	.tbl_injea tbody td {border:solid 1px #ebebeb; padding:10px 18px; line-height:20px;}
+.tbl_11 {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_11 thead th {padding:12px 0; text-align:center; font-size:0; line-height:0; border:solid 1px #ececec; border-top:solid 2px #9568d5; border-right-width:0; border-bottom-width:0; background:url(http://image.jinhak.com/job/site/th_a_bg.gif) repeat-x left bottom;}
+	.tbl_11 thead th:first-child {border-left-width:0;}
+	.tbl_11 tbody td {text-align:center; padding:6px 0; border:solid 1px #ececec; border-right-width:0; line-height:18px;}
+	.tbl_11 tbody td.al_l {text-align:left; padding-left:10px;}
+	.tbl_11 tbody td .btn_txt {position:absolute; right:10px; font-size:11px; color:#438ee9;}
+.tbl_13 {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_13 thead th {text-align:center; font-weight:normal; color:#FFF; background:#8d62c8; padding:12px 0; border:0; border-bottom:solid 1px #e5e5e5;}
+	.tbl_13 tbody td {text-align:center; padding:11px 0; border:0; border-bottom:solid 1px #e5e5e5; font-size:13px; line-height:18px;}
+	.tbl_13 tbody td.al_l {text-align:left; padding-left:20px;}
+	.tbl_13 tbody td.al_r {text-align:right; padding-right:40px;}
+	.tbl_13.type2 thead th {background-color:#1543bc; font-size:13px;}
+	.tbl_13.type2 tbody td {font-size:13px;}
+.tbl_14 {width:100%; border:0; border-bottom:solid 1px #979797; border-collapse:collapse; table-layout:fixed;}
+	.tbl_14 th {text-align:center; font-weight:normal; color:#FFF; background:url(http://image.jinhak.com/job/site/tbl_14_th_bg.gif) repeat-x left top #ededed; padding:0; border:0;}
+	.tbl_14 th.img {font-size:0; line-height:0; padding-left:20px; height:75px; text-align:left;}
+	.tbl_14 td {text-align:center; padding:11px 0; border:0; border-top:solid 1px #bcbcbc; font-size:13px; line-height:18px;}
+	.tbl_14 tr.first td {border-color:#979797;}
+	.tbl_14 td.al_l {text-align:left; padding-left:20px;}
+	.tbl_14 td.al_r {text-align:right; padding-right:40px;}
+	.tbl_14 td.ico {background:url(http://image.jinhak.com/job/site/jindan_img08.png) no-repeat center center; color:#FFF; letter-spacing:-2px; line-height:16px; font-weight:bold; padding:25px 0;}
+	.tbl_14 td.btn {padding:0; font-size:0; line-height:0;}
+	.tbl_14 td.btn img {margin:0 3px;}
+	.tbl_14 td.view_td {padding:0; border-top-width:0;}
+	.tbl_14 .view_div {position:relative; border-top:solid 1px #bcbcbc; text-align:left; padding:15px 20px;}
+	.tbl_14 .view_div .nodata {text-align:center; height:33px; line-height:33px; background:#f2f2f2; font-size:12px; margin:4px 4px 0 0;}
+	.tbl_14 .view_div .t01 {font-weight:bold; margin:15px 0 2px 0;}
+	.tbl_14 .view_div .t01:first-child {margin-top:0;}
+	.tbl_14 .view_div .t02 {font-size:18px; color:#333; font-weight:bold; margin-top:16px; padding-left:10px;}
+	.tbl_14 .view_div .btn {text-align:center; margin-top:10px;}
+.tbl_15 {width:100%; border:0; border-collapse:collapse;}
+	.tbl_15 thead th {padding:10px 0; border:solid 1px #FFF; font-size:13px; color:#333; font-weight:bold; text-align:center; background-color:#c8e0e6;}
+	.tbl_15 tbody td {padding:10px; border:solid 1px #FFF; font-size:13px; color:#333; font-weight:bold; text-align:left; background-color:#f2f2f2;}
+	.tbl_15 tr.bg1 td {background-color:#dfdfdf;}
+	.tbl_15 .al_r {text-align:right;}
+.tbl_16 {width:100%; border:0; border-collapse:collapse;} /* TH 보라bg + 흰색바 */
+	.tbl_16 thead th {padding:12px 0; border:0; font-size:13px; color:#FFF; text-align:center; font-weight:normal; background:url(http://image.jinhak.com/job/site/tbl_16_th_bg.gif) no-repeat left center #6a449f;}
+	.tbl_16 thead th:first-child {background:#6a449f;}
+	.tbl_16 tbody td {padding:3px 0; border:0; border-left:solid 1px #d3d3d3; text-align:center; line-height:1.8;}
+	.tbl_16 tbody td:first-child {border-left-width:0;}
+	.tbl_16 tbody tr.blank td {padding:0; border-left-width:0; height:20px; background:url(http://image.jinhak.com/job/site/tbl_16_td_bg.gif) repeat-x left center;}
+	.tbl_16 tbody tr.blank:first-child td {height:10px; background:#FFF;}
+	.tbl_16 .al_l {text-align:left; padding-left:10px; padding-right:5px;}
+	.tbl_16 .btn {padding:0;}
+.page {text-align:center; margin-top:20px; font-size:0; line-height:0;}
+	.page a {display:inline-block; font-size:12px; height:28px; line-height:27px; padding:0 10px; color:#333; border:solid 1px #d2d2d2; margin-left:-1px; text-decoration:none;}
+	.page a:hover,
+	.page a.selected {background-color:#9cca3d; color:#FFF;}
+	.page a.prev {padding-left:15px; background:url(http://image.jinhak.com/job/site/Arr12_prev.png) no-repeat left center; margin-right:6px;}
+	.page a.next {padding-right:15px; background:url(http://image.jinhak.com/job/site/Arr12_next.png) no-repeat right center; margin-left:6px;}
+	.page a.prev:hover {background:url(http://image.jinhak.com/job/site/arr13_prev.png) no-repeat left center #9cca3d;}
+	.page a.next:hover {background:url(http://image.jinhak.com/job/site/arr13_next.png) no-repeat right center #9cca3d;}
+	.ncs .page a {height:15px; line-height:14px; border-width:0; padding:0 3px 0 2px; margin:0 6px;}
+	.ncs .page a.prev {padding-left:15px;}
+	.ncs .page a.next {padding-right:15px;}
+	.ncs .page a:hover,
+	.ncs .page a.selected {background:none; color:#333; border-bottom:solid 4px #8cb739;}
+	.ncs .page a.prev:hover {background:url(http://image.jinhak.com/job/site/Arr12_prev.png) no-repeat left center; border-bottom-width:0;}
+	.ncs .page a.next:hover {background:url(http://image.jinhak.com/job/site/Arr12_next.png) no-repeat right center; border-bottom-width:0;}
+
+/* btn */
+a.btn_ico1 {background-image:url(http://image.jinhak.com/job/site/btn_arr01.gif); background-repeat:no-repeat; background-position:right center; padding:0 50px 0 20px; min-width:120px; text-align:left;}
+a.btn_ico2 {background-image:url(http://image.jinhak.com/job/site/btn_arr02.gif); background-repeat:no-repeat; background-position:right center; padding:0 50px 0 20px; min-width:120px; text-align:left;}
+.btn_more {border-top:solid 1px #e1e1e3; border-left:solid 1px #e1e1e3; border-right:solid 1px #c4c4c8; border-bottom:solid 1px #c4c4c8; background:#fbfbfb; overflow:hidden; margin-top:20px;}
+	.btn_more:after {content:""; clear:both; display:block;}
+	.btn_more a {display:block; height:33px; line-height:33px; text-align:center;}
+	.btn_more a:hover {text-decoration:none;}
+	.btn_more a.more {margin-right:91px; color:#333;}
+	.btn_more a.more span {padding-right:15px; background:url(http://image.jinhak.com/job/site/arr05_down.gif) no-repeat right 6px;}
+	.btn_more a.top {margin-top:-33px; float:right; width:90px; border-left:solid 1px #e1e1e3; font-size:11px; color:#333;}
+	.btn_more a.top span {padding-right:8px; background:url(http://image.jinhak.com/job/site/arr04_up.gif) no-repeat right 5px;}
+.btn_s {text-align:right; font-size:11px; padding:0 17px; margin-top:-1px; color:#747d94; height:22px; line-height:22px; border:solid 1px #e0e0e0; border-right-color:#c8c8c8; border-left-color:#c8c8c8; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left 3px #f7f7f7;}
+	.btn_s a {color:#747d94; padding:0 3px;}
+.btn_s2 {font-size:11px; color:#747d94; padding:0 3px;}
+.btn_center {text-align:center; margin-top:25px; font-size:0; line-height:0;}
+	.btn_center img {margin:0 5px;}
+.btn_select {overflow:hidden; display:inline; float:left;}
+	.btn_select:after {content:""; clear:both; display:block;}
+	.btn_select li {float:left; text-align:center; margin-left:-1px; border:solid 1px #dcdcdc; width:133px; height:27px; line-height:27px; background-color:#FFF;}
+	.btn_select li:first-child {margin-left:0;}
+	.btn_select li.selected {color:#FFF; position:relative; border:solid 1px #6aa1e3; background:#6aa1e3;}
+	.btn_select li a {display:block; text-decoration:none !important; color:inherit;}
+	.btn_select.type2 li {width:81px; height:32px; line-height:32px;}
+	.btn_select.type2 li.selected {border:solid 1px #eb6d6c; background:#eb6d6c; font-weight:bold;}
+	.btn_select.type3 li {border-color:#c7c7c7; width:138px; height:46px; line-height:44px; font-size:14px; color:#666; font-weight:bold;}
+	.btn_select.type3 li.selected {border:solid 1px #438ee9; background:#438ee9; color:#FFF;}
+	.btn_select.wd2 li {width:130px;}
+	.btn_select.wd2 li:first-child {width:133px;}
+	.btn_select.he2 li {width:92px; height:20px; line-height:20px;}
+.btn_file {display:inline-block; width:73px; height:21px; background:url(http://image.jinhak.com/job/site/btn_file02.gif) no-repeat left top; vertical-align:middle; margin-right:5px;}
+	.btn_file span {display:none;}
+	.btn_file.type2 {background:url(http://image.jinhak.com/job/site/btn_file.gif) no-repeat left top;}
+.btn_h2 {position:absolute; right:0; margin-top:-42px;}
+.btn_h2_right {position:absolute; right:0; margin-top:-40px;}
+.btn_h3_right {position:absolute; right:0; margin-top:-35px;}
+.btn_divide {overflow:hidden;}
+	.btn_divide a {float:right; width:49%;}
+	.btn_divide a:first-child {float:left;}
+a.btn_type1, a.btn_type2, a.btn_type3, a.btn_type4, a.btn_type5 {
+	display:inline-block; text-decoration:none !important; box-sizing:border-box; text-align:center;
+}
+.btn_type1 {height:30px; line-height:30px; background:#6b489d; color:#fefeff !important; font-weight:bold; padding:0 10px 0 23px;}
+	.btn_type1 img {margin-top:-2px;}
+.btn_type2 {height:27px; line-height:24px; color:#7963c1 !important; font-size:12px !important; padding:0 18px; border:solid 1px #7963c1; box-shadow:0 1px 0 0 #b8b8b8; background:#FFF;}
+	.ncs .btn_type2,
+	.ncsBtn .btn_type2 {border-color:#364f90; color:#364f90 !important;}
+.btn_type3 {height:41px; line-height:41px; color:#FFF !important; padding:0 30px; background-color:#1543bc; font-size:13px;}
+	.btn_type3.bg2 {background-color:#606060;}
+	.btn_type3.bg3 {background-color:#8cb739;}
+.btn_type4 {height:61px; line-height:60px; font-size:25px; color:#FFF !important; padding:0 50px; min-width:188px; background-color:#1543bc;}
+.btn_type5 {height:48px; line-height:45px; font-size:16px; color:#FFF !important; padding:0 50px; background-color:#8d72e4; border:solid 1px #3c228d;} /* padding은 임시 */
+	.btn_type5.bg2 {color:#3c228d !important; background-color:#FFFFFF;}
+	.btn_type5.bg3 {color:#FFFFFF !important; background-color:#eb6d6c; border-color:#4f4f4f;}
+	.btn_type5.bg4 {color:#eb6d6c !important; background-color:#FFFFFF; border-color:#eb6d6c;}
+	
+/* layer popup */
+.layer_arr {display:none; position:absolute; z-index:10;}
+	.layer_arr .arr {position:absolute; z-index:11; width:17px; height:10px; background:url(http://image.jinhak.com/job/site/layer_arr.png) no-repeat center top;}
+	.layer_arr .core {position:relative; border:solid 1px #d7d7d7; background:#FFF; padding:1px; margin-top:8px;}
+	.layer_arr .close {position:absolute; right:0; top:3px; z-index:11;}
+	.layer_arr .tit {color:#FFF; font-weight:bold; padding:0 15px; height:37px; line-height:39px; background:#584192;}
+	.layer_arr .cont {padding:13px 12px 7px 12px;}
+	.layer_arr .txt1 {font-size:11px; line-height:18px; color:#777;}
+	.layer_arr .txt2 {font-size:11px; color:#000; margin-top:10px; text-align:center;}
+	.layer_arr .bot {text-align:center; padding:10px 0 7px 0; background:#f8f8f8;}
+	.layer_arr.type1 {width:290px; right:10px; margin-top:-27px;}
+	.layer_arr.type1 .arr {right:37px;}
+.layer_arr2 {display:none; position:absolute; right:10px; width:610px; border:solid 1px #6b489d; z-index:10; box-shadow:3px 5px 0 0 rgba(0,0,0,0.2);}
+	.layer_arr2 .arr {position:absolute; right:30px; margin-top:-7px; z-index:11; width:11px; height:7px; background:url(http://image.jinhak.com/job/site/layer_arr2.png) no-repeat center top;}
+	.layer_arr2 .core {padding:15px 20px; line-height:20px; background:#FFF;}
+	.layer_arr2.type2 {right:auto; margin-top:10px;}
+	.layer_arr2.type2 .arr {right:auto; left:30px;}
+.layer_roadmap {/*display:none;*/ position:absolute; z-index:10; border:solid 3px #a28fe1; background:#FFF;}
+	.layer_roadmap .close {position:absolute; right:17px; top:15px;}
+	.layer_roadmap .core {text-align:center; padding:19px;}
+	.layer_roadmap .tit {margin-bottom:19px; font-size:0; line-height:0;}
+	.layer_roadmap .process {width:694px; height:540px; margin:0 auto; text-align:left; background:url(http://image.jinhak.com/job/site/roadmap_proc_bg.gif) no-repeat 92px top;}
+	.layer_roadmap .process dl {position:relative; width:546px; padding-left:148px; margin-top:8px; overflow:hidden;}
+	.layer_roadmap .process dl:after {content:""; clear:both; display:block;}
+	.layer_roadmap .process dl:first-child {margin-top:0;}
+	.layer_roadmap .process dt {position:absolute; left:0; top:0; width:140px; font-size:0; line-height:0;}
+	.layer_roadmap .process dd {float:left; width:180px; height:60px; margin:0 0 2px 2px; background:#ebebeb; text-align:center;}
+	.layer_roadmap .process dd p {font-size:11px; padding:11px 10px 9px 10px; text-align:left;}
+	.layer_roadmap .process dd a {font-weight:bold; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:0 10px;}
+	.layer_roadmap .process dd.on {background:#c3bde6;}
+	.layer_roadmap .process dd.on a {color:#5c509a;}
+	.layer_roadmap .process dd.on a span {line-height:12px;}
+	.layer_roadmap.type1 {width:794px; left:0; margin-top:-146px;}
+.layer_more {display:none; position:absolute; right:0; margin-top:-15px; text-align:right; border:solid 1px #438ee9; background:#FFF; padding:6px 8px; z-index:1;}
+	.layer_more .txt1 {color:#438ee9; line-height:18px;}
+	.layer_more .txt2 {line-height:20px;}
+	.layer_more .txt2 span {color:#438ee9;}
+.layer_more2 {display:none; position:absolute; left:0; width:798px; margin-top:-2px; border:solid 1px #dcdcdc; background:#FFF; z-index:1;}
+	.layer_more2 .close {position:absolute; right:3px; top:8px;}
+	.layer_more2 .cont {padding:5px 32px 15px 32px;}
+.layer_more3 {display:none; position:absolute; right:16px; margin-top:-12px; width:370px; border-top:solid 1px #978bdb; border-bottom:solid 1px #d2d2d2; z-index:10;}
+	.layer_more3 .core {border:solid 1px #978bdb; background:#FFF; padding:9px 10px; line-height:18px;}
+.layer_jindan {display:none; position:absolute; border:solid 1px #000; background:#FFF; width:873px; top:450px; left:50%; margin-left:-436px; text-align:center; padding-bottom:20px;}
+	.layer_jindan .top {background:#f7f7f7; padding:30px 0 20px 0;}
+	.layer_jindan .cont {width:644px; margin:0 auto; padding-top:30px;}
+	.layer_jindan .tit {font-weight:bold; color:#333; margin-bottom:15px;}
+	.layer_jindan .tit2 {font-weight:bold; color:#333; margin-bottom:12px; font-size:14px;}
+	.layer_jindan .result {width:380px; height:53px; line-height:48px; margin:0 auto; background:#f7f7f7; color:#438ee9; font-size:14px; font-weight:bold;}
+	.layer_jindan .result .num {font-size:40px; display:inline-block; vertical-align:top;}
+	.layer_jindan .result .percent {font-size:16px;}
+	.layer_jindan .result .txt {display:inline-block; vertical-align:top; margin-top:6px; margin-left:2px;}
+.layer_violet {display:none; position:absolute; border:solid 4px #ddd3e8; background:#FFF; padding:12px 18px; left:50%; margin-top:-40px;}
+	.layer_violet .tit {color:#8d72e4; font-size:13px; margin-bottom:15px;}
+	.layer_violet .pay {overflow:hidden; text-align:left; border-bottom:solid 1px #ebebeb; width:300px;}
+	.layer_violet .pay:after {content:""; clear:both; display:block;}
+	.layer_violet .pay dt,
+	.layer_violet .pay dd {float:left; padding:5px 0; border-top:solid 1px #ebebeb;}
+	.layer_violet .pay dt {width:25%;}
+	.layer_violet .pay dt label {padding-left:5px;}
+	.layer_violet .pay dd {width:75%;}
+.layer_main {position:absolute; top:0; left:0; z-index:1;}
+	.layer_main .close {position:absolute; right:15px; bottom:10px;}
+	.layer_main .close a {display:inline-block; font-size:11px; text-decoration:none; padding-right:15px; background:url(http://image.jinhak.com//job/site/layer_close10.gif) no-repeat right 4px; color:#FFF;}
+	.layer_main .close a:first-child {margin-right:10px;}
+.layer_shdow {position:absolute; z-index:1; left:50%; box-shadow:4px 4px 0 0 rgba(0,0,0,0.14);}
+	.layer_shdow .cont {border:solid 1px #b0b1b0;}
+	.layer_shdow .close {position:absolute; top:0; right:0; cursor:pointer;}
+.layer1 {position:absolute; border:solid 1px #333; background-color:#FFF; z-index:1;} /* Corp.css 와 공통 */
+	.layer1 .close {position:absolute; right:0; bottom:0; cursor:pointer;}
+	.layer1 .close2 {display:table; width:100%;}
+	.layer1 .close2 a {display:table-cell; width:50%; text-align:center; font-size:20px; color:#FFF; height:80px; vertical-align:middle; background-color:#f45757; text-decoration:none;}
+	.layer1 .close2 a:first-child {background-color:#9a9a9a;}
+	.layer1 .core {padding:30px; background-color:#FFF;}
+	.list_sns {overflow:hidden;}
+	.list_sns:after {content:""; clear:both; display:block;}
+	.list_sns li {float:left; width:85px; text-align:center;}
+	.list_sns li a {display:block; margin-bottom:5px;}
+	.layer1 .input {height:27px; line-height:27px;}
+	.layer1 .reason {display:table-cell; width:100%; height:137px; vertical-align:middle; box-sizing:border-box; padding-left:195px; background:url(http://image.jinhak.com/job/corp/layer_img01.gif) no-repeat left center;}
+	.layer1 .reason .t1 {font-size:27px; color:#000;}
+	.layer1 .reason .t2 {font-size:20px; color:#f45757; margin-top:3px;}
+	.layer1 .reason .t3 {font-size:14px; color:#000; margin-top:9px;}
+	.layer1.atReason .core {background:url(http://image.jinhak.com/job/corp/layer_bg01.gif) repeat-x left top #FFF; padding-top:40px;} /* 마이페이지> 기업평판내역> 미승인사유 */
+	
+/* graph */
+.gra1 {position:absolute; left:19px; top:79px; width:395px; height:161px; background:url(http://image.jinhak.com/job/site/gra1_bg.gif) no-repeat center 11px;}
+	.gra1 .pos1 {z-index:1; position:absolute; top:0; right:5px; width:385px; height:145px; font-size:11px; line-height:1em; font-weight:bold; color:#438ee9; text-align:right;}
+	.gra1 .pos1 span {position:absolute; right:0; top:12px; height:145px; background:url(http://image.jinhak.com/job/site/gra1_bg1.png) repeat-x right top;}
+	.gra1 .pos2 {z-index:2; position:absolute; top:72px; right:0; width:385px; font-size:11px; line-height:1em; font-weight:bold; color:#333; text-align:right;}
+	.gra1 .pos2 em {padding-right:12px; background:url(http://image.jinhak.com/job/site/gra1_bg2.png) no-repeat right 3px;}
+	.gra1 .pos2 span {display:inline-block; height:10px;}
+.gra2 {border:solid 1px #ececec; width:338px; height:255px;}
+	.gra2 .graph {width:338px; height:188px; position:relative;}
+	.gra2 .graph .arr {position:absolute; top:52px; width:100%; text-align:center;}
+	.gra2 .graph.type1 {background:url(http://image.jinhak.com/job/site/gra2_bg1.jpg) no-repeat center top;}
+	.gra2 .graph.type2 {background:url(http://image.jinhak.com/job/site/gra2_bg2.jpg) no-repeat center top;}
+	.gra2 table {width:100%; border:solid 1px #FFF; border-collapse:collapse; background:#eaeaea;}
+	.gra2 th {width:110px; height:65px; padding:0; border:0; text-align:center; font-weight:bold; color:#000;}
+	.gra2 th strong {display:block; font-size:16px; margin-top:8px;}
+	.gra2 th em {display:block; font-size:11px; margin-top:8px; color:#555; letter-spacing:0;}
+	.gra2 td {padding:0 18px 0 0; border:0; line-height:16px;}
+	
+/* etc common */
+.t_total {color:#333; margin-bottom:7px;}
+.t_txt {margin-top:20px; margin-bottom:10px; position:relative;}
+	.t_txt .btn {position:absolute; right:0; top:0;}
+.t_tbl_r {position:absolute; right:0; font-size:11px; color:#AAA; margin-top:-18px;}
+	.t_tbl_r.type2 {position:relative; text-align:right; margin-top:-15px;}
+	.t_tbl_r.type3 {position:relative; text-align:right; margin-top:2px; margin-bottom:5px;}
+	.t_tbl_r.type4 {position:absolute; right:0; margin-top:-37px;}
+	.t_tbl_r.type5 {position:relative; text-align:right; margin-top:-22px;}
+.t_ju {font-size:11px; color:#aaa; margin-top:9px; padding-left:14px; background:url(http://image.jinhak.com/job/site/bl_dangu.gif) no-repeat left 3px;}
+.t_ju2 {margin-top:10px; padding-left:20px; color:#777;}
+.t_ju3 {margin-top:40px; padding-left:20px; color:#f7941d;}
+.txt8 {font-size:14px; color:#333; line-height:1.6;}
+.txt9 {font-size:13px; color:#333; line-height:1.6;}
+.t_dot {background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 7px; padding-left:9px;}
+	.t_dot.img {background-position:left 9px;}
+.talk_cont {overflow:hidden;}
+	.talk_cont:after {content:""; clear:both; display:block;}
+	.talk_cont dt,
+	.talk_cont dt .nowrap {font-size:14px; color:#333; font-weight:bold;}
+	.talk_cont dt.pic {float:left; width:115px;}
+	.talk_cont dt.pic img {width:100px; height:107px;}
+	.talk_cont dt .company {color:#555;}
+	.talk_cont dt .name {display:block; font-weight:normal; font-size:12px; margin-top:5px; color:#555;}
+	.talk_cont dd {line-height:16px; margin-top:5px;}
+	.talk_cont dd span {color:#555;}
+	.talk_cont dd .comment {color:#777; margin-top:5px;}
+	.talk_cont dd .comment span {}
+	.talk_cont.type2 {margin-bottom:11px;}
+	.talk_cont.type2 dt.pic {width:151px;}
+	.talk_cont.type2 dt.pic img {width:140px; height:150px;}
+	.talk_cont.type3 {margin-top:30px;}
+	.talk_cont.type3 dt.pic {width:151px;}
+	.talk_cont.type3 dt.pic img {width:140px; height:150px;}
+.scroll {overflow-x:hidden; overflow-y:auto; padding-right:5px;}
+.divide {overflow:hidden;}
+	.divide:after {content:""; clear:both; display:block;}
+	.divide.type1 .left {float:left; width:430px; margin-right:10px; position:relative;}
+	.divide.type1 .right {float:left; width:360px; position:relative;}
+	.divide.type2 {padding-bottom:20px;}
+	.divide.type2 .left {float:left; width:410px; margin-right:10px; position:relative;}
+	.divide.type2 .right {float:left; width:340px; position:relative;}
+	.divide.type3 {padding-bottom:20px;}
+	.divide.type3 .left {float:left; width:375px; margin-right:10px; position:relative;}
+	.divide.type3 .right {float:left; width:375px; position:relative;}
+	.divide.type4 {padding-bottom:20px;}
+	.divide.type4 .left {float:left; width:340px; margin-right:10px; position:relative;}
+	.divide.type4 .right {float:left; width:410px; position:relative;}
+	.divide.type5 .core {float:left; width:260px; padding-left:10px; padding-bottom:10px;}
+	.divide.type5 .core:first-child {padding-left:0;}
+	.divide.type6 .left {float:left; width:395px; margin-right:10px;}
+	.divide.type6 .right {float:left; width:395px;}
+	.divide.type7 .left {float:left; width:547px;}
+	.divide.type7 .right {float:right; width:341px;}
+	.divide.type8 .left {float:left; width:151px; margin-right:9px;}
+	.divide.type8 .right {float:left; width:760px;}
+	.divide.type9 .left {float:left; width:455px;}
+	.divide.type9 .right {float:right; width:455px;}
+.auto_frame {position:absolute; background:#FFF; border:solid 1px #c5c5c5; padding:4px 0; margin-top:-1px; #margin-top:22px; overflow-x:hidden; overflow-y:auto; height:106px; z-index:10;}
+	.auto_frame li {padding:0 5px; line-height:18px;}
+	.auto_frame.type1 {width:215px; margin-left:89px; #margin-left:-221px;}
+	.auto_frame.type2 {width:275px; margin-left:0; #margin-left:-281px;}
+	.auto_frame.type3 {width:192px; margin-left:0; #margin-left:-198px;}
+	
+/* Main */
+.main_cover {position:relative; overflow:hidden;}
+	.main_cover:after {content:""; clear:both; display:block;}
+	.main_cover .list {overflow:hidden; margin-top:12px;}
+	.main_cover .list:after {content:""; clear:both; display:block;}
+	.main_cover .list li {float:left; font-size:0; line-height:0; position:relative;}
+	.main_cover .list li img:first-child {position:absolute; left:0; top:0; display:none;}
+.main_slogan {text-align:center; margin-bottom:20px; font-size:0; line-height:0; height:55px;}
+.main_corp {margin-bottom:39px; overflow:hidden;}
+	.main_corp:after {content:""; clear:both; display:block;}
+	.main_corp a {color:inherit;}
+	.main_corp h3 {color:#6b489d; font-weight:bold; font-size:15px; line-height:22px; margin-bottom:12px;}
+	.main_corp .core {position:relative; overflow:hidden; padding:26px 0 0 18px; float:left; width:462px;}
+	.main_corp .core:after {content:""; clear:both; display:block;}
+	.main_corp .core .more {position:absolute; top:18px; right:10px;}
+	.main_corp dl {float:left; width:140px; margin-right:13px;}
+	.main_corp dl dt.pic {margin-bottom:9px; border:solid 1px #CCC; width:111px; text-align:center;}
+	.main_corp dl dt.pic img {width:76px; height:76px;}
+	.main_corp dl dt {font-weight:bold; color:#333; font-size:13px; line-height:22px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.main_corp dl dd {font-size:11px; color:#777; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.main_trend {overflow:hidden; border:solid 1px #e4e4e4; border-top-width:0;}
+	.main_trend:after {content:""; clear:both; display:block;}
+	.main_trend .core {float:left; width:50%; margin-left:-1px;}
+	.main_trend .core:first-child {border-right:solid 1px #e4e4e4; margin-left:0;}
+	.main_trend a {color:inherit;}
+	.main_trend h2 {position:relative; border-top:solid 1px #e4e4e4; border-bottom:solid 1px #e4e4e4; height:39px; font-size:0; line-height:0;}
+	.main_trend h2 img {margin:12px 0 0 18px;}
+	.main_trend h2 .more {position:absolute; top:12px; right:12px;}
+	.main_trend h2 .more img {margin:0;}
+	.main_trend h2 .pg {position:absolute; top:12px; right:12px;}
+	.main_trend h2 .pg a {display:inline-block; font-size:11px; color:#6b489d; width:13px; height:13px; line-height:13px; border:solid 1px #beafd4; text-align:center; margin-left:5px;}
+	.main_trend h2 .pg a.selected {color:#FFF; border-color:#6b489d; background-color:#6b489d;}
+	.main_trend .list1 {width:113px; text-align:center;}
+	.main_trend .list1 .pic {border:solid 1px #e1e1e1;}
+	.main_trend .list1 .pic img {max-width:111px; height:66px;}
+	.main_trend .list1 .pic.type2 img {max-width:111px; height:76px;}
+	.main_trend .list1 .t01 {padding:0 2px; margin-top:3px;}
+	.main_trend .list1 a {font-size:11px;}
+	.main_trend .list2 li {margin-top:7px;}
+	.main_trend .list2 li:first-child {margin-top:0;}
+	.main_trend .list2 li a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.main_trend .list2 li a strong {padding-right:5px;}
+	.main_trend .list2.type2 a {width:297px; margin-right:10px; float:left;}
+	.main_trend .list2.type2 .date {display:block; overflow:hidden;}
+	.main_trend .list3 {position:relative;}
+	.main_trend .list3 .t1 {font-weight:bold; line-height:18px; margin-bottom:6px;}
+	.main_trend .list3 .t2 {line-height:18px;}
+	.main_trend .list3 .t2 .bar {padding:0 2px;}
+	.main_trend .list3 .logo {position:absolute; right:0; bottom:24px;}
+	.main_trend .list3 .logo img {width:46px;}
+	.main_trend .list3 .btn {text-align:right; margin-top:8px;}
+	.main_trend .list4 {float:left; width:84px; margin-right:8px;}
+	.main_trend .list4 .logo img {width:84px;}
+	.main_trend .main_theme {float:left; width:165px; padding-top:15px; margin-right:5px;}
+	.main_trend .main_theme .t1 {font-size:13px;}
+	.main_trend .main_theme .btn {margin-top:8px;}
+	.main_trend .main_theme .btn a {display:block; width:133px; height:22px; line-height:22px; text-align:center; font-size:11px; color:#6b489d; font-weight:bold; border:solid 1px #6b489d; text-decoration:none;}
+	.main_trend .section1 {overflow:hidden; padding:12px 0 0 19px; height:121px;}
+	.main_trend .section1:after {content:""; clear:both; display:block;}
+	.main_trend .section1 .list1 {float:left; margin-right:20px;}
+	.main_trend .section1 .list2 {float:left; width:300px;}
+	.main_trend .section1 .list3 {float:left; width:315px;}
+	.main_trend .section2 {overflow:hidden; padding:12px 0 0 19px; height:112px;}
+	.main_trend .section2:after {content:""; clear:both; display:block;}
+	.main_trend .section2 .list1 {float:left; margin-right:40px;}
+	.main_trend .section3 {overflow:hidden; padding:12px 0 0 19px; height:121px;}
+	.main_trend .section3 .list_CI {float:left;}
+	.main_trend .section3 .list1 {float:left; width:82px; padding:0 5px;}
+	.main_trend .section3 .list1 .pic {border-width:0;}
+	.main_trend .section3 .list1 .pic img {width:82px; height:82px;}
+	.main_trend .section3 .list1 .t01 {margin-top:-3px;}
+.main_notice {position:relative; overflow:hidden; border:solid 1px #e4e4e4; border-top-width:0; height:48px;}
+	.main_notice:after {content:""; clear:both; display:block;}
+	.main_notice h2 {float:left; width:95px;}
+	.main_notice h2 img {margin:16px 0 0 18px;}
+	.main_notice .more {position:absolute; top:16px; right:12px;}
+	.main_notice ul {float:left; width:830px; margin-top:15px;}
+	.main_notice li {float:left; width:48.3%;}
+	.main_notice li a {display:block; float:left; max-width:70%; margin-right:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.main_notice li .date {display:block; overflow:hidden; padding-left:12px; background:url(http://image.jinhak.com/job/site/bl_bar13.gif) no-repeat left center;}
+.main_talk {position:relative; overflow:hidden; height:140px; padding:0 60px 0 70px; margin-bottom:25px;}
+	.main_talk:after {content:""; clear:both; display:block;}
+	.main_talk a {color:inherit;}
+	.main_talk .bx-controls-direction a {position:absolute; top:35px; width:29px; height:45px; text-indent:-9999px;}
+	.main_talk .bx-controls-direction a.bx-prev {left:10px; background:url(http://image.jinhak.com/job/site/arr24_prev.gif) no-repeat left top;}
+	.main_talk .bx-controls-direction a.bx-next {right:10px; background:url(http://image.jinhak.com/job/site/arr24_next.gif) no-repeat left top;}
+	.main_talk .left {float:left; width:410px;}
+	.main_talk .pic {float:right;}
+	.main_talk .pic img {width:377px;}
+	.main_talk h3 {font-size:18px; color:#6b489d; font-weight:bold; margin-bottom:5px;}
+	.main_talk .t01 {line-height:18px; /*height:70px;*/ overflow:hidden;}
+	.main_talk .btn {margin-top:10px;}
+.main_job {border:solid 4px #ebe7f1; text-align:center; padding:20px 20px 18px 20px; margin-top:20px;}
+	.main_job h2 {font-size:18px; font-weight:bold; color:#6b489d; text-align:center; height:32px; margin-bottom:10px; background:url(http://image.jinhak.com/job/site/main_h2_bg.gif) no-repeat center bottom;}
+	.main_job .t01 {line-height:19px;}
+	.main_job .t02 {line-height:23px; margin-top:7px;}
+	.main_job .t02 strong {display:inline-block; background:url(http://image.jinhak.com/job/site/bl_bar13.gif) no-repeat right 7px; padding-right:10px; margin-right:3px;}
+	.main_job .t02 .logo {font-size:0; line-height:0;}
+	.main_job .t02 .logo img {width:65px; height:65px; margin:0 15px;}
+	.main_job .t02 .btn {margin-left:20px;}
+dl.main_right_bn {position:absolute; top:334px; left:50%; margin-left:500px; background-color:#f8f8f8; border:solid 1px #e4e4e4; width:104px; padding:16px 0;}
+	dl.main_right_bn dt {margin-bottom:15px;}
+	dl.main_right_bn dd {margin-top:8px;}
+div.main_right_bn {position:absolute; top:334px; left:50%; margin-left:500px;}
+	div.main_right_bn p {margin-bottom:10px;}
+.main_bn {position:relative; margin-bottom:10px; margin-top:20px;}
+	.main_bn .bx-has-pager {position:absolute; bottom:9px; right:9px; font-size:0; line-height:0;}
+	.main_bn .bx-pager-item {display:inline-block;}
+	.main_bn .bx-pager-link {display:block; width:9px; height:9px; background:url(http://image.jinhak.com//job/site/pager04.png) no-repeat center top; margin-left:5px;}
+	.main_bn .bx-pager-link.active {background-image:url(http://image.jinhak.com//job/site/pager04_on.png);}
+
+/* 2016-05-26 삭제할 내용 */
+h2.h2_main {font-size:13px; font-weight:bold; color:#777; text-align:center; padding-top:20px; height:25px; margin-bottom:14px; background:url(http://image.jinhak.com/job/site/main_h2_bg.gif) no-repeat center bottom;}
+.rolling_event {position:relative; margin-bottom:15px; overflow:hidden;}
+.slider_evt {height:150px;}
+	.slider_evt li {font-size:0; line-height:0;}
+	.slider_evt li a {display:block; width:710px;}
+	.slider_evt li a img {width:710px; height:150px;}
+.pager_evt {position:absolute; right:0; top:0; bottom:0; width:245px; background:#e5e9e9; padding-top:10px;}
+	.pager_evt a {display:block; height:35px; line-height:35px; font-size:15px; color:#777; letter-spacing:-2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:0 10px 0 20px; margin-bottom:7px; text-decoration:none;}
+	.pager_evt a.active {background:#6b489d; color:#FFF;}
+.main_edu {background:#8464b0; position:relative; overflow:hidden; height:254px; padding:10px 55px;}
+	.main_edu:after {content:""; clear:both; display:block;}
+	.main_edu .bx-controls-direction a {position:absolute; top:101px; width:24px; height:74px; text-indent:-9999px;}
+	.main_edu .bx-controls-direction a.bx-prev {left:10px; background:url(http://image.jinhak.com/job/site/arr18_prev.gif) no-repeat left top;}
+	.main_edu .bx-controls-direction a.bx-next {right:10px; background:url(http://image.jinhak.com/job/site/arr18_next.gif) no-repeat left top;}
+	.main_edu li {height:254px; background:#f8f9f9;}
+	.main_edu li .pic {text-align:center; background:#FFF; border:solid 3px #f8f9f9; border-bottom-width:0;}
+	.main_edu li a {color:inherit;}
+	.main_edu li a:hover {color:#8d72e4;}
+	.main_edu li dl {padding:10px;}
+	.main_edu li dt {font-size:13px; color:#000; line-height:20px;}
+	.main_edu li dd {font-size:13px; line-height:20px;}
+	.main_edu li .cate {position:absolute; left:10px; bottom:10px; font-size:11px; padding-left:8px; background:url(http://image.jinhak.com/job/site/bl_bar12.gif) no-repeat left 3px;}
+	
+/* Sub */
+/* 뉴스 */
+.news_wrap {overflow:hidden; /*border-top:solid 1px #a4b8be;*/ margin-top:-20px;}
+	.news_wrap:after {content:""; clear:both; display:block;}
+	.news_wrap .left {float:left; width:700px; padding:25px 19px 20px 0; border-right:solid 1px #dbdbdb; position:relative;}
+	.news_wrap .right {float:left; width:239px; padding:29px 0 15px 0; border-left:solid 1px #dbdbdb; margin-left:-1px;}
+	.news_wrap .right h3 {margin:0 0 7px 20px;}
+	.news_wrap .right .list_dot {margin:0 10px 30px 20px;}
+	.news_wrap .right .list_dot li {margin-bottom:4px;}
+	.news_wrap .right .list_dot a:hover {color:#555;}
+	.news_wrap .right .list_dotline {padding:0 10px 10px 20px; border-bottom:solid 1px #dbdbdb;}
+	.news_wrap .right .list_dotline img {display:none;}
+	.news_wrap .right .list_dotline li.selected img {display:block; width:200px; height:89px; margin:13px 0 7px 0;}
+	.news_wrap .right .list_dotline li.selected a {font-weight:bold; color:#438ee9;}
+.search_news {background:#e0e0e0; padding:12px 0; margin-bottom:20px;}
+	.search_news * {vertical-align:top;}
+	.search_news label {display:inline-block; width:70px; padding-left:30px; line-height:27px;}
+	.search_news input[type="text"] {border:0; background:#FFF; padding:0 10px; height:27px; line-height:27px; font-size:16px; font-weight:bold; margin-right:6px;}
+.list_newsbox {padding:0 10px; overflow:hidden;}
+	.list_newsbox li {margin-bottom:5px; #margin-bottom:0;}
+	.list_newsbox li:after {content:""; clear:both; display:block;}
+	.list_newsbox li:hover dl {background:#f7f7f7;}
+	.list_newsbox li dl {border:solid 1px #e0e0e0; padding:7px 11px; overflow:hidden;}
+	.list_newsbox li dt {font-size:11px; color:#4f8c9f; font-weight:bold;}
+	.list_newsbox li dd {color:#333; line-height:18px; margin-top:3px;}
+	.list_newsbox.type2 {padding:0; border-top:solid 1px #DDD;}
+	.list_newsbox.type2 li {float:left; width:345px; margin-top:10px; #margin-top:5px; margin-bottom:0;}
+	.list_newsbox.type2 li.odd {margin-right:10px;}
+	.list_newsbox.type2 li dl {padding:10px; height:76px;}
+	.list_newsbox.type2 li dt.pic {float:left; width:148px; font-size:0; line-height:0;}
+	.list_newsbox.type2 li dt.pic img {width:130px; height:74px;}
+	.list_newsbox.type2 li dd {font-size:14px; font-weight:bold; line-height:18px; margin-top:-2px;}
+	.list_newsbox.type2 li dd a {color:#333;}
+	.list_newsbox.type2 li dd .date {display:block; font-size:11px; color:#777; margin-top:10px; line-height:1.2em;}
+.news_now {position:relative; background:#eff1f3; padding:14px 20px; margin-bottom:10px;}
+	.news_now .tit {margin-bottom:6px;}
+	.news_now .update {position:absolute; right:20px; top:15px;}
+	.news_now .update span {font-size:11px; color:#333;}
+	.news_now .core {overflow:hidden;}
+	.news_now .core:after {content:""; clear:both; display:block;}
+	.news_now .pic {float:left; width:240px; margin-right:20px; border:solid 1px #d5d5d5; background:#FFF; text-align:center;}
+	.news_now .pic img {max-width:240px; max-height:151px;}
+	.news_now dl dt {font-size:24px; color:#438ee9; letter-spacing:-2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.news_now dl dt a {color:inherit;}
+	.news_now dl dd {margin-top:7px; line-height:18px; color:#333;}
+	.news_now ul {margin-top:8px;}
+	.news_now ul li {font-size:14px; color:#4f6b9f; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-bottom:1px;}
+	.news_now ul li a {color:inherit;}
+.list_date {position:absolute; right:30px; margin-top:-21px;}
+	.list_date a {font-size:11px; color:#333; background:url(http://image.jinhak.com/job/site/bl_bar10.gif) no-repeat left 4px; padding-left:7px; padding-right:1px;}
+	.list_date a:first-child {background:none;}
+	.list_date a.selected {font-weight:bold; color:#438ee9;}
+
+/* 직무/진단 */
+#jobTop {position:relative; width:960px; height:150px; margin:-6px auto 20px auto; background:url(http://image.jinhak.com/job/site/job_bg.gif); text-align:center;}
+	#jobTop .txt1 {color:#000; margin-top:1px;}
+	#jobTop .txt2 {font-size:45px;  color:#000; font-weight:bold; letter-spacing:-2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-top:9px;}
+	#jobTop .btn_area {margin-top:12px;}
+	#jobTop .btn_area .ico {cursor:pointer; padding:0 2px;}
+	#jobTop .btn_area a {display:inline-block; border:solid 1px #bababa; border-radius:25px; background-color:#FFF; height:34px; line-height:33px; padding:0 25px; font-size:13px; color:#272727; text-decoration:none; margin:0 2px;}
+	#jobTop .btn_area a:hover {border-color:#7044ae; background-color:#7044ae; color:#FFF;}
+	/* #jobTop .logo {position:absolute; width:160px; height:90px; background:#FFF; left:20px; top:10px; text-align:center; overflow:hidden;}
+	#jobTop .logo img {height:90px; width:90px;}
+	#jobTop .box {position:absolute; right:15px; top:17px; overflow:hidden; width:318px;}
+	#jobTop .box:after {content:""; clear:both; display:block;}
+	#jobTop .box li {float:left; width:154px; height:34px; line-height:34px; text-align:center; background:url(http://image.jinhak.com/job/site/corp_top_box.gif) no-repeat left top; margin:0 5px 7px 0;}
+	#jobTop .box li span {color:#438ee9; font-weight:bold;}
+	#jobTop .box li img {vertical-align:top; margin-top:5px;}*/
+.jindan_subj {overflow:hidden; margin-bottom:47px;}
+	.jindan_subj:after {content:""; clear:both; display:block;}
+	.jindan_subj dt {padding-top:6px;}
+	.jindan_subj dt.pic {float:left; width:340px; /*min-height:175px;*/ padding-top:0;}
+	.jindan_subj dd {line-height:20px; padding-top:13px;}
+.jindan_cont {padding:0 20px;}
+	#contents .jindan_cont h3.type4 {font-weight:normal;}
+.jindan_result {padding:0 42px; text-align:center;}
+	.jindan_result .box {border:solid 1px #000; padding:30px 120px 20px 120px;}
+	.jindan_result .txt1 {font-size:24px; color:#222; margin-bottom:20px;}
+	.jindan_result .txt2 {font-weight:bold; text-align:left; margin-bottom:28px;}
+	.jindan_result .txt3 {margin-top:30px;}
+	.jindan_result .result {width:380px; margin:0 auto; padding:11px 0 13px 0; background:#f7f7f7; color:#438ee9; font-size:30px; font-weight:bold;}
+	.jindan_result .result .sm {font-size:16px; line-height:18px; font-weight:normal; color:#555;}
+	.jindan_result .result.wd100 {width:100%;}
+	.jindan_result .result2 {height:88px; line-height:83px; color:#438ee9; font-size:14px; font-weight:bold; margin-left:86px;}
+	.jindan_result .result2 .num {font-size:40px; display:inline-block; vertical-align:top; color:#FFF; background:url(http://image.jinhak.com/job/site/jindan_img05.gif) no-repeat left top; width:88px; height:88px; text-align:center;}
+	.jindan_result .result2 .percent {font-size:16px;}
+	.jindan_result .result2 .txt {display:inline-block; vertical-align:top; margin-top:6px; margin-left:2px;}
+	.jindan_result .result2 .txt.type2 {font-size:40px; margin-top:0; margin-left:8px;}
+.jindan_select {overflow:hidden; border:solid 2px #f45757;}
+	.jindan_select:after {content:""; clear:both; display:block;}
+	.jindan_select .core {float:left; width:50%; height:226px; box-sizing:border-box; padding:0 32px; text-align:center;}
+	.jindan_select .core.bg {background-color:#f45757;}
+	.jindan_select .t1 {padding-top:27px; margin-bottom:20px;}
+	.jindan_select .t2 {font-size:13px; color:#272727; text-align:left; margin-top:7px;}
+	.jindan_select .t3 {font-size:18px; color:#272727; margin-top:40px;}
+	.jindan_select .core.bg .t2,
+	.jindan_select .core.bg .t3 {color:#FFF;}
+.box_agree {border:solid 1px #ececec; padding:20px 30px;}
+	.box_agree .list_dot li {float:left; width:45%;}
+	.box_agree.bg {background:#f5f5f5; border-color:#dfdfdf;}
+.list_univ {overflow:hidden;}
+	.list_univ:after {content:""; clear:both; display:block;}
+	.list_univ li {position:relative; float:left; width:112px; height:150px; border:solid 1px #e8e8e8; margin-right:17px; margin-bottom:20px;}
+	.list_univ li a {display:block; margin:10px; color:#000; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_univ li img {display:block; border:solid 1px #e8e8e8; width:85px; margin-bottom:10px;}
+	.list_univ li .ing {position:absolute; top:0; left:0;}
+	.list_univ li .ing img {display:inline; border:0; width:auto; margin:0;}
+	.list_univ li .bd {display:none; position:absolute; top:0; right:0; bottom:0; left:0; border:solid 2px #8d72e4; z-index:-1;}
+	.list_univ li:hover a,
+	.list_univ li.selected a {font-weight:bold;}
+	.list_univ li:hover .bd,
+	.list_univ li.selected .bd {display:block;}
+.jindan_acc {border:solid 1px #e8e8e8; padding:15px;}
+	.jindan_acc dt {display:none;}
+	.jindan_acc dd {padding:5px 0;}
+.jindan_set_top {margin-top:30px; text-align:center; font-size:24px; font-weight:bold; color:#000;}
+	.jindan_set_top img {border:solid 1px #e8e8e8; width:85px; margin-right:3px;}
+.ncs_top {height:191px; background:url(http://image.jinhak.com/job/site/jindan_ncs_bg.gif) no-repeat left top; overflow:hidden; margin-bottom:20px;}
+	.ncs_top ul {overflow:hidden; padding-top:114px;}
+	.ncs_top ul:after {content:""; clear:both; display:block;}
+	.ncs_top li {float:left; font-size:0; line-height:0;}
+.ncs_cont h3 {border:solid 3px #eeecf4; padding:11px 18px; position:relative; font-size:0; line-height:0; margin-bottom:20px;}
+	.ncs_cont h3 .btn {position:absolute; right:18px; top:9px;}
+	.ncs_cont .cont {padding:0 20px;}
+.jindan_input {width:600px; margin:0 auto; text-align:left;}
+	.jindan_input dl {width:421px;}	
+	.jindan_input dt {display:none;}
+	.jindan_input dd {border:solid 1px #666; height:46px;}
+	.jindan_input dd input {border:0; height:90%; padding-left:10px; font-size:14px; color:#333; font-weight:bold;}
+	.jindan_input .btn {position:absolute; top:0; right:0;}
+
+/* 교육 */
+.edu_tit {padding-top:1px;}
+.edu_tit2 {font-size:28px; font-weight:bold; color:#333; margin-bottom:19px;}
+.edu_detail_top {overflow:hidden; margin-bottom:30px;}
+	.edu_detail_top:after {content:""; clear:both; display:block;}
+	.edu_detail_top dt {font-size:16px; font-weight:bold; color:#333; line-height:24px; padding-top:6px;}
+	.edu_detail_top dt.pic {float:left; width:250px; position:relative; margin-right:20px; font-size:0; line-height:0; padding-top:0;}
+	.edu_detail_top dt.pic .photo {width:250px; height:150px;}
+	.edu_detail_top dt.pic .play {position:absolute; left:50%; top:50%; margin:-33px 0 0 -33px;}
+	.edu_detail_top dd {font-size:14px; font-weight:bold; line-height:24px; padding-top:9px; padding-left:270px;}
+	.edu_detail_top dd span {padding-left:5px; color:#333;}
+	.edu_detail_top.type2 dt {font-size:12px; font-weight:normal;}
+	.edu_detail_top.type2 dt strong {display:block; font-size:16px;}
+	.edu_detail_top.type2 dd {font-weight:normal; font-size:11px; line-height:18px; color:#777;}
+.edu_detail {border-top:solid 1px #dbdbdb; border-bottom:solid 1px #dbdbdb; padding-bottom:30px;}
+	.edu_detail h3 {font-size:16px; font-weight:bold; margin-top:26px; margin-bottom:13px;}
+	.edu_detail h4 {font-weight:bold; background:url(http://image.jinhak.com/job/site/bl_dot05.gif) no-repeat 1px 5px; padding-left:10px; margin-bottom:6px;}
+	.edu_detail h4 span {font-weight:normal; padding-left:5px;}
+	.iframe .edu_detail {border-color:#FFF; padding-bottom:0;}
+.list_book {overflow:hidden; margin-bottom:-15px; #margin-bottom:0;}
+	.list_book:after {content:""; clear:both; display:block;}
+	.list_book li {float:left; width:50%; margin-bottom:15px;}
+	.list_book li dl {overflow:hidden; padding-right:10px;}
+	.list_book li dl:after {content:""; clear:both; display:block;}
+	.list_book li dt {color:#438ee9; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-top:3px;}
+	.list_book li dt a {color:#438ee9;}
+	.list_book li dt.pic {float:left; width:55px; margin-right:15px; font-size:0; line-height:0; padding-top:0;}
+	.list_book li dt.pic img {width:55px; height:80px;}
+	.list_book li dd {line-height:18px; padding-top:1px;}
+.teacher_info {overflow:hidden;}
+	.teacher_info:after {content:""; clear:both; display:block;}
+	.teacher_info dt {padding-top:2px;}
+	.teacher_info dt strong {font-size:14px; display:block; line-height:1.4em; margin-bottom:5px;}
+	.teacher_info dt.pic {float:left; width:150px; margin-right:15px; font-size:0; line-height:0; padding-top:0;}
+	.teacher_info dt.pic img {width:150px; height:170px;}
+	.teacher_info dd {font-size:11px; color:#777; line-height:18px; padding-top:9px;}
+.layer_vod {display:none; position:absolute; left:0; top:78px;}
+	.layer_vod .close {text-align:right; font-size:0; line-height:0; margin-bottom:1px;}
+	.layer_vod .close img {cursor:pointer;}
+.layer_vod2 {display:none; position:absolute;}
+	.layer_vod2 .close {text-align:right; font-size:0; line-height:0;}
+	.layer_vod2 .close img {cursor:pointer;}
+	.layer_vod2 .vod_area {border:solid 1px #cdcdcd; background:#FFF;}
+.list_mento {overflow:hidden; border:solid 1px #c8c8c8; padding:14px 16px 0 16px; margin-bottom:10px;}
+	.list_mento:after {content:""; clear:both; display:block;}
+	.list_mento li {float:left; width:290px; margin-right:10px; margin-bottom:20px; position:relative;}
+	.list_mento li input[type="checkbox"] {position:absolute; left:0; top:3px;}
+	.list_mento li dl {padding-left:26px; height:80px; overflow:hidden;}
+	.list_mento li dt {padding-top:0;}
+	.list_mento li dt strong {font-size:12px; line-height:20px; margin-bottom:0;}
+	.list_mento li dt.pic {width:70px; margin-right:10px;}
+	.list_mento li dt.pic img {width:70px; height:80px;}
+	.list_mento li dd {line-height:12px; padding-top:7px;}
+	.list_mento li.selected *,
+	.list_mento li:hover * {color:#438ee9;}
+.major_cal {border-bottom:solid 1px #cebce2; background:url(http://image.jinhak.com/job/site/cal_bg0.gif) repeat-y left top; margin-bottom:10px;}
+	.major_cal .year {position:relative; text-align:center; height:37px; line-height:36px; font-size:18px; font-weight:bold; color:#7963c1; background:#e5e5e5; border:solid 1px #cebce2; border-bottom:0; margin-bottom:1px;}
+	.major_cal .year .prev,
+	.major_cal .year .next {width:12px; height:20px; text-indent:-9999%; display:inline-block; vertical-align:middle; margin:-2px 5px 0 5px;}
+	.major_cal .year .prev {background:url(http://image.jinhak.com/job/site/arr17_prev.gif) no-repeat left top;}
+	.major_cal .year .next {background:url(http://image.jinhak.com/job/site/arr17_next.gif) no-repeat left top;}
+	.major_cal .cal {overflow:hidden; padding-bottom:25px;}
+	.major_cal .cal:after {content:""; clear:both; display:block;}
+	.major_cal .cal li {position:relative; float:left; width:152px; padding:4px;}
+	.major_cal .cal li table {width:100%; border:0; border-collapse:collapse;}
+	.major_cal .cal li caption {visibility:visible; width:auto; height:20px; line-height:19px; text-align:center; font-size:14px; font-weight:bold; color:#000; background:#cdcdcd;}
+	.major_cal .cal li th {padding:0; border:0; font-weight:normal; text-align:center; font-size:11px; color:#333; height:21px;}
+	.major_cal .cal li th:first-child {color:#e96060;}
+	.major_cal .cal li th:nth-child(7) {color:#1543bc;}
+	.major_cal .cal li td {position:relative; padding:0; border:0; text-align:center; color:#000; height:22px;}
+	.major_cal .cal li td.start,
+	.major_cal .cal li td.end {background-position:center bottom; background-repeat:no-repeat; cursor:pointer;}
+	.major_cal .cal li td.start {background-image:url(http://image.jinhak.com/job/site/cal_bg1.gif);}
+	.major_cal .cal li td.end {background-image:url(http://image.jinhak.com/job/site/cal_bg2.gif);}
+	.major_cal .cal li td.start.end {background-image:url(http://image.jinhak.com/job/site/cal_bg3.gif);}
+	.major_cal .cal li .arr {display:none; position:absolute; width:100%; height:8px; background:url(http://image.jinhak.com/job/site/arr15_down.gif) no-repeat center bottom; margin-top:5px;}
+	.major_cal .cal li:hover,
+	.major_cal .cal li.selected {border:solid 4px #aa89da; padding:0;}
+	.major_cal .cal li:hover .arr,
+	.major_cal .cal li.selected .arr {display:block;}
+	.major_cal .cal li table tbody tr:first-child {display:none;}
+	.major_cal .detail {overflow:hidden; background:url(http://image.jinhak.com/job/site/cal_bg4.gif) repeat-y center top; height:75px;}
+	.major_cal .detail:after {content:""; clear:both; display:block;}
+	.major_cal .detail.htAuto {height:auto;}
+	.major_cal .detail ul {float:left; width:460px; padding-left:15px;}
+	.major_cal .detail li {float:left; width:182px; padding:0 10px 5px 38px;}
+	.major_cal .detail li * {color:#333;}
+	.major_cal .detail li .tit {font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.major_cal .detail li .date {margin-top:2px; word-spacing:-3px;}
+	.major_cal .detail ul.start li:first-child,
+	.major_cal .detail ul.start li:nth-child(2) {background:url(http://image.jinhak.com/job/site/ico_start.gif) no-repeat left 1px;}
+	.major_cal .detail ul.end li:first-child,
+	.major_cal .detail ul.end li:nth-child(2) {background:url(http://image.jinhak.com/job/site/ico_end.gif) no-repeat left 1px;}
+	.major_cal .more {text-align:center; font-size:0; line-height:0; margin-top:10px; overflow:hidden;}
+	.major_cal .more span {display:inline-block; width:86px; height:22px; background:url(http://image.jinhak.com/job/site/arr16_down.gif) no-repeat center top; cursor:pointer;}
+	.major_cal .more span.close {background-image:url(http://image.jinhak.com/job/site/arr16_up.gif);}
+	.ncs .major_cal {border-width:0; background:none;}
+	.ncs .major_cal .year {height:45px; line-height:44px; font-size:19px; color:#364f90; background:#f4f4f8; border:solid 1px #e5e5e5;}
+	.ncs .major_cal .year .prev,
+	.ncs .major_cal .year .next {position:absolute; top:14px; width:13px; height:16px; margin:0;}
+	.ncs .major_cal .year .prev {background-image:url(http://image.jinhak.com/job/site/arr19_prev.png); left:18px;}
+	.ncs .major_cal .year .next {background-image:url(http://image.jinhak.com/job/site/arr19_next.png); right:18px;}
+	.ncs .major_cal .cal {padding-top:3px;}
+	.ncs .major_cal .cal li caption {height:26px; line-height:25px; color:#FFF; background:#1543bc; border-bottom:solid 2px #cdcdcd;}
+	.ncs .major_cal .cal li td {color:#666;}
+	.ncs .major_cal .cal li:hover,
+	.ncs .major_cal .cal li.selected {border:0; background-color:#e8eaf1; padding:4px;}
+	.ncs .major_cal .cal li.selected td {color:#000;}
+	.ncs .major_cal .cal li:hover .arr,
+	.ncs .major_cal .cal li.selected .arr {display:none;}
+	.ncs .major_cal .more {margin-top:30px; border-top:solid 2px #05153e; background:#1543bc;}
+	.ncs .major_cal .more span {height:33px; background:url(http://image.jinhak.com/job/site/arr25_down.png) no-repeat center 7px;}
+	.ncs .major_cal .more span.close {background-image:url(http://image.jinhak.com/job/site/arr25_up.png);}
+.major_str {margin-top:30px; background:#f9f9f9; padding:18px 20px;}
+	.major_str .tit {text-align:center; font-size:20px; color:#797979;}
+	.major_str .core {overflow:hidden;}
+	.major_str .core:after {content:""; clear:both; display:block;}
+	.major_str .core dl {float:left; width:430px; margin-left:60px;}
+	.major_str .core dl:first-child {margin-left:0;}
+.major_list {overflow:hidden;}
+	.major_list:after {content:""; clear:both; display:block;}
+	.major_list li {float:left; width:164px; margin:0 0 20px 35px;}
+	.major_list li a {display:block; text-decoration:none;}
+	.major_list li .logo {display:block; text-align:center; border:solid 1px #e8e8e8; height:95px; background:#FFF; padding:2px;}
+	.major_list li .logo img {max-height:95px;}
+	.major_list li .txt {display:block; text-align:center; font-size:15px; line-height:20px; padding:5px 7px 0 7px; height:50px; overflow:hidden;}
+	.major_list li a:hover {background:#aa89da;}
+	.major_list li a:hover .logo {padding:0; border:solid 3px #aa89da;}
+	.major_list li a:hover .txt {color:#FFF;}
+.major_company {position:relative; height:129px;}
+	.major_company .bg {position:absolute; left:0; top:0; z-index:-1;}
+	.major_company .t01 {text-align:center; font-weight:bold; color:#FFF; font-size:36px; letter-spacing:-3px; padding-top:30px;}
+	.major_company .t02 {text-align:center; color:#FFF; font-size:15px; padding-top:18px;}
+	.major_company .t02 a {color:inherit;}
+	.major_company .select {position:absolute; left:20px; bottom:9px;}
+.majob_summary {border:solid 4px #dbd6e2; overflow:hidden; padding:20px 0;}
+	.majob_summary:after {content:""; clear:both; display:block;}
+	.majob_summary dl {float:left; width:220px;}
+	.majob_summary dt {padding-left:25px; color:#777;}
+	.majob_summary dd {height:106px;}
+	.majob_summary dd .t01 {text-align:center; font-size:45px; color:#333; line-height:125px;}
+	.majob_summary dd .t02 {text-align:center; padding-top:23px;}
+	.majob_summary dd .t02 span {background:#ededed; font-size:20px; font-weight:bold; color:#6b489d; line-height:29px; padding:0 13px;}
+	.majob_summary dd .t03 {text-align:center; font-size:24px; font-weight:bold; color:#81c624; margin-top:5px;}
+	.majob_summary dl:first-child dd {border-right:solid 2px #dbd6e2;}
+	.majob_summary .date {float:left; width:486px; height:74px; margin-top:30px; background:url(http://image.jinhak.com/job/site/major_img01.gif) no-repeat left top; text-align:center; font-size:22px; line-height:72px; color:#333;}
+	.majob_summary .bot {clear:both; position:relative; padding:25px 27px 0 27px; color:#333; font-size:16px; padding-left:100px;}
+	.majob_summary .bot span {position:absolute; left:27px; color:#777; font-size:12px; letter-spacing:0;}
+.major_detail {overflow:hidden;}
+	.major_detail:after {content:""; clear:both; display:block;}
+	.major_detail h4 {height:43px; line-height:43px; background:#ededed; font-weight:bold; color:#6b489d; font-size:18px; margin-top:20px;}
+	.major_detail h4 span {display:inline-block; width:68px; height:100%; line-height:40px; text-align:center; color:#FFF; background:#dbd6e2; font-size:24px; margin-right:15px; vertical-align:top;}
+	.major_detail h5.type1 {color:#333; border-bottom:solid 1px #e5e5e5; padding-bottom:5px; margin-top:20px; font-weight:normal; font-size:12px;}
+	.major_detail h5.type1 .subj {font-size:18px; padding-right:10px;}
+	.major_detail h5.type1 .bar {padding:0 8px 0 5px; background:url(http://image.jinhak.com/job/site/bl_bar09.gif) no-repeat center center;}
+	.major_detail h5.type2 {color:#7963c1; margin-top:30px; font-weight:bold; font-size:15px;}
+	.major_detail h6.type1 {background:#8d62c8; height:40px; line-height:40px; color:#FFF; font-size:15px; padding-left:20px; margin-top:20px; font-weight:normal;}
+	.major_detail .core {position:relative; border:solid 1px #ededed; border-top:0; padding:10px 20px;}
+	.major_detail .core2 {padding:0 20px;}
+	.major_detail .core2 .t01 {color:#8d72e4; line-height:20px; font-weight:bold; margin:20px 0 15px 0;}
+	.major_detail .core2 .t02 {color:#555; line-height:18px; margin:15px 0;}
+	.major_detail .core2 .t03 {color:#8d72e4; line-height:20px; font-weight:bold; margin:20px 0 12px 0; font-size:14px;}
+	.major_detail .core2 .dl01 {position:relative;}
+	.major_detail .core2 .dl01 dt {position:absolute; left:0;}
+	.major_detail .core2 .dl01 dd {padding:13px 0 0 88px; line-height:18px; margin-bottom:20px; min-height:57px;}
+	.major_detail .core2 .dl02 {margin-bottom:20px;}
+	.major_detail .core2 .dl02 dt {line-height:18px; position:relative; padding:0 0 11px 15px; font-weight:bold;}
+	.major_detail .core2 .dl02 dt span {position:absolute; left:0; color:#8d72e4;}
+	.major_detail .core2 .dl02 dd {line-height:18px; position:relative; padding-left:15px; margin-bottom:23px;}
+	.major_detail .core2 .dl02 dd span {position:absolute; left:0; color:#81c624; font-weight:bold;}
+	.major_detail .core2 .pic {margin:20px 0 15px 0; text-align:center;}
+	.major_detail .menu {overflow:hidden; margin-bottom:10px;}
+	.major_detail .menu li {float:left; margin:0 3px 3px 0;}
+	.major_detail .menu li a {display:block; padding:0 14px; height:31px; line-height:31px; border:solid 1px #DDD; text-decoration:none; background:#FFF;}
+	.major_detail .menu li a:hover,
+	.major_detail .menu li.selected a {border:solid 1px #81c624; background:#81c624; font-weight:bold; color:#FFF;}
+	.major_detail .box {border:solid 1px #ededed; padding:20px 10px;}
+	.major_detail .box .t01 {text-align:center; font-size:18px; font-weight:bold; color:#7963c1; word-spacing:15px;}
+	.major_detail .box .t02 {margin-top:15px; font-size:14px; color:#777; line-height:20px;}
+	.major_detail .step {overflow:hidden; margin:20px 0 20px 25px;}
+	.major_detail .step:after {content:""; clear:both; display:block;}
+	.major_detail .step li {float:left; width:97px; min-height:100px; padding-left:54px; text-align:center; background-repeat:no-repeat; background-position:right top;}
+	.major_detail .step li span {display:block; padding-top:31px; font-size:13px; line-height:18px; color:#FFF;}
+	.major_detail .step li em {display:block; padding-top:37px; line-height:16px;}
+	.major_detail .step li.bg1 {background-image:url(http://image.jinhak.com/job/site/step_bg01.gif); padding-left:0;}
+	.major_detail .step li.bg2 {background-image:url(http://image.jinhak.com/job/site/step_bg02.gif);}
+	.major_detail .step li.bg3 {background-image:url(http://image.jinhak.com/job/site/step_bg03.gif);}
+	.major_detail .step li.bg4 {background-image:url(http://image.jinhak.com/job/site/step_bg04.gif);}
+	.major_detail .step li.bg5 {background-image:url(http://image.jinhak.com/job/site/step_bg05.gif);}
+	.major_detail .step li.bg6 {background-image:url(http://image.jinhak.com/job/site/step_bg06.gif);}
+    .major_detail .step li.bg7 {background-image:url(http://image.jinhak.com/job/site/step_bg07.gif);}
+	.major_detail .slogan {text-align:center; margin:30px 0;}
+	.major_detail .sample {overflow:hidden; margin-top:1px;}
+	.major_detail .sample:after {content:""; clear:both; display:block;}
+	.major_detail .sample dt {font-weight:bold; font-size:18px; padding-top:10px;}
+	.major_detail .sample dt a:hover {text-decoration:none; color:#7963c1;}
+	.major_detail .sample dt.pic {float:left; width:164px; height:160px; margin-right:20px; background:#ededed; text-align:center; padding-top:0;}
+	.major_detail .sample dt.pic img {width:101px; height:124px; margin-top:18px;}
+	.major_detail .sample dd {font-size:15px; line-height:22px; padding-top:15px;}
+	.major_detail .t_total {position:absolute; right:20px; font-size:15px; color:#7963c1; margin-top:-16px;}
+	.major_detail .t_total2 {text-align:right; font-size:15px; color:#7963c1; margin-bottom:7px;}
+	.major_detail .t_down {position:absolute; right:20px; margin-top:-30px;}
+	.major_detail .t_down a {text-decoration:underline;}
+	.major_detail .faq dt {margin-top:10px; font-size:15px; line-height:20px; border:solid 1px #e5e5e5; padding:5px 13px 6px 13px; cursor:pointer;}
+	.major_detail .faq dt.more2 {color:#000;}
+	.major_detail .faq dd {font-size:13px; line-height:20px; border:solid 1px #e5e5e5; border-top-width:0; padding:7px 25px; background:#ededed; margin-top:-1px;}
+	.ncs .major_detail h4 {background-color:#1543bc; color:#FFF;}
+	.ncs .major_detail h4 span {background-color:#5c7cd0;}
+	.ncs .major_detail .step li.bg1 {background-image:url(http://image.jinhak.com/job/site/step2_bg01.gif);}
+	.ncs .major_detail .step li.bg2 {background-image:url(http://image.jinhak.com/job/site/step2_bg02.gif);}
+	.ncs .major_detail .step li.bg3 {background-image:url(http://image.jinhak.com/job/site/step2_bg03.gif);}
+	.ncs .major_detail .step li.bg4 {background-image:url(http://image.jinhak.com/job/site/step2_bg04.gif);}
+	.ncs .major_detail .step li.bg5 {background-image:url(http://image.jinhak.com/job/site/step2_bg05.gif);}
+	.ncs .major_detail .step li.bg6 {background-image:url(http://image.jinhak.com/job/site/step2_bg06.gif);}
+.major_box {position:relative; padding:15px 0 10px 0; background:#7b7691; border:solid 1px #6c4a9d; margin-top:20px; overflow:hidden;}
+	.major_box:after {content:""; clear:both; display:block;}
+	.major_box .tit span {display:inline-block; background:#6c4a9d; font-size:14px; font-weight:bold; color:#FFF; height:30px; line-height:30px; padding:0 40px 0 20px;}
+	.major_box .t01 {font-size:13px; color:#FFF; line-height:20px; padding:0 20px; margin-top:10px;}
+	.major_box .t02 {color:#FFF; line-height:18px; padding:0 20px; margin-top:5px;}
+	.major_box .btn {position:absolute; top:55px; right:18px;}
+	.major_box .section {float:left; width:49%;}
+	.major_box .section:first-child {border-right:solid 2px #6b489d;}
+.other_company {overflow:hidden;}
+	.other_company:after {content:""; clear:both; display:block;}
+	.other_company dt {float:left; width:104px; padding:6px 0 6px 15px; color:#FFF; font-weight:bold; border:solid 1px #b6b5b9; background:#b6b5b9; margin-bottom:10px; line-height:20px;}
+	.other_company dd {float:left; width:760px; padding:6px 15px; border:solid 1px #e5e5e5; margin:0 0 10px 4px; line-height:20px;}
+	.other_company dd img {margin-top:-3px;}
+	.other_company dd a:hover {color:#7963c1; text-decoration:none;}
+	.other_company dd.atTbl {border:0; padding:0; width:792px;}
+	.other_company dd.atTbl dt {background:none; border-color:#e5e5e5; color:#555; font-weight:normal;}
+	.other_company dd.atTbl dd {width:635px;}
+	.other_company dd.atTbl dd a {white-space:nowrap; margin-right:15px; font-weight:bold;}
+.list_vod {overflow:hidden;}
+	.list_vod:after {content:""; clear:both; display:block;}
+	.list_vod li {float:left; width:160px; height:185px; margin-left:70px; margin-top:10px;}
+	.list_vod li img {width:160px; height:104px;}
+	.list_vod .t01 {display:block; text-align:center; font-size:15px; font-weight:bold; line-height:20px; margin-top:10px;}
+	.list_vod .t02 {display:block; text-align:center; margin-top:5px;}
+.edu_box1 {border:solid 8px #efefef; margin-bottom:20px;}
+	.edu_box1.odd {background:#FFF;}
+	.edu_box1.even {background:#f5f5f5;}
+	.edu_box1 .list {overflow:hidden; margin:23px 0 0 136px;}
+	.edu_box1 .list:after {content:""; clear:both; display:block;}
+	.edu_box1 .list li {float:left; width:50%; height:126px; padding-top:7px; position:relative;}
+	.edu_box1 .list li .pic {position:absolute; left:10px; top:0;}
+	.edu_box1 .list li .pic img {width:87px; height:99px; border:solid 1px #efefef;}
+	.edu_box1 .list li .pic .play {position:absolute; right:7px; bottom:8px; width:18px; height:18px; background:url(http://image.jinhak.com/job/site/ico_vod02.png) no-repeat left top;}
+	.edu_box1 .list li .cate {font-size:14px; color:#FFF; padding-left:109px; height:35px; line-height:35px; background:url(http://image.jinhak.com/job/site/edu_cont5_0.gif) no-repeat left top;}
+	.edu_box1 .list li .subj {font-size:14px; color:#333; padding-left:109px; margin-top:12px; padding-right:20px;}
+	.edu_box1 .list li .name {font-size:14px; color:#333; padding-left:109px; margin-top:6px;}
+.edu_box2 {border:solid 8px #efefef; margin-bottom:20px;}
+	.edu_box2 .list {display:table; border:0; margin:20px 0 30px 0;}
+	.edu_box2 .list li {display:table-cell; width:33%; border:0; border-left:solid 2px #efefef; padding:0;}
+	.edu_box2 .list li:first-child {border-left-width:0;}
+	.edu_box2 .list li .t01 {text-align:center; font-size:0; line-height:0; padding-top:13px;}
+	.edu_box2 .list li .t02 {text-align:center; font-size:0; line-height:0; padding-top:12px;}
+	.edu_box2 .list li .t03 {line-height:16px; margin:20px 20px 20px 30px;}
+	.edu_box2 .list li dl {position:relative; margin:30px 20px 0 30px; padding-left:90px; padding-top:8px; min-height:81px;}
+	.edu_box2 .list li dt {font-size:16px; font-weight:bold;}
+	.edu_box2 .list li dt.pic {position:absolute; left:0; top:0;}
+	.edu_box2 .list li dt.pic img {width:80px; height:91px;}
+	.edu_box2 .list li dd {font-size:11px; line-height:16px; padding-top:8px;}
+.edu_box3 {border:solid 8px #efefef; margin-bottom:20px; padding:40px 50px 30px 34px; overflow:hidden;}
+	.edu_box3:after {content:""; clear:both; display:block;}
+	.edu_box3 .t01 {font-size:0; line-height:0; margin-bottom:22px;}
+	.edu_box3 .pic {float:left; width:226px;}
+	.edu_box3 .pic img {width:187px; height:213px;}
+	.edu_box3 .pic .name {font-size:20px; font-weight:bold; margin-top:7px;}
+	.edu_box3 .pic .profile {font-size:11px; margin-top:10px; line-height:16px;}
+	.edu_box3 table {float:left; width:634px; border:0; border-collapse:collapse;}
+	.edu_box3 td {text-align:center; padding:11px 0; border:0; border-top:solid 1px #efefef; border-bottom:solid 1px #efefef;}
+	.edu_box3 td.subj {text-align:left; font-weight:bold;}
+	.edu_box3 td.img {padding:0; font-size:0; line-height:0;}
+.edu_box4 {border:solid 8px #efefef; margin-bottom:20px; padding:22px 37px;}
+	.edu_box4 .t02 {font-size:18px; color:#333; font-weight:bold; margin-top:16px; padding-left:10px;}
+	.edu_box4 .btn {text-align:center; margin-top:10px;}
+.edu_box5 {position:relative; background-color:#ececec; padding:30px; overflow:hidden;}
+	.edu_box5:after {content:""; clear:both; display:block;}
+	.edu_box5 .left {float:left; width:270px; margin-right:20px;}
+	.edu_box5 .right {float:left; width:610px; padding-top:27px;}
+	.edu_box5 .ico {vertical-align:top; margin-top:-42px; margin-left:5px;}
+	.edu_box5 .t1 {font-size:13px; color:#6c499d; line-height:1.4;}
+	.edu_box5 .t2 {font-size:39px; color:#6c499d; line-height:1.2;}
+	.edu_box5 .t3 {margin:10px 0 8px 0;}
+	.edu_box5 .t3 span {display:block; width:500px; height:42px; line-height:42px; border:solid 1px #4d4d4d; background-color:#FFF; padding:0 15px; font-size:13px;}
+	.edu_box5 .t4 {font-size:13px; line-height:1.6; margin-top:6px;}
+	.edu_box5 .t5 {font-size:27px; color:#6b489d; text-align:center; padding:30px 0;}
+	.edu_box5 .sns {position:absolute; top:10px; right:10px;}
+.rolling_univ {margin:45px 0;}
+.list_univ2 {overflow:hidden;}
+	.list_univ2:after {content:""; clear:both; display:block;}
+	.list_univ2 li {float:left; text-align:center; color:#333;}
+	.list_univ2 li div {border-right:solid 1px #ebebeb; height:103px; margin-bottom:12px;}
+.lec_info {background:url(http://image.jinhak.com/job/site/lec_info_bg.gif) repeat-y center top; overflow:hidden; margin:30px 0 25px 0;}
+	.lec_info:after {content:""; clear:both; display:block;}
+	.lec_info .core {display:table-cell; #display:block; #float:left; width:406px; padding:20px 37px 100px 37px; position:relative;}
+	.lec_info .tit {height:57px;}
+	.lec_info .tit span {display:inline-block; vertical-align:top; background:url(http://image.jinhak.com/job/site/lec_info_bg02.gif) no-repeat left top; text-align:center; font-weight:bold; color:#FFF; font-size:18px; width:116px; height:27px; line-height:27px;}
+	.lec_info .t01 {font-size:0; line-height:0; margin-bottom:25px;}
+	.lec_info .btn {position:absolute; bottom:15px; width:100%; left:0; text-align:center;}
+.dl_lec {margin-bottom:20px; position:relative;}
+	.dl_lec dt {position:absolute; width:73px; height:21px; line-height:20px; text-align:center; color:#FFF; background:url(http://image.jinhak.com/job/site/lec_info_bg03.gif) no-repeat left top;}
+	.dl_lec dd {padding-left:73px; min-height:21px; margin:0 0 5px 9px; font-size:15px; color:#000; line-height:20px;}
+	.dl_lec dd a {color:inherit;}
+.lec_list {padding:23px 65px; border-bottom:solid 1px #DDD;}
+	.lec_list table {width:100%; border:0; border-collapse:collapse;}
+	.lec_list thead th {font-size:11px; color:#567519; font-weight:normal; text-align:center; background:#e6e6e6; border:solid 1px #BBB; border-top-width:2px; border-right-width:0; border-left-width:0; padding:10px 0;}
+	.lec_list tbody td {font-size:13px; text-align:center; border:0; border-bottom:solid 1px #BBB; padding:7px 0; line-height:20px;}
+	.lec_list tbody td.al_l {text-align:left; padding-left:10px;}
+	.lec_list tbody td.btn {padding:0; font-size:0; line-height:0;}
+	.lec_list tbody td em {cursor:pointer; font-weight:bold;}
+	.lec_list tbody td.info {text-align:left; padding:9px 20px;}
+	.lec_list tbody tr:hover td,
+	.lec_list tbody.more2 tr td,
+	.lec_list tbody tr.ans td {background-color:#eaf2da;}
+.apply_detail {overflow:hidden;}
+	.apply_detail:after {content:""; clear:both; display:block;}
+	.apply_detail dt {float:left; width:90px; padding:8px 0 8px 15px; color:#262626;}
+	.apply_detail dd {padding-left:110px;}
+	.apply_detail dd p {border-left:solid 2px #FFF; color:#262626; padding:8px 10px;}
+	.apply_detail dt.odd,
+	.apply_detail dd.odd {background-color:#f4f4f4}
+
+/* 기업 */
+#corpTop {position:relative; width:960px; height:150px; margin:0 auto 20px auto; text-align:left; background-color:#e0e2eb;}
+	#corpTop .bg {position:absolute; height:150px; left:0; top:0; background:#e0e2eb;}
+	#corpTop .bg img {width:960px; height:150px;}
+	#corpTop .logo {position:absolute; width:180px; height:110px; background:#FFF; left:28px; top:20px; text-align:center; overflow:hidden;}
+	#corpTop .logo img {height:110px; max-width:180px;}
+	#corpTop .txt1 {position:relative; color:#000; padding-top:29px; padding-left:240px; height:16px;}
+	#corpTop .txt1 span {}
+	#corpTop .txt1 em {color:#c1c1c1;}
+	#corpTop .txt2 {position:relative; width:530px; padding-top:4px; padding-left:240px;}
+	#corpTop .txt2 p {display:inline-block; max-width:83%; color:#000; font-size:40px; font-weight:bold; letter-spacing:-2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	#corpTop .txt3 {position:relative; padding-top:8px; padding-left:240px;}
+	#corpTop .txt3 a {color:#000;}
+	#corpTop .box {position:absolute; right:20px; top:15px /*30px*/;}
+	#corpTop .box li {width:154px; height:34px; line-height:34px; text-align:center; background:url(http://image.jinhak.com/job/site/corp_top_box.gif) no-repeat left top; margin-bottom:10px;}
+	#corpTop .box li span {color:#438ee9; font-weight:bold;}
+#contents h2 {margin-bottom:15px; overflow:hidden;}
+#contents h2 .menu,
+#contents h2 img {vertical-align:top; margin-left:13px;}
+#contents.dep3 h2,
+#contents h2.type2 {font-weight:bold; font-size:20px; line-height:1.2em; color:#333; letter-spacing:-2px; margin:30px 0 20px 0; padding-top:13px; border-top:solid 1px #DDD; height:auto;}
+#contents h2.type3 {font-weight:bold; font-size:20px; line-height:1.2em; color:#333; letter-spacing:-2px; margin:30px 0 9px 0; padding-top:13px; border-bottom:solid 1px #DDD; padding-bottom:19px; height:auto;}
+#contents.dep3 h2.first {margin-top:0; padding-top:0; border-top:none;}
+#contents h2 .sm {font-weight:normal; font-size:12px; letter-spacing:0; color:#777; padding-left:5px;}
+#contents h2 .sm2 {display:inline-block; font-weight:normal; font-size:12px; padding-left:10px; padding-top:3px;}
+#wrapper.member #contents h2 {text-align:center; margin-bottom:30px;}
+#contents h3.type1 {font-size:16px; font-weight:bold; color:#333; margin:17px 0 19px 0;}
+#contents h3.type2 {font-size:14px; font-weight:bold; color:#333; margin-bottom:10px;}
+#contents h3.type3 {font-weight:bold; margin-bottom:6px; margin-top:20px; padding-left:20px;}
+#contents h3.type4 {font-size:20px; font-weight:bold; line-height:1.2em; color:#333; letter-spacing:-2px; margin:25px 0 20px 0;}
+#contents h3.type5 {font-size:24px; font-weight:normal; line-height:1.2em; color:#6b489d; letter-spacing:-2px; margin:25px 0 10px 0;}
+.line_h2 {margin-top:20px; border-top:solid 1px #DDD; padding-top:20px;}
+.location {position:absolute; width:920px; margin-right:-480px; right:50%; top:211px/*105px*/; color:#777; text-align:right;}
+	.location span {color:#999;}
+.more_h2 {position:absolute; right:0; margin-top:-31px;}
+	.more_h2.type2 {margin-top:-21px;}
+	.more_h2.type2 a {font-size:11px; padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 6px;}
+	.more_h2.type2.selected a {background:url(http://image.jinhak.com/job/site/arr06_up.gif) no-repeat right 6px;}
+.culture {padding:0 20px; margin-top:30px;}
+	.culture h3 {font-weight:bold; font-size:14px; color:#333; margin-bottom:7px;}
+	.culture .core {overflow:hidden; border:solid 1px #d2d2d2;}
+	.culture .core:after {content:""; clear:both; display:block;}
+	.culture .left {float:left; width:542px; padding:10px 0 0 10px;}
+	.culture .right {float:right; width:362px; overflow-x:hidden; overflow-y:auto; height:424px;}
+	.culture .right ul {padding-top:10px;}
+	.culture .right li {float:left; width:50%; height:139px;}
+	.culture .right li a {display:block; margin:0 5px; text-decoration:none;}
+	.culture .right li a span {display:block; margin-top:6px; padding-left:5px;}
+	.culture .t1 {font-size:22px; color:#333; letter-spacing:-2px; margin-top:5px; padding-left:10px;}
+.interview {overflow:hidden; margin-top:30px;}
+	.interview:after {content:""; clear:both; display:block;}
+	.interview .core {margin-bottom:20px; padding-left:20px; position:relative;}
+	.interview h3 {font-weight:bold; font-size:14px; color:#333; margin-bottom:7px; /*padding-left:20px;*/}
+	.interview .bx-controls-direction a {position:absolute; top:33px; width:19px; height:56px; text-indent:-9999px; z-index:51}
+	.interview .bx-controls-direction a.bx-prev {left:0; background:url(http://image.jinhak.com/job/site/arr11_prev.gif) no-repeat left top;}
+	.interview .bx-controls-direction a.bx-next {right:0; background:url(http://image.jinhak.com/job/site/arr11_next.gif) no-repeat right top;}
+.theme {overflow:hidden; padding:0 0 30px 20px; margin-top:18px;}
+	.theme:after {content:""; clear:both; display:block;}
+	.theme h3 {font-weight:bold; font-size:14px; color:#333; margin-bottom:15px;}
+	.theme h4 {font-weight:bold; font-size:20px; color:#6b489d; margin-bottom:9px; letter-spacing:-2px;}
+	.theme dl {float:left; position:relative; width:190px; height:118px; border:solid 1px #CCC; padding-left:108px; margin-right:10px;}
+	.theme dl dt.pic {position:absolute; left:20px; top:17px;}
+	.theme dl dt.pic img {width:76px; height:76px; border:solid 1px #CCC;}
+	.theme dl dt span {display:block; font-size:11px; color:#333; padding-top:20px;}
+	.theme dl dt a {display:block; font-weight:bold; color:#333; font-size:13px; line-height:22px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:8px 10px 0 0;}
+	.theme dl dd {font-size:11px; color:#777; line-height:16px; padding-right:10px;}
+.box_sort {background:#eeefef; position:relative; margin-bottom:10px; min-height:40px; padding:0 21px;}
+	.box_sort .sort {padding:13px 0;}
+	.box_sort .sort a {padding-left:15px;}
+	.box_sort .sort a.selected {font-weight:bold;}
+	.box_sort .sort .up {padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_up.gif) no-repeat right 4px;}
+	.box_sort .sort .down {padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 4px;}
+	.box_sort .select {position:absolute; top:6px; right:10px;}
+	.box_sort .select.type2 {left:10px; right:auto;}
+	.box_sort p.at_left {padding:14px 0 12px 170px;}
+	.box_sort .inp {border:solid 1px #d0d0d0; border-left-width:0; height:28px; line-height:28px; padding-left:10px; margin-left:-10px;}
+	.box_sort .more {position:absolute; top:14px; right:10px;}
+	.box_sort .more a {text-decoration:underline;}
+	.box_sort .more.type2 {top:10px;}
+	.box_sort .sch {text-align:right; padding:5px 10px;}
+	.box_sort .sch .inp {border-left-width:1px;}
+.box_tbl_6 {background:#eeefef; position:relative; border:solid 1px #dcdcdc; margin-bottom:10px;}
+	.box_tbl_6 p {border:solid 1px #FFF; font-weight:bold; padding:8px 20px;}
+	.box_tbl_6 p img {margin-top:-3px;}
+.company_info {overflow:hidden;}
+	.company_info:after {content:""; clear:both; display:block;}
+	.company_info dt {font-weight:bold;}
+	.company_info dt a {display:inline-block; float:left; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:67%; padding-right:5px;}
+	.company_info dt strong {font-size:11px; color:#438ee9;}
+	.company_info dt em {padding-left:11px; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat 3px 3px;}
+	.company_info dt.pic {float:left; width:72px;}
+	.company_info dt.pic img {width:60px; height:60px; /*border:solid 1px #dedede;*/}
+	.company_info dd .txt {color:#333; margin-top:3px;}
+	.company_info dd .txt a {color:inherit;}
+	.company_info dd .txt span {padding-left:6px; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat 1px 4px;}
+	.company_info dd .txt2 {margin-top:4px; font-size:11px; color:#777; line-height:16px;}
+	.company_info dd .txt2 a {color:inherit;}
+	.company_info dd .bot {color:#777; font-size:11px; margin-top:5px;}
+	.company_info dd .bot strong {padding-right:8px; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat right 3px;}
+	.company_info dd .bot a {padding-left:1px;}
+	.company_info dd .bot label {vertical-align:top;}
+	.company_info.type2 {padding:10px 0 19px 10px;}
+	.company_info.type2 dt a {display:block; float:none;}
+	.company_info.type2 dt.pic {padding-top:0;}
+	.company_info.type3 {padding:3px 20px 6px 20px;}
+	.company_info.type4 .pic {width:82px; margin-right:9px; border:solid 1px #dedede; text-align:center;}
+	.company_info.type4 .pic img {border:0;}
+.myset {text-align:center; line-height:25px; color:#000; position:relative;} /* 2016-05-01에 삭제하기 */
+	.myset strong {padding-right:14px;}
+	.myset strong span {font-size:16px;}
+	.myset strong input {color:inherit; font-size:16px; font-weight:bold; border:0; background:none; width:25px; margin-top:-6px; text-align:right;}
+	.myset .txt1 {position:absolute; font-size:11px; right:30px; color:#000;}
+	.myset .txt1 .num {vertical-align:top; margin-top:2px; display:inline-block; background:#c5c5c5; width:40px; padding:0 4px; height:22px; line-height:22px; color:#FFF; font-weight:bold; font-size:16px; text-align:right;}
+.slider {position:relative; border:solid 1px #d9d9d9; border-bottom-width:0; background:#f4f4f4;}
+	.slider .tit {background:url(http://image.jinhak.com/job/site/bl_check.png) no-repeat 19px center #9aca38; padding:11px 0 11px 35px; color:#FFF; font-size:13px; font-weight:bold;}
+	.slider dl {overflow:hidden; position:relative; padding:13px 0 11px 34px;}
+	.slider dl:after {content:""; clear:both; display:block;}
+	.slider dt {position:absolute; margin-left:34px;}
+	.slider dt input {color:inherit; font-size:16px; font-weight:bold; border:0; background:none; width:25px; margin-top:-6px; text-align:right;}
+	.slider dt.type1 {color:#ed443f; left:5px;}
+	.slider dt.type2 {color:#a8b626; left:203px;}
+	.slider dt.type3 {color:#9054b5; left:401px;}
+	.slider dt.type4 {color:#518ed2; left:599px;}
+	.slider dd {position:relative; float:left; width:176px; height:41px; margin-right:22px; margin-top:20px;}
+	.slider dd.type1 {color:#ed443f;}
+	.slider dd.type2 {color:#a8b626;}
+	.slider dd.type3 {color:#9054b5;}
+	.slider dd.type4 {color:#518ed2;}
+	.slider dd a {position:absolute; bottom:1px; right:0; font-size:11px; color:inherit; text-decoration:underline;}
+	.slider .txt1 {position:absolute; right:29px; top:53px; color:#333;}
+	.slider .txt1 .num {vertical-align:top; margin:-3px 0 0 3px; display:inline-block; background:#c5c5c5; width:50px; height:22px; line-height:20px; font-weight:bold; color:#FFF; font-size:14px; text-align:center;}
+	.slider .txt2 {position:absolute; right:29px; top:11px; color:#324a01;}
+	.slider .txt2 a {color:inherit;}
+	.slider .btn2 {position:absolute; right:29px; bottom:11px;}
+.slider2 {position:relative; padding-left:77px;}
+	.slider2 li {font-size:11px; color:#777;}
+	.slider2 li .logo {display:block; border:solid 1px #CCC; text-align:center; margin-bottom:10px;}
+	.slider2 li .name {display:block; font-size:13px; color:#333; font-weight:bold; margin-bottom:4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.slider2 li img {height:76px;}
+	.slider2 .bx-controls-direction a {position:absolute; top:26px; width:29px; height:45px; text-indent:-9999px;}
+	.slider2 .bx-controls-direction a.bx-prev {left:20px; background:url(http://image.jinhak.com/job/site/arr24_prev.gif) no-repeat left top;}
+	.slider2 .bx-controls-direction a.bx-next {right:20px; background:url(http://image.jinhak.com/job/site/arr24_next.gif) no-repeat left top;}
+.user_info {border:solid 3px #438ee9; margin-bottom:24px;}
+	.user_info .top {background:#f2f2f2; position:relative; padding:10px 0 19px 136px;}
+	.user_info .top .pic {position:absolute; left:27px; top:7px;}
+	.user_info .top .pic img {max-width:100px; height:80px;}
+	.user_info .top .name {font-size:28px; color:#000; font-weight:bold; letter-spacing:-2px; height:51px;}
+	.user_info .top .name span {display:inline-block; background:url(http://image.jinhak.com/job/site/btn01_bg.gif) no-repeat left top; padding-left:1px; vertical-align:top; margin-top:7px;}
+	.user_info .top .name span em {display:block; background:url(http://image.jinhak.com/job/site/btn01_bg.gif) no-repeat right top #AAA; padding:0 4px 0 4px; height:21px; line-height:18px; font-size:12px; color:#FFF; font-weight:normal; letter-spacing:0;}
+	.user_info .top .txt span {display:inline-block; color:#0c79cc; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat left 4px; padding:0 5px 0 8px; margin-left:12px;}
+	.user_info .top .txt span:first-child {background:none; padding-left:0; margin-left:0;}
+	.user_info .top .txt span.set {background:url(http://image.jinhak.com/job/site/ico_set.png) no-repeat left 3px; padding-left:13px;}
+	.user_info .map {position:relative; padding:14px 0 12px 0; text-align:center;}
+	.user_info .map .more {position:absolute; right:20px; top:17px; font-size:11px;}
+	.user_info .map .tit {margin-bottom:15px; font-size:0; line-height:0;}
+	.user_info .map .process {width:759px; margin:0 auto; background:url(http://image.jinhak.com/job/site/roadmap_pro_bg.gif) repeat-x left 21px; font-size:0; line-height:0; text-align:left;}
+	.user_info .map .process img {margin-left:11px; #margin-left:10px; display:inline-block;}
+	.user_info .map .process img:first-child {margin-left:0;}
+.corp_thum {overflow:hidden; margin-top:20px; font-size:0; line-height:0;}
+	.corp_thum a {display:inline-block; width:80px; margin:0 6px 6px 0;}
+	.corp_thum a img {width:78px; height:78px; border:solid 1px #ececec;}
+#layerCorpPhoto {position:absolute; left:-99999px; top:-99999px; width:780px; z-index:50; background:#FFF;}
+	#layerCorpPhoto.view {left:0; top:0;}
+	#layerCorpPhoto .close {z-index:52; position:absolute; right:9px; top:9px;}
+	#layerCorpPhoto .bx-controls-direction a {position:absolute; top:154px; width:19px; height:36px; text-indent:-9999px; z-index:51}
+	#layerCorpPhoto .bx-controls-direction a.bx-prev {left:9px; background:url(http://image.jinhak.com/job/site/arr07_prev.png) no-repeat left top;}
+	#layerCorpPhoto .bx-controls-direction a.bx-next {right:9px; background:url(http://image.jinhak.com/job/site/arr07_next.png) no-repeat left top;}
+	#corpPhoto li {text-align:center; background:#ebebeb; font-size:0; line-height:0; height:369px;}
+	#corpPhoto li img {max-width:780px; max-height:369px;}
+.my_jindan {overflow:hidden; margin-top:-4px;}
+	.my_jindan:after {content:""; clear:both; display:block;}
+	.my_jindan dl {float:left; width:178px; margin-left:29px;}
+	.my_jindan dl.first {margin-left:0;}
+	.my_jindan dt {font-size:14px; font-weight:bold;}
+	.my_jindan dt span {color:#438ee9;}
+	.my_jindan dd {margin-top:11px; position:relative;}
+	.my_jindan dd .tit {font-size:16px; color:#333; font-weight:bold; text-align:center; background:#ebebeb; height:49px; line-height:49px; padding:0 5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.my_jindan dd .txt {margin-top:7px; line-height:16px;}
+	.my_jindan dd .btn {margin-top:16px; text-align:center; font-size:0; line-height:0;}
+	.my_jindan dd .list_dot li {line-height:16px; background-position:0 8px; padding-left:4px;}
+	.my_jindan dd .graph {position:absolute; right:0; top:60px; width:43px; height:43px;}
+	.my_jindan dd .graph img {position:absolute; right:0; top:0; z-index:-1;}
+	.my_jindan dd .graph em {display:block; width:43px; height:43px; text-align:center; line-height:40px; font-size:20px; color:#438ee9; letter-spacing:-2px;}
+	.my_jindan dd.nodata .tit {color:#AAA;}
+	.my_jindan dd.nodata .txt {height:48px;}
+.my_corp {overflow:hidden;}
+	.my_corp:after {content:""; clear:both; display:block;}
+	.my_corp li {float:left; width:125px; margin-left:10px; cursor:pointer;}
+	.my_corp li:first-child {margin-left:0;}
+	.my_corp li .pic {width:100px; height:100px; border:solid 1px #cdcdcd; text-align:center;}
+	.my_corp li .pic img {width:79px; height:79px; margin-top:11px;}
+	.my_corp li .tit {color:#333; font-weight:bold; margin-top:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.my_corp li .score {color:#0c79cc; font-weight:bold; margin-top:2px;}
+.my_talk {overflow:hidden;}
+	.my_talk:after {content:""; clear:both; display:block;}
+	.my_talk .cont {float:left; position:relative; width:670px;}
+	.my_talk .menu {width:109px; height:114px; position:relative; float:right; border-left:solid 1px #DDD; padding-left:10px;}
+	.my_talk .more {position:absolute; bottom:1px;}
+	.my_talk .more a {color:#333;}
+.my_recruit {overflow:hidden;}
+	.my_recruit:after {content:""; clear:both; display:block;}
+	.my_recruit li {float:left; width:45%; margin-right:5%; margin-bottom:17px;}
+	.my_recruit li dl {overflow:hidden;}
+	.my_recruit li dl:after {content:""; clear:both; display:block;}
+	.my_recruit li dl dt.pic {float:left; width:75px;}
+	.my_recruit li dl dt.pic img {width:58px; height:58px; border:solid 1px #ebebeb;}
+	.my_recruit li dl dt a {display:block; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.my_recruit li dl dt .dday {display:inline-block; width:50px; margin-top:1px; vertical-align:top; color:#438ee9; font-weight:bold; line-height:1.6em;}
+	.my_recruit li dl dt .company {max-width:64%; display:inline-block; margin-top:2px;}
+	.my_recruit li dl dd {margin-top:3px;}
+.news_type1 {overflow:hidden; margin-bottom:14px;}
+	.news_type1:after {content:""; clear:both; display:block;}
+	.news_type1 dt {font-size:16px; color:#333; font-weight:bold;}
+	.news_type1 dt a {color:inherit;}
+	.news_type1 dt.pic {float:left; width:115px;}
+	.news_type1 dt.pic img {width:100px; height:100px;}
+	.news_type1 dd {line-height:18px; margin-top:4px;}
+	.news_type1 dd .date {font-size:11px; color:#777;}
+	.news_type1 dd .source {font-size:11px; color:#777; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat right 3px; padding-right:7px; margin-right:2px;}
+.news_type2 {margin-left:5px;}
+	.news_type2 li {padding-left:9px; line-height:18px; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 8px;}
+	.news_type2 li a {color:#333;}
+	.news_type2 li .source,
+	.news_type2 li .date {font-size:11px; color:#777; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat left 3px; padding-left:6px;}
+	.news_type2 li a, .news_type2 li .source {padding-right:5px;}
+.news_type3 {overflow:hidden; margin-bottom:25px;}
+	.news_type3:after {content:""; clear:both; display:block;}
+	.news_type3 dt {font-weight:bold;}
+	.news_type3 dt.pic {float:left; width:100px; margin-right:10px; min-height:70px; border:solid 1px #e1e1e1; text-align:center;}
+	.news_type3 dt.pic img {max-width:100px; max-height:70px;}
+	.news_type3 dd {line-height:18px; margin-top:4px;}
+	.news_type3 dd .date {font-size:11px; color:#777; margin-top:1px;}
+	.news_type3 dd .source {font-size:11px; color:#777; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat right 3px; padding-right:9px; margin-right:5px;}
+.news_type4 {overflow:hidden; margin-top:18px;}
+	.news_type4:after {content:""; clear:both; display:block;}
+	.news_type4 dt {font-size:14px; color:#333; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.news_type4 dt a {color:inherit;}
+	.news_type4 dt.pic {float:left; width:100px;}
+	.news_type4 dt.pic img {width:80px;}
+	.news_type4 dd {color:#797979; line-height:20px; margin-top:2px;}
+.news_list {border-top:solid 1px #ddd; border-bottom:solid 1px #ddd; #padding-bottom:14px;}
+	.news_list .news_type1 {border-top:solid 1px #ebebeb; padding-top:15px;}
+	.news_list .news_type1:first-child {border-top:0;}
+	.news_list .news_type1 dt.pic {float:left; width:80px;}
+	.news_list .news_type1 dt.pic img {width:70px; height:70px;}
+.news_list2 {border-top:solid 1px #ddd; border-bottom:solid 1px #ddd; padding-top:14px;}
+.news_detail {/*border-bottom:solid 1px #ddd;*/ #padding-bottom:14px;}
+	.news_detail .news_type1 dt {display:none;/*padding:0; line-height:20px;*/}
+	.news_detail .news_type1 dd.sd {display:none; /*margin-top:0; padding:6px 0;*/}
+	.news_detail .news_type1 dd.cont {/*border-top:solid 1px #ebebeb;*/ padding:0 0 50px 0; line-height:18px; margin-top:0;}
+	.news_detail .news_type1 dd.cont .pic {text-align:center; margin-bottom:20px;}
+	.news_detail .news_type1 dd.cont .pic img {max-width:760px;}
+	.news_detail .news_type1 dd.cont p {line-height:22px; font-size:14px; letter-spacing:0; margin-bottom:20px;}
+	.news_detail.type2 {border-top:solid 1px #ddd;}
+	.news_detail.type2 .news_type1 dt {padding:9px 22px; position:relative;}
+	.news_detail.type2 .news_type1 dt.nodata {text-align:center; padding:40px 0 27px 0;}
+	.news_detail.type2 .news_type1 dd.sd {padding:10px 22px; border-top:solid 1px #ebebeb;}
+	.news_detail.type2 .news_type1 .source {color:#333; font-size:12px;}
+	.news_detail.type2 .news_type1 dd.cont {padding:12px 22px;}
+	.news_detail.type2 .news_type1 .btn_select {position:absolute; right:20px;}
+	.news_detail.type3 {border-top:solid 1px #ddd;}
+	.news_detail.type3 .news_type1 dt {padding:9px 22px;}
+	.news_detail.type3 .news_type1 dd.sd {text-align:right; padding:0;}
+	.news_detail.type3 .news_type1 .date {position:absolute; right:10px; margin-top:-29px;}
+	.news_detail.type3 .news_type1 dd.cont {padding:12px 22px;}
+	@media all and (max-width:768px) {
+		.news_detail .news_type1 dd.cont img {width:100%;}
+	}
+.my_tit {position:relative; background:#f4f4f4; padding:11px 0; margin-bottom:20px;}
+	.my_tit .tit {text-align:center; font-size:30px; color:#777; font-weight:bold;}
+	.my_tit .tit label {cursor:default;}
+	.my_tit .date {position:absolute; right:20px; bottom:10px;}
+	.my_tit.type2 {padding:6px 0;}
+	.my_tit.type2 .tit {text-align:left; padding-left:20px;}
+	.my_tit.type2 .tit input {width:756px; border:solid 2px #c5c5c5; background:#FFF; height:44px; font-weight:bold; font-size:21px; letter-spacing:-2px; text-align:center;}
+	.my_tit.type2 .tit input.before {color:#c7c7c7;}
+.resume_info {position:relative; padding:0 0 0 147px; min-height:137px;}
+	.resume_info .pic {position:absolute; left:0; top:0;}
+	.resume_info .pic img.me,
+	.pic_me {width:121px; height:125px; border:solid 1px #c9c9c9;}
+	.resume_info .pic .btn {position:absolute; left:7px; bottom:1px;}
+	.resume_info .name {font-size:16px; font-weight:bold;}
+	.resume_info .name select {vertical-align:top;}
+	.resume_info .name label {vertical-align:baseline;}
+	.resume_info .name span {font-size:12px; font-weight:normal; letter-spacing:0;}
+	.resume_info .age {font-size:14px; font-weight:bold; margin-top:1px;}
+	.resume_info .salary {position:absolute; top:1px; right:20px;}
+	.resume_info .salary select {vertical-align:top; margin-top:-2px;}
+	.resume_info .salary label {vertical-align:baseline;}
+	.resume_info dl {border-top:solid 1px #e0e0e0; overflow:hidden; width:652px; margin-top:10px; padding-top:9px;}
+	.resume_info dt {float:left; width:48px;}
+	.resume_info dd {float:left; width:604px; font-weight:bold; margin-bottom:7px;}
+	.resume_info dd.mtm5 {margin-top:-1px !important;}
+.user_sign {text-align:center; line-height:21px; background:#f4f4f4; margin-top:20px; padding:38px 0;}
+.div_graph {overflow:hidden; margin-bottom:20px;}
+	.div_graph:after {content:""; clear:both; display:block;}
+	.div_graph .graph {float:left; width:325px; margin-right:10px;}
+	.div_graph .cont {float:left; width:463px; height:224px; border:solid 1px #ececec;}
+	.div_graph .cont table {width:100%; border:0; border-collapse:collapse;}
+	.div_graph .cont td {padding:0; border:0; border-top:solid 1px #ececec; height:109px;}
+	.div_graph .cont tr:first-child td {border-top:0;}
+	.div_graph .cont td.score {font-size:48px; font-weight:bold; letter-spacing:-2px; text-align:center;}
+	.div_graph .cont td.score span {font-size:36px;}
+	.div_graph .cont td ul {overflow:hidden;}
+	.div_graph .cont td ul:after {content:""; clear:both; display:block;}
+	.div_graph .cont td ul li {float:left; width:100px; text-align:right; line-height:20px; margin-right:20px;}
+.div_graph2 {overflow:hidden; margin-bottom:20px;}
+	.div_graph2:after {content:""; clear:both; display:block;}
+	.div_graph2 .graph {float:left; width:360px; margin-left:10px;}
+	.div_graph2 .cont {position:relative; float:left; width:428px; height:256px; border:solid 1px #ececec;}
+	.div_graph2 .cont .txt {padding:9px 10px 0 10px; line-height:19px;}
+.corp_photo {position:relative;}
+	.corp_photo h3 {font-weight:bold; color:#438ee9; margin:12px 0 2px 0;}
+.corp_talk {overflow:hidden;}
+	.corp_talk:after {content:""; clear:both; display:block;}
+	.corp_talk .cont {float:left; width:390px; margin-right:10px;}
+	.corp_talk .nodata {text-align:center; line-height:20px; padding:22px 0; clear:both;}
+	.corp_talk.wd2 .cont {width:470px;}
+.list_job dt {background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat 20px 21px #f4f4f4; margin-top:10px; font-weight:bold; padding:14px 0 0 29px;}
+	.list_job dt:first-child {margin-top:0;}
+	.list_job dd {background:#f4f4f4; padding:0 0 18px 32px;}
+	.list_job dd ul {overflow:hidden;}
+	.list_job dd ul:after {content:""; clear:both; display:block;}
+	.list_job dd li {margin-right:80px; float:left; background:url(http://image.jinhak.com/job/site/bl_bar02.gif) no-repeat left 10px; padding-left:6px; padding-top:7px;}
+	.list_job dd li img {vertical-align:top;}
+	.list_job dd li.selected a {font-weight:bold; color:#438ee9;}
+	.list_job dd.showhide {display:none; padding:3px; position:relative;}
+	.list_job dd.showhide .close {position:absolute; right:6px; top:11px;}
+	.list_job dd.showhide .cont {background:#FFF; padding:15px 27px 15px 27px;}
+	.list_job dd.showhide .cont * {line-height:18px;}
+	.list_job dd.showhide .cont .tit {font-weight:bold; color:#438ee9;}
+	.list_job dd.showhide .cont .txt1 {font-weight:bold; margin-top:15px;}
+	.list_job dd.showhide .cont .txt2 {}
+	.list_job dd.showhide .bot {padding:12px 0 7px 27px;}
+	.list_job dd.showhide .bot img {vertical-align:top; margin-left:5px; margin-top:-3px;}
+.list_stats {overflow:hidden;}
+	.list_stats:after {content:""; clear:both; display:block;}
+	.list_stats>li {float:left; width:395px; margin-bottom:10px; margin-left:10px;}
+	.list_stats>li.first {margin-left:0;}
+	.list_stats>li dl {border:solid 1px #ececec;}
+	.list_stats>li dt {border:solid 1px #FFF; background:#f4f4f4; font-weight:bold; height:37px; line-height:37px; padding-left:20px;}
+	.list_stats>li dt span {font-weight:normal;}
+	.list_stats>li dd li {height:39px; line-height:39px; padding-left:20px; border-top:solid 1px #ececec;}
+	.list_stats>li dd li a,
+	.list_stats>li dd li em {color:#438ee9;}
+	.list_stats.at2>li {width:260px;}
+.list_stats2 {overflow:hidden; #margin-top:10px;}
+	.list_stats2:after {content:""; clear:both; display:block;}
+	.list_stats2>li {margin-bottom:10px;}
+	.list_stats2>li dl {border:solid 1px #ececec; overflow:hidden;}
+	.list_stats2>li dt {float:left; width:146px; padding-left:20px; height:63px; line-height:63px; border:solid 1px #FFF; background:#f4f4f4; font-weight:bold;}
+	.list_stats2>li dd {float:left; border-left:solid 1px #ececec; height:65px;}
+	.list_stats2>li dd ul {margin-top:12px;}
+	.list_stats2>li dd li {overflow:hidden; margin-bottom:10px;}
+	.list_stats2>li dd li:after {content:""; clear:both; display:block;}
+	.list_stats2>li dd li span {display:block; float:left; width:100px; text-align:right; margin-right:15px;}
+	.list_stats2>li dd li div {float:left; overflow:hidden; width:471px; height:14px; background:url(http://image.jinhak.com/job/site/graph01_bg.gif) no-repeat left top;}
+	.list_stats2>li dd li div p {display:inline-block; float:left; margin:1px 0 0 1px; height:12px;}
+	.list_stats2>li dd li div em {display:inline-block; float:left; margin:1px 0 0 -28px; width:25px; color:#ececec; text-align:right; font-size:11px; line-height:11px;}
+	.list_stats2>li dd li.bg1 div p {background:#438ee9;}
+	.list_stats2>li dd li.bg2 div p {background:#97c2f7;}
+	.list_stats2>li dd li.at_sm em {margin-left:-5px; color:#438ee9;}
+.list_stats3 {background:#f4f4f4; overflow:hidden; padding:17px 0 16px 60px;}
+	.list_stats3:after {content:""; clear:both; display:block;}
+	.list_stats3 li {float:left; margin-left:180px; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 14px; padding-left:7px;}
+	.list_stats3 li:first-child {margin-left:0;}
+	.list_stats3 li em {vertical-align:middle; display:inline-block; padding-top:3px;}
+	.list_stats3 li span {vertical-align:middle; display:inline-block; font-size:20px; color:#438ee9;}
+.list_fs /* tbl_4 style로 변경 2016-03-22 */ {overflow:hidden; margin-top:9px;}
+	.list_fs:after {content:""; clear:both; display:block;}
+	.list_fs li {float:left;}
+	.list_fs li dl {border:solid 1px #d3d4d8; border-right-width:0;}
+	.list_fs li dt {text-align:center; padding:7px 0; background:#e5f2fb; line-height:16px; color:#777;}
+	.list_fs li dd {border-top:solid 1px #f0f0f0; text-align:right; padding:7px 25px 7px 17px; background:#FFF; line-height:16px;}
+	.list_fs li dd.bg1 {font-weight:bold; color:#333;}
+	.list_fs li:first-child dl {border-left-width:0;}
+	.list_fs li:first-child dl dd {text-align:left; padding-right:0;}
+	.list_fs.at2 li {width:50%;}
+	.list_fs.at3 li {width:33.3%;}
+	.list_fs.at4 li {width:25%;}
+.corp_info_box {background:#f4f4f4; margin-bottom:20px; position:relative;}
+	.corp_info_box h3 {padding:10px 0 0 19px; font-size:16px; font-weight:bold; color:#333;}
+	.corp_info_box h3 span {font-weight:normal; font-size:11px; padding-left:5px;}
+	.corp_info_box .num {font-size:58px; font-weight:bold; color:#438ee9; padding-left:60px;}
+	.corp_info_box .info {position:absolute; left:160px; top:54px; background:#FFF; overflow:hidden; width:535px;}
+	.corp_info_box .info:after {content:""; clear:both; display:block;}
+	.corp_info_box .info li {float:left; height:40px; line-height:40px; color:#777; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 20px; padding-left:4px; margin-left:30px;}
+	.corp_info_box .info li:first-child {margin-left:15px;}
+	.corp_info_box .info li strong {color:#555; font-size:14px;}
+	.corp_info_box .more {position:absolute; right:20px; bottom:13px; font-size:11px; padding-right:10px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 6px;}
+	.corp_info_box .more a {color:#777;}
+.corp_info_view {position:relative; padding:0 20px; border-bottom:solid 1px #DDD; margin-bottom:20px;}
+	.corp_info_view h4 {font-weight:bold; color:#777; margin-bottom:6px;}
+	.corp_info_view .close {text-align:right; font-size:11px; padding-right:10px; background:url(http://image.jinhak.com/job/site/arr06_up.gif) no-repeat right 7px; margin-bottom:5px;}
+.corp_info_hide {position:absolute; left:-99999px; top:-99999px;}
+.talk_detail {margin-top:24px;}
+	.talk_detail .tit {font-weight:bold; font-size:24px; color:#333; letter-spacing:-2px; text-align:center; margin-bottom:16px;}
+	.talk_detail .tit2 {font-weight:bold; font-size:14px; color:#333; text-align:center; margin-bottom:27px;}
+	.talk_detail .core {overflow:hidden;}
+	.talk_detail .core:after {content:""; clear:both; display:block;}
+	.talk_detail .core .cont {float:left; width:660px;}
+	.talk_detail .core .cont p {line-height:1.5;}
+	.talk_detail .core .cont img {max-width:660px;}
+	.talk_detail .core .list {float:right; width:100px;}
+	.talk_detail .core .list li {border-bottom:solid 1px #DDD; margin-bottom:10px; padding-bottom:7px; cursor:pointer;}
+	.talk_detail .core .list li .pic img {width:100px; height:108px;}
+	.talk_detail .core .list li .company,
+	.talk_detail .core .list li .name {font-weight:bold; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.talk_detail .core .list li .company {margin-top:5px;}
+	.talk_detail .core .list li .name {margin-top:2px;}
+	.talk_detail .core .list li:hover p {text-decoration:underline;}
+	.talk_detail .core .list.type2 li .company {font-weight:normal;}
+	.talk_detail .core .list.type2 li .name {text-overflow:clip; white-space:normal;}
+.share {text-align:right; color:#777; margin-top:20px; padding-bottom:10px; border-bottom:solid 1px #DDD;}
+	.share img {vertical-align:top; width:17px;}
+.comment_area {padding-top:6px;}
+	.comment_area .txt {padding-left:10px;}
+	.comment_area fieldset {overflow:hidden; background:#ebebeb; padding:10px 0 10px 10px; margin-top:5px;}
+	.comment_area fieldset:after {content:""; clear:both; display:block;}
+	.comment_area fieldset .name {float:left; width:15%; padding:7px 6px 0 0; font-weight:bold; word-break:break-all;}
+	.comment_area fieldset textarea {float:left; border:solid 1px #DDD; width:74%; height:64px; padding:5px; line-height:18px; box-sizing:border-box;}
+	.comment_area fieldset a {float:left; margin-left:10px;}
+	.comment_area table {width:100%; border:0; border-collapse:collapse; table-layout:fixed; border-bottom:solid 1px #DDD; margin-top:10px;}
+	.comment_area table th,
+	.comment_area table td {padding:9px 10px 14px 10px; line-height:18px; vertical-align:top; text-align:left; border:0; border-top:solid 1px #DDD;}
+	.comment_area table th {font-weight:bold; padding-top:8px; word-break:break-all; text-align:left;}
+	.comment_area table td.btn {text-align:center; padding-left:0; padding-right:0; padding-top:12px; font-size:11px; line-height:15px;}
+	.comment_area table td.btn a {display:block;}
+	.comment_area table td.nodata {text-align:center; padding-left:0; padding-right:0;}
+	.comment_area table td .date {font-size:11px; color:#777; white-space:nowrap;}
+	.comment_area table tr.mento th {color:#8d72e4;}
+	.comment_area table tr.mento th .gubun {display:block; font-weight:normal; font-size:11px;}
+	.comment_area table tr.mento td {background:#f5f2ff;}
+	.comment_area .agree {position:relative; background:#ebebeb; padding:0 22px 13px 158px;}
+	.comment_area .agree .t01 {}
+	.comment_area .agree .t02 {position:absolute; right:111px; top:1px;}
+	.comment_area .agree .t03 {background:#DDD; font-size:11px; line-height:18px; padding:8px 8px 5px 8px; margin-top:8px;}
+	.comment_area .agree .t03 span {background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 4px; padding:0 15px 0 6px;}
+.search_all {background:#9a9a9a; margin-bottom:25px;}
+	.search_all .core {position:relative; padding:20px 0 20px 20px;}
+	.search_all .core * {vertical-align:top;}
+	.search_all input.inp {border:solid 1px #000; width:270px; height:36px; line-height:36px; padding-left:10px; font-size:14px; font-weight:bold;}
+	.search_all input.base {color:#888;}
+	.search_all .select {display:inline-block;}
+	.search_all .dsSelectBox {border-color:#5e3c92;}
+	.search_all .ing {display:inline-block; border:solid 1px #5e3c92; width:102px; height:36px; font-size:14px; background:url(http://image.jinhak.com/job/site/select_bg03.gif) repeat-x left top; line-height:34px; margin-left:-4px;}
+	.search_all .ing input {margin:-2px 9px 0 10px;}
+	.search_all .ing label {font-weight:bold;}
+	.search_all label {color:#FFF; font-weight:bold; font-size:14px; padding-right:49px; line-height:38px;}
+.corp_opp h3 {font-weight:bold; color:#438ee9; margin:12px 0 8px 0;}
+	.corp_opp .result {overflow:hidden;}
+	.corp_opp .result:after {content:""; clear:both; display:block;}
+	.corp_opp .result .logo {float:left; width:78px; margin-right:10px; border:solid 1px #cdcdcd;}
+	.corp_opp .result .logo img {max-width:78px; height:78px;}
+	.corp_opp .result .score {float:left; width:78px; height:78px; margin-right:10px; border:solid 1px #cdcdcd; text-align:center; font-size:36px; color:#438ee9; font-weight:bold;}
+	.corp_opp .result .score span {display:block; font-size:16px;}
+	.corp_opp .result .txt {float:left; width:600px;}
+	.corp_opp .result .txt .t1 {font-size:14px; color:#333; padding-top:3px;}
+	.corp_opp .result .txt .t1 span {font-size:18px;}
+	.corp_opp .result .txt .t2 {color:#333; margin-top:7px; line-height:1.5;}
+	.corp_opp .info {margin-top:10px; background-color:#f6f6f6; padding:10px 25px; color:#777; line-height:1.8;}
+	.corp_opp .btn {margin-top:20px; text-align:center;}
+.corp_src {border:solid 1px #c3c3c3; border-top:solid 2px #573a7f; margin-top:40px; margin-bottom:20px;}
+	.corp_src .top {height:200px; border-bottom:solid 1px #c3c3c3;}
+	.corp_src .top:after {content:""; clear:both; display:block;}
+	.corp_src .top dl {position:relative; float:left; height:200px; border-left:solid 1px #c3c3c3; margin-left:-1px;}
+	.corp_src .top dt {position:absolute; top:-28px; right:0; left:0; text-align:center;}
+	.corp_src .top dd {margin-top:45px; height:155px; overflow-y:auto; padding-left:25px;}
+	.corp_src .top li {float:left; padding-bottom:6px; min-height:19px;}
+	.corp_src .top li label {color:#666; letter-spacing:-1px; vertical-align:top;}
+	.corp_src .top li img {margin-top:2px;}
+	.corp_src .top li .tooltip1 {width:400px; margin-left:-227px;}
+	.corp_src .top li .more {display:none; position:relative; margin-top:2px;}
+	.corp_src .top li .more ul:before {content:""; display:block; position:absolute; left:0; right:0; top:-6px; height:7px; background-image:url(http://image.jinhak.com/job/corp/src_arr.gif); background-repeat:no-repeat;}
+	.corp_src .top li .more ul {border:solid 1px #c3c3c3; background-color:#FFF; padding-left:5px; padding-top:3px; margin-top:7px; overflow:hidden;}
+	.corp_src .top li .more li {width:50% !important; padding-bottom:5px; min-height:auto;}
+	.corp_src .top li .more li label {font-size:11px;}
+	.corp_src .top li.atMaking.selected,
+	.corp_src .top li.atMakingWith {height:205px;}
+	.corp_src .top li.atMaking.selected .more {display:block;}
+	.corp_src .top.at2 dl {width:50%;}
+	.corp_src .top.at3 dl {width:33.3%;}
+	.corp_src .top.at3 li .more {width:250px; margin-left:-89px;}
+	.corp_src .top.at3 li .more ul:before {background-position:center top;}
+	.corp_src .top.at4 dl {width:25%;}
+	.corp_src .top.at4 li .more {width:210px; margin-left:-110px;}
+	.corp_src .top.at4 li .more ul:before {background-position:145px top;}
+	.corp_src .top ul.wd1 li {width:71px;}
+	.corp_src .top ul.wd2 li {width:90px;}
+	.corp_src .top ul.wd3 li {width:138px;}
+	.corp_src .top.at3 ul.wd4 li {width:138px;}
+	.corp_src .top.at4 ul.wd4 li {float:none; width:auto;}
+	.corp_src .bot {background-color:#e5e5e5; padding:16px 0 16px 60px;}
+	.corp_src .bot .inp {margin-bottom:8px;}
+	.corp_src .bot .inp input[type='text'] {border:solid 1px #272727; border-right-width:0; width:675px; height:37px; line-height:37px; padding-left:10px; font-size:13px; color:#666;}
+
+/* 채용 */
+.search_cate {position:relative;}
+	.search_cate .txt {text-align:center; padding:15px 0 12px 0; border-top:solid 1px #DDD;}
+	.search_cate .txt2 {padding:2px 0 8px 130px; line-height:20px;}
+	.search_cate .menu {overflow:hidden; border-bottom:solid 1px #a4b8be; margin-bottom:10px;}
+	.search_cate .menu li {float:left; margin:0 3px 3px 0;}
+	.search_cate .menu li a {display:block; padding:0 14px 0 13px; height:31px; line-height:32px; border:solid 1px #DDD; text-decoration:none; background:#FFF;}
+	.search_cate .menu li a:hover,
+	.search_cate .menu li.selected a {border:solid 1px #76abea; background:#76abea; font-weight:bold; color:#FFF;}
+.search_cate2 {position:relative; border:solid 1px #d9d9d9; padding:20px 20px 6px 20px;}
+	.search_cate2 dl {overflow:hidden;}
+	.search_cate2 dl:after {content:""; clear:both; display:block;}
+	.search_cate2 dt {float:left; position:relative; width:85px; font-weight:bold; font-size:14px; color:#333; padding-top:3px;}
+	.search_cate2 dt .more {position:absolute; left:0; margin-top:24px; font-size:11px; color:#6b489d; padding-left:20px; background:url(http://image.jinhak.com/job/site/btn_more03.gif) no-repeat left top; text-decoration:none;}
+	.search_cate2 dt .more.selected {background-image:url(http://image.jinhak.com/job/site/btn_more03_on.gif);}
+	.search_cate2 dd {float:left; width:830px;}
+	.search_cate2 dd label {font-size:13px; color:#666;}
+	.search_cate2 dd .list_ck {margin-bottom:14px;}
+	.search_cate2 dd .list_ck li {padding-top:4px; padding-bottom:4px;}
+	.search_cate2 .btn {position:absolute; right:30px; bottom:15px;}
+	.search_cate2.bg {/*border:0; border-top:solid 1px #2d2040; background:#573a7f;*/}
+	.search_cate2.bg dt {/*color:#FFF;*/}
+	.search_cate2.bg dd label {/*color:#FFF;*/}
+	.search_cate2 .tab_14 a {padding:0 20px; height:28px; line-height:28px;}
+.search_more {border-top:solid 1px #afa1c2; border-bottom:solid 2px #20182b; background:url(http://image.jinhak.com/job/site/btn_more06.gif) no-repeat center top #573a7f; height:32px; cursor:pointer; margin-bottom:25px;}
+	.search_more span {display:none;}
+	.search_more.selected {background-image:url(http://image.jinhak.com/job/site/btn_more06_on.gif);}
+.sch_biz {position:absolute; right:13px; top:8px;}
+	.sch_biz label {display:none;}
+	.sch_biz input {border:0; width:315px; height:26px; line-height:26px; padding-left:10px; background:#FFF; border:solid 1px #505050; font-weight:bold; font-size:14px; margin-right:5px;}
+	.sch_biz input.base {color:#bababa;}
+	
+/* NCS */
+.ncs_main {position:relative; width:960px; padding-bottom:45px; margin:0 auto; text-align:left;}
+	.ncs_main:after {content:""; clear:both; display:block;}
+	.ncs_main .next {position:relative; z-index:2; text-align:center; padding-top:20px;}
+	#container.ncs_main {min-height:auto;}
+.ncs_main_bg1 {position:relative; background-color:#ededf0;}
+.ncs_main_bg2 {position:relative; background:url(http://image.jinhak.com/job/site/ncs_main_bg1.gif) repeat-x left bottom #ededf0;}
+	.ncs_main_bg2 .ncs_main {background:url(http://image.jinhak.com/job/site/ncs_main_bg2.jpg) no-repeat center bottom;}
+.ncs_main_step {position:absolute; left:50%; top:-62px; margin-left:-52px; z-index:1;}
+.ncs_main .section1 {margin-top:10px; overflow:hidden;}
+	.ncs_main .section1 .left {float:left; width:570px; margin-left:20px;}
+	.ncs_main .section1 .right {float:right; width:338px;}
+	.ncs_main .section1 .news h2 {position:relative; border-top:solid 1px #183288; border-bottom:solid 1px #d3d3d3; height:34px;}
+	.ncs_main .section1 .news h2 img {margin:10px 0 0 10px;}
+	.ncs_main .section1 .news .more {position:absolute; padding:12px 10px; top:1px; right:0; font-size:0; line-height:0;}
+	.ncs_main .section1 .news .more img {margin:0;}
+	.ncs_main .section1 .news ul {padding:7px 11px 20px 11px;}
+	.ncs_main .section1 .news li {position:relative; font-size:13px; height:29px; line-height:29px;}
+	.ncs_main .section1 .news li a {display:block; width:75%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.ncs_main .section1 .news li .date {position:absolute; right:0; top:0;}
+.ncs_main .section2 {padding-top:70px; text-align:center;}
+	.ncs_main .section2 h2 {margin-bottom:23px;}
+	.ncs_main .section2 .core {overflow:hidden;}
+	.ncs_main .section2 .core:after {content:""; clear:both; display:block;}
+	.ncs_main .section2 .core ul.type1 {margin:15px 50px 0 112px; float:left;}
+	.ncs_main .section2 .core ul.type1 li {float:left; width:124px;}
+	.ncs_main .section2 .core ul.type1 li a {display:block; margin-top:7px;}
+	.ncs_main .section2 .core dl {float:left; width:220px;}
+	.ncs_main .section2 .core dl.type1 {background:#686868; text-align:left;}
+	.ncs_main .section2 .core dl.type1 dt {position:relative;}
+	.ncs_main .section2 .core dl.type1 dt .more {position:absolute; padding:6px 9px; top:0; right:0; font-size:0; line-height:0;}
+	.ncs_main .section2 .core dl.type1 dd {padding:7px; color:#c0c0c0;}
+	.ncs_main .section2 .core dl.type2 dt {background:#686868; color:#FFF; height:30px; line-height:29px; padding-left:15px;}
+	.ncs_main .section2 .core dl.type2 dd {background:#d1d1d1; height:149px;}
+	.ncs_main .section2 .core dl.type2 dd .t01 {color:#333; font-size:13px; padding:13px 0 5px 0;}
+.ncs_main .section3 {padding-top:70px; text-align:center;}
+	.ncs_main .section3 h2 {margin-bottom:28px;}
+	.ncs_main .section3 .core {overflow:hidden; width:680px; height:189px; margin:0 auto; background:url(http://image.jinhak.com/job/site/ncs_main_bg3.png) no-repeat center top;}
+	.ncs_main .section3 .core:after {content:""; clear:both; display:block;}
+	.ncs_main .section3 .core dl {float:left; width:189px; margin-left:98px;}
+	.ncs_main .section3 .core dt {padding-top:38px;}
+	.ncs_main .section3 .core dd {padding-top:12px; line-height:1.4;}
+	.ncs_main .section3 .core dd a {color:#bababa;}
+.ncs_main .section4 {padding-top:70px; text-align:center;}
+	.ncs_main .section4 h2 {margin-bottom:40px;}
+	.ncs_main .section4 ul {overflow:hidden; width:640px; margin:0 auto;}
+	.ncs_main .section4 ul:after {content:""; clear:both; display:block;}
+	.ncs_main .section4 li {float:left; width:180px; position:relative;}
+	.ncs_main .section4 li.arr {width:50px; height:222px; background:url(http://image.jinhak.com/job/site/arr23_next.png) no-repeat center center;}
+	.ncs_main .section4 li .t01 {position:absolute; top:11px; left:13px;}
+	.ncs_main .section4 li .t02 {position:absolute; top:184px; left:10px;}
+	.ncs_main .section4 li .t03 {font-size:13px; margin-top:5px;}
+	.ncs_main .section4 li .t03 a {color:#323232;}
+.ncs_main_cal {background:url(http://image.jinhak.com/job/site/ncs_cal_bg.jpg) repeat-x left top; background-size:1px 113px;}
+	.ncs_main_cal .year {position:relative; text-align:center; height:85px; line-height:85px; font-size:23px; color:#FFF;}
+	.ncs_main_cal .year .prev,
+	.ncs_main_cal .year .next {width:13px; height:13px; text-indent:-9999%; display:inline-block; position:absolute; top:36px; background-repeat:no-repeat; background-position:left center;}
+	.ncs_main_cal .year .prev {background-image:url(http://image.jinhak.com/job/site/arr21_prev.png); left:9px;}
+	.ncs_main_cal .year .next {background-image:url(http://image.jinhak.com/job/site/arr21_next.png); right:9px;}
+	.ncs_main_cal table {width:322px; border:0; border-collapse:collapse; margin-left:17px;}
+	.ncs_main_cal caption,
+	.ncs_main_cal tr:first-child th {display:none;}
+	.ncs_main_cal th {padding:0; border:0; border-bottom:solid 10px #FFF; font-size:0; line-height:0; text-align:left; background:#183288; height:28px;}
+	.ncs_main_cal td {position:relative; padding:0; border:0; text-align:left; color:#000; height:50px; vertical-align:top;}
+	.ncs_main_cal td:first-child {color:#ff0000;}
+	.ncs_main_cal td.start,
+	.ncs_main_cal td.end {background-position:left 18px; background-repeat:no-repeat; cursor:pointer; background-size:38px 4px;}
+	.ncs_main_cal td.start {background-image:url(http://image.jinhak.com/job/site/cal_bg1.gif);}
+	.ncs_main_cal td.end {background-image:url(http://image.jinhak.com/job/site/cal_bg2.gif);}
+	.ncs_main_cal td.start.end {background-image:url(http://image.jinhak.com/job/site/cal_bg3.gif);}
+	.ncs_main_cal .t01 {text-align:right; padding-right:10px;}
+.ncs_cont2 {padding:0 20px 20px 20px;}
+.ncs_top2 {position:relative; border:solid 10px #e4e4e4; height:165px; margin-bottom:20px;}
+	.ncs_top2 .logo {position:absolute; left:40px; top:54px;}
+	.ncs_top2 .logo img {width:147px; height:52px;}
+	.ncs_top2 .txt_area {margin:31px 225px 0 223px; padding-left:30px; border-left:solid 1px #d7d7d7; height:105px;}
+	.ncs_top2 .txt_area .t01 {font-weight:bold; font-size:21px; padding-top:20px;}
+	.ncs_top2 .txt_area .t02 {font-size:17px; padding-top:5px;}
+	.ncs_top2 .btn {position:absolute; top:37px; right:20px;}
+	.ncs_top2 .btn a {display:block; margin-bottom:9px;}
+.ncs_t01 {text-align:center; margin:50px 0 30px 0;}
+.ncs_t02 {text-align:center; font-size:14px; line-height:1.6; margin:15px 0;}
+.ncs_t03 {text-align:center; font-size:18px; font-weight:bold; margin:35px 0 20px 0;}
+.ncs_box {background:#183288; overflow:hidden; padding:5px 20px; margin-top:10px; text-align:center;}
+	.ncs_box p {color:#FFF;}
+.ncs_box2 {background:#e4e4e4; overflow:hidden; padding:13px 20px 15px 20px; margin-top:20px;}
+	.ncs_box2 p {font-size:14px; line-height:1.5;}
+.ncs_search {background:#e0e0e0;}
+	.ncs_search:after {content:""; clear:both; display:block;}
+	.ncs_search .core {padding:20px 0 20px 30px;}
+	.ncs_search .core * {vertical-align:top;}
+	.ncs_search input.inp {border:solid 1px #333; height:38px; line-height:38px; padding-left:10px; font-size:13px; margin-right:5px;}
+	.ncs_search.sort {background:#FFF; margin:10px 0;}
+	.ncs_search .floatR {margin-right:-10px;}
+.ncs_map {border:solid 10px #e8e8e8; margin-bottom:20px; overflow:hidden;}
+	.ncs_map:after {content:""; clear:both; display:block;}
+	.ncs_map .left {float:left; width:400px;}
+	.ncs_map .right {float:left; width:500px;}
+.ncs_sort {position:relative; font-size:13px; color:#FFF; background:#1543bc; padding:11px 0 12px 20px;}
+	.ncs_sort .sort {font-size:13px; color:#FFF;}
+	.ncs_sort .sort .tit {padding-right:15px; margin-right:5px; background:url(http://image.jinhak.com/job/site/bl_bar15.png) no-repeat right 3px;}
+	.ncs_sort .sort a {color:inherit; padding:0 5px;}
+	.ncs_sort .sort a.selected {font-weight:bold;}
+	.ncs_sort .ck {position:absolute; right:18px; top:10px;}
+	.ncs_sort .ck label {color:#FFF; font-size:13px; margin-left:3px;}
+.ncs_bn {overflow:hidden; background-color:#e5e5e5;}
+	.ncs_bn:after {content:""; clear:both; display:block;}
+	.ncs_bn li {float:left; width:50%; text-align:center; font-size:15px; line-height:1.8; padding:40px 0; background:url(http://image.jinhak.com/job/site/bl_bar18.gif) no-repeat left center;}
+	.ncs_bn li:first-child {background:none;}
+	.ncs_bn li a {font-weight:bold; text-decoration:underline; color:#1543bc;}
+.ncs_exp {overflow:hidden;}
+	.ncs_exp:after {content:""; clear:both; display:block;}
+	.ncs_exp dt {float:left; width:128px; text-align:right; margin-right:10px;}
+	.ncs_exp dd {float:left; width:727px; padding:35px 0 10px 0; font-size:14px; line-height:1.6;}
+.ncs_lecture {background:url(http://image.jinhak.com/job/site/ncs_img24.jpg) repeat-y right top #323232; overflow:hidden; width:856px; margin:0 auto;}
+	.ncs_lecture:after {content:""; clear:both; display:block;}
+	.ncs_lecture .teacher {float:left; width:180px; position:relative;}
+	.ncs_lecture .teacher .t01 {position:absolute; top:10px; left:12px;}
+	.ncs_lecture .list {float:left; width:446px; padding:10px 25px;}
+	.ncs_lecture .list li {position:relative; color:#FFF; font-size:14px; line-height:1.7;}
+	.ncs_lecture .list li span {position:absolute; right:0;}
+	.ncs_lecture.wd2 {width:676px;}
+.ncs_slide {position:relative; margin-top:1px; height:320px; background:#555;}
+	.ncs_slide .bx-controls {position:absolute; bottom:26px; left:549px;}
+	.ncs_slide .bx-controls .bx-pager-item {display:inline-block; margin-right:6px; overflow:hidden; text-indent:100%; white-space:nowrap;}
+	.ncs_slide .bx-controls .bx-pager-item a {display:block; width:9px; height:9px; background:url(http://image.jinhak.com/job/site/pager03.png) no-repeat left top;}
+	.ncs_slide .bx-controls .bx-pager-item a.active {background-image:url(http://image.jinhak.com/job/site/pager03_on.png);}
+.slider_ncs {overflow:hidden;}
+	.slider_ncs:after {content:""; clear:both; display:block;}
+	.slider_ncs .pic {float:left; width:555px; height:281px; margin:19px 0 0 20px;}
+	.slider_ncs .pic img {width:509px; height:281px;}
+	.slider_ncs .txt {float:left; margin-top:38px; width:350px;}
+	.slider_ncs .txt .t01 {color:#FFF; font-size:30px; line-height:1.6; letter-spacing:-2px; background:url(http://image.jinhak.com/job/site/bl_bar19.gif) no-repeat left top;}
+	.slider_ncs .txt .t02 {color:#FFF; font-size:14px; line-height:1.4; margin-top:5px;}
+.ncs_az {border-bottom:solid 1px #CCC; padding:30px 0 20px 0;}
+	.ncs_az.bg1 {background:url(http://image.jinhak.com/job/site/ncs_img26.jpg) no-repeat right top; padding-top:45px;}
+	.ncs_az.bg2 {background:url(http://image.jinhak.com/job/site/ncs_img28.jpg) no-repeat right center;}
+	.ncs_az.bg3 {background:url(http://image.jinhak.com/job/site/ncs_img29.jpg) no-repeat right center;}
+	.ncs_az.bg4 {background:url(http://image.jinhak.com/job/site/ncs_img30.jpg) no-repeat right center;}
+	.ncs_az.bg5 {background:url(http://image.jinhak.com/job/site/ncs_img31.jpg) no-repeat right 41px;}
+	.ncs_az .tit {padding-bottom:18px;}
+	.ncs_az .t01 {font-size:14px; line-height:1.5;}
+	.ncs_az .t02 {font-size:14px; line-height:1.5; background:url(http://image.jinhak.com/job/site/bl_dot10.gif) no-repeat 5px 8px; padding-left:18px;}
+	.ncs_az .btn_type3 {height:36px; line-height:35px; border-top:solid 1px #0a153a;}
+	.ncs_az .btn_type3.bg2 {border-color:#565656;}
+	.ncs_az .btn_type3.bg3 {border-color:#70922e;}
+	.ncs_az .btn_area .btn_type2 {width:270px; padding-right:0; padding-left:0; margin-bottom:5px; margin-right:3px; text-align:center;}
+.ico_save,
+.ico_location {position:relative; cursor:pointer; display:inline-block; font-size:13px; line-height:27px; height:29px; font-weight:bold; text-decoration:none; padding-left:23px; background-repeat:no-repeat; background-position:left center;}
+	.ico_save {background-image:url(http://image.jinhak.com/job/site/ico_ncs01.png); padding-right:30px; margin-right:30px; border-right:solid 1px #d3d3d3;}
+	.ico_save input[type=checkbox] {display:block; cursor:pointer; position:absolute; top:0; left:0; width:100%; height:100%; opacity:0;}
+	.ico_save.on {background-image:url(http://image.jinhak.com/job/site/ico_ncs01_on.png);}
+	.ico_location {background-image:url(http://image.jinhak.com/job/site/ico_ncs02.png);}
+	.ico_location:hover {text-decoration:none;}
+.ico_more {display:inline-block; font-weight:bold; color:#1543bc; font-size:13px; padding-top:14px; background:url(http://image.jinhak.com/job/site/bl_dot09.gif) no-repeat center top;}
+	.ico_more:hover {color:#1543bc;}
+.list_interview2 {overflow:hidden;}
+	.list_interview2:after {content:""; clear:both; display:block;}
+	.list_interview2 li {float:left; width:50%; margin-top:10px;}
+	.list_interview2 li a {display:block; position:relative; border:solid 5px #dadada; height:115px; font-size:13px; text-align:right; margin-left:5px;}
+	.list_interview2 li a:hover {text-decoration:none;}
+	.list_interview2 li.odd a {margin-right:5px; margin-left:0;}
+	.list_interview2 li .pic {position:absolute; left:0; top:0;}
+	.list_interview2 li .pic img {height:115px;}
+	.list_interview2 li .blind {position:absolute; top:0; right:0; bottom:0; left:0; background:url(http://image.jinhak.com/job/site/blind01.png) repeat-y right top;}
+	.list_interview2 li .logo {position:relative; display:block; margin:25px 6px 0 0;}
+	.list_interview2 li .logo img {height:38px;}
+	.list_interview2 li .txt {position:relative; display:block; margin-right:16px;}
+
+/* 회원가입 */
+.mem_join {font-size:0; line-height:0;}
+	.mem_join a img {margin-bottom:10px;}
+.mem_step {overflow:hidden; background:#ebebeb; height:60px; margin-bottom:20px;}
+	.mem_step:after {content:""; clear:both; display:block;}
+	.mem_step li {float:left; width:220px; padding-left:44px; background:url(https://imgorg.catch.co.kr/job/site/mem_step_arr.gif) no-repeat left top;}
+	.mem_step li:first-child {padding-left:30px; background:none;}
+.error2 {margin-top:20px;}
+	.error2 input {text-align:center; border:0; background:#FFF; width:100%; height:20px; line-height:20px; color:#ff0000;}
+.row_area {position:relative;}
+	.row_area.wd500 {width:500px; margin:0 auto;}
+	.row_area .row {position:relative; border:solid 1px #c7c7c7; padding:6px 0 6px 20px; margin-top:7px; min-height:34px; #height:34px; background-color:#FFF;}
+	.row_area .row:first-child {margin-top:0;}
+	.row_area .row.error {border:solid 1px #ff0000;}
+	.row_area .row.error .msg {color:#ff0000; clear:both;}
+	.row_area .row.pass .msg {color:#eb6d6c; clear:both; margin-top:5px;}
+	.row_area .row label {position:absolute; left:20px; color:#aaa; font-weight:bold; color:#aaa; font-size:14px; height:34px; line-height:34px;}
+	.row_area .row input.inp {border:0; font-weight:bold; color:#333; font-size:14px; width:360px; height:34px; line-height:34px;}
+	.row_area .row input[type="radio"] {margin-top:-4px;}
+	.row_area .row .btn {position:absolute; right:9px; top:6px;}
+	.row_area .row .btn.type2 {top:14px; color:#AAA; font-size:12px; font-weight:normal; text-decoration:underline;}
+	.row_area .row .cell {display:inline-block; float:left; width:10px; height:34px; background:url(https://imgorg.catch.co.kr/job/site/bl_bar07.gif) no-repeat left top;}
+	.row_area .row.star {background:url(https://imgorg.catch.co.kr/job/site/bl_star.gif) no-repeat 10px 20px;}
+	.row_area .row2 {position:relative; border:solid 1px #c7c7c7; padding:15px 20px 7px 20px; margin-bottom:10px;}
+.box_join {border:solid 1px #e0e0e0; padding:20px 69px 20px 69px; background-color:#f9f9f9;}
+	.box_join h3 {font-weight:bold; font-size:14px; margin-bottom:10px;}
+	.box_join h3:first-child {margin-top:-5px;}
+	.box_join h3.t_isms {font-size:17px;}
+	.box_join h3.ck {position:relative;}
+	.box_join h3.ck label {/*position:absolute; z-index:10; top:0; left:0; background:url(https://imgorg.catch.co.kr/job/site/ico_ck.gif) no-repeat right 3px; padding:2px 0 0 0; min-height:20px;*/}
+	/*.box_join h3.ck label.selected {background-image:url(https://imgorg.catch.co.kr/job/site/ico_ck_on.gif);}*/
+	.box_join h3.ck input {position:absolute; right:0; top:0; width:18px; height:18px; margin:0;}
+	.box_join h3.ck.error label {color:#ff0000;}
+	.box_join .txt0 {font-weight:bold; color:#333; font-size:14px; line-height:34px;}
+	.box_join .txt {padding:3px 0 0 22px;}
+	.box_join .txt a {color:#AAA;}
+	.box_join .txt .bar {color:#AAA; padding:0 3px;}
+	.box_join .txt2 {font-weight:bold; text-align:center; font-size:14px; line-height:21px;}
+	.box_join .txt2 strong {color:#8d72e4;}
+	.box_join .txt3 {font-weight:bold; margin-bottom:18px;}
+	.box_join .bn {text-align:center; margin-top:15px; margin-bottom:25px;}
+	.box_join .list_ck {margin-top:6px;}
+	.box_join .list_ck li {padding-bottom:10px;}
+.list_ck2 {overflow:hidden; border:solid 1px #e0e0e0; border-top-width:0;}
+	.list_ck2:after {content:""; clear:both; display:block;}
+	.list_ck2>li {background-color:#FFF; border-top:solid 1px #e0e0e0; padding:4px 10px 6px 10px; color:#777;}
+	.list_ck2>li .t1 {position:relative;}
+	.list_ck2>li label {color:inherit;}
+	.list_ck2>li input {position:absolute; top:2px; right:0; width:18px; height:18px; margin-right:0;}
+	.list_ck2>li .ck2 {position:absolute; right:0;}
+	.list_ck2>li .ck2 label {margin-left:10px;}
+	.list_ck2>li .ck2 input {position:static; margin-top:2px;}
+	.list_ck2>li .msgDetail,
+	.list_ck2>li .msgDetail2 {margin-top:7px; background-color:#f9f9f9;}
+	.list_ck2>li .msgDetail .privercy {overflow-y:auto; height:100px;}
+	.list_ck2>li .btn {display:inline-block; width:62px; height:18px; font-size:0; line-height:0; background:url(https://imgorg.catch.co.kr/job/site/arr30_down.gif) no-repeat center top; vertical-align:middle; margin:2px 0 0 5px; cursor:pointer;}
+	.list_ck2>li .btn.selected {background-image:url(https://imgorg.catch.co.kr/job/site/arr30_up.gif);}
+.box_join2 .txt2 {text-align:center; font-size:20px; color:#272727; line-height:1.6;}
+	.box_join2 .txt2 strong {font-weight:normal; /*color:#8d72e4;*/}
+.box_join3 dl {border:solid 1px #e0e0e0; border-top-width:0; background-color:#FFF; padding:15px 20px 20px 20px;}
+	.box_join3 dl:first-child {border-top:solid 3px #4f4f4f;}
+	.box_join3 dt {font-size:18px; color:#272727; font-weight:bold; line-height:1.4;}
+	.box_join3 dd {padding-top:5px; font-size:13px; color:#666; line-height:1.4; letter-spacing:0;}
+.box_join4 {width:460px; margin:0 auto; text-align:left;}
+	.box_join4 .row {margin-top:-1px; border-color:#666;}
+.join_select {width:814px; margin-top:80px; zoom:1;}
+	.join_select:after {content:""; display:table; clear:both; table-layout:fixed;}
+	.join_select li {position:relative; float:left; width:393px; margin:0 7px 14px 7px;}
+	.join_select li a {display:block; border:solid 1px #e1e1e1; text-align:center; text-decoration:none; font-size:13px; color:#333; padding:10px 0;}
+	.join_select li a img {margin-right:8px;}
+	.join_select li.naver span {color:#2db400;}
+	.join_select li.facebook span {color:#44619c;}
+	.join_select li.google span {color:#eb4a3c;}
+	.join_select li.kakao span {color:#f0c100;}
+	.join_select li.catch span {color:#eb6d6c;}
+	.join_select li.jinhak span {color:#284e8f;}
+	.join_select .ico {position:absolute; left:64px; top:64px;}
+.mem_right_bn {position:absolute; top:83px; left:50%; margin-left:410px; background-color:#f8f8f8;}
+	.mem_right_bn p,
+	.mem_right_bn_core p {margin-bottom:5px;}
+#wrapper.member .util {position:absolute; top:20px; right:-10px;}
+	#wrapper.member .util a {position:relative; color:#333; font-weight:bold; padding-left:8px; margin-left:5px;}
+	#wrapper.member .util a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#5b5b5b;}
+	#wrapper.member .util a:first-child:after {display:none;}
+#inneriframe {position:absolute; top:0px; left:0px; visibility:hidden;}
+
+.iframe_bd {border:solid 1px #e0e0e0;}
+.iframe_use {padding:40px 30px 0 30px;}
+.use {padding:10px;}
+	.use h3 {font-weight:bold; margin-top:22px;}
+	.use h3:first-child {margin-top:0;}
+	.use p {line-height:20px;}
+.privercy {padding:10px;}
+	.privercy h3 {font-weight:bold; margin-top:40px; margin-bottom:23px;}
+	.privercy p {line-height:1.7;}
+	.privercy .list_decimal {overflow:hidden; border:solid 1px #c7c7c7; padding:15px 10px 15px 0; margin-top:14px;}
+	.privercy .list_decimal:after {content:""; clear:both; display:block;}
+	.privercy .list_decimal li {float:left; width:42%; margin-left:8%; margin-bottom:6px;}
+	.strong_font p,
+	.strong_font th,
+	.strong_font td {font-size:14px;}
+	.strong_font h3 {font-size:17px; color:#e76a65;}
+	.strong_font .strong {color:#e76a65;}
+.dl_join {width:660px;}
+	.dl_join:after {content:""; clear:both; display:block;}
+	.dl_join dt {float:left; width:115px; padding-right:15px; padding-top:16px; text-align:right; font-weight:bold; font-size:14px; color:#777;}
+	.dl_join dd {float:left; width:508px; padding:6px 0 6px 20px; margin-bottom:7px;}
+	.dl_join.noline dd {width:528px; padding-left:0;}
+.dl_join_result {overflow:hidden; width:500px; margin:12px auto 0 auto;}
+	.dl_join_result:after {content:""; clear:both; display:block;}
+	.dl_join_result dt,
+	.dl_join_result dd {float:left; line-height:48px; font-weight:bold; font-size:14px; background:#ebebeb;}
+	.dl_join_result dt {width:134px; text-align:right; color:#777;}
+	.dl_join_result dd {width:311px; padding-left:55px; margin-bottom:7px; color:#333;}
+.job_set {overflow:hidden;}
+	.job_set:after {content:""; clear:both; display:block;}
+	.job_set li {float:left; width:326px; height:70px; border:solid 1px #c7c7c7; margin:0 4px 7px 0; background-color:#FFF;}
+	.job_set li a {display:block; color:#AAA; padding:8px 0 0 9px;}
+	.job_set li a span {display:block; color:#555; font-size:14px; margin-bottom:5px;}
+	.job_set li:hover {background:#af99ed;}
+	.job_set li:hover a,
+	.job_set li:hover a span {color:#FFF; text-decoration:underline;}
+
+/* 고객센터 */
+.cus_main {border:solid 1px #DDD; background:#e8e8e8; padding:6px;}
+	.cus_main .hello {text-align:center; height:51px;}
+	.cus_main .hello img {margin-top:10px;}
+	.cus_main .tel {position:relative; text-align:center; background:url(http://image.jinhak.com/job/site/cus_main02.gif) no-repeat center 19px #FFF; height:108px;}
+	.cus_main .tel .map {position:absolute; top:70px; left:180px; width:200px; height:23px; text-indent:-9999em;}
+	.cus_main .menu {margin-top:8px; overflow:hidden;}
+	.cus_main .menu:after {content:""; clear:both; display:block;}
+	.cus_main .menu dl {float:left; width:240px; height:219px; background:#FFF; margin-left:8px;}
+	.cus_main .menu dl:first-child {margin-left:0;}
+	.cus_main .menu dt {height:158px; text-align:center;}
+	.cus_main .menu dt img {margin-top:26px;}
+	.cus_main .menu dd {text-align:center;}
+	.cus_main .menu dd a {width:78px; display:block; padding:5px 0; margin:0 auto; background:url(http://image.jinhak.com/job/site/line_dot.gif) repeat-x left top;}
+	.cus_main .menu dd a.noline {background:none;}
+	.cus_main .menu dl a.wd2 {text-align:left; display:inline-block;}
+.cus_main_bot {margin-top:12px; overflow:hidden;}
+	.cus_main_bot:after {content:""; clear:both; display:block;}
+	.cus_main_bot dl {float:left; width:370px; height:141px; #height:137px; border:solid 1px #DDD; margin-left:6px;}
+	.cus_main_bot dl:first-child {margin-left:0;}
+	.cus_main_bot dt {height:37px; border-bottom:solid 1px #ebebeb; padding-left:20px;}
+	.cus_main_bot dt img {margin-top:11px;}
+	.cus_main_bot dd {padding:20px 0 0 20px;}
+	.cus_main_bot dd a {display:inline-block; width:96px; padding-left:7px; margin-bottom:8px; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 7px;}
+.left_tel {margin-top:7px;}
+#wrapper.customer #contents h2 {font-weight:bold; font-size:20px; height:50px; line-height:50px; padding-left:20px; color:#777; letter-spacing:-2px; margin-bottom:25px; background:#e8e8e8;}
+#wrapper.customer #contents h3 {font-weight:bold; font-size:14px; color:#777; margin-bottom:10px;}
+#wrapper.customer #contents h3 input[type="checkbox"] {margin-top:-3px;}
+.idsearch {border:solid 1px #DDD; border-top:none; padding:0 40px;}
+	.idsearch .sel {font-size:14px; font-weight:bold; color:#333; padding:30px 0 30px 10px; border-top:solid 1px #e6e6e6;}
+	.idsearch .sel:first-child {border-top:none; padding-top:40px;}
+	.idsearch .sel label {vertical-align:top;}
+	.idsearch .sel input[type="radio"] {margin-top:-3px;}
+	.idsearch .core {padding-bottom:37px; display:none;}
+	.idsearch table {width:100%; border:0; border-collapse:collapse;}
+	.idsearch th {padding:0; border:0; text-align:right; font-weight:bold; font-size:14px; color:#333; min-height:31px;}
+	.idsearch td {padding:3px 0 3px 28px; border:0; font-size:14px; color:#333;}
+	.idsearch td .input,
+	.idsearch td select {height:23px; line-height:23px;}
+	.idsearch td .input.ht2 {height:46px; line-height:46px; letter-spacing:0;}
+	.idsearch.type2 {padding:35px; border:solid 1px #e0e0e0; background-color:#f9f9f9;}
+	.box_pi .idsearch td label {vertical-align:top;}
+.idresult {border:solid 1px #DDD; padding:40px 50px;}
+	.idresult .result {color:#333;}
+	.idresult .result strong {font-size:16px; color:#8d72e4; background:url(http://image.jinhak.com/job/site/bl_dot03.gif) no-repeat left 11px; padding-left:12px; padding-right:5px;}
+	.idresult .ju {padding:18px 0 0 12px;}
+	.idresult .ju strong {color:#8d72e4;}
+	.idresult .tit {font-weight:bold; font-size:17px; margin-bottom:10px;}
+	.idresult.type2 {padding:35px; border:solid 1px #e0e0e0; background-color:#f9f9f9;}
+.t_leave {text-align:center; font-size:14px; line-height:33px; padding:66px 0 34px 0;}
+.list_faq {border-top:solid 1px #c7c7c7; border-bottom:solid 1px #c7c7c7; margin-top:15px;}
+	.list_faq li:first-child a {border-top:0;}
+	.list_faq li a {display:block; padding:9px 29px; background:url(http://image.jinhak.com/job/site/bl_dot04.gif) no-repeat 20px 17px; border-top:solid 1px #e6e6e6; line-height:18px; text-decoration:none;}
+	.list_faq li .ans {border-top:solid 1px #e6e6e6; line-height:18px; padding:20px;}
+	.list_faq li.some {}
+	.list_faq li.more a {font-weight:bold;}
+.box_pi {padding:30px 10px 0 10px;}
+	.box_pi * {color:#272727;}
+
+/* error */
+#error {width:800px; margin:200px auto 0 auto;}
+	#error h1 {height:90px;}
+	#error .tit {font-size:30px;}
+	#error .tit span {padding-left:40px; background:url(http://image.jinhak.com/job/corp/bl13.png) no-repeat left 4px;}
+	#error .txt {margin:15px 0 30px 0; line-height:18px;}
+	#error .txt2 {font-size:19px; line-height:1.4;}
+	#error .txt3 {font-size:38px; color:#e76a65; line-height:1.4; letter-spacing:-2px;}
+	#error .txt3 a {color:inherit;}
+	#error .tel {border:solid 1px #DDD; background:#e8e8e8; padding:5px 4px; font-size:0; line-height:0; width:553px; margin:30px auto 0 auto;}
+	#error .tel .core {background:#FFF; padding:20px 0;}
+	#error .box {background:#e8e8e8; width:406px; margin:20px auto; padding:10px; line-height:2;}
+	
+/* popup */
+#popup_wrap {text-align:left; height:100%; background-color:#f8f8f8;}
+	#popup_wrap.wd380 {width:380px; position:relative;}
+	#popup_wrap.wd640 {width:640px; position:relative;}
+	#popup_wrap h1 {background:url(http://image.jinhak.com/job/site/bl_bar06.gif) no-repeat 16px 13px #463375; padding-left:25px; height:36px; line-height:36px; font-weight:bold; color:#FFF;}
+	#popup_wrap h1.type2 {background:#648fcd; height:78px; line-height:78px; font-size:31px; letter-spacing:-2px; font-weight:normal;}
+#popup_wrap2 {text-align:center; height:100%; background-color:#eb6d6c; padding:0 24px; overflow:hidden;}
+	#popup_wrap2 h1 {margin:60px 0 20px 0;}
+	#popup_wrap2 h1 .sns {display:inline-block; height:33px; background-color:#FFF; padding:0 15px; border-radius:5px; overflow:hidden; vertical-align:middle; margin:4px 5px 4px 0;}
+	#popup_wrap2 h1 .sns img {margin-top:-12px;}
+#popup_cont {padding:13px 14px 15px 14px;}
+	#popup_cont .txt {margin-bottom:7px; line-height:18px;}
+	#popup_cont .txt2 {margin-bottom:7px; line-height:18px; text-align:center; border-bottom:solid 1px #e0e0e0; padding-bottom:5px;}
+	#popup_cont h2.type1 {font-weight:normal; font-size:14px; color:#8d72e4;}
+	#popup_cont h2.type2 {font-weight:bold; font-size:20px; color:#000;}
+	#popup_cont h3.type1 {font-weight:bold; padding-left:4px; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 4px; margin-top:15px; margin-bottom:5px;}
+	#popup_cont .bot_area {margin-top:8px; padding-top:12px; background:url(http://image.jinhak.com/job/site/line_pop_bot.gif) repeat-x left top; text-align:center;}
+#popup_cont2 {background:#FFF;}
+	#popup_cont2 .t1 {font-size:13px; background:#e0e0e0; padding:9px 25px 12px 25px; color:#333;}
+	#popup_cont2 .t1 strong {font-size:17px;}
+	#popup_cont2 .t1 .bar {padding:0 8px 0 10px; background:url(http://image.jinhak.com/job/site/bl_bar16.gif) no-repeat 6px 3px;}
+#popup_cont3 .ptxt5 {font-size:13px; color:#FFF; line-height:1.6;}
+	#popup_cont3 #loginCont {width:387px; margin-top:40px;}
+	#popup_cont3 #loginCont .save span a {color:#FFF;}
+	#popup_cont3 #loginCont .save span a::after {background-color:#FFF;}
+.my_src_list {border-top:solid 1px #e0e0e0;}
+	.my_src_list li {position:relative; height:29px; line-height:29px; padding-left:6px; border:solid 1px #e0e0e0; border-top:none; background:#FFF;}
+	.my_src_list li .date {font-size:11px; color:#777; padding-left:3px;}
+	.my_src_list li a {position:absolute; right:9px; top:10px; line-height:0;}
+	.my_src_list.type2 {overflow-x:hidden; overflow-y:auto; height:150px;}
+	.my_src_list.type2 li a {position:relative; top:auto; right:auto; line-height:1.2em;}
+.zip_result {overflow-x:hidden; overflow-y:auto; height:185px; background:#FFF; border:solid 1px #c7c7c7;}
+	.zip_result li {padding:7px 5px; overflow:hidden; border-bottom:solid 1px #ebebeb;}
+	.zip_result li:hover dd {text-decoration:underline; cursor:pointer;}
+	.zip_result li dt {float:left; width:17%; text-align:center;}
+	.zip_result li dd {float:left; width:83%;}
+	.zip_result li dd span {display:block; color:#438ee9;}
+.apply_preview {overflow:hidden; padding:25px 23px;}
+	.apply_preview:after {content:""; clear:both; display:block;}
+	.apply_preview .preview {float:left; width:745px; height:588px; overflow:auto; border:solid 1px #7b7b7b;}
+	.apply_preview .list {float:right; width:110px;}
+	.apply_preview .list li {margin-top:10px; border:solid 1px #7b7b7b; height:108px; overflow:hidden;}
+	.apply_preview .list li:first-child {margin-top:0;}
+	.apply_preview .list li img {width:100%;}
+#popup_wrap.login {text-align:center;}
+	#popup_wrap.login h1 {background:none; padding:24px 0 2px 0; height:auto; text-align:center;}
+	#popup_wrap.login .before {width:280px; margin:0 auto; text-align:left;}
+	#popup_wrap.login .before .gubun {font-weight:bold; color:#333; font-size:14px; height:33px; text-align:center;}
+	#popup_wrap.login .before .gubun label {padding-right:33px;}
+	#popup_wrap.login .before fieldset {position:relative;}
+	#popup_wrap.login .before fieldset .login label {display:none;}
+	#popup_wrap.login .before fieldset .login input {border:solid 1px #c7c7c7; width:256px; padding:0 11px; height:46px; line-height:46px; display:block; font-size:14px; font-weight:bold;}
+	#popup_wrap.login .before fieldset .login input#txtJobID {background:url(http://image.jinhak.com/job/site/login_t03.gif) no-repeat 12px center #FFF; margin-bottom:6px;}
+	#popup_wrap.login .before fieldset .login input#txtJobPwd {background:url(http://image.jinhak.com/job/site/login_t04.gif) no-repeat 12px center #FFF;}
+	#popup_wrap.login .before fieldset .btn {position:absolute; top:0; right:9px; font-size:0;}
+	#popup_wrap.login .before .save {margin-top:14px; color:#333;}
+	#popup_wrap.login .before .btn {margin-top:19px;}
+	#popup_wrap.login .before .bot {margin-top:15px; text-align:center;}
+	#popup_wrap.login .before .bot a {color:#333; padding-left:3px; font-weight:bold;}
+	#popup_wrap.login .before .bot strong {padding:0 8px 0 0; background:url(http://image.jinhak.com/job/site/bl_bar04.gif) no-repeat right 0; font-weight:normal;}
+.pbox1 {background-color:#FFF; border-radius:12px; padding:50px 5px; margin:20px 0;}
+	.pbox1 .t1 {font-size:26px; color:#333; font-family:"SpoqaHanSans";}
+	.pbox1 .t2 {font-size:13px; color:#333;}
+	.pbox1 .btn {margin-top:10px;}
+.pbox2 {background-color:#FFF; margin:20px 0; text-align:left;}
+.pbtn_join01 {margin-top:10px;}
+	.pbtn_join01 a {display:block; border:solid 1px #FFF; font-size:14px; color:#FFF; height:56px; line-height:53px;}
+	.pbtn_join01 a:hover {color:#FFF; text-decoration:none;}
+	.pbtn_join01.ico1 span {display:inline-block; padding-left:35px; background:url(http://image.jinhak.com/job/corp/ico_btn01.png) no-repeat left center;}
+.pbtn_join02 {margin-top:10px;}
+	.pbtn_join02 a {display:block; background-color:#FFF; font-size:14px; color:#333;}
+	.pbtn_join02 img {margin-right:8px;}
+	.pbtn_join02 a:hover {color:#333; text-decoration:none;}
+
+/* LOGIN */
+#loginWrap {width:1024px; margin:0 auto;}
+	#loginWrap .util {padding:20px 20px 0 0; text-align:right;}
+	#loginWrap .util a {position:relative; color:#333; font-weight:bold; padding-left:8px; margin-left:5px;}
+	#loginWrap .util a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#5b5b5b;}
+	#loginWrap .util a:first-child:after {display:none;}
+	#loginWrap h1 {margin:53px 0 80px 0;}
+#loginCont {width:800px; margin:0 auto; text-align:left; overflow:hidden;}
+	#loginCont:after {content:""; clear:both; display:block;}
+	#loginCont .loginarea {float:left; width:387px;}
+	#loginCont .ad {float:right; width:387px;}
+	#loginCont fieldset {position:relative;}
+	#loginCont fieldset label {display:none;}
+	#loginCont fieldset .login input {border:solid 1px #666; border-right-width:0; width:236px; padding-left:12px; padding-right:20px; height:46px; line-height:46px; display:block; font-size:14px; font-weight:bold;}
+	#loginCont fieldset .login input#txtJobID {background:url(http://image.jinhak.com/job/site/login_t03.gif) no-repeat 12px 17px #FFF; border-bottom-width:0;}
+	#loginCont fieldset .login input#txtJobPwd {background:url(http://image.jinhak.com/job/site/login_t04.gif) no-repeat 12px 17px #FFF;}
+	#loginCont fieldset .btn {position:absolute; top:0; right:0;}
+	#loginCont fieldset .univ {margin-bottom:20px;}
+	#loginCont fieldset .univ .box {border:solid 1px #666; box-sizing:border-box; background-color:#FFF;}
+	#loginCont fieldset .univ .box:first-child {border-bottom-width:0;}
+	#loginCont fieldset .univ input {border:0; padding-left:11px; width:220px; height:46px; line-height:46px; font-size:14px; font-weight:bold;}
+	#loginCont fieldset .univ input#txtPhone {background:url(http://image.jinhak.com/job/site/login_t05.gif) no-repeat 12px 17px #FFF;}
+	#loginCont fieldset .univ input#txtNum {background:url(http://image.jinhak.com/job/site/login_t06.gif) no-repeat 12px 17px #FFF;}
+	#loginCont fieldset .univ .more {display:none; padding:0 12px 10px 12px; color:#333; line-height:1.4;}
+	#loginCont fieldset .btn2 {position:absolute; right:6px; margin-top:6px;}
+	#loginCont .save {position:relative; margin:11px 0 26px 0;}
+	#loginCont .save label {vertical-align:top; color:#333;}
+	#loginCont .save span {position:absolute; right:0;}
+	#loginCont .save span a {position:relative; padding-left:8px; margin-left:5px; color:#333;}
+	#loginCont .save span a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#7b7b7b;}
+	#loginCont .save span a:first-child:after {display:none;}
+	#loginCont .t1 {margin-top:11px;}
+	#loginCont .t1 a {text-decoration:underline; margin-left:10px;}
+	#loginCont .bot {text-align:center; margin-bottom:7px; font-size:0; line-height:0;}
+	#loginCont .bot a:first-child img {margin-right:7px;}
+
+/* Admin과 공동사용 */
+.box_1 {background:#ebebeb; padding:10px 15px; border:solid 1px #e0e0e0;}
+.category_move {overflow:hidden; margin-top:10px;}
+	.category_move:after {content:""; clear:both; display:block;}
+	.category_move .core {float:left; width:48%; margin-left:10px;}
+	.category_move .core:first-child {margin-left:0;}
+	.category_move .core dl {border:solid 1px #c8c8c8; border-top:0;}
+	.category_move .core dl dt {color:#777; font-weight:normal; text-align:center; padding:6px 0 4px 0; border-top:solid 1px #e0e0e0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #ebebeb;}
+	.category_move .core dl dd {height:189px; overflow-x:hidden; overflow-y:auto; border-top:solid 1px #e0e0e0; background:#FFF;}
+	.category_move .core dl dd ul {padding:3px 1px 3px 0;}
+	.category_move .core dl dd li {padding:3px 5px;}
+	.category_move .core dl dd li.selected,
+	.category_move .core dl dd li:hover {background:#ebebeb;}
+	.category_move .core dl dd ul.nohover li:hover {background:none;}
+	.category_move .core dl dd ul.type2 li {float:left; width:43%; border-right:solid 1px #c8c8c8;}
+	.category_move .core dl dd ul.type2 li.even {border-right:none;}
+	.category_move.at3 .core {width:32%;}
+
+/* 결제 */
+.pay_prodinfo {background:#ececec; position:relative; padding:42px 40px 29px 188px; min-height:126px;}
+	.pay_prodinfo .pic {position:absolute; left:47px; top:40px;}
+	.pay_prodinfo .pic img {width:126px;}
+	.pay_prodinfo .tit {font-size:20px; color:#333;}
+	.pay_prodinfo dl {overflow:hidden; width:712px; margin-top:33px;}
+	.pay_prodinfo dl:after {content:""; clear:both; display:block;}
+	.pay_prodinfo dt {float:left; width:62px; color:#777; padding-top:2px;}
+	.pay_prodinfo dd {float:left; width:650px; font-size:15px; color:#333; margin-bottom:2px;}
+	
+/* 결제 공통 */
+.pay_area {position:relative; border:solid 1px #ececec; padding:20px 30px; margin-bottom:15px;}
+	.pay_area h1 {font-size:20px; color:#FFF; font-weight:bold; height:40px; line-height:40px; background:#a6a6a6; padding-left:15px; margin-bottom:10px; width:90%;}
+	.pay_area .step {position:absolute; right:30px; top:20px; font-size:14px; letter-spacing:-2px; color:#777; font-weight:bold; height:40px; line-height:40px; background:url(https://imgorg.catch.co.kr/job/site/pay_step_bg02.png) no-repeat right top;}
+	.pay_area .step span {display:inline-block; padding:0 50px 0 13px;}
+	.pay_area .step span.m1 {background:#a6a6a6;}
+	.pay_area .step span.m2 {}
+	.pay_area .step span.selected {color:#FFF; background:url(https://imgorg.catch.co.kr/job/site/pay_step_bg01.png) no-repeat right top;}
+	.pay_area .list {position:relative; margin:0 15px;}
+	.pay_area .list dt {position:absolute; left:21px; top:21px; font-size:16px; z-index:1;}
+	.pay_area .list dd {position:relative; padding:20px 35px 20px 172px; min-height:23px; border-bottom:solid 1px #7f7f7f; font-size:16px;}
+	.pay_area .list dd .prod {font-size:20px; font-weight:bold; color:#333; padding-right:220px;}
+	.pay_area .list dd .price {position:absolute; width:190px; right:35px; top:21px; font-size:16px; color:#333;}
+	.pay_area .list dd .price em {position:absolute; width:100px; text-align:right; right:0; font-weight:bold; font-size:20px;}
+	.pay_area .list.total dt {color:#8d72e4; font-weight:bold;}
+	.pay_area .list.total dd {text-align:right; color:#8d72e4; font-weight:bold;}
+	.pay_area .list.total dd input {width:100px; font-size:20px; color:#8d72e4; font-weight:bold; text-align:right; border:0; margin-top:-10px; #margin-top:-1px;}
+	.pay_area .list.total dd em {font-size:20px;}
+	.pay_area .box {border-bottom:solid 1px #7f7f7f; padding:20px 0;}
+	.pay_area .t01 {font-size:11px; margin-top:8px;}
+	.pay_area .t02 {font-size:20px; font-weight:bold; color:#8d72e4; text-align:center; margin-bottom:30px;}
+	.pay_area .t03 {font-size:16px; line-height:24px;}
+	.pay_area .t04 {font-size:16px; line-height:24px; color:#333; font-weight:bold; margin-top:15px;}
+	.pay_area .t05 {font-size:16px; line-height:24px; color:#333; font-weight:bold;}
+	.pay_area .t05 .left,
+	.pay_area .t05 .right {display:block;}
+	.pay_area .bt01 {display:inline-block; padding:0 6px; background:#eaeaea; color:#555; font-size:11px; font-weight:normal !important; height:21px; line-height:21px; text-decoration:none; border:solid 1px #a6a6a6; border-radius:3px;}
+	.pay_area .bt02 {display:inline-block; padding:0 30px; background:#FFF; color:#777; font-size:20px; letter-spacing:-2px; font-weight:bold; height:48px; line-height:48px; text-decoration:none; border:solid 1px #a6a6a6;}
+	.pay_area .bt03 {display:inline-block; padding:0 30px; background:#fe863d; color:#FFF; font-size:20px; letter-spacing:-2px; font-weight:bold; height:48px; line-height:48px; text-decoration:none; border:solid 1px #fe863d;}
+	.pay_area .pointc {color:#8d72e4;} 
+	.pay_area .atThis {display:none;}
+.pay_btn {margin:20px 0; text-align:center;}
+.vlayer1 {position:absolute; width:738px; border:solid 2px #000; left:50%; top:0; margin-left:-370px; background:#f8f8f8; z-index:1;}
+	.vlayer1 .close {position:absolute; right:0; top:0; padding:8px; cursor:pointer;}
+	.vlayer1 .core {padding:30px;}
+	.vlayer1 .tit {font-size:22px; color:#062b6e; font-weight:bold; line-height:1.4; letter-spacing:-2px; margin-bottom:10px;}
+	.vlayer1 .t1 {color:#515151; font-size:16px; line-height:1.4;}
+	.vlayer1 .t2 {color:#353535; font-size:16px; line-height:1.4;}
+	.vlayer1.type2 {width:770px; margin-left:-385px; background:#FFF;}
+	.vlayer1.type2 .core {padding:18px;}
+.vtable2 {width:100%; border:0; border-top:solid 2px #454545; border-bottom:solid 1px #EEE; border-collapse:collapse; table-layout:fixed;}
+	.vtable2 thead th {text-align:center; font-weight:normal; font-size:16px; color:#454545; border:0; padding:11px 0 12px 0; background:url(http://image.jinhak.com/renewal2009/virtualapply/vtable2_th_bar.gif) no-repeat left top #bfbfbf;}
+	.vtable2 thead th:first-child {background-image:none;}
+	.vtable2 tbody td {text-align:center; font-size:14px; color:#7b7b7b; border:0; padding:10px 0 8px 0; vertical-align:top;}
+	.vtable2 tbody tr:nth-child(odd) td {background-color:#f8f8f8;}
+	.vtable2 tbody tr:nth-child(even) td {background-color:#EEE;}
+	.vtable2.tdLeft tbody td {text-align:left; padding-left:10px;}
+	
+/* 이벤트 */
+.list_event {overflow:hidden;}
+	.list_event:after {content:""; clear:both; display:block;}
+	.list_event li {float:left; width:470px; margin-left:20px; margin-bottom:28px;}
+	.list_event li * {text-align:center; font-size:15px; color:#333333;}
+	.list_event li img {width:470px; height:100px;}
+	.list_event li .tit {font-weight:bold; margin-top:3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_event li .date {margin-top:3px;}
+
+/* 공통 */
+.cont_type1 {padding:0 30px;}
+	.cont_type1 h3 {margin:20px 0 10px 0;} 
+.list_select {position:relative;}
+	.list_select .t1 {font-size:14px; color:#333; line-height:46px; height:46px; padding-left:18px; border:solid 1px #c7c7c7; background:url(http://image.jinhak.com/job/site/arr26_down.gif) no-repeat right center; cursor:pointer;}
+	.list_select ul {display:none; position:absolute; border:solid 1px #333; margin-top:-1px; right:0; left:0; background-color:#FFF; padding:10px 0;}
+	.list_select li a {display:block; height:31px; line-height:31px; font-size:14px; padding-left:18px;}
+	.list_select li a:hover {text-decoration:none; background-color:#ebebeb;}
+	.list_select li .end {color:#ff0000;}
+	.list_select li .bar {padding:0 8px;}
+
+/* 가이드 */
+.guide_api_top {margin-top:-16px; background:url(http://image.jinhak.com/job/site/guide_api00.jpg) repeat-x center top;}
+	.guide_api_top .core {position:relative; width:990px; height:360px; margin:0 auto; overflow:hidden;}
+	.guide_api_top h2 {margin-top:86px;}
+	.guide_api_top ul {position:absolute; right:0; bottom:0; left:0; overflow:hidden;}
+	.guide_api_top ul:after {content:""; clear:both; display:block;}
+	.guide_api_top li {float:left; width:33.3%;}
+	.guide_api_top li a {position:relative; display:block; border:solid 1px #7f5763; height:69px; margin-left:1px; z-index:1;}
+	.guide_api_top li a img {margin-top:26px;}
+	.guide_api_top li:first-child a {margin-left:0;}
+	.guide_api_top li a:after {content:""; display:block; position:absolute; top:0; right:0; bottom:0; left:0; background-color:#FFF; opacity:0.4; filter:alpha(opacity=40); z-index:-1;}
+	.guide_api_top li.selected a:after {background-color:#823653; opacity:0.2; filter:alpha(opacity=20);}
+.guide_api_cont {position:relative; margin:0 15px; text-align:center;}
+	.guide_api_cont .box {background-color:#714757; overflow:hidden;}
+	.guide_api_cont .box * { color:#FFF; font-family:'SpoqaHanSans';}
+	.guide_api_cont .box .down {margin:45px 0 80px 0}
+	.guide_api_cont .box .down span {display:inline-block; width:270px; margin:0 7px; padding-top:72px; background-repeat:no-repeat; background-position:center top;}
+	.guide_api_cont .box .down span.ico1 {background-image:url(http://image.jinhak.com/job/site/guide_api_ico01.png);}
+	.guide_api_cont .box .down span.ico2 {background-image:url(http://image.jinhak.com/job/site/guide_api_ico02.png);}
+	.guide_api_cont .box .down span.ico3 {background-image:url(http://image.jinhak.com/job/site/guide_api_ico03.png);}
+	.guide_api_cont .box .down a {display:block; border:solid 1px #bfacb4; border-radius:22px; background-color:#7f5a68; height:42px; line-height:39px; font-size:19px; text-decoration:none;}
+	.guide_api_cont .box .t1 {margin-top:65px;}
+	.guide_api_cont .box .t2 {padding-top:95px; font-size:18px; background:url(http://image.jinhak.com/job/site/guide_api_ico04.png) no-repeat center 27px;}
+	.guide_api_cont .box .t3 {margin:30px 0;}
+	.guide_api_cont .box .t3 span {position:relative; display:inline-block; font-size:16px; padding:13px 0; width:370px;}
+	.guide_api_cont .box .t3 span:after {content:""; display:block; position:absolute; top:0; bottom:0; left:0; width:1px; background-color:#b8a3ab;}
+	.guide_api_cont .box .t3 span:first-child:after {display:none;}
+	.guide_api_cont .box .t3 span a {display:block;}
+	.guide_api_cont .box .t4 {text-align:left; font-size:13px; padding:35px 50px;}
+	.guide_api_cont .box2 {border:solid 1px #714757; background-color:#fafafa; padding:30px; text-align:left;}
+	.guide_api_cont .box2 input[type=text] {border:0; background-color:#714757; padding:7px 0 9px 20px; font-size:14px; color:#FFF;}
+	.guide_api_cont .box2 .t1 {font-size:17px; color:#333;}
+	.guide_api_cont .box2 .t2 {color:#333;}
+	.guide_api_cont .tit {font-size:18px; color:#472130; margin:45px 0 8px 0; text-align:left;}
+	.guide_api_cont .gbtn {position:relative; display:inline-block; height:44px; line-height:41px; border-radius:24px; padding:0 30px; font-size:18px; font-family:'SpoqaHanSans'; text-decoration:none; box-sizing:border-box; vertical-align:middle;}
+	.guide_api_cont .gbtn.bt1 {border:solid 1px #714757; color:#714757; background-color:#FFF;}
+	.guide_api_cont .gbtn.bt2 {color:#FFF; background-color:#714757; z-index:1;}
+	.guide_api_cont .gbtn.url {border:solid 1px #714757; border-left-width:0; border-radius:0 24px 24px 0; margin-left:-25px; padding:0 15px 0 30px; background-color:#FFF; font-size:14px; color:#333; text-align:left; max-width:70%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.guide_api_cont .gbtn.wd1 {width:330px; padding:0;}
+	.guide_api_cont .gbtn.ht2 {height:35px; line-height:33px; font-size:14px; border-radius:17px;}
+	.guide_api_cont .gbtn2 {display:inline-block; height:35px; line-height:33px; padding:0 30px; font-size:14px; font-family:'SpoqaHanSans'; text-decoration:none; box-sizing:border-box; vertical-align:middle;}
+	.guide_api_cont .gbtn2.bt2 {color:#FFF; background-color:#714757;}
+	.guide_api_cont .gbtn2.bt3 {color:#714757; background-color:#FFF; border:solid 1px #714757;}
+	.guide_api_cont table {width:100%; border:0; border-top:solid 4px #714757; border-collapse:collapse; table-layout:fixed;}
+	.guide_api_cont th,
+	.guide_api_cont td {padding:15px 0 15px 20px; border:0; border-bottom:solid 1px #714757; text-align:left; font-weight:normal; font-size:13px; color:#472130;}
+	.guide_api_cont th {font-size:16px; vertical-align:top; padding-bottom:0;}
+	.guide_api_cont td label {font-size:13px; color:#472130;}
+	.guide_api_cont td input[type=checkbox] {margin-top:2px;}
+	.guide_api_cont td input[type=text],
+	.guide_api_cont td select {border:solid 1px #b9b9b9; background-color:#fafafa; padding:6px 0 8px 10px; font-size:14px; color:#333;}
+	.guide_api_cont td select {padding:5px 5px 7px 10px;}
+	.guide_api_cont td.btn {text-align:center;}
+	.guide_api_cont td.nodata {text-align:center; font-size:20px; color:#472130; padding:100px 0;}
+	.guide_api_cont table.thBg th {background-color:#fafafa;}
+	.guide_api_cont table.thVmid th {vertical-align:middle; padding-top:0;}
+	.guide_api_cont table.atInput th {padding-top:18px;}
+	.guide_api_cont .list {overflow:hidden;}
+	.guide_api_cont .list:after {content:""; clear:both; display:block;}
+	.guide_api_cont .list li {float:left; width:20%; margin-bottom:30px;}
+	.guide_api_cont .list .logo {border:solid 1px #e8e8e8; width:85px; margin:0 auto;}
+	.guide_api_cont .list .logo img {width:100%; height:100px;}
+	.guide_api_cont .list .t1 {font-size:14px; color:#333; margin-top:5px;}
+	.guide_api_cont .list .t2 {color:#333; margin-top:2px;}
+	.guide_api_cont .list .t2 a {color:inherit;}
+	.guide_api_cont .t_tbl_r {font-size:13px; color:#472130; margin-top:-24px;}
+	

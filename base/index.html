@@ -40,6 +40,9 @@ var ui = {
 
 	common : {
 		init : function(){
+			if($(".test").length){
+				this.module();
+			}
 			this.gnb();
 		}, 
 

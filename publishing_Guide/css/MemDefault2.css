@@ -1,0 +1,9 @@
+﻿@charset "utf-8";
+@import "Default2.css";
+
+.pager_type1 .bx-pager-link {background-image:url(https://imgorg.catch.co.kr/job/site/pager05.png);}
+	.pager_type1 .bx-pager-link.active {background-image:url(https://imgorg.catch.co.kr/job/site/pager05_on.png);}
+.pager_type2 .bx-pager-link {background-image:url(https://imgorg.catch.co.kr/job/site/pager06.png);}
+	.pager_type2 .bx-pager-link.active {background-image:url(https://imgorg.catch.co.kr/job/site/pager06_on.png);}
+#footer .inner {background-image:url(https://imgorg.catch.co.kr/job/site/footer_jinhak02.png);}
+#rBn .bn:before {background-image:url(https://imgorg.catch.co.kr/job/corp/box1_bg.png);}

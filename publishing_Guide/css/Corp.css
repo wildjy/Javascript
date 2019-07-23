@@ -1,0 +1,1096 @@
+﻿@charset "utf-8";  
+
+/* 기업 > 공통 */
+.corp_src {border:solid 1px #c3c3c3; border-top:solid 2px #f45757; margin-bottom:20px; margin-top:45px;}
+	.corp_src .top {height:223px; border-bottom:solid 1px #c3c3c3;}
+	.corp_src .top:after {content:""; clear:both; display:block;}
+	.corp_src .top dl {position:relative; float:left; height:223px; border-left:solid 1px #c3c3c3; margin-left:-1px;}
+	.corp_src .top dt {position:absolute; top:-28px; right:0; left:0; text-align:center;}
+	.corp_src .top dd {margin-top:46px; height:177px; overflow-y:auto; padding-left:5px;}
+	.corp_src .top dl.wide dt {text-align:right;right:-32px;z-index:1} /* 기업 검색 수정 2018-12-11 */
+	.corp_src .top dl.wide li img {cursor:pointer; padding-left:4px; margin-top:0px; margin-bottom:2px} /* 기업 검색 수정 2018-12-11 */
+	.corp_src .top li {float:left; padding-bottom:6px; min-height:19px;}
+	.corp_src .top li label {color:#666; letter-spacing:-1px; display:inline-block;}
+	.corp_src .top li input[type=checkbox] {margin-top:-2px;}
+	.corp_src .top li img {margin-top:2px; cursor:pointer;}
+	.corp_src .top li .tooltip1 {width:300px; margin-left:-173px;}
+	.corp_src .top li .more {display:none; position:relative; margin-top:4px;}
+	.corp_src .top li .more ul:after {content:""; display:block; position:absolute; left:0; right:0; top:-6px; height:7px; background:url(https://imgorg.jinhak.com/job/corp/src_arr.gif) no-repeat center top;}
+	.corp_src .top li .more ul {border:solid 1px #c3c3c3; background-color:#FFF; padding-left:5px; padding-top:3px; margin-top:7px; overflow:hidden;}
+	.corp_src .top li .more li {padding-bottom:5px; min-height:initial;}
+	.corp_src .top li .more li label {font-size:11px;}
+	.corp_src .top li .moreSub {display:none;position:absolute;top:inline;left:inline;margin-top:-26px;margin-left:100px;width:480px;background:#fff;border:1px solid #5f5f5f;box-shadow:3px 3px 3px 0 rgba(0,0,0,0.1);z-index:1}
+	.corp_src .top li .moreSub .core {position:relative;}
+	.corp_src .top li .moreSub .close {position:absolute;top:8px;right:10px}
+	.corp_src .top li .moreSub .tooltip {position:absolute;top:8px;left:-9px;width:9px;height:17px;background:url("http://image.jinhak.com/job/corp/tooltip_al.png") no-repeat;}
+	.corp_src .top li .moreSub .tit {background:#ebebeb;height:42px}
+	.corp_src .top li .moreSub .tit input[type="checkbox"] {display:none}
+	.corp_src .top li .moreSub .tit input[type="checkbox"] + label {display:inline-block;padding:15px 0 0 15px;color:#272727;font-size:13px;font-weight:bold}
+	.corp_src .top li .moreSub .tit input[type="checkbox"] + label span {display:inline-block;width:13px;height:17px;margin:2px 0 0 8px;vertical-align:middle;cursor:pointer;background:url("http://image.jinhak.com/job/corp/ico_uncheck2.gif") no-repeat}
+	.corp_src .top li .moreSub .tit input[type="checkbox"]:checked + label span {background:url("http://image.jinhak.com/job/corp/ico_check2.gif") no-repeat}
+	.corp_src .top li .moreSub ul {margin:8px 0}
+	.corp_src .top li .moreSub ul:after {content:""; clear:both; display:block;}
+	.corp_src .top li .moreSub ul li {width:160px;float:left;padding:0}
+	.corp_src .top li .moreSub ul li input[type="checkbox"] {display:none}
+	.corp_src .top li .moreSub ul li input[type="checkbox"] + label {display:block;height:30px;line-height:30px;padding-left:14px}
+	.corp_src .top li .moreSub ul li input[type="checkbox"]:hover + label {background:#f1f1f1}
+	.corp_src .top li .moreSub ul li input[type="checkbox"]:checked + label {color:#f45757}
+	.corp_src .top li.atMaking.selected,
+	.corp_src .top li.atMakingWith {height:220px;}
+	.corp_src .top li.atMaking.selected .more {display:block;}
+	.corp_src .top li.atMaking ul {width:186%; margin-left:-96%;}
+	.corp_src .top li.atMaking .more li:nth-child(2n-1) {width:40%;}
+	.corp_src .top li.atMaking .more li:nth-child(2n) {width:60%;}
+	.corp_src .top li.atMaking2.selected .more {display:block;}
+	.corp_src .top li.atMaking2 ul {margin-right:5px;}
+	.corp_src .top ul.wd1 li {width:50%;}
+	.corp_src .top ul.wd2 li {float:none;}
+	.corp_src .top.at4 dl {width:25%;}
+	.corp_src .top.at5 dl {width:20%;}
+	.corp_src .bot {background-color:#e5e5e5; padding:16px 0 16px 60px;}
+	.corp_src .bot .inp {margin-bottom:8px;}
+	.corp_src .bot .inp input[type='text'] {border:solid 1px #272727; border-right-width:0; width:675px; /*height:37px; line-height:37px; padding-left:10px;*/ padding:8px 5px 11px 10px; font-size:13px; color:#666;}
+	.corp_src .bot dl {height:20px;}
+	.corp_src .bot dt {float:left; width:220px; padding-left:18px; background:url(https://imgorg.jinhak.com/job/corp/bl05.gif) no-repeat 8px 5px; font-size:13px; color:#474747; font-weight:bold;}
+	.corp_src .bot dd {float:left;}
+	.corp_src .bot dd a {display:inline-block; font-size:13px; margin-right:35px;}
+	.corp_src .bot2 {background-color:#e5e5e5; padding:16px 60px 16px 60px;}
+	.corp_src .bot2 .inp {position:relative;margin-bottom:8px;}
+	.corp_src .bot2 .inp input[type='text'] {border:solid 1px #272727; border-right-width:0; width:98%; /*height:37px; line-height:37px; padding-left:2%;*/ padding:9px 5px 11px 10px; font-size:13px; color:#666;}
+	.corp_src .bot2 .inp a {position:absolute;right:-1px;top:0}
+	.corp_src .bot2 .user_select {line-height:23px;}
+	.corp_src .bot2 .user_select p {}
+	.corp_src .bot2 .user_select span {margin-right:15px;font-size:13px;white-space:nowrap;cursor:pointer;}
+	.corp_src .bot2 .user_select span img {vertical-align:middle;display:inline-block;padding:2px 2px 4px 2px;}
+	.corp_src .bot2 .btn {display:none;position:absolute;right:60px;margin-top:-23px;background:#e5e5e5;padding-left:4px}
+	.corp_src .bot2 .btn img {cursor:pointer;margin-left:1px}
+	.corp_src.ht2 .top,
+	.corp_src.ht2 dl {height:220px;}
+	.corp_src.ht2 dd {height:175px;}
+	.corp_src.type2 {margin-top:0; border:solid 1px #dfdfdf;} /* 뉴스 검색 */
+	.corp_src.type2 .bot {background-color:#f6f6f6; padding:30px 0; text-align:center;}
+	.corp_src.type2 .bot .inp {margin:0;}
+.company_info {overflow:hidden; position:relative;}
+	.company_info:after {content:""; clear:both; display:block;}
+	.company_info dt {margin:3px 0;}
+	.company_info dt a {font-size:15px; font-weight:bold; line-height:1.4; display:inline-block; #display:inline; zoom:1; max-width:50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle;}
+	.company_info dt.pic {float:left; width:89px; margin:0 25px 0 0;}
+	.company_info dt.pic img {width:100%; height:100%;}
+	.company_info dt.pic a {display:inline-block; line-height:0; width:76px; height:76px; max-width:none;}
+	.company_info dt.no {float:left; width:60px; text-align:center; font-size:16px; color:#909090; margin:0; padding-top:20px;}
+	.company_info dt.no span {display:block; font-size:12px; color:#333; padding-top:3px;}
+	.company_info dt.no span.up {color:#ff0000;}
+	.company_info dt.no span.down {color:#006cff;}
+	.company_info dd {margin-top:-1px;}
+	.company_info dd .txt {font-size:11px; color:#666; margin-bottom:1px;}
+	.company_info dd .txt span {position:relative; padding-left:5px;}
+	.company_info dd .txt span:before {content:""; display:block; position:absolute; top:3px; left:0; width:1px; height:11px; background-color:#c2c2c2;}
+	.company_info dd .txt span:first-child {padding-left:0;}
+	.company_info dd .txt span:first-child:before {display:none;}
+	.company_info dd .nowrap {white-space:nowrap;}
+	.company_info dd .btn {margin-top:5px;}
+	.company_info dd .btn .mbtn2 {border-width:0; background:none; padding:0; margin-right:3px;} /* overwrite 임 */
+	.company_info dd .btn .mbtn2:hover span {color:#222 !important;}
+	.company_info dd .btn .mbtn2:hover span em {color:#f45757 !important;}
+	.company_info dd .btn .mbtn2:hover span:first-child em {color:#9f59d9 !important;}
+	.company_info dd .btn2 {position:absolute; top:24px; right:40px; text-align:center;}
+	.company_info dd .btn2 a {text-decoration:none;}
+	.company_info.type2 {border-top:solid 1px #d4d4d4;}
+	.company_info.type2:first-child {border-top-width:0;}
+	.company_info.type2 dt {margin-top:17px;}
+	.company_info.type2 dt a {font-size:20px;}
+	.company_info.type2 dt.pic {margin:10px 0 10px 36px;}
+	.company_info.type2 dt.pic img {width:64px; height:64px;}
+	.company_info.type2 dd {margin-top:5px; padding-bottom:10px;}
+.recom_src {padding-top:30px;}
+	.recom_src select,
+	.recom_src input,
+	.recom_src img {vertical-align:top;}
+	.recom_src label.tit {font-size:14px; font-weight:bold; line-height:36px; margin-left:30px;}
+	.recom_src label.tit:first-child {margin-left:0;}
+.recom_bot {border:solid 1px #c3c3c3; background-color:#f3f3f3; padding:0 18px 15px 18px; /* overflow:hidden; */ zoom:1;}
+	.recom_bot:after {content:""; clear:both; /* display:block; */ display:table; table-layout:fixed;}
+	.recom_bot .core {float:right; width:453px;}
+	.recom_bot .core:first-child {float:left;}
+	.recom_bot .core > div {height:200px;}
+	.recom_bot .tit {margin:22px 0 14px 0;}
+	.recom_bot .txt1 {margin-top:-36px;}
+	.recom_bot .clearfix .list_corp {position:relative; float:left; text-align:center; width:139px; height:166px; margin-right:22px; overflow:visible;}
+	.recom_bot .clearfix .list_corp .ico {right:-10px !important;}
+	.box1 .recom_bot {border:0; margin-top:-20px;}
+.list_corp2 {float:left; width:290px; margin-top:2px;}
+	.list_corp2 li {position:relative; margin-top:10px;}
+	.list_corp2 .t1 {position:relative; padding-left:10px; font-size:14px; max-width:52%; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_corp2 .t1:after {content:""; display:block; position:absolute; top:8px; left:0; width:3px; height:3px; background-color:#6c6c6c;}
+	.list_corp2 .t2 {position:absolute; right:0; top:0;}
+	.list_corp2 .t2 span {position:relative; padding-left:5px; font-size:11px; color:#666;}
+	.list_corp2 .t2 span:after {content:""; display:block; position:absolute; top:3px; left:0; width:1px; height:11px; background-color:#c2c2c2;}
+	.list_corp2 .t2 span:first-child {padding-left:0;}
+	.list_corp2 .t2 span:first-child:after {display:none;}
+.list_talk {border:solid 2px #272727; border-right-width:0; border-left-width:0;}
+	.list_talk li {position:relative; background:url(https://imgorg.jinhak.com/job/corp/line_dot01.gif) repeat-x left top; padding:27px 20px 20px 120px; min-height:90px;}
+	.list_talk li:first-child {background:none;}
+	.list_talk li .pic {position:absolute; top:20px; left:10px; width:95px; height:95px; text-align:center;}
+	.list_talk li .pic .img {position:absolute; right:0; bottom:0; left:0;}
+	.list_talk li .mask {position:absolute; top:0; left:0; right:0; bottom:0; background:url(https://imgorg.jinhak.com/job/corp/mask02.png) no-repeat left top;}
+	.list_talk li .t1 {font-weight:bold;}
+	.list_talk li .t1 span {position:relative; padding-left:5px;}
+	.list_talk li .t1 span:after {content:""; display:block; position:absolute; top:4px; left:0; width:2px; height:12px; background-color:#272727;}
+	.list_talk li .t1 span:first-child {padding-left:0;}
+	.list_talk li .t1 span:first-child:after {display:none;}
+	.list_talk li .t2 {font-size:17px; letter-spacing:-1px; margin-top:4px;}
+	.list_talk li .t3 {margin-top:10px;}
+	.list_talk li .t3 span {color:#fa6a6a; padding-right:13px; margin-top:5px;}
+	.list_talk li .t4 {position:absolute; left:0; width:115px; top:120px; text-align:center; font-size:14px; font-weight:bold;}
+	.list_talk li .t4 span {color:#f45757;}
+	.list_talk li .t5 {background-repeat:no-repeat; background-position:left 3px; padding-left:51px;}
+	.list_talk li .t5 span {position:relative; display:block; padding:13px 10px 14px 10px; border-style:solid; border-width:1px; border-radius:9px; font-size:13px;}
+	.list_talk li .t5 span:after {content:""; display:block; position:absolute; width:8px; top:0; left:-8px; bottom:0; background-position:center 15px; background-repeat:no-repeat;}
+	.list_talk li .t5.good {background-image:url(http://image.jinhak.com/job/corp/ico_type11_1.png); margin-top:20px;}
+	.list_talk li .t5.good span {border-color:#f45757;}
+	.list_talk li .t5.good span:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr01.gif);}
+	.list_talk li .t5.bad {background-image:url(http://image.jinhak.com/job/corp/ico_type11_2.png); margin-top:10px;}
+	.list_talk li .t5.bad span {border-color:#ababab;}
+	.list_talk li .t5.bad span:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr03.gif);}
+	.list_talk.type2 {overflow:hidden; border-width:0;}
+	.list_talk.type2:after {content:""; clear:both; display:block;}
+	.list_talk.type2 li {float:left; width:320px; height:110px; background:none;border-bottom:1px solid #dcdcdc;padding-top:20px} /* 2019-02-12 수정 */
+	.list_talk.type2 li.last {border-bottom:none} /* 2019-02-12 추가 */
+	.list_talk.type2 li .pic {background-color:#FFF;}
+	.list_talk.type2 li .mask {background-image:url(https://imgorg.jinhak.com/job/corp/mask03.png);}
+	.list_talk.type2 li .t1 {font-size:19px; letter-spacing:-1px;}
+	.list_talk.type2 li .t1 span {font-size:12px; color:#666; letter-spacing:0;}
+	.list_talk.type2 li .t1 span:after {background-color:#666;}
+	.list_talk.type2 li .t1 span:nth-child(2) {padding-left:0;}
+	.list_talk.type2 li .t1 span:nth-child(2):after {display:none;}
+	.list_talk.type2 li .t2 {font-size:14px; letter-spacing:0; padding-right:20px;line-height:1.3em;max-height:2.6em;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;word-wrap:break-word;-webkit-line-clamp: 2;-webkit-box-orient: vertical;} /* 2019-02-12 두줄 말줄임 추가 */
+	.list_talk.type2 li .t3 span {display:inline-block; height:22px; line-height:20px; border:solid 1px #AAA; border-radius:12px; padding:0 12px;}
+	.list_talk.type2 li .t4 {left:121px; width:148px; top:95px; border:1px solid #bfbfbf;border-radius:15px;height:26px;line-height:26px} /* 2019-02-12 수정 */
+.list_theme {border:solid 2px #272727; border-right-width:0; border-left-width:0;} /* 기업> 테마> 목록 */
+	.list_theme li {padding:25px 0 23px 18px; background:url(https://imgorg.jinhak.com/job/corp/line_dot01.gif) repeat-x left top;}
+	.list_theme li:first-child {background:none;}
+	.list_theme .theme {overflow:hidden; margin-top:20px;}
+	.list_theme .theme:after {content:""; clear:both; display:block;}
+	.list_theme .theme .graph1 {float:left; width:142px; margin-right:24px;}
+	.list_theme .theme .txt {float:left; width:537px; height:146px; background:url(https://imgorg.jinhak.com/job/corp/main_theme02.gif) no-repeat left top; overflow:hidden; padding-left:84px; box-sizing:border-box;}
+	.list_theme .theme .txt .comp {float:left; width:120px; text-align:center; font-size:14px; line-height:1.2; margin:20px 2px 0 2px;}
+	.list_theme .theme .txt .comp div {width:101px; margin:0 auto 5px auto; border:solid 1px #aeaeae;}
+	.list_theme .theme .txt .comp div img {height:81px;}
+	.list_theme .theme .txt .comp div a {display:block;}
+	.list_theme .t1 {font-size:22px; font-weight:bold; letter-spacing:-1px; line-height:1.1;}
+	.list_theme .t1 > a {padding-right:20px;}
+	.list_theme .t1 span {white-space:nowrap;}
+	.list_theme .t1 span em {font-size:13px; color:#f45757; font-weight:normal; padding-right:13px;}
+	.list_theme .t1 span em a {color:inherit;}
+	.list_theme .t1 .cbtn5 {line-height:18px !important;}
+.list_tag {overflow:hidden; margin-right:-9px;} /* 기업> 태그 목록 */
+	.list_tag:after {content:""; clear:both; display:block;}
+	.list_tag li {float:left; width:33.3%; margin-bottom:10px;}
+	.list_tag a {position:relative; display:block; text-decoration:none; margin-right:10px; height:360px; overflow:hidden;}
+	.list_tag .t1 {position:absolute; top:54px; right:29px; left:29px; border:solid 2px #FFF; border-radius:24px; background:rgba(0,0,0,0.2); height:48px; line-height:46px; text-align:center; font-size:15px; color:#FFF; text-shadow:1px 1px 2px #000;}
+	.list_tag.big {position:relative; margin-right:0;} /* 기업 목록(태그 타이틀) */
+	.list_tag.big .t1 {top:50%; right:162px; left:162px; border-radius:48px; margin-top:-50px; height:96px; line-height:75px; font-size:30px; text-shadow:none; font-family:SpoqaHanSans; font-weight:300;}
+	.list_tag.big .t1 span {display:block; font-size:12px; line-height:normal; font-weight:normal; margin-top:-18px;}
+.theme_corp2 {border-top:solid 2px #272727; overflow:hidden;}
+	.theme_corp2:after {content:""; clear:both; display:block;}
+	.theme_corp2 .graph1 {float:left; width:142px; margin:32px 24px 30px 6px;}
+	.theme_corp2 .txt {float:left; width:555px; margin:32px 0;}
+	.theme_corp2 .t1 {font-size:27px; font-weight:bold; letter-spacing:-1px; line-height:1.2;}
+	.theme_corp2 .t2 {margin-top:4px;}
+	.theme_corp2 .t2 em {white-space:nowrap; font-size:13px; color:#f45757; font-weight:normal; padding-right:13px;}
+	.theme_corp2 .t2 em a {color:inherit;}
+	.theme_corp2 .t3 {margin-top:16px; border:solid 1px #b2b2b2; border-radius:10px; padding:12px 15px 16px 15px; line-height:1.6;}
+.t_talk {/* padding은 table9 td에 있음 */}
+	.t_talk .txt {position:relative; padding:13px 10px 14px 10px; border-style:solid; border-width:1px; border-radius:9px; text-align:left; font-size:13px;}
+	.odd .t_talk .txt {border-color:#f45757;}
+	.even .t_talk .txt {border-color:#beccb4;}
+.compare_src {margin-top:40px;}
+	.compare_src .compare {overflow:hidden; background:url(http://image.jinhak.com/job/corp/compare02.png) no-repeat center 30px; padding:0 35px 24px 35px;}
+	.compare_src .compare:after {content:""; clear:both; display:block;}
+	.compare_src .compare .box {float:right; position:relative; width:362px; height:107px; text-align:center; box-sizing:border-box;}
+	.compare_src .compare .box:first-child {float:left;}
+	.compare_src .compare .box.before {border:dashed 3px #d3d1d0;}
+	.compare_src .compare .box.before a {display:block; height:100%; font-size:0; line-height:0; background:url(http://image.jinhak.com/job/corp/compare03.gif) no-repeat center center #FFF; cursor:pointer;}
+	.compare_src .compare .box.before span {position:absolute; right:0; bottom:-13px; left:0; text-align:center;}
+	.compare_src .compare .box.before span:after {content:""; display:block; position:absolute; top:-7px; right:0; left:0; height:8px; background:url(http://image.jinhak.com/job/corp/tooltip0_arr.png) no-repeat center top;}
+	.compare_src .compare .box.before span em {display:inline-block; color:#535353; letter-spacing:-1px; border:solid 1px #6f6f6f; padding:2px 10px 3px 10px; background-color:#FFF;}
+	.compare_src .compare .box.after {border:solid 1px #272727; box-shadow:5px 5px 7px 0 rgba(0,0,0,0.1); background-color:#FFF;}
+	.compare_src .compare .box.after span {display:inline-block; max-width:68%; height:105px; line-height:97px; font-size:22px; font-weight:bold; letter-spacing:-1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle;}
+	.compare_src .compare .box.after .logo {height:105px; margin-right:5px;}
+	.compare_src .compare .box.after .del {position:absolute; right:0; bottom:0; cursor:pointer;}
+.compare_list {border-top:solid 2px #000; border-bottom:solid 1px #000; margin-top:5px;}
+.compare_comp {background:url(https://imgorg.jinhak.com/job/corp/line_dot04.gif) repeat-y center top; border-bottom:solid 1px #272727;}
+	.compare_comp.noline {background:none; border-bottom-width:0;}
+	.compare_comp .comp {position:relative; overflow:hidden; /*background:url(http://image.jinhak.com/job/corp/COmpare_comp01.png) no-repeat left top;*/}
+	.compare_comp .comp:after {content:""; clear:both; display:block;}
+	.compare_comp .comp dl {float:left; width:50%;}
+	.compare_comp .comp dt {position:relative; height:114px; padding-left:20px; margin-bottom:25px; font-size:13px; background-color:#FFF; border:solid 1px #8e8e8e; box-sizing:border-box; box-shadow:3px 5px 3px 0 rgba(222,222,222,1);}
+	.compare_comp .comp dt:after {content:""; display:block; position:absolute; bottom:-24px; right:0; left:0; height:24px; background:url(https://imgorg.jinhak.com/job/corp/cOmpare_comp_arr.png) no-repeat center bottom;}
+	.compare_comp .comp dt .pic {float:left;}
+	.compare_comp .comp dt .pic img {width:88px; vertical-align:middle; margin-top:10px; margin-right:20px;}
+	.compare_comp .comp dt .name {display:block; font-size:26px; letter-spacing:-1px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:72%; padding-top:25px; margin-bottom:3px;}
+	.compare_comp .comp dt .btn {position:absolute; top:25px; right:20px; width:101px;}
+	.compare_comp .comp dt .btn img {margin-bottom:4px;}
+	.compare_comp .comp dd.num {letter-spacing:-1px; font-weight:bold; text-align:center; padding-bottom:20px;}
+	.compare_comp .comp dd.num span {display:inline-block; margin:0 15px;}
+	.compare_comp .comp dd.num span.num1 {font-size:34px; letter-spacing:-2px; line-height:1.2;}
+	.compare_comp .comp dd.num span.num2 {font-size:25px; letter-spacing:-2px; line-height:1.7;}
+	.compare_comp .comp dd.graph .graph1 {margin:20px auto 0 auto;}
+	.compare_comp .comp dl.left dt {border-top:solid 4px #f45757;}
+	.compare_comp .comp dl.left dd.num {padding-right:30px; color:#f45757;}
+	.compare_comp .comp dl.left dd.graph .graph1 span {background-image:url(https://imrgor.jinhak.com/job/corp/graph1_01.png);}
+	.compare_comp .comp dl.right dt {border-top:solid 4px #00b3ce; border-left-width:0;}
+	.compare_comp .comp dl.right dd.num {padding-left:30px; color:#00b4cf;}
+	.compare_comp .comp dl.right dd.graph .graph1 span {background-image:url(https://imrgor.jinhak.com/job/corp/graph1_02.png);}
+	.compare_comp .comp .t1 {position:absolute; top:145px; left:0; right:0; text-align:center;}
+	.compare_comp .comp .t1 span {display:block; border:solid 1px #8e8e8e; border-radius:17px; width:166px; height:33px; line-height:30px; background-color:#FFF; font-size:20px; letter-spacing:-1px; font-weight:bold; margin:0 auto 8px auto;}
+	.compare_comp .comp.bg2 {background:none;}
+	.compare_comp .comp.bg2 dt {display:none;}
+	.compare_comp .comp.bg2 dd.num {padding-top:20px;}
+	.compare_comp .comp.bg2 .t1 {top:25px;}
+.compare_fixname {display:none; position:fixed; top:0; right:0; left:0; border:solid 1px #8b6363; border-right-width:0; border-left-width:0; box-shadow:2px 4px 1px 0 rgba(0,0,0,0.1); z-index:100;}
+	.compare_fixname .name {float:left; width:50%; height:56px;}
+	.compare_fixname .name p {position:relative; width:475px; padding:0 10px 23px 10px; height:56px; line-height:48px; font-size:26px; letter-spacing:-1px; font-weight:bold; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.compare_fixname .name p:after {content:""; display:block; position:absolute; right:0; left:0; top:56px; height:23px; background-repeat:no-repeat; background-position:center bottom;}
+	.compare_fixname .name.left {background-color:#f45757;}
+	.compare_fixname .name.left p {float:right;}
+	.compare_fixname .name.left p:after {background-image:url(https://imgorg.jinhak.com/job/corp/compare_comp03.png);}
+	.compare_fixname .name.right {background-color:#00b4cf;}
+	.compare_fixname .name.right p:after {background-image:url(https://imgorg.jinhak.com/job/corp/compare_comp04.png);}
+.compare_same {border:solid 1px #272727; background-color:#FFF; margin-top:20px; padding:0 30px 30px 30px;}
+	.compare_same .t1 {position:relative; text-align:center; font-size:16px; letter-spacing:-1px; font-weight:bold; padding-top:10px; margin-bottom:10px;}
+	.compare_same .t1:before {content:""; display:block; position:absolute; top:-1px; right:0; left:0; height:6px; background:url(https://imgorg.jinhak.com/job/corp/compare_top6_bg.gif) no-repeat center top;}
+	.compare_same table {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.compare_same td {padding:12px 0 12px 20px; border:solid 1px #cbcbcb; border-right-width:0; border-bottom-width:0; text-align:left;}
+	.compare_same tr:first-child td {border-top-width:0;}
+	.compare_same td:first-child {border-left-width:0;}
+.ranking_theme {display:table; width:100%;} /*  기업> 테마> 랭킹 */
+	.ranking_theme .theme {display:table-cell; text-align:center; vertical-align:top; background:url(http://image.jinhak.com/job/corp/theme_bg01.gif);}
+	.ranking_theme .theme .t1 {font-size:17px; color:#FFF; letter-spacing:-0.04em; padding:0 8px; margin-top:30px;}
+	.ranking_theme .theme .t2 {padding:0 10px; margin-top:3px;}
+	.ranking_theme .theme .t2 em {font-size:12px; color:#FFF; letter-spacing:-0.04em; padding:0 3px; white-space:nowrap;}
+	.ranking_theme .theme .graph1 {margin-top:17px;}
+.ranking_theme2 {border:solid 1px #e3e3e3; padding-right:15px;} /* 기업> 테마> 상세> 랭킹 */
+	.ranking_theme2 .tit {text-align:center; margin:30px 0;}
+.list_ranking {overflow:hidden;} /* 기업> 테마> 랭킹> 순위 */
+	.list_ranking:after {content:""; clear:both; display:block;}
+	.list_ranking dl {box-sizing:border-box;}
+	.list_ranking dt {border:solid 1px #e3e3e3; background-color:#f6f6f6; text-align:center; height:77px;}
+	.list_ranking dt:after {content:""; display:inline-block; height:100%; vertical-align:middle;}
+	.list_ranking dt img {vertical-align:middle;}
+	.list_ranking dd {padding:10px;min-height:162px;} /* 2019-02-12 워라밸 랭킹 고정높이를 위해 min-height 추가 */
+	.list_ranking dd li {display:table; width:100%; table-layout:fixed;}
+	.list_ranking dd li .st0 {display:table-cell; font-size:13px; padding:5px 0; color:#f45757; font-weight:bold; width:20px; text-align:right; padding-right:5px;}
+	.list_ranking dd li .st1 {display:table-cell; font-size:13px; padding:5px 0; color:#272727; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_ranking dd li .st2 {display:table-cell; font-size:13px; padding:5px 0; color:#f45757; width:65px; text-align:right;}
+	.list_ranking dl.money .st2 {width:84px;}
+	.list_ranking .nodata {display:table; width:100%; height:100%;}
+	.list_ranking .nodata span {display:table-cell; height:100%; vertical-align:middle; text-align:center; font-size:13px; color:#666;}
+	.list_ranking .nodata span:before {content:"";  display:block; width:100%; height:17px; background:url(http://image.jinhak.com/job/corp/ico_nodata2.png) no-repeat center top; margin-bottom:10px;}
+	.list_ranking .pager_type4 .bx-has-pager {margin-top:20px;}
+	.ranking_theme .list_ranking {display:table-cell;}
+	.ranking_theme .list_ranking dl {margin-left:10px; border:solid 1px #e3e3e3; padding:10px;}
+	.ranking_theme.at4 .theme, .ranking_theme.at4 .list_ranking {width:25%;}
+	.ranking_theme2.at3 .list_ranking dl {float:left; width:33.3%; padding-left:15px;}
+.divide.theme {position:relative; overflow:hidden;}
+	.divide.theme .left {float:left;width:701px;height:854px;border:1px solid #848484;border-right-width:0;}
+	.divide.theme .right {float:left;width:288px;height:856px;background:#4d4d4d;}
+	.divide.theme .srctop {position:absolute;z-index:1;padding:10px}
+	.divide.theme .srctop:after {content:""; clear:both; display:block;}
+	.divide.theme .srctop dt {display:none}
+	.divide.theme .srctop dd {float:left;width:163px;margin-right:10px}
+	.divide.theme .srctop dd.local {position:relative}
+		.divide.theme .srctop dd.local p {border:1px solid #4d4d4d;height:36px;line-height:36px;background:#fff;padding-left:10px}
+		.divide.theme .srctop dd.local p .arw {position:absolute;right:1px;top:-1px}
+	.divide.theme .srctop dd.local .opt1 {display:none;position:absolute;width:163px;background:#fff;z-index:2}
+		.divide.theme .srctop dd.local .opt1 li {border:1px solid #4d4d4d;border-top-width:0}
+		.divide.theme .srctop dd.local .opt1 li a {height:38px;display:block;line-height:38px;text-decoration:none;padding-left:10px}
+		.divide.theme .srctop dd.local .opt1 li a:hover {background:#e1e1e1}
+	.divide.theme .srctop dd.select {z-index:1; padding:0}
+	.divide.theme .srctop dd.select select {height:38px; width:100%; color:#333; border:1px solid #4d4d4d; padding-left:10px; padding-right:40px; font-size:12px;
+		background:url(http://image.jinhak.com/job/corp/slt_arw3.gif) #fff no-repeat 100% 50%;
+		-webkit-appearance:none; -moz-appearance:none; vertical-align:top;vertical-align: -webkit-baseline-middle;z-index:2;}
+	.divide.theme .srctop dd.select select::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { /* IE9 */
+		.divide.theme .srctop dd.select select {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.divide.theme .srctop dd.select select {background:none; padding-right:4px;}
+	}
+	.divide.theme .map {position:relative}
+	/* .divide.theme .map .place {display:table;table-layout:fixed} */
+	.divide.theme .map .place a {color:#fff;text-decoration:none;display:table-cell;vertical-align:middle;border-radius:50%;text-align:center;color:#fff;-moz-box-shadow: 3px 3px 10px #666;-webkit-box-shadow: 3px 3px 10px #666;box-shadow: 3px 3px 10px #666;}
+	.divide.theme .map .place.lv1 {margin-left:-43px;margin-top:-43px;width:100px}
+	.divide.theme .map .place.lv1 a {width:86px;height:86px;font-size:25px;background:#287ab9;border:7px solid #fff}
+	.divide.theme .map .place.lv2 {margin-left:-33px;margin-top:-33px;width:75px}
+	.divide.theme .map .place.lv2 a {width:66px;height:66px;font-size:17px;background:#39a5b2;border:5px solid #fff}
+	.divide.theme .map .place.lv3 {margin-left:-33px;margin-top:-33px;width:75px}
+	.divide.theme .map .place.lv3 a {width:66px;height:66px;font-size:17px;background:#a663c9;border:5px solid #fff}
+	.divide.theme .map .place.lv4 {margin-left:-26px;margin-top:-26px;width:60px}
+	.divide.theme .map .place.lv4 a {width:52px;height:52px;font-size:12px;background:#eb6d6c;border:4px solid #fff;}
+	.divide.theme .map .corp {position:absolute;z-index:2;}
+	.divide.theme .map .corp.overed {z-index:3;}
+	.divide.theme .map .corp .point {display:block;background:url(http://image.jinhak.com/job/corp/ico_pt1.png) no-repeat;width:15px;height:23px}
+	.divide.theme .map .corp.on .point {background:url(http://image.jinhak.com/job/corp/ico_pt2.png) no-repeat;}
+	.divide.theme .map .corp dl {position:absolute;bottom:55px;left:-90px;width:247px;border:1px solid #8c8c8c;background:#fff;}
+	.divide.theme .map .corp dl dt {margin:0 15px;padding:10px 0 5px 0;border-bottom:2px solid #000;font-size:14px;font-weight:bold}
+	.divide.theme .map .corp dl dt span {background:#f45757;color:#fff;font-size:11px;height:17px;line-height:17px;display:inline-block;border-radius:16px;padding:0 8px;margin-left:4px}
+	.divide.theme .map .corp dl dd {padding:7px 15px 15px 15px;line-height:13px}
+	.divide.theme .map .corp dl dd.tooltip {position:absolute;left:50px;bottom:-51px;margin-left:52px;background:url(http://image.jinhak.com/job/corp/pointer.png) no-repeat;width:57px;height:51px;padding:0}
+.hitBest {padding:30px}
+	.hitBest h3 {padding:15px 0 30px 0;border-bottom:2px solid #c7c7c7;color:#fff;font-size:17px;font-weight:normal;text-align:center;}
+	.hitBest dt {padding:19px 0 10px 0;text-align:center;}
+	.hitBest dt p {display:inline-block;border:1px solid #939393;color:#fff;font-size:12px;height:23px;line-height:23px;padding:0 15px;border-radius:15px;letter-spacing:-1px}
+	.hitBest dd {padding:0 10px 22px 17px;border-bottom:1px solid #7a7a7a}
+	.hitBest dd ul:after {content:""; clear:both; display:block;}
+	.hitBest dd ul li {float:left;margin:0 4px 10px 0}
+	.hitBest dd ul li a {display:table-cell;vertical-align:middle;width:95px;height:35px;background:#333;color:#fff;font-size:17px;border-radius:35px;text-align:center;text-decoration:none}
+.corpInfo {/*display:none;*/position:absolute;top:0;right:0;padding:20px;width:248px;height:816px;background:#4d4d4d}
+	.corpInfo a {color:#fff;text-decoration:none;}
+	.corpInfo .i1 {padding:15px 0 8px 0}
+	.corpInfo .i1 a {font-size:13px;margin-right:4px}
+	.corpInfo .s1 {color:#90b5ff}
+	.corpInfo .s2 {color:#ff9191}
+	.corpInfo .tit {margin-bottom:25px}
+	.corpInfo .tit a {font-size:26px;letter-spacing:-3px;font-weight:100}
+	.corpInfo .btn {margin-bottom:6px;letter-spacing:-2px}
+	.corpInfo .btn a {display:block;height:55px;line-height:52px;text-align:center;font-size:18px;color:#3c3c3c;background:#fff}
+	.corpInfo .btn a.c {background:#f45757;color:#fff}
+	.corpInfo .login {color:#fdf8a8;text-align:center;letter-spacing:-1px;margin-bottom:10px;cursor:pointer}
+	.corpInfo .login span {text-decoration:underline}
+	.corpInfo .m {margin:12px 0 20px 0}
+	.corpInfo .m:after {content:""; clear:both; display:block;}
+	.corpInfo .m li {float:left;width:50%;background:url(http://image.jinhak.com/job/corp/bar.gif) no-repeat right 50%;text-align:center;}
+	.corpInfo .m li p {color:#fff;font-size:24px;font-weight:100;letter-spacing:-1px}
+	.corpInfo .m li p.t {margin:3px auto;width:70px;height:25px;line-height:25px;border:1px solid #7b7b7b;border-radius:15px;background:#252525;color:#b7b7b7;font-size:12px;}
+	.corpInfo .m li:last-child {background:none}
+	.corpInfo .graphC .msg {color:#aaa;font-size:11px;letter-spacing:-1px;margin:15px 0}
+	.corpInfo .cinfotab {height:37px;background:#a4a4a4}
+	.corpInfo .cinfotab li {float:left;width:50%;text-align:center;letter-spacing:-1px}
+	.corpInfo .cinfotab li a {display:block;width:100%;height:37px;line-height:37px;font-size:12px;color:#272727;}
+	.corpInfo .cinfotab li.selected a {background:#fff}
+	.corpInfo .tabv {background:#fff;height:160px}
+	.corpInfo .tabv .price {position:absolute;top:10px;left:47px;font-size:17px;color:#000;z-index:1}
+	.corpInfo .tabv .price * {vertical-align:middle}
+	.corpInfo .tabv .price .arw {display:inline-block;margin-left:8px;margin-bottom:3px;width:15px;height:8px}
+	.corpInfo .tabv .price .arw.up {background:url(http://image.jinhak.com/job/corp/ico_up.gif) no-repeat;}
+	.corpInfo .tabv .price .arw.down {background:url(http://image.jinhak.com/job/corp/ico_dn.gif) no-repeat;}
+	.corpInfo .tabv .cmt {position:absolute;bottom:10px;right:13px;color:#aaa;font-size:11px;z-index:1}
+	.corpInfo .grade {margin-top:8px}
+	.corpInfo .grade dt {float:left;width:110px;text-align:right;padding-top:12px}
+	.corpInfo .grade dt p.t {display:inline-block;text-align:center;width:70px;height:25px;line-height:25px;border:1px solid #7b7b7b;border-radius:15px;background:#252525;color:#b7b7b7;font-size:12px;}
+	.corpInfo .grade dd {float:left;padding-left:20px;font-size:35px;color:#fff;font-weight:100;letter-spacing:-2px}
+
+/* 기업> 분석 */
+.analysis_top2 {height:370px; padding:0 12px; border:solid 1px #9f9f9f; box-sizing:border-box; background:url(http://image.jinhak.com/job/corp/Anal_bg.gif);}
+	.analysis_top2 li {position:relative; height:350px; margin:0 25px; background:url(http://image.jinhak.com/job/corp/anal_bg3.png) no-repeat center top; text-align:center;}
+	.analysis_top2 li a {text-decoration:none;}
+	.analysis_top2 li a.cont {display:block;}
+	.analysis_top2 .t1 {display:block; font-size:18px; color:#797979; font-weight:bold; letter-spacing:-0.04em; margin-top:95px;}
+	.analysis_top2 .t2 {display:block; font-size:13px; color:#272727; letter-spacing:-0.04em; padding:0 20px; margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.analysis_top2 .t3 {position:absolute; right:20px; bottom:20px; left:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left;}
+	.analysis_top2 .pic {display:block; width:98px; margin:11px auto 0 auto;}
+	.analysis_top2 .pic img {width:100%;}
+	.analysis_top2 .btn {display:block; margin-top:14px;}
+.report_theme {overflow:hidden;}
+	.report_theme:after {content:""; clear:both; display:block;}
+	.report_theme .theme {float:left; width:260px; margin:30px 15px 15px 15px; text-align:center; overflow:hidden;}
+	.report_theme .theme .t1 {font-size:20px; letter-spacing:-1px; margin-top:5px;}
+	.report_theme .theme .t2 {padding:0 10px; margin-top:3px;}
+	.report_theme .theme .t2 em {color:#f66f6f; padding:0 3px; white-space:nowrap;}
+	.report_theme.bg1 .theme {background:url(http://image.jinhak.com/job/corp/theme_bg01.gif);}
+	.report_theme.bg2 .theme {background:url(http://image.jinhak.com/job/corp/theme_bg02.gif);}
+	.report_theme .list_corp {margin-top:55px;}
+.list_report2 {overflow:hidden;}
+	.list_report2:after {content:""; clear:both; display:block;}
+	.list_report2 li { float:left; margin-bottom:20px; text-align:center;}
+	.list_report2 li > div {position:relative; border:solid 1px #e3e3e3;}
+	.list_report2 li a {display:block; text-decoration:none;}
+	.list_report2 .pic {display:block; height:180px;}
+	.list_report2 .pic img {width:120px; margin-top:30px;}
+	.list_report2 .new {display:block;position:absolute;top:-2px;left:-1px;width:36px;height:22px;background:#272727;font-size:11px;color:#fff;line-height:20px} /* 2018-12-03 추가 */
+	.list_report2 .t1 {display:block; font-size:15px; letter-spacing:-1px; padding:0 10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_report2 .t2 {display:block; margin-top:4px; padding:0 10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_report2 .t2 em {color:#f45757; padding:0 2px; white-space:nowrap;}
+	.list_report2 .btn {display:block; margin-top:17px;}
+	.list_report2 .ico {position:absolute; top:0; right:0; text-align:center; width:40px; height:40px !important; z-index:1;}
+	.list_report2 .ico img {margin-top:10px;}
+	.list_report2 .look {background:url(http://image.jinhak.com/job/corp/bn_type04.gif);}
+	.list_report2 .look .pic {height:160px;}
+	.list_report2 .look .pic img {width:auto; margin-top:60px;}
+	.list_report2 .look .t1 {color:#FFF;}
+	.list_report2 .look .t2 em {color:#FFF;}
+	.list_report2.at4 {margin-left:-15px;}
+	.list_report2.at4 li {width:25%;}
+	.list_report2.at4 li > div {margin-left:15px;}
+	.list_report2.line li > div {border-top:solid 2px #272727;}
+	.list_report2.ht1 li a {height:275px;}
+	.list_report2.ht2 li a {height:305px;}
+.analysis_detail_top {border-top:solid 2px #272727; text-align:center; padding:40px 20px 30px 40px;}
+	.analysis_detail_top .t1 {font-size:44px; font-weight:500; letter-spacing:-1px; font-family:"NotoSansKR";}
+	.analysis_detail_top .t2 {margin-top:15px;}
+	.analysis_detail_top .t2 span.ico1 {position:relative; font-size:13px; padding-right:10px; padding-left:12px;}
+	.analysis_detail_top .t2 span.ico1:after {content:""; display:block; position:absolute; top:5px; left:0; width:8px; height:9px; background:url(http://image.jinhak.com/job/site/ico_play02.gif) no-repeat left center;}
+/* 2019-02-12 주석처리 *//*
+#analysis_wrap {position:relative; min-width:1100px;}
+	#analysis_wrap .top_wrap {position:fixed; top:0; right:0; left:0; border-bottom:solid 1px #000; background-color:rgba(255,255,255,0.8); z-index:2;}
+	#analysis_wrap .header {position:relative; width:100%; min-width:1100px; max-width:1280px; height:120px; text-align:left; margin:0 auto;}
+	#analysis_wrap .header:after {content:""; clear:both; display:block;}
+	#analysis_wrap .header .logo {position:absolute; top:10px; left:10px; width:100px; text-align:center;}
+	#analysis_wrap .header .logo img {max-width:100px; max-height:100px;}
+	#analysis_wrap .header h2 {font-size:29px; margin-left:140px; padding-top:28px; font-weight:bold; letter-spacing:-1px; max-width:650px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	#analysis_wrap .header .t1 {font-size:11px; color:#c8c8c8; font-weight:bold; margin:7px 0 0 140px;}
+	#analysis_wrap .header .btn {position:absolute; right:10px; top:42px;}
+	#analysis_wrap .header .btn .ico1 {position:relative; font-size:13px; padding-left:12px; padding-right:10px;}
+	#analysis_wrap .header .btn .ico1:after {content:""; display:block; position:absolute; top:5px; left:0; width:8px; height:9px; background:url(http://image.jinhak.com/job/site/Ico_play02.gif) no-repeat left center;}
+	#analysis_wrap .header .btn img {margin-left:2px;}
+	#analysis_wrap .top_wrap.small .header {height:50px;}
+	#analysis_wrap .top_wrap.small .header .logo {display:none;}
+	#analysis_wrap .top_wrap.small .header h2 {margin-left:10px; padding-top:1px;}
+	#analysis_wrap .top_wrap.small .header .t1 {display:none;}
+	#analysis_wrap .top_wrap.small .header .btn {top:7px;}
+	#analysis_wrap .menu {position:relative; text-align:center; border-top:solid 2px #000; min-width:1100px;}
+	#analysis_wrap .menu:after {content:""; clear:both; display:block; position:absolute; top:0; right:0; left:0; height:58px; border-bottom:solid 1px #000; background-color:rgba(0,0,0,0.1); z-index:-1;}
+	#analysis_wrap .menu dl {display:inline-block; /*width:220px; margin:0 40px;*//* margin:0 80px; text-align:left; vertical-align:top;}
+/*	#analysis_wrap .menu dt {font-size:14px; color:#000; font-weight:bold; letter-spacing:-1px; height:58px; line-height:55px;}
+	#analysis_wrap .menu dt a {text-decoration:none;}
+	#analysis_wrap .menu dd {position:absolute; display:none;}
+	#analysis_wrap .menu dd li {margin-top:10px; font-size:12px; padding-left:8px;}
+	#analysis_wrap .menu dd li:after {top:7px;}
+	#analysis_wrap #contents {width:100%; min-width:1100px; max-width:1280px; text-align:center; margin:200px auto 0 auto;}
+	#analysis_wrap .cont div {margin-bottom:10px;}
+	#analysis_wrap .cont img {max-width:100%;}
+	#analysis_wrap .look {padding-bottom:30px;}
+	#analysis_wrap .look p,
+	#analysis_wrap .look li {font-family:"NotoSansKR";}
+	#analysis_wrap .look .tit {font-size:20px; color:#FFF; text-align:center; padding:11px 0 13px 0; margin:50px 0 30px 0;}
+	#analysis_wrap .look .tit:first-child {margin-top:0;}
+	#analysis_wrap .look .tit.bg1 {background-color:#636363;}
+	#analysis_wrap .look .tit.bg2 {background-color:#5c79a2;}
+	#analysis_wrap .look .tit.bg3 {background-color:#5e909c;}
+	#analysis_wrap .look .list {display:table; width:100%; border-collapse:collapse; text-align:left;}
+	#analysis_wrap .look .list + .list {margin-top:30px;}
+	#analysis_wrap .look .group {display:table-cell; width:20%; padding:0 0 20px 20px; border-left:solid 1px #d7d7d7;}
+	#analysis_wrap .look .group:first-child {border-left-width:0;}
+	#analysis_wrap .look .group p {font-size:19px; color:#000; letter-spacing:-0.04em; margin:45px 0 12px 0;}
+	#analysis_wrap .look .group p:first-child {margin-top:10px;}
+	#analysis_wrap .look .group li {padding-right:10px; margin-top:10px;}
+	#analysis_wrap .look .group li a {font-size:15px; color:#999; font-weight:500;}
+	#analysis_wrap .look .group .gubun {margin-top:20px;}
+	#analysis_wrap .look .group.last {width:auto;} */
+
+/* 기업> 상세 */
+.corp_top {border-bottom:solid 1px #bababa; height:121px; background-color:#FFF; padding-top:50px;}
+	.corp_top:after {content:""; clear:both; display:block;}
+	.corp_top .logo {position:absolute; top:0; left:15px; width:121px; text-align:center;}
+	.corp_top .logo img {max-width:121px; max-height:121px;}
+	.corp_top h2 {font-size:29px; margin-left:160px; padding-top:12px;} /* 2019-04-26 수정 */
+	.corp_top h2 a:first-child {display:inline-block; font-weight:bold; letter-spacing:-1px; max-width:500px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle;}
+	.corp_top h2 img {margin-top:5px;}
+	.corp_top .t1 {font-size:13px; margin:3px 0 0 160px;}
+	.corp_top .btn {position:absolute; right:10px; top:42px;}
+	.corp_top .btn .box {display:inline-block; height:34px; line-height:31px; border:solid 1px #f45757; border-radius:18px; font-size:15px; color:#FFF; padding:0 20px; vertical-align:middle; text-decoration:none; background-color:#f45757;}
+	.corp_top.floating {padding-top:0;}
+.detail_top {overflow:hidden; margin-bottom:14px;}
+	.detail_top:after {content:""; clear:both; display:block;}
+	.detail_top .core {float:left; width:50%;}
+	.detail_top .box {border:solid 1px #afafaf; background:#FFF; padding:19px; height:292px; margin-top:-1px;}
+	.detail_top .scroll {overflow-x:hidden; overflow-y:auto; padding-right:5px;}
+	.detail_top .view1 .scroll {max-height:253px;}
+	.detail_top .view2 .scroll {max-height:287px;}
+	.detail_top .table4 {margin-top:10px; width:95%;}
+	.detail_top .company_info dt a {font-size:14px; max-width:95%;}
+	.detail_top .company_info dd {margin-top:-4px;}
+	.detail_top .t1 {font-size:11px; color:#666; letter-spacing:-1px;}
+	.detail_top .t2 {border-bottom:solid 2px #272727; padding-bottom:13px;}
+	.detail_top .t2 input[type='radio'] {margin:3px 3px 0 70px;}
+	.detail_top .t2 input[type='radio']:first-child {margin-left:10px;}
+	.detail_top .t2 input[type='radio']:disabled + label {color:#a6a6a6} /* 2019-05-02 추가 */
+	.detail_top .t2 label {font-size:14px; font-weight:bold;}
+	.detail_top .nodata {font-size:14px; text-align:center; padding-top:115px; line-height:1.5;}
+	.detail_top .nodata.atBtn {padding-top:75px;}
+	.detail_top .startup_img {height:306px; text-align:center;}
+.list_brand {overflow:hidden;}
+	.list_brand:after {content:""; clear:both; display:block;}
+	.list_brand li {float:left; width:50%; display:table; margin-top:20px;}
+	.list_brand .pic {display:table-cell; width:180px; padding-left:20px; box-sizing:border-box; vertical-align:middle;}
+	.list_brand .txt {display:table-cell; vertical-align:middle;}
+	.list_brand .txt .t1 {font-size:20px;}
+	.list_brand .txt .t2 {color:#666; line-height:1.6; margin-top:5px;}
+	.list_brand .txt .btn {margin-top:9px;}
+.box_withico {display:table; width:100%; min-height:117px; padding-left:165px; background-repeat:no-repeat; background-position:23px center; box-sizing:border-box;}
+	.box_withico ul {display:table-cell; vertical-align:middle;}
+	.box_withico li:first-child {margin-top:0;}
+	.box_withico.biz.ico1 {background-image:url(http://image.jinhak.com/job/corp/001_음식배달앱.png);}
+	.box_withico.biz.ico2 {background-image:url(http://image.jinhak.com/job/corp/002_배달대행.png);}
+	.box_withico.biz.ico3 {background-image:url(http://image.jinhak.com/job/corp/003_숙박.png);}
+	.box_withico.biz.ico4 {background-image:url(http://image.jinhak.com/job/corp/004_여행.png);}
+	.box_withico.biz.ico5 {background-image:url(http://image.jinhak.com/job/corp/005_전자책.png);}
+	.box_withico.biz.ico6 {background-image:url(http://image.jinhak.com/job/corp/006_웹툰.png);}
+	.box_withico.biz.ico7 {background-image:url(http://image.jinhak.com/job/corp/007_부동산.png);}
+	.box_withico.biz.ico8 {background-image:url(http://image.jinhak.com/job/corp/008_모바일게임.png);}
+	.box_withico.biz.ico9 {background-image:url(http://image.jinhak.com/job/corp/009_자동차.png);}
+	.box_withico.biz.ico10 {background-image:url(http://image.jinhak.com/job/corp/010_의료기기.png);}
+	.box_withico.biz.ico11 {background-image:url(http://image.jinhak.com/job/corp/011_헬스케어.png);}
+	.box_withico.biz.ico12 {background-image:url(http://image.jinhak.com/job/corp/012_인테리어.png);}
+	.box_withico.biz.ico13 {background-image:url(http://image.jinhak.com/job/corp/013_금융.png);}
+	.box_withico.biz.ico14 {background-image:url(http://image.jinhak.com/job/corp/014_의류.png);}
+	.box_withico.biz.ico15 {background-image:url(http://image.jinhak.com/job/corp/015_의류플랫폼.png);}
+	.box_withico.biz.ico16 {background-image:url(http://image.jinhak.com/job/corp/016_비디오.png);}
+	.box_withico.biz.ico17 {background-image:url(http://image.jinhak.com/job/corp/017_뷰티.png);}
+	.box_withico.biz.ico18 {background-image:url(http://image.jinhak.com/job/corp/018_번역.png);}
+	.box_withico.biz.ico19 {background-image:url(http://image.jinhak.com/job/corp/019_레스토랑.png);}
+	.box_withico.biz.ico20 {background-image:url(http://image.jinhak.com/job/corp/020_농산물.png);}
+	.box_withico.biz.ico21 {background-image:url(http://image.jinhak.com/job/corp/021_어린이.png);}
+	.box_withico.biz.ico22 {background-image:url(http://image.jinhak.com/job/corp/022_교육.png);}
+	.box_withico.biz.ico23 {background-image:url(http://image.jinhak.com/job/corp/023_공유오피스.png);}
+	.box_withico.biz.ico24 {background-image:url(http://image.jinhak.com/job/corp/024_소개팅.png);}
+	.box_withico.biz.ico25 {background-image:url(http://image.jinhak.com/job/corp/025_o2o.png);}
+	.box_withico.biz.ico26 {background-image:url(http://image.jinhak.com/job/corp/026_위치기반.png);}
+	.box_withico.biz.ico27 {background-image:url(http://image.jinhak.com/job/corp/027_모바일광고.png);}
+	.box_withico.biz.ico28 {background-image:url(http://image.jinhak.com/job/corp/028_디지털마케팅.png);}
+	.box_withico.biz.ico29 {background-image:url(http://image.jinhak.com/job/corp/029_iot.png);}
+	.box_withico.biz.ico30 {background-image:url(http://image.jinhak.com/job/corp/030_빅데이타.png);}
+	.box_withico.biz.ico31 {background-image:url(http://image.jinhak.com/job/corp/031_클라우드.png);}
+	.box_withico.biz.ico32 {background-image:url(http://image.jinhak.com/job/corp/032_보안.png);}
+	.box_withico.biz.ico33 {background-image:url(http://image.jinhak.com/job/corp/033_태양광.png);}
+	.box_withico.biz.ico34 {background-image:url(http://image.jinhak.com/job/corp/034_특수기술.png);}
+	.box_withico.biz.ico35 {background-image:url(http://image.jinhak.com/job/corp/035_공연기획.png);}
+	.box_withico.biz.ico36 {background-image:url(http://image.jinhak.com/job/corp/036_연합.png);}
+	.box_withico.benefit.ico1 {background-image:url(http://image.jinhak.com/job/corp/001_근무시간.png);}
+	.box_withico.benefit.ico2 {background-image:url(http://image.jinhak.com/job/corp/002_휴가.png);}
+	.box_withico.benefit.ico3 {background-image:url(http://image.jinhak.com/job/corp/003_포상.png);}
+	.box_withico.benefit.ico4 {background-image:url(http://image.jinhak.com/job/corp/004_음식.png);}
+	.box_withico.benefit.ico5 {background-image:url(http://image.jinhak.com/job/corp/005_자기계발.png);}
+	.box_withico.benefit.ico6 {background-image:url(http://image.jinhak.com/job/corp/006_돈.png);}
+	.box_withico.benefit.ico7 {background-image:url(http://image.jinhak.com/job/corp/007_장비지원.png);}
+	.box_withico.benefit.ico8 {background-image:url(http://image.jinhak.com/job/corp/008_사내시설.png);}
+	.box_withico.benefit.ico9 {background-image:url(http://image.jinhak.com/job/corp/009_가족.png);}
+	.box_withico.benefit.ico10 {background-image:url(http://image.jinhak.com/job/corp/010_해외연수.png);}
+	.box_withico.benefit.ico11 {background-image:url(http://image.jinhak.com/job/corp/011_호칭.png);}
+	.box_withico.benefit.ico12 {background-image:url(http://image.jinhak.com/job/corp/012_건강검진.png);}
+	.box_withico + .box_withico {margin-top:30px;}
+.box_invest {position:relative; height:394px; background:url(http://image.jinhak.com/job/corp/startup_img03.jpg) no-repeat left top;} /* 기업상세> 투자유치 */
+	.box_invest .exp {position:absolute; z-index:3;} /* 오버시 설명 */
+	.box_invest .exp span {position:absolute; top:0; left:0; width:10px; height:10px; border:solid 1px #000; background-color:#FFF; border-radius:50%; cursor:pointer; animation-duration:1s; animation-iteration-count:infinite;}
+	.box_invest .exp img {display:none;}
+	.box_invest .exp span:hover + img {display:inline;}
+	.box_invest .exp.ps1 {top:179px; left:238px;}
+	.box_invest .exp.ps1 span {animation-name:changeBg1;}
+	.box_invest .exp.ps1 img {margin:8px 0 0 12px;}
+		@keyframes changeBg1 {0% {background-color:#FFF;} 50% {background-color:#e76a65;} 100% {background-color:#FFF;}}
+	.box_invest .exp.ps2 {top:104px; left:359px;}
+	.box_invest .exp.ps2 img {margin:-43px 0 0 12px;}
+	.box_invest .exp.ps2 span {animation-name:changeBg2;}
+		@keyframes changeBg2 {0% {background-color:#FFF;} 50% {background-color:#f38d32;} 100% {background-color:#FFF;}}
+	.box_invest .exp.ps3 {top:65px; left:499px;}
+	.box_invest .exp.ps3 img {margin:-6px 0 0 13px;}
+	.box_invest .exp.ps3 span {animation-name:changeBg3;}
+		@keyframes changeBg3 {0% {background-color:#FFF;} 50% {background-color:#41a371;} 100% {background-color:#FFF;}}
+	.box_invest .serise {display:none; position:absolute; width:94px; bottom:0; text-align:center; z-index:2;} /* 금액+시리즈단계+연도 , 2016~2017 같은 연도 때문에 width를 넓게 잡아야 함 */
+	.box_invest .serise.show {display:block;}
+	.box_invest .serise:before {content:""; display:block; position:absolute; top:0; left:50%; border-radius:50%; opacity:0.8; filter:alpha(opacity=80);}
+	.box_invest .serise span {position:relative; display:block; font-family:"NotoSansKR"; font-weight:500; line-height:1.1; letter-spacing:-0.04em;}
+	.box_invest .serise .money {color:#FFF;}
+	.box_invest .serise .step {color:#FFF;}
+	.box_invest .serise.SEED {top:282px; left:80px;}
+	.box_invest .serise.SEED:before {background-color:#d4bb49; width:52px; height:52px; margin-left:-26px;}
+	.box_invest .serise.SEED .money {font-size:20px; margin-top:8px;}
+	.box_invest .serise.SEED .step {font-size:10px; margin-top:1px;}
+	.box_invest .serise.SEED .year {font-size:10px; color:#e5ca31; margin-top:12px;}
+	.box_invest .serise.A {top:164px; left:157px;}
+	.box_invest .serise.A:before {background-color:#ff6666; width:56px; height:56px; margin-left:-28px;}
+	.box_invest .serise.A .money {font-size:20px; margin-top:10px;}
+	.box_invest .serise.A .step {font-size:10px; margin-top:2px;}
+	.box_invest .serise.A .year {font-size:10px; color:#ff8585; margin-top:12px;}
+	.box_invest .serise.B {top:83px; left:257px;}
+	.box_invest .serise.B:before {background-color:#f37200; width:74px; height:74px; margin-left:-37px;}
+	.box_invest .serise.B .money {font-size:30px; margin-top:11px;}
+	.box_invest .serise.B .step {font-size:13px; margin-top:0px;}
+	.box_invest .serise.B .year {font-size:12px; color:#f0892f; margin-top:16px;}
+	.box_invest .serise.C {top:22px; left:387px;}
+	.box_invest .serise.C:before {background-color:#1f9656; width:94px; height:94px; margin-left:-47px;}
+	.box_invest .serise.C .money {font-size:32px; margin-top:20px;}
+	.box_invest .serise.C .step {font-size:14px; margin-top:1px;}
+	.box_invest .serise.C .year {font-size:14px; color:#42a472; margin-top:23px;}
+	.box_invest .serise.D {top:6px; left:517px;}
+	.box_invest .serise.D:before {background-color:#156cb4; width:94px; height:94px; margin-left:-47px;}
+	.box_invest .serise.D .money {font-size:32px; margin-top:20px;}
+	.box_invest .serise.D .step {font-size:14px; margin-top:1px;}
+	.box_invest .serise.D .year {font-size:14px; color:#3b86c0; margin-top:23px;}
+	.box_invest .serise.E {top:6px; left:637px;}
+	.box_invest .serise.E:before {background-color:#5d6a75; width:94px; height:94px; margin-left:-47px;}
+	.box_invest .serise.E .money {font-size:32px; margin-top:20px;}
+	.box_invest .serise.E .step {font-size:14px; margin-top:1px;}
+	.box_invest .serise.E .year {font-size:14px; color:#666; margin-top:23px;}
+	.box_invest .now {position:absolute; background-repeat:no-repeat; background-position:center top; z-index:1;} /* 현재단계 새싹이미지 */
+	.box_invest .now.SEED {}
+	.box_invest .now.A {background-image:url(http://image.jinhak.com/job/corp/startup_img07.png); width:75px; height:71px; top:177px; left:215px;}
+	.box_invest .now.B {background-image:url(http://image.jinhak.com/job/corp/startup_img08.png); width:61px; height:52px; top:192px; left:292px;}
+	.box_invest .now.C {background-image:url(http://image.jinhak.com/job/corp/startup_img09.png); width:94px; height:105px; top:140px; left:393px;}
+	.box_invest .now.D {background-image:url(http://image.jinhak.com/job/corp/startup_img10.png); width:80px; height:163px; top:81px; left:523px;}
+	.box_invest .now.E {background-image:url(http://image.jinhak.com/job/corp/startup_img11.png); width:80px; height:161px; top:82px; left:646px;}
+.list_history li {position:relative; padding-left:128px;} /* 기업상세> 연혁 */
+	.list_history li:after {content:""; display:block; position:absolute; right:0; bottom:0; left:70px; height:1px; background-color:#c2c2c2;}
+	.list_history li .date {position:absolute; top:5px; left:12px; font-size:29px; color:#333;}
+	.list_history li .date em {color:#ff6666;}
+	.list_history li p {font-size:15px; color:#666; line-height:1.6; padding:15px 8px 18px 8px; border-top:solid 1px #ececec;}
+	.list_history li p:first-of-type {border-top-width:0;}
+.list_photo li {height:146px; overflow:hidden;} /* 기업상세> 회사사진 슬라이드 */
+	.list_photo li img {width:100%;}
+.list_photo2 {overflow:hidden; margin-left:35px; margin-right:-30px;} /* 기업상세> 인터뷰> 일상사진 */
+	.list_photo2:after {content:""; clear:both; display:block;}
+	.list_photo2 li {float:left; width:255px; height:305px; padding:17px; margin:0 30px 25px 0; background-color:#f4f4f4; box-sizing:border-box; box-shadow:2px 2px 10px 0 #c8c8c8;}
+	.list_photo2 .pic {height:221px; overflow:hidden; margin-bottom:5px;}
+	.list_photo2 .pic img {width:100%; min-height:221px;}
+	.list_photo2 p {font-family:"NotoSansKR"; letter-spacing:-0.06em; line-height:1.4; padding-left:7px;}
+	.list_photo2 .t1 {font-size:15px; color:#666;}
+	.list_photo2 .t2 {font-size:18px; color:#333;}
+.list_interview {padding:0 30px;}
+	.list_interview .tit {font-size:25px; color:#333; font-weight:500; line-height:1.2; letter-spacing:-0.06em; font-family:"NotoSansKR"; border-bottom:solid 4px #333; padding-bottom:8px; margin-top:40px;}
+	.list_interview .q,
+	.list_interview .a {position:relative; font-size:15px; line-height:1.6; letter-spacing:-0.06em; font-family:"NotoSansKR";}
+	.list_interview .q {color:#f45757; padding:27px 0 20px 60px; border-top:solid 1px #e4e4e4; margin-top:27px;}
+	.list_interview .q:after {content:""; display:block; position:absolute; top:20px; left:0; width:42px; height:42px; background:url(http://image.jinhak.com/job/corp/ico_type18_01.png) no-repeat left top;}
+	.list_interview .tit + .q {border-top-width:0; margin-top:0;}
+	.list_interview .a {color:#666; padding:7px 0 0 60px;}
+	.list_interview .a span {position:absolute; top:0; left:0;}
+.list_fs {overflow:hidden; border-top:solid 2px #000;}
+	.list_fs:after {content:""; clear:both; display:block;}
+	.list_fs li {float:left;}
+	.list_fs li dl {border-left:solid 1px #d4d4d4;}
+	.list_fs li dt,
+	.list_fs li dd {font-size:13px; padding:11px 10px 12px 10px; border-bottom:solid 1px #d4d4d4; text-align:right;}
+	.list_fs li dt {background-color:#f5f5f5; text-align:center;}
+	.list_fs li dd.bg1 {font-weight:bold; color:#333;}
+	.list_fs li:first-child dl {border-left-width:0;}
+	.list_fs li:first-child dl dd {text-align:left;}
+	.list_fs.at2 li {width:50%;}
+	.list_fs.at3 li {width:33.3%;}
+	.list_fs.at4 li {width:25%;}
+.reputeWorker {padding:40px 45px}
+	.reputeWorker .worker dt {font-size:13px;text-align:center;height:40px;line-height:40px}
+	.reputeWorker .worker dd.repscore {padding-top:5px;text-align:center}
+	.reputeWorker .worker dd.repscore .score {display:inline-block;margin-top:-3px;font-size:33px;color:#f45757;font-weight:bold;letter-spacing:-1px;margin-right:20px}
+	.reputeWorker .worker dd.repscore .bar {display:inline-block;width:190px;height:29px;background:url(http://image.jinhak.com/job/corp/bizrepute_star02.png) no-repeat}
+	.reputeWorker .worker dd.repscore .bar span {display:block;height:100%;background:url(http://image.jinhak.com/job/corp/bizrepute_star03.png) no-repeat}
+	.reputeWorker .worker dd.repscore2 {text-align:center}
+	.reputeWorker .worker dd.repscore2 .score {display:inline-block;width:295px;height:24px;background:#ddd;border-radius:25px;margin-top:13px;margin-left:15px}
+	.reputeWorker .worker dd.repscore2 .score span {display:block;height:100%;text-align:center; background:url(http://image.jinhak.com/job/corp/graph8_03.png) no-repeat left top;border-radius:25px;color:#fff;line-height:24px}
+	.reputeWorker .initialPay dt {font-size:13px;text-align:center;height:25px;line-height:25px;padding-top:10px}
+	.reputeWorker .initialPay dd {text-align:center}
+	.reputeWorker .initialPay dd .ex {font-size:11px;color:#868686;margin-bottom:2px}
+	.reputeWorker .initialPay dd .pay {font-size:33px;font-weight:bold;color:#f45757;letter-spacing:-1px}
+	.reputeWorker .exr {text-align:right;color:#666;text-align:right;font-size:11px;padding:10px 15px 0 0}
+	.reputeWorker .repGraph {padding:40px 0 0 42px;width:375px;}
+	.reputeWorker .repGraph .graph12 {width:375px}
+	.reputeWorker .repGraph .graph12 dt {display:block;clear:both;margin-bottom:0}
+	.reputeWorker .repGraph .graph12 dd {margin-bottom:12px}
+	.reputeWorker .repGraph .graph12 dd .score {right:35px;top:-25px;text-align:right;width:45px}
+	.reputeWorker .repGraph .graph12 dd .ave {position:absolute;right:-40px;top:2px;width:40px}
+	.reputeWorker .repGraph .graph12 dd .ave.up {color:#f67777;background:url(http://image.jinhak.com/job/corp/ave_up.gif) no-repeat right 50%}
+	.reputeWorker .repGraph .graph12 dd .ave.m {color:#666;background:url(http://image.jinhak.com/job/corp/ave_m.gif) no-repeat right 50%}
+	.reputeWorker .repGraph .graph12 dd .ave.dn {color:#1097b4;background:url(http://image.jinhak.com/job/corp/ave_dn.gif) no-repeat right 50%}
+	.reputeWorker .sns {position:absolute;right:22px}
+	.reputeWorker .sns a span {display:none}
+	.reputeWorker .useful {margin-top:17px;text-align:right;font-size:13px}
+	.reputeWorker .useful .t {display:inline-block;border:1px solid #d9d9d9;border-radius:25px 0 0 25px;padding-left:10px;width:115px;height:38px;line-height:36px;text-align:center}
+	.reputeWorker .useful .ans {display:inline-block;border:1px solid #d9d9d9;border-left-width:0;border-radius:0 25px 25px 0;padding-right:10px;width:177px;height:38px;line-height:36px;text-align:center;background:#fafafa}
+	.reputeWorker .useful .ans a {display:inline-block;width:50%;text-align:center;text-decoration:underline}
+	.reputeWorker .useful .ans a.yes {color:#f45757}
+	.reputeWorker .useful .btn {display:inline-block;border:1px solid #d9d9d9;border-radius:25px;width:145px;height:38px;line-height:36px;text-align:center;margin-left:5px}
+	.reputeWorker .useful .btn a {display:block}
+	.reputeWorker .think {margin:25px 20px}
+	.reputeWorker .think li {margin-bottom:15px}
+	.reputeWorker .think li .rep_textarea {margin:10px 19px}
+	.reputeWorker .think li .rep_textarea textarea {font-size:13px}
+
+/* 기업> 평판 */
+.rep_menu {position:relative; height:64px; border-bottom:solid 1px #d4d4d4; background-color:#FFF; margin-top:2px; z-index:2;}
+	.rep_menu h2 {float:left; margin-right:20px;}
+	.rep_menu h2 img {margin:19px 0 0 10px;}
+	.rep_menu .t1 {float:left; font-size:13px; margin-top:30px;}
+	.rep_menu .btn {position:absolute; right:10px; top:13px;}
+.rep_select {padding-top:25px; overflow:hidden}
+	.rep_select:after {content:""; clear:both; display:block;}
+	.rep_select .box1 {float:left; width:318px; height:298px; text-align:center; padding:0;}
+	.rep_select .box1:before {background-image:url(https://imgorg.jinhak.com/job/corp/box1_bg.png);}
+	.rep_select .box1:first-child {margin-right:20px; margin-left:150px;}
+	.rep_select .box1 .font13 {padding-top:40px; margin-bottom:10px;}
+	.rep_select .box1 .btn {margin-top:20px;}
+.rep_survey {text-align:center; padding:10px 112px 0 112px;}
+	.rep_survey .box1 {width:660px; margin:0 auto; text-align:left; padding-right:50px; padding-left:50px;}
+	.rep_survey .box1:after {background-image:url(http://image.jinhak.com/job/corp/box1_bg.png);}
+	.rep_survey.atEnd .box1 {background:url(http://image.jinhak.com/job/corp/poll_img08.png) no-repeat 85px 42px;}
+	.rep_survey.atEnd .txt10,
+	.rep_survey.atEnd .font13 {padding-left:150px;}
+	.rep_survey .search,
+	.rep_survey_iframe .search {position:relative; border:solid 1px #272727;}
+	.rep_survey .search img,
+	.rep_survey_iframe .search img {position:absolute; top:-1px; right:0;}
+	.rep_survey .search .input,
+	.rep_survey_iframe .search .input {/*height:37px; line-height:37px;*/ width:80%; border:0; padding:4px 10px 5px 10px;}
+	.rep_survey .t1,
+	.rep_survey_iframe .t1 {font-size:22px; font-weight:bold; letter-spacing:-1px; text-align:center; margin:30px 0;}
+	.rep_survey .t1 .sm,
+	.rep_survey_iframe .t1 .sm {font-size:13px; font-weight:normal; letter-spacing:0;}
+	.rep_survey .t2,
+	.rep_survey_iframe .t2 {font-size:16px; letter-spacing:-1px; margin-top:20px;}
+	.rep_survey .t2 label,
+	.rep_survey_iframe .t2 label {font-size:inherit; letter-spacing:-1px;}
+	.rep_survey .t2 input[type=checkbox],
+	.rep_survey_iframe .t2 input[type=checkbox] {margin-top:5px;}
+	.rep_survey .t3,
+	.rep_survey_iframe .t3 {margin:20px 0;}
+	.rep_survey .t3 span,
+	.rep_survey_iframe .t3 span {display:inline-block; font-size:24px; color:#f45757; font-weight:bold; letter-spacing:-2px; border:solid 2px #f45757; border-right-width:0; border-left-width:0; padding:0 10px 7px 10px;}
+	.rep_survey .t4,
+	.rep_survey_iframe .t4 {font-size:22px; letter-spacing:-1px; text-align:center; margin:30px 0 10px 0;}
+	.rep_survey_iframe .msg {text-align:center;font-size:15px;line-height:24px}
+	.rep_survey_iframe .nodata {text-align:center;font-size:15px;}
+	.rep_survey_iframe .nodata span {display:block;margin-bottom:8px}
+	.rep_survey_iframe .nodata span.m1 {font-weight:bold}
+	.rep_survey_iframe .nodata span.btn a {display:inline-block;width:170px;height:39px;line-height:39px;background:#272727;color:#fff;font-weight:bold;text-decoration:none}
+	.rep_survey_iframe .check input[type="radio"] {display:none}
+	.rep_survey_iframe .check input[type="radio"] + label {display:inline-block;color:#a1a1a1;font-size:19px;width:100%;height:70px;line-height:70px}
+	.rep_survey_iframe .check input[type="radio"] + label span {display:inline-block;width:35px;height:35px;margin-left:8px;vertical-align:middle;cursor:pointer;background:url("http://image.jinhak.com/job/corp/bizrepute_uncheck.png") no-repeat}
+	.rep_survey_iframe .check input[type="radio"]:checked + label {background-color:#f45757;color:#fff}
+	.rep_survey_iframe .check input[type="radio"]:checked + label span {background:url("http://image.jinhak.com/job/corp/bizrepute_check.png") no-repeat}
+	.rep_survey_iframe .ques {text-align:center;font-size:22px}
+.reputeRegTop {border:5px solid #f0f0f0;padding:7px;height:126px;text-align:center}
+	.reputeRegTop .pic, .reputeRegTop .biz {vertical-align:middle}
+	.reputeRegTop .pic {display:inline-block;width:123px;height:123px;margin-right:20px}
+	.reputeRegTop .pic img {width:100%}
+	.reputeRegTop .biz {display:inline-block;}
+	.reputeRegTop .name {display:block;font-size:29px;font-weight:bold;letter-spacing:-2px;text-align:left;}
+	.reputeRegTop .txt {display:block;margin-top:5px;font-size:14px;text-align:left;line-height:15px}
+	.reputeRegTop .txt span {position:relative; padding-right:6px;}
+	.reputeRegTop .txt span:after {content:""; display:block; position:absolute; top:4px; right:0; width:1px; height:12px; background-color:#7d7d7d;}
+	.reputeRegTop .txt span:last-child:after {width:0px}
+	.reputeReg {border-left:5px solid #f0f0f0;border-right:5px solid #f0f0f0;}
+	.reputeReg .opt1 {clear:both;border-bottom:5px solid #f0f0f0;height:70px}
+	.reputeReg .opt1 li {float:left;width:50%;text-align:center}
+	.reputeReg .opt1 li:first-child p {border-right:5px solid #f0f0f0}
+	.reputeReg .opt2 {clear:both;position:relative}
+	.reputeReg .opt2 dt {position:absolute;height:70px;line-height:17px;padding-left:15px;width:95px;border-right:5px solid #f0f0f0}
+	.reputeReg .opt2 dt p {display:table-cell;vertical-align:middle;height:70px;}
+	.reputeReg .opt2 dd {padding-left:115px;border-bottom:5px solid #f0f0f0;height:70px}
+	.reputeReg .opt2 dd .in {display:table-cell;vertical-align:middle;height:70px;padding-left:20px}
+	.reputeReg .opt2 dd .in .check {color:#666;margin-left:15px;height:37px;line-height:30px}
+	.reputeReg .opt2 dd .in2 li {float:left;text-align:left;height:70px}
+	.reputeReg .opt2 dd .in2 li p {height:40px;padding:13px 20px 17px 20px;text-align:left;line-height:40px}
+	.reputeReg .opt2 dd .in2 li:first-child p {border-right:5px solid #f0f0f0}
+	.reputeReg .opt2 dd .in2 .input_t {height: 37px;width:176px;color:#f45757;border:1px solid #272727;padding-right:10px;font-size:16px;text-align:right;}
+	.reputeReg .opt2 dd .in2 span {height: 37px;line-height:35px;margin-left:15px;font-size:14px}
+	.reputeReg .opt2 dd .in2 .check {height:37px;line-height:30px;margin-left:0}
+	.reputeReg .opt2 dd li {float:left;width:50%;text-align:center;height:70px}
+	.reputeReg .opt2 dd li:first-child p.check {border-right:5px solid #f0f0f0}
+.ansGraph {position:relative;margin:0 auto;height:410px;background:url(http://image.jinhak.com/job/corp/bizrepute_graph.png) no-repeat 50% 50%;}
+	.ansGraph .ans {position:absolute;width:340px;margin-left:-166px;left:50%;top:38px}
+	.ansGraph .ans li {float:left;margin-right:10px;margin-bottom:10px}
+	.ansGraph .ans li p {position:relative;width:160px;height:160px;}
+	.ansGraph .ans input[type="radio"] {display:none}
+	.ansGraph .ans input[type="radio"] + label {display:block;width:160px;height:160px;}
+	.ansGraph .ans input[type="radio"] + label .t {position:absolute;bottom:20px;left:0;text-align:center;width:100%;display:block;color:#666;font-size:14px;font-weight:bold}
+	.ansGraph .ans input[type="radio"]:checked + label .line {position:absolute;width:152px;height:152px;border:4px solid #f55758}
+	.ansGraph .point {position:absolute;font-size:14px;color:#272727;font-weight:bold;width:200px}
+	.ansGraph .gt {left:50%;margin-left:-100px;text-align:center}
+	.ansGraph .gb {left:50%;bottom:0;margin-left:-100px;text-align:center}
+	.ansGraph .gl {left:50%;top:50%;margin-left:-390px;margin-top:-10px;height:20px;line-height:20px;text-align:right}
+	.ansGraph .gr {left:50%;top:50%;margin-left:190px;margin-top:-10px;height:20px;line-height:20px;text-align:left}
+.corpnewReg {padding:30px 60px}
+	.corpnewReg .table7 th {text-align:left;font-size:18px;color:#333;font-weight:normal;vertical-align:top;padding-top:10px}
+	.corpnewReg .table7 th span {font-size:17px;position:absolute;margin-top:-5px}
+	.corpnewReg .input_t {border:1px solid #333;color:#333;font-size:12px;height:36px;width:97%;padding-left:3%;margin-bottom:5px}
+	.corpnewReg .input_t.bg {background:#e1e1e1}
+	.corpnewReg .input_t.base {color:#a1a1a1}
+	.corpnewReg .chk {color:#f45757;font-size:11px;padding-left:17px;margin-bottom:5px;}
+	.corpnewReg .search {position:absolute; top:1px; right:0;}
+	.corpnewReg .btn {margin-top:15px}
+	.corpnewReg .btn a {background:#272727;height:45px;width:100%;padding-top:12px;display:block;color:#fff;font-size:22px;text-align:center;text-decoration:none}
+	.corpnewReg .bbs_select3 {margin-bottom:4px}
+	.corpRegDone {text-align:center;padding:80px 0 40px 0}
+	.corpRegDone .t1 {font-size:22px;color:#333;letter-spacing:-1px}
+	.corpRegDone .btn {margin:20px 0}
+	.corpRegDone .t2 {font-size:12px;color:#666;line-height:19px}
+.rep_result {background:url(http://image.jinhak.com/job/corp/line_dot01.gif) repeat-x left top; margin-top:15px; padding-top:30px; text-align:center;}
+	.rep_result p {font-size:28px; letter-spacing:-1px;}
+	.rep_result .btn {margin-top:10px;}
+	.rep_survey .btn_top {text-align:right; margin:-50px auto 15px auto;}
+.rep_list li {position:relative; height:98px; padding-left:138px; /*overflow:hidden;*/ text-align:left; cursor:pointer;}
+	.rep_list li:after {content:""; clear:both; display:block;}
+	.rep_list li:hover:after,
+	.rep_list li.selected:after {display:block; position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px; border:solid 5px #f45a5a;}
+	.rep_list li .pic {position:absolute; top:5px; left:20px;}
+	.rep_list li .pic img {width:88px; height:88px;}
+	.rep_list li .name {font-size:15px; padding-top:26px;}
+	.rep_list li .name strong {position:relative; padding-right:8px;}
+	.rep_list li .name strong:after {content:""; display:block; position:absolute; top:3px; right:1px; width:1px; height:16px; background-color:#272727;}
+	.rep_list li .txt {margin-top:5px;}
+	.rep_list li .txt span:first-child {position:relative; padding-right:6px;}
+	.rep_list li .txt span:first-child:after {content:""; display:block; position:absolute; top:3px; right:0; width:1px; height:12px; background-color:#7d7d7d;}
+	.rep_list li .total {position:absolute; top:20px; right:0; width:110px; height:58px; line-height:58px; text-align:center; font-size:15px; font-weight:bold; border-left:solid 1px #d4d4d4;}
+	.rep_list li .done {color:#9a9a9a;}
+	.rep_list li .ing {color:#f45757;}
+	.rep_list li .nodata {padding-left:140px; padding-top:40px;}
+	.rep_list.type1 li {margin-top:4px; border:solid 1px #9a9a9a; box-shadow:2px 3px 1px 0 rgba(0,0,0,0.1);}
+	.rep_list.type2 {border:solid 2px #272727; border-right-width:0; border-left-width:0;}
+	.rep_list.type2 li {background:url(https://imgorg.jinhak.com/job/corp/line_dot01.gif) repeat-x left top;}
+	.rep_list.type2 li:first-child {background:none;}
+.rep_list_radio {overflow:hidden;}
+	.rep_list_radio:after {content:""; clear:both; display:block;}
+	.rep_list_radio li a {position:relative; display:block; border:solid 1px #272727; height:47px; line-height:43px; padding:0 20px; font-size:16px; letter-spacing:-1px; margin:10px 0; text-decoration:none; background-color:#FFF; z-index:1;}
+	.rep_list_radio li a:hover:after,
+	.rep_list_radio li.selected a:after{content:""; display:block; position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px; border:solid 5px #f45757;}
+	.rep_list_radio li input[type=text] {display:block; border:solid 1px #272727; width:85.5%; height:47px; line-height:43px; padding-left:20px; font-size:16px; letter-spacing:-1px; margin:10px 0;}
+	.rep_list_radio li.selected input.etc {width:210px !important; height:49px !important; line-height:30px !important; border:solid 5px #f45757; box-sizing:border-box;} /* 직접입력 선택했을때(3개짜리) */
+	.rep_list_radio li .t1 {position:absolute; top:0; left:0; background-color:#272727; font-size:16px; color:#f5f5f5; padding:3px 20px 7px 20px;}
+	.rep_list_radio.at2 li {float:left; width:50%;}
+	.rep_list_radio.at2 li a {margin:5px;}
+	.rep_list_radio.at2 li a img {width:100%;}
+	.rep_list_radio.at3 li {float:left; width:33.3%;}
+	.rep_list_radio.at3 li a {margin:5px;}
+	.rep_list_radio.at3 li input[type=text] {margin:5px; width:86%; height:47px;}
+	.rep_list_radio.at4 li {float:left; width:25%;}
+	.rep_list_radio.at4 li a {margin:5px;}
+	.rep_list_radio.at7 {margin-left:-6px;}
+	.rep_list_radio.at7 li {position:relative; float:left; width:14.2%;}
+	.rep_list_radio.at7 li:after {content:""; display:block; position:absolute; top:36px; right:0; left:0; height:5px; background-color:#272727; z-index:0;}
+	.rep_list_radio.at7 li:first-child:after {display:none;}
+	.rep_list_radio.at7 li a {font-size:14px; line-height:15px; font-weight:normal; text-align:center; padding:0; margin-left:11px;}
+	.rep_list_radio.at7 li a.l1 {height:35px; padding-top:18px;}
+	.rep_list_radio.at7 li a.l2 {height:43px; padding-top:9px;}
+	.rep_list_radio.atImg li a {height:auto; line-height:normal; padding:0;}
+.rep_selectbox select {width:100%; margin:5px 0; padding:12px 5px 12px 20px; font-size:16px; letter-spacing:-1px; /*border:solid 1px #272727;*/}
+.rep_input {font-size:16px; color:#f45757; font-weight:bold;}
+	.rep_input input[type="text"] {border-color:#707070; height:47px; line-height:47px; font-size:16px;}
+.rep_textarea p {font-size:13px; margin-top:5px;}
+	.rep_textarea textarea {width:100%; font-size:16px; letter-spacing:-1px;}
+.rep_logo {text-align:center; font-size:22px; font-weight:bold; margin-bottom:40px;}
+	.rep_logo img {width:82px; height:82px;}
+.progress {height:8px; background:url(https://imgorg.jinhak.com/job/corp/graph7_01.gif); margin:115px -50px -30px -50px;}
+	.progress span {display:block; height:100%; background-color:#f45757;}
+	.progress .at70 {position:absolute; margin-top:-105px; right:84px; width:206px; height:94px; background:url(http://image.jinhak.com/job/corp/poll_img06.png) no-repeat center top;}
+	.progress .at70_2 {position:absolute; margin-top:-122px; right:228px; width:159px; height:111px; background:url(http://image.jinhak.com/job/corp/bizrepute_ing.png) no-repeat center top;}
+	.progress .atTalking {position:absolute; margin-top:-88px; right:71px; width:208px; height:80px; background:url(http://image.jinhak.com/job/corp/poll_img07.png) no-repeat center top;}
+	.progress .atDone {position:absolute; margin-top:-120px; right:-26px; width:153px; height:109px; background:url(http://image.jinhak.com/job/corp/bizrepute_goal.png) no-repeat center top;}
+.reputeTopArea {background:url(http://image.jinhak.com/job/corp/bizrepute_bg.jpg) no-repeat;height:310px/*460px*/;border:1px solid #e1e1e1}
+	.reputeTopArea .reputeGo {margin:0 auto;text-align:center;padding:65px 180px 0 180px;margin-bottom:20px}
+	.reputeTopArea .reputeGo a {display:block;padding:45px 0 40px 0}
+	.reputeTopArea .reputeGo a span {display:block}
+	.reputeTopArea .reputeGo a span.btn {margin-top:15px}
+	.reputeTopArea .reputeNum {padding-left:88px;float:left;width:390px;height:135px;}
+	.reputeTopArea .reputeNum dt {text-align:center;height:25px;width:370px;}
+	.reputeTopArea .reputeNum dd {position:relative;height:110px;line-height:108px;background:url(http://image.jinhak.com/job/corp/bizrepute_nbga.png) no-repeat 0 5px;color:#fff;font-size:77px;letter-spacing:31px;text-align:right;font-weight:bold}
+	.reputeTopArea .reputeNum dd .ov {position:absolute;left:0;top:9px;display:block;width:370px;height:105px;background:url(http://image.jinhak.com/job/corp/bizrepute_nbgova.png) no-repeat}
+	.reputeTopArea .reputeNum.right {float:right;padding:0 68px 0 0;}
+	.reputeTopArea .date {clear:both;padding:35px 13px 0 0;text-align:right;color:#999;font-weight:bold}
+h3.repute {margin:30px 0 20px 10px}
+.reputeLive {border:3px solid #bfbfbf;height:74px;position:relative;overflow:hidden}
+	.reputeLive ul {position:absolute;width:10000px}
+	.reputeLive ul li {float:left;/*width:780px*/ margin-right:60px;}
+	.reputeLive ul li a {display:block; height:100%; /*overflow:hidden; text-overflow:ellipsis; white-space:nowrap;*/}
+	.reputeLive * {vertical-align:top}
+	.reputeLive .pic {display:inline-block;border:4px solid #fff;}
+	.reputeLive .pic img {height:66px}
+	.reputeLive .tit {display:inline-block;color:#272727;font-size:13px;font-weight:bold;padding-right:20px;height:100%;line-height:74px;}
+	.reputeLive .good,
+	.reputeLive .bad {display:inline-block; width:290px; height:100%; line-height:74px; padding-left:47px; box-sizing:border-box; background-size:27px 27px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.reputeLive .good {background:url(http://image.jinhak.com/job/corp/ico_type11_1.png) no-repeat 0 18px;color:#f45757;padding-right:10px;}
+	.reputeLive .bad {background:url(http://image.jinhak.com/job/corp/ico_type11_2.png) no-repeat 0 18px;}
+.reputeList {margin-bottom:35px}
+	.reputeList li {position:relative;border-bottom:1px solid #d4d4d4;padding:25px 25px 25px 180px;min-height:110px;cursor:pointer}
+	.reputeList .pic {position:absolute;left:49px;width:94px;height:94px;padding:7px;border:1px solid #bfbfbf}
+	.reputeList .pic img {width:100%}
+	.reputeList .name .tit {display:inline-block;font-size:21px;font-weight:bold;padding-top:8px;margin-right:9px}
+	.reputeList .name .ctg {display:inline-block}
+	.reputeList .name .ctg span {position:relative; padding-right:6px;margin-top:5px;font-size:13px;font-weight:normal;line-height:15px}
+	.reputeList .name .ctg span:after {content:""; display:block; position:absolute; top:4px; right:0; width:1px; height:12px; background-color:#7d7d7d;}
+	.reputeList .name .ctg span:last-child:after {width:0px}
+	.reputeList li ul li {position:relative;border-bottom:none;padding:15px 0 0 0;min-height:45px;float:left;width:50%}
+	.reputeList .talk {background-repeat:no-repeat; background-position:left 3px; padding-left:51px;padding-right:20px;}
+	.reputeList .talk .tbox {position:relative; display:block; padding:13px 10px 14px 10px; border-style:solid; border-width:1px; border-radius:9px; font-size:13px;}
+	.reputeList .talk .tbox .wrap {display:block;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+	.reputeList .talk .tbox:after {content:""; display:block; position:absolute; width:8px; top:0; left:-8px; bottom:0; background-position:center 15px; background-repeat:no-repeat;}
+	.reputeList .talk.good {background-image:url(http://image.jinhak.com/job/corp/ico_type11_1.png);}
+	.reputeList .talk.good .tbox {border-color:#f45757;}
+	.reputeList .talk.good .tbox:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr01.png);}
+	.reputeList .talk.bad {background-image:url(http://image.jinhak.com/job/corp/ico_type11_2.png);}
+	.reputeList .talk.bad .tbox {border-color:#ababab;}
+	.reputeList .talk.bad .tbox:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr03.png);}
+	.reputeList li:hover .name .tit {text-decoration:underline}
+	.reputeList li:hover .talk .tbox {text-decoration:underline}
+.reputeL {float:left;width:490px}
+.reputeR {float:right;width:490px}
+.reputeL h3, .reputeR h3 {margin:0 0 10px 0}
+.reputebox {border:1px solid #7b7b7b;border-top:2px solid #272727;height:285px;overflow:hidden;position:relative}
+	.reputebox .btn {position:absolute;bottom:20px;left:18px;width:450px}
+	.reputebox .btn a {display:block;border:3px solid #070102;padding:10px 0 12px 0;background:#fff;text-align:center}
+	.corpPick {text-align:center;padding:50px;cursor:pointer}
+	.corpPick .pic, .corpPick .biz {vertical-align:middle}
+	.corpPick .pic {display:inline-block;width:100px;height:100px;padding:4px;border:1px solid #bfbfbf;margin-right:20px}
+	.corpPick .pic img {width:100%}
+	.corpPick .biz {display:inline-block}
+	.corpPick .biz .name {display:block;font-size:21px;font-weight:bold;margin-bottom:20px;text-align:left;}
+	.corpPick .biz .good {display:block;text-align:left;margin-bottom:10px;height:40px;background:url(http://image.jinhak.com/job/corp/ico_type11_1.png) no-repeat;padding-left:50px;color:#f45757;font-size:34px;line-height:38px;letter-spacing:-2px}
+	.corpPick .biz .good img {margin-left:10px}
+	.corpcomp {margin:0 18px}
+	.corpcomp .pic {display:inline-block;width:60px;height:60px;margin-right:10px}
+	.corpcomp .pic img {width:100%}
+	.corpcomp .name {font-size:13px;font-weight:bold}
+	.corpcomp li {height:26px;line-height:26px;font-size:12px}
+	.corpcomp li .corp {float:left;width:175px;position:relative}
+	.corpcomp li .corp .bar {position:relative;display:inline-block;width:130px;height:8px;background:#d6d6d6}
+	.corpcomp li .corp .bar span {position:absolute;height:8px;background:#fa9393}
+	.corpcomp li .corp .num {position:absolute;color:#f45757;font-size:16px}
+	.corpcomp li .vs {float:left;width:100px;text-align:center;letter-spacing:-1px}
+	.corpcomp li .left {text-align:right}
+	.corpcomp li .left .num {left:0}
+	.corpcomp li .left .bar span {right:0}
+	.corpcomp li .right {text-align:left}
+	.corpcomp li .right .num {right:0}
+	.corpcomp li.tit {height:60px;margin:10px 0}
+	.corpcomp li.tit .vs {padding-top:15px}
+.reputeCorp10 {border-top:2px solid #272727;background:#f6f6f6;padding:14px}
+	.reputeCorp10 .corp:after {content:""; clear:both; display:block;}
+	.reputeCorp10 .corp li {float:left;width:88px;margin-right:9px}
+	.reputeCorp10 .corp li.selected .tooltip {margin-left:35px;margin-top:7px;position:absolute;width:15px;height:8px;background:url("http://image.jinhak.com/job/corp/tooltip_at.png") no-repeat}
+	.reputeCorp10 .corp li.selected .pic {border:1px solid #272727}
+	.reputeCorp10 .corp li:last-child {margin-right:0}
+	.reputeCorp10 .corp li .pic {border:1px solid #c8c8c8;padding:5px;background:#fff}
+	.reputeCorp10 .corp li .pic img {width:100%;}
+	.reputeCorp10 .corp li a {position:absolute;width:88px;height:88px;}
+	.repcorpview {margin-top:14px;border:1px solid #c8c8c8;background:#fff}
+	.repcorpview:after {content:""; clear:both; display:block;}
+	.repcorpview li {float:left;width:160px;height:43px}
+	.repcorpview li a {display:block;width:159px;line-height:43px;text-align:center;color:#242424;font-size:13px;text-decoration:none;/*border:1px solid #f0f0f0;border-top-width:0;border-left-width:0*/box-shadow:1px 1px 0 0 rgba(0,0,0,0.05);}
+	.repcorpview li a:hover {background:#e6e6e6}
+	.repcorpview li:nth-child(6n) a {border-right-width:0;width:160px}
+.repbestRank {position:relative;border-top:2px solid #272727;background:#f6f6f6;padding:14px}
+	.repbestRank .bestrank:after {content:""; clear:both; display:block;}
+	.repbestRank .bestrank li {float:left;margin-right:10px;width:146px;border:1px solid #c8c8c8;background:#fff;padding:2px}
+	.repbestRank .bestrank li:last-child {margin-right:0}
+	.repbestRank .bestcorp {display:none;position:absolute;top:14px}
+	.repbestRank .bestcorp dt {float:left;}
+	.repbestRank .bestcorp dt img {border:3px solid #f45757}
+	.repbestRank .bestcorp dd {float:left;border-left:10px solid #f6f6f6;width:798px}
+	.repbestRank .bestcorp dd .arr {position:absolute;margin-left:-7px;margin-top:78px;background:url("http://image.jinhak.com/job/corp/tooltip_al2.png") no-repeat;width:8px;height:15px}
+	.repbestRank .bestcorp dd ul {background:#fff;width:798px;height:178px;border:1px solid #c8c8c8}
+	.repbestRank .bestcorp dd ul li {float:left;width:158px;height:178px;text-align:center;border-left:1px solid #c8c8c8}
+	.repbestRank .bestcorp dd ul li:first-child {border-left:none}
+	.repbestRank .bestcorp dd ul li .pic {display:block;width:94px;height:94px;margin:22px auto 9px auto}
+	.repbestRank .bestcorp dd ul li .pic img {width:100%}
+	.repbestRank .bestcorp dd ul li .name {font-size:13px;font-weight:bold}
+	.repbestRank .bestcorp dd ul li a {text-decoration:none}
+	.selectbox_r {float:right}
+	.selectbox_r select {height:32px; /*width:176px;*/ color:#272727; border:1px solid #272727; padding-left:10px; padding-right:40px; font-size:13px;
+		background:url(http://image.jinhak.com/job/corp/slt_arw.gif) #fff no-repeat 100% 50%;
+		-webkit-appearance:none; -moz-appearance:none; vertical-align:top;vertical-align: -webkit-baseline-middle;z-index:2;}
+	.selectbox_r select::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { /* IE9 */
+		.selectbox_r select {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.selectbox_r select {background:none; padding-right:4px;}
+	}
+	.selectbox_r option:checked { color:#f45757; }
+.corpScore {margin-top:30px;position:relative}
+	.star-input {position:absolute;right:210px;top:30px}
+	.star-input span,.star-input span label:hover,.star-input span input:focus+label, .star-input span input:checked+label {display: inline-block;vertical-align:middle;background:url("http://image.jinhak.com/job/corp/bizrepute_star.png") no-repeat;}
+	.star-input span {display:block;width:190px;height:30px;position: relative;}
+	.star-input span input{position:absolute;opacity:0;}
+	.star-input span label{width:30px;height:0;padding:29px 0 0 0;overflow:hidden;float:left;cursor:pointer;position:absolute;top:0;left:0;}
+	.star-input span label:hover, .star-input span input:focus+label, .star-input span input:checked+label{background-position: 0 bottom;}
+	.star-input span label:hover~label{background-image: none;}
+	.star-input span label[for="p1"]{width:35px;z-index:5;}
+	.star-input span label[for="p2"]{width:75px;z-index:4;}
+	.star-input span label[for="p3"]{width:115px;z-index:3;}
+	.star-input span label[for="p4"]{width:160px;z-index:2;}
+	.star-input span label[for="p5"]{width:190px;z-index:1;}
+.repIssue {border-top:2px solid #272727;background:#f6f6f6;}
+	.repIssue.pager_type2 .bx-has-pager {position:absolute; top:-29px; right:5px; font-size:0; line-height:0;}
+	.repIssue li {cursor:pointer}
+	.repIssue .top {padding:40px 140px 15px 140px;min-height:185px}
+	.repIssue .l {float:left;width:185px;margin-right:40px;text-align:center}
+	.repIssue .r {float:left;width:445px}
+	.repIssue .top:after {content:""; clear:both; display:block;}
+	.repIssue .pic {margin:0 auto;border:1px solid #c8c8c8;width:100px;height:100px;padding:4px;background:#fff}
+	.repIssue .pic img {width:100%}
+	.repIssue .name {margin:15px 0 6px 0;font-size:15px;font-weight:bold}
+	.repIssue .ctg span {position:relative; padding-right:6px;margin-top:5px;font-size:13px;font-weight:normal;line-height:15px}
+	.repIssue .ctg span:after {content:""; display:block; position:absolute; top:4px; right:0; width:1px; height:12px; background-color:#7d7d7d;}
+	.repIssue .ctg span:last-child:after {width:0px}
+	.repIssue .rep {padding:0 75px 40px 75px}
+	.repIssue .rep:after {content:""; clear:both; display:block;}
+	.repIssue .rep li {float:left;width:49%}
+	.repIssue .rep li:first-child {margin-right:2%}
+	.repIssue .talk {background-repeat:no-repeat; background-position:left 3px; padding-left:51px}
+	.repIssue .talk .tbox {position:relative; display:block; padding:13px 10px 14px 10px; border-style:solid; border-width:1px; border-radius:9px; font-size:13px;background-color:#fff}
+	.repIssue .talk .tbox .wrap {display:block;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+	.repIssue .talk .tbox:after {content:""; display:block; position:absolute; width:8px; top:0; left:-8px; bottom:0; background-position:center 15px; background-repeat:no-repeat;}
+	.repIssue .talk.good {background-image:url(http://image.jinhak.com/job/corp/ico_type11_1.png);}
+	.repIssue .talk.good .tbox {border-color:#f45757;}
+	.repIssue .talk.good .tbox:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr01.png);}
+	.repIssue .talk.bad {background-image:url(http://image.jinhak.com/job/corp/ico_type11_2.png);}
+	.repIssue .talk.bad .tbox {border-color:#ababab;}
+	.repIssue .talk.bad .tbox:after {background-image:url(http://image.jinhak.com/job/corp/tooltip2_arr03.png);}
+.corprepTop5 {margin-top:30px}
+	.corprepTop5 .top {background:#272727;height:50px}
+	.corprepTop5 .top .tit {float:left;padding:12px 0 0 27px;position:relative;overflow:hidden;width:250px;height:25px}
+	.corprepTop5 .top .tit .prev, .corprepTop5 .top .tit .next {position:absolute;top:12px;cursor:pointer}
+	.corprepTop5 .top .tit .prev {left:27px}
+	.corprepTop5 .top .tit .next {right:0px}
+	.corprepTop5 .top .tit ul {width:200px;margin:3px 0 0 25px}
+	.corprepTop5 .top .tit ul li {text-align:center;height:25px}
+	.corprepTop5 .top .ctg {float:right;padding:13px 12px 0 0}
+	.corprepTop5 .top .ctg a {display:inline-block;width:67px;height:21px;line-height:19px;text-align:center;background:#797979;color:#ddd;font-size:11px;text-decoration:none}
+	.corprepTop5 .top .ctg a.selected {background-color:#fff;color:#797979}
+	.corprepTop5 .list {clear:both;border:1px solid #272727;height:225px;overflow:hidden}
+	.corprepTop5 .rank {padding:30px 20px}
+	.corprepTop5 .rank li {float:left;width:20%;text-align:center;position:relative;height:225px}
+	.corprepTop5 .rank li a {text-decoration:none}
+	.corprepTop5 .rank .n {position:absolute;left:0;width:40px;text-align:center}
+	.corprepTop5 .rank .pic {margin:0 auto;display:block;border:1px solid #bfbfbf;width:94px;height:94px;padding:9px;background:#fff}
+	.corprepTop5 .rank .pic img {width:100%}
+	.corprepTop5 .rank .t {display:block;font-size:13px;font-weight:bold;margin-top:6px}
+	.corprepTop5 .rank .s {display:block;font-size:20px;color:#f45757}
+.reputeLayer {position:relative;text-align:center}
+	.reputeLayer .ques {text-align:center;font-size:22px}
+	.reputeLayer .progress {width:800px;margin:0}
+	.reputeLayer .done2 {background:url(http://image.jinhak.com/job/corp/poll_bg01.gif); padding:70px 0;}
+	.reputeLayer .done2 .bn {font-size:0; line-height:0; margin-top:30px;}
+	.reputeLayer .done2 .bn img {margin:0 15px;}
+.reputeDone {border:5px solid #f0f0f0;margin:0 45px 100px 45px;}
+	.reputeDone .msg {padding:40px 0;}
+	.reputeDone .msg .pic {display:inline-block;width:90px;height:90px;margin-right:25px}
+	.reputeDone .msg .pic img {width:100%;}
+	.reputeDone .msg .tit {display:inline-block;font-size:28px}
+	.reputeDone .msg .btn {margin-top:30px}
+	.reputeDone .msg .t1 {font-size:20px; letter-spacing:-0.06em;}
+	.reputeDone .ex {background:#f0f0f0;padding:20px;line-height:20px}
+	.reputeDone .ex .left {float:left;width:315px}
+	.reputeDone .ex .right {float:right;width:315px}
+	.reputeDone .ex .table1 {border-top-width:3px}
+	.reputeDone .ex .table1 th,
+	.reputeDone .ex .table1 td {font-size:12px;color:#666;word-break:keep-all;word-wrap:break-word;text-align:left;padding:10px} /* 2019-05-07 추가 */
+	.reputeDone .ex .table1 th {background-color:#f6f6f6;}
+	.reputeDone .ex .table1 td {background-color:#fff;}
+	.reputeDone .ex .txt {clear:both;color:#f45757;font-size:12px;text-align:left;padding:15px 0 0 0}
+.bbs_select select {height:37px; width:176px; color:#272727; border:1px solid #272727; font-size:13px; background:url("http://image.jinhak.com/job/corp/slt_arw.gif") #fff no-repeat 100% 50%; z-index:1;}
+.bbs_select2 select {height:29px; width:148px; color:#272727; border:1px solid #272727; font-size:12px; background:url("http://image.jinhak.com/job/corp/slt_arw4.gif") #fff no-repeat 100% 50%; z-index:1;}
+.bbs_select3 select {height:38px; width:100%; color:#333; border:1px solid #4d4d4d; font-size:12px; background:url(http://image.jinhak.com/job/corp/slt_arw3.gif) #fff no-repeat 100% 50%; z-index:2;}
+.bbs_select,
+.bbs_select2,
+.bbs_select3 {z-index:0}
+.bbs_select select,
+.bbs_select2 select,
+.bbs_select3 select {padding-left:10px; padding-right:40px; -webkit-appearance:none; -moz-appearance:none; vertical-align:top;vertical-align: -webkit-baseline-middle;}
+.bbs_select select::-ms-expand,
+.bbs_select2 select::-ms-expand,
+.bbs_select3 select::-ms-expand {display:none;}
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) { /* IE9 */
+	.bbs_select select, .bbs_select2 select, .bbs_select3 select {background:none; padding-right:2px;}
+}
+@media \0screen { /* IE8 */
+	.bbs_select select, .bbs_select2 select, .bbs_select3 select {background:none; padding-right:2px;}
+}

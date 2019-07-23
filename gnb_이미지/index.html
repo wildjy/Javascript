@@ -20,11 +20,9 @@
 		<!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/ui.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
 		<script type="text/javascript" src="js/ui.js"></script>
-		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 		<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
 		<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 
@@ -46,6 +44,98 @@
 
 				gnb : function(){
 					console.log("gnb");
+					var g_nav = true,
+					s_nav = true,
+					gnb = $(".gnb");
+					sub = $(".sub");
+					gnbTarget = $(".gnb>li>a"),
+					subTarget = $(".sub>li>a"),
+					offImg = "_off.png";
+					onImg = "_on.png";
+					_active = $(".gnb>li.selected>a").children("img");
+					
+					gnb.children("li").each(function(){
+						var _ = $(this);
+						if(_.hasClass("selected")){
+							_.children("a").find("img").attr("src", _.children("a").find("img").attr("src").replace(offImg, onImg));
+							_.children(sub).show();
+						}
+					});
+		
+					sub.children("li").each(function(){
+						var _ = $(this);
+						if(_.hasClass("selected")){
+							_.children("a").find("img").attr("src", _.children("a").find("img").attr("src").replace(".png", onImg));
+						}
+					});
+					
+					gnbTarget.on("mouseover focus", function(){
+							var gnbOn = $(".gnb .on"),
+							onsrc = $(this).find("img").attr("src").replace(offImg, onImg);
+		
+							if(gnbOn.hasClass("on")){
+									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
+									gnbOn.find("img").attr("src", offsrc);
+									gnbOn.next(sub).hide();
+							};
+							gnbOn.removeClass("on");
+							$(this).addClass("on");
+							if(_active.is(":visible")){
+								_active.attr("src", _active.attr("src").replace(offImg, onImg));
+							}
+							$(this).find("img").attr("src", onsrc);
+							$(sub).hide();
+							$(this).next(sub).show();
+					});
+		
+					function hideGnb(){
+						if(g_nav && s_nav){
+							var _ = $(this);
+							var gnbOn = $(".gnb .on");
+		
+							if(gnbOn.hasClass("on")){
+									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
+									gnbOn.find("img").attr("src", offsrc);
+									gnbOn.next(sub).hide();
+									if(_active.is(":visible")){
+										_active.attr("src", _active.attr("src").replace(offImg, onImg));
+										$(".gnb>li.selected>ul").show();
+									}
+							};
+						}
+					};
+		
+					gnb.on("mouseleave", function(){
+						g_nav = true;
+						hideGnb();
+					}).on("mouseenter", function(){
+						g_nav = false;
+					}).find(sub).on("mouseleave", function(){
+						s_nav = true;
+						hideGnb();
+					}).on("mouseenter", function(){
+						s_nav = false;
+					});
+		
+					subTarget.find("img").on("mouseover", function(){
+						var src = $(this).attr("src");
+						var regex = /.png/gi;
+						matches = src.match(/_on/);
+		
+						if(!matches){
+							src = this.src.replace(regex,'_on.png');
+							$(this).attr("src", src);
+						}
+					}).on("mouseleave", function(){
+						var src = $(this).attr("src");
+						var regex = /_on.png/gi;
+						matches = src.match(/_on/);
+		
+						if(!$(this).closest(".sm>li.selected").is(":visible")){
+							src = this.src.replace(regex,'.png');
+							$(this).attr("src", src);
+						};
+					});
 				}
 			}, 
 			

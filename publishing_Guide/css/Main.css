@@ -1,0 +1,170 @@
+﻿@charset "utf-8";
+
+.atMain#wrapper {background-color:#f5f5f5;}
+.atMain #gnb4 {background-color:#FFF;}
+.atMain #container {padding-top:43px;}
+.atMain #rBn {top:244px;}
+#mainContents {width:990px; margin:0 auto; text-align:left; overflow:hidden;}
+	#mainContents:after {content:""; clear:both; display:block;}
+.main_left {float:left; width:625px; overflow:hidden;} /* 2018-12-17 width:626px -> width 625px 로 변경 */
+	.main_left h2 {margin-top:16px; height:30px;}
+	/*.main_left .pager_type1 .bx-wrapper .bx-viewport {margin-left:1px; margin-left:0\9;}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		.main_left .pager_type1 .bx-wrapper .bx-viewport {margin-left:0;}
+	}*/
+	.slideTop li {overflow:hidden;}
+		.slideTop li a {display:block; text-align:center;}
+		.slideTop li a > img {width:100%; height:224px;}
+		.slideTop li.atAnalysis .pic {display:block;}
+		.slideTop li.atAnalysis .pic img {width:100%; height:224px;}
+		.slideTop li.atAnalysis .logo {position:absolute; top:68px; left:50%; margin-left:-95px; width:190px; height:95px; box-sizing:border-box; border:solid 1px #909090; background-color:#FFF;}
+		.slideTop li.atAnalysis .logo img {width:77px; margin-top:8px;}
+		.slideTop li.atAnalysis .name {position:absolute; bottom:9px; right:0; left:0; font-size:14px; color:#424242;}
+		.slideTop li.atAnalysis .btn2 {position:absolute; right:0; bottom:32px; left:0;}
+	.list_catch.slideCatchNews li {float:left; width:150px !important; height:127px;}
+	.list_catch_main.slideCatchNews li {float:left; width:150px !important; height:140px; text-align:left; overflow:hidden;}
+		.list_catch_main li a {position:relative; display:block; border:solid 1px #c7c8c7;}
+		.list_catch_main li a > span {position:absolute; right:8px; bottom:8px; left:8px; font-size:14px; color:#FFF; letter-spacing:-1px;}
+		.list_catch_main li a > span span {display:block; font-size:11px; opacity:0.5; filter:alpha(opacity=50);}
+		.list_catch_main li img {width:100%; height:138px;}
+		.recruit_news {position:relative; border:solid 1px #b6b6b6; background-color:#FFF; padding:18px 10px 0 100px; box-sizing:border-box; height:111px; margin-top:10px;}
+		.recruit_news .tit {position:absolute; top:18px; left:22px; font-size:13px; color:#000; font-weight:bold;}
+		.recruit_news .tit:after {content:""; display:inline-block; width:5px; height:9px; background:url(http://image.jinhak.com/job/corp/arr17_next.gif) no-repeat center center; vertical-align:middle; margin-left:5px; margin-top:-3px}
+		.recruit_news li {overflow:hidden; margin-top:8px;}
+		.recruit_news li:first-child {margin-top:0;}
+		.recruit_news li:after {content:""; clear:both; display:block;}
+		.recruit_news a,
+		.recruit_news .date {display:inline-block; font-size:13px; letter-spacing:-0.04em; vertical-align:top;}
+		.recruit_news a {float:left; color:#666; width:420px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		.recruit_news .date {float:right; color:#666; width:70px; text-align:right;}
+		.newest_rep2 {position:relative;border:solid 1px #b6b6b6; background-color:#FFF;height:51px;padding:0 85px 0 22px;margin-top:20px}
+		.newest_rep2 dt {position:absolute;margin-top:17px;font-size:13px;color:#f45757;}
+		.newest_rep2 dt:after {content:""; display:inline-block; width:5px; height:9px; background:url(http://image.jinhak.com/job/corp/arr18_next.gif) no-repeat center center; vertical-align:middle; margin-left:5px; margin-top:-3px}
+		.newest_rep2 dd {padding:17px 0 0 101px;font-size:13px}
+		.newest_rep2 .more {position:absolute;right:17px;top:16px;border:1px solid #f86969;border-radius:10px;color:#f45757;display:inline-block;width:58px;height:18px;line-height:18px;text-align:center;font-size:11px;text-decoration:none}
+		.newest_rep2Live {height:20px;position:relative;overflow:hidden}
+			.newest_rep2Live ul {position:absolute;width:10000px;overflow:hiddne}
+			.newest_rep2Live ul li {float:left; margin-right:60px;}
+			.newest_rep2Live ul li a {display:block; height:100%;font-size:13px}
+			.newest_rep2Live * {vertical-align:top}
+.main_right {float:right; width:320px; overflow:hidden;}
+	.main_right h2 {margin-top:28px; height:30px;}
+	.main_right .pager_type6 h2 {margin-top:3px; height:27px; background-color:#f5f5f5;}
+	.main_right .ranking {position:relative;}
+	.main_right .ranking .box {border:solid 1px #666; background-color:#FFF; overflow:hidden; padding-bottom:12px;}
+	.main_right .ranking .list a {position:relative; display:table; width:100%; border-collapse:collapse; table-layout:fixed; text-decoration:none; margin-top:8px;}
+	.main_right .ranking .list li:first-child a {margin-top:14px;}
+	.main_right .ranking .list .no {display:table-cell; vertical-align:middle; width:45px; text-align:center; font-size:15px;}
+	.main_right .ranking .list .pic {display:table-cell; vertical-align:middle; width:63px;}
+	.main_right .ranking .list .pic span {display:block; border:solid 1px #ddd; padding:5px; height:63px; box-sizing:border-box;}
+	.main_right .ranking .list .pic img {width:100%;}
+	.main_right .ranking .list .txt {display:table-cell; vertical-align:middle; padding-left:10px;}
+	.main_right .ranking .list .num {display:table-cell; vertical-align:middle; width:80px; text-align:right; padding-right:15px; font-size:11px; color:#f45757; font-weight:bold;}
+	.main_right .ranking .list .num img {margin-top:-2px;}
+	.main_right .ranking .list .up {color:#f45757;}
+	.main_right .ranking .list .same {color:#b0b0b0;}
+	.main_right .ranking .list .down {color:#69a1e0;}
+	.main_right .ranking .list .t1 {font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.main_right .ranking .list .t2 {margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.main_right .ranking .list .t2 span {position:relative; font-size:11px; color:#888; letter-spacing:-0.06em; padding-left:7px;}
+	.main_right .ranking .list .t2 span:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#c2c2c2;}
+	.main_right .ranking .list .t2 span:first-child {padding-left:0;}
+	.main_right .ranking .list .t2 span:first-child:after {display:none;}
+	.main_right .ranking .btn {margin-top:12px; text-align:center;}
+	.newest_rep {position:relative; background-color:#FFF; border:solid 1px #f45757; margin-top:15px;}
+		.newest_rep h2 {background-color:#f45757; height:42px; margin:0;}
+		.newest_rep h2 img {margin:8px 0 0 10px;}
+		.newest_rep .core {margin:12px 13px 0 13px; height:191px; overflow:hidden;}
+		.newest_rep li {position:relative; height:179px; overflow:hidden;}
+		.newest_rep .pic {float:left; border:solid 1px #CCC; width:70px; height:70px; padding:5px; margin-right:10px;}
+		.newest_rep .pic img {width:100%;}
+		.newest_rep .t1 {font-size:18px; color:#000; letter-spacing:-1px; font-family:"SpoqaHanSans"; margin-top:18px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		.newest_rep .t2 {font-size:13px; color:#555; line-height:1.4; margin-top:10px; padding:0 7px;
+			height:55px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;word-wrap:break-word;-webkit-line-clamp: 3;-webkit-box-orient: vertical;} /* 2019-02-12 3줄 말줄임 추가*/
+		.newest_rep .t3 {margin-top:1px;padding-bottom:13px;}
+		.newest_rep .t3 span {position:relative; font-size:12px; color:#666; padding-left:7px;}
+		.newest_rep .t3 span:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#c2c2c2;}
+		.newest_rep .t3 span:first-child {padding-left:0;}
+		.newest_rep .t3 span:first-child:after {display:none;}
+		.newest_rep .t4 {font-size:13px; color:#f45757; margin-top:3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		.newest_rep .t4 em {padding-right:10px;}
+		.newest_rep .btn {position:absolute; right:0; bottom:0; left:0;}
+		.newest_rep .btn a {position:relative; display:block; text-align:center; text-decoration:none; font-size:15px; color:#f45757; font-weight:bold; line-height:27px; height:30px !important; background-color:#FFF; border:solid 1px #f45757; border-radius:15px;}
+		.newest_rep .btn a:after {content:""; display:block; position:absolute; top:15px; right:0; width:15px; height:1px; background-color:#f45757;}
+	.main_login_box {position:relative;border:1px solid #bcbcbc;background:#fff;width:318px;height:115px;margin-bottom:7px;}
+		.main_login_box .before {text-align:center;padding:25px 0 0 0}
+		.main_login_box .before .btn {display:block;margin-bottom:10px}
+		.main_login_box .before span {font-size:12px}
+		.main_login_box .before .srcidpw {margin-right:55px}
+		.main_login_box .before {text-align:center;padding:25px 0 0 0}
+		.main_login_box .after {padding:1px;}
+		.main_login_box .after .inner {padding:23px 0 0 27px}
+		.main_login_box .after .user {display:block;font-size:16px;font-weight:bold;margin-bottom:5px}
+		.main_login_box .after .mypage {font-size:12px;color:#afafaf;letter-spacing:-1px}
+		.main_login_box .after .mypage:after {content:""; display:inline-block; width:6px; height:10px; background:url(http://image.jinhak.com/job/site/main_login_bl.png) no-repeat center center; vertical-align:middle; margin-left:7px; margin-top:-2px}
+		.main_login_box .after .btn {position:absolute;top:26px;left:205px;}
+		.main_login_box .after .btn a {display:block;border:1px solid #e3e3e3;border-radius:15px;background:#f0f0f0;width:88px;height:26px;line-height:26px;text-align:center;font-size:12px;text-decoration:none}
+		.main_login_box .after ul {position:absolute;bottom:1px}
+		.main_login_box .after ul li {float:left;width:104px;height:30px;background:#f0f0f0;margin-right:1px}
+		.main_login_box .after ul li:nth-child(2) {width:106px}
+		.main_login_box .after ul li a {display:block;text-align:center;line-height:30px;font-size:12px;color:#000}
+	.main_r_banner_320_47 {position:relative;width:320px;height:47px;margin-bottom:6px;overflow:hidden}
+		.main_r_banner_320_47 .pic {display:block;width:320px;height:47px;}
+		.main_r_banner_320_47 .pic img {width:100%;height:100%}
+		.main_r_banner_320_47 a.txt {display:block;position:absolute;top:0;left:0;padding:14px 0 0 13px;width:100%;height:100%;}
+		.main_r_banner_320_47 a.txt:hover {text-decoration:none;}
+		.main_r_banner_320_47 a .c {font-weight:bold;font-size:17px}
+		.main_r_banner_320_47 a .t {font-size:13px;}
+		.main_r_banner_320_47 a .d {font-size:15px;color:#f45757}
+	.main_r_banner {margin:10px 0 25px 0}
+		.main_r_banner:after {content:"";display:block;clear:both}
+		.main_r_banner li {float:left;width:157px;height:131px;overflow:hidden}
+		.main_r_banner li:last-child {float:right}
+	.main_r_banner_157_131 {position:relative;width:157px;height:131px;}
+		.main_r_banner_157_131.w a {color:#fff}
+		.main_r_banner_157_131 .pic {display:block;width:157px;height:131px;}
+		.main_r_banner_157_131 .pic img {width:100%;height:100%}
+		/* .main_r_banner_157_131 a {display:block;position:absolute;top:0;left:0;padding:14px 6px 0 14px;width:137px;height:117px;}
+		.main_r_banner_157_131 a:hover {text-decoration:none;}
+		.main_r_banner_157_131 a .c {font-weight:bold;font-size:17px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		.main_r_banner_157_131 a .t {display:block;font-size:12px;margin-top:3px;height:49px;overflow:hidden}
+		.main_r_banner_157_131 a .d {position:absolute;bottom:13px;display:block;font-size:18px;color:#f45757} */
+	h2.realhit {margin-top:0;padding-top:0}
+	h2.recr_main {margin:30px 0 20px 0;padding:0}
+	.realtimeHit20 {border:1px solid #bcbcbc;background:#fff;height:355px;overflow:hidden}
+		.realtimeHit20 ul {padding:30px 0 0 20px;width:135px;float:left;}
+		.realtimeHit20 ul li {height:31px}
+		.realtimeHit20 ul li a {font-size:13px;letter-spacing:-1px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	/* 2019-04-17 추가 start */
+	.realtimeHit10 {border:1px solid #bcbcbc;background:#fff;height:355px;overflow:hidden}
+		.realtimeHit10 ul {padding:30px 10px 0 15px;}
+		.realtimeHit10 ul li {height:31px}
+		.realtimeHit10 ul li a {font-size:12px;letter-spacing:-1px;color:#838383;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+		.realtimeHit10 ul li a span {font-size:13px;color:#272727}
+		.realtimeHit10 .n {display:inline-block;width:16px;margin-right:4px;text-align:center;color:#02a8aa;font-weight:bold;}
+		.realtimeHit10 .t {margin-right:10px}
+		.realtimeHit10 .d {color:#f45757;font-weight:bold;margin-right:8px}
+	/* 2019-04-17 추가 end */
+	.rbn_99_204 {margin-bottom:20px}
+.main_bottom {clear:both; overflow:hidden;}
+	.main_bottom .report {border:solid 1px #b6b6b6; background-color:#FFF; overflow:hidden; margin-top:20px;}
+	.main_bottom .report:after {content:""; clear:both; display:block;}
+	.main_bottom .report .left {position:relative; float:left; width:297px; height:188px; border:solid 1px #ececec; background-color:#fbfbfb; box-sizing:border-box; padding:22px 20px; margin:10px 0 10px 15px;}
+	.main_bottom .report .right {position:relative; float:right; width:616px; margin-right:30px; box-sizing:border-box; padding-top:35px; overflow:hidden;}
+	.main_bottom .report .right.pager_type2 .bx-has-pager,
+	.main_bottom .report .right.pager_type2 .swiper_pager_type {top:13px; right:0;}
+	.main_bottom .report .right li {float:left; width:139px !important;}
+	.main_bottom .report .tit {margin-bottom:10px;}
+	.main_bottom .report .tit + .more {position:absolute; top:20px; right:20px;}
+
+/* OPIc Layer : 2019-05-17 추가 */
+.opic_catch {text-align:center}
+	.opic_catch .bn {width:557px;margin:40px auto 0 auto}
+	.opic_catch .bn:after {content:"";display:block;clear:both}
+	.opic_catch .bn li {float:left;margin-bottom:20px;margin-right:25px;width:266px;}
+	.opic_catch .bn li img {width:100%;box-shadow:2px 5px 5px 0 rgba(0,0,0,0.2);}
+	.opic_catch .bn li:nth-child(2n) {margin-right:0;}
+	.dlayer .wrap .today {display:block;background:#f45757;text-align:right;height:40px;line-height:40px;padding-right:20px}
+	.dlayer .wrap .today a {font-size:12px;color:#000;margin-left:26px}
+	.dlayer .wrap .today a:after {content:"";display:inline-block;width:11px;height:11px;vertical-align:middle;background:url(http://image.jinhak.com/job/corp/main_today_close.png) no-repeat;margin:2px 0 4px 9px}
+	.dlayer .wrap .today.floatw {position:absolute;left:0;bottom:8px;background:none} /* 2019-05-25 추가 */

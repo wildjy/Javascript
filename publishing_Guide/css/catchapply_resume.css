@@ -1,0 +1,362 @@
+body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,fieldset,label,textarea,form,p,input,td,th {margin:0; padding:0;}
+body,h1,h2,h3,h4,input,button,select,p,dt,dd,li,textarea,th,td {font-family:malgun Gothic,'맑은 고딕',Dotum,'돋움',Sans-serif; font-size:12px; color:#272727;word-break:break-all;}
+img,fieldset,iframe {border:0 none;}
+li {list-style:none;}
+input[type="checkbox"],
+input[type="radio"] {margin:-3px 3px 0 3px;}
+input[readonly="readonly"],
+input[disabled=""],
+select[disabled="disabled"] {background-color:#dedede !important;}
+select {line-height:20px; /*border:solid 1px #c1c1c1;*/ padding:0 1px 2px 0;}
+textarea {overflow:auto; padding:10px; box-sizing:border-box;}
+i,em,address {font-style:normal;}
+label,button {cursor:pointer;}
+th label {cursor:default;}
+button {margin:0; padding:0; border:0; background:transparent;} 
+a {color:#272727; text-decoration:none}
+	a:hover {color:inherit; text-decoration:underline;}
+button * {position:relative;}
+option {padding-right:6px;}
+hr {display:none;}
+caption,.skip,legend {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
+iframe {vertical-align:top;}
+input,select,button,/*label,*/img {vertical-align:middle;}
+
+.prevcont h1,
+.prevcont div,
+.prevcont section,
+.prevcont p,
+.prevcont dt,
+.prevcont dd,
+.prevcont li,
+.prevcont textarea,
+.prevcont th,
+.prevcont td,
+.prevcont a {font-family:'Noto Sans KR', sans-serif;color: #555;text-decoration:none }
+
+.btn3 {display: inline-block;vertical-align: middle;text-decoration: none !important;text-align: center;cursor: pointer;letter-spacing: -1px;font-family:'Noto Sans KR', sans-serif;color: #fff; }
+a.btn3 {height: 40px;line-height: 40px;padding: 0 12px 0 10px;color:#fff ;background:#aaa}
+	@media screen and (min-width: 770px) {
+		a.btn3 {padding: 0 22px 0 20px; }
+	}
+
+.letter {line-height: 1.7em;}
+.letter p {margin-bottom: 10px;font-weight: bold;color: #000; }
+.letter + .letter {margin-top: 30px;padding-top: 30px;border-top: solid 1px whitesmoke; }
+
+/** Icons **/
+@font-face {font-family: 'Material Icons';font-style: normal;font-weight: 400;
+	src: url("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/MaterialIcons-Regular.eot");
+	/* For IE6-8 */
+	src: local("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/Material Icons"), local("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/MaterialIcons-Regular"), url("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"), url("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/MaterialIcons-Regular.woff") format("woff"), url("https://imgorg.catch.co.kr/job/catchapply/font/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype");
+}
+/* line 65, _font.scss */
+.material-icons.size19 {font-family: "Material Icons";font-size: 19px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga'; 
+}
+.material-icons.size21 {font-family: "Material Icons";font-size: 21px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;  line-height: 1;  text-transform: none;  letter-spacing: normal;  word-wrap: normal;  white-space: nowrap;  direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.material-icons.size24 {font-family: "Material Icons";font-size: 24px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+/* line 74, _font.scss */
+.material-icons.size27 {font-family: "Material Icons";font-size: 27px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.material-icons.size36 {font-family: "Material Icons";font-size: 36px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.material-icons.size50 {font-family: "Material Icons";font-size: 50px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.material-icons.size72 {font-family: "Material Icons";font-size: 72px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+.material-icons.size180 {font-family: "Material Icons";font-size: 180px !important;font-weight: normal !important;font-style: normal !important;display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+/* view */
+.cell_dataview strong, .cell_dataview em, .cell_dataview span, .cell_dataview a {display: block; }
+.cell_dataview strong {font-size: 1.214em;color:#000 }
+	@media screen and (min-width: 770px) {
+		.cell_dataview strong {font-size: 1.176em;color:#000 }
+	}
+.cell_dataview strong + em, .cell_dataview strong + .summary {margin-top: 4px; }
+.cell_dataview em + em {margin-top: 2px; }
+.cell_dataview em .alphanum, .cell_dataview em .tbl .number, .tbl .cell_dataview em .number, .cell_dataview em .tbl1 .number, .tbl1 .cell_dataview em .number, .cell_dataview em .tbl2 .number, .tbl2 .cell_dataview em .number, .cell_dataview em .list6.type2 li .date span, .list6.type2 li .date .cell_dataview em span {position: relative;top: -2px; }
+.cell_dataview em + .btn3 {margin-top: 4px; }
+.cell_dataview .title {color: #000;font-weight: bold; }
+	@media screen and (min-width: 770px) {
+		.cell_dataview .btn3 {display: inline-block; }
+	}
+.cell_dataview .summary li {position: relative;display: inline-block; }
+	@media screen and (max-width: 320px) {
+		.cell_dataview .summary li {display: block; }
+	}
+.cell_dataview .summary li strong {font-size: inherit; }
+.cell_dataview .summary li .status {color: #f45858; }
+.cell_dataview .summary li + li {margin-left: 7px;padding-left: 8px; }
+	@media screen and (min-width: 770px) {
+		.cell_dataview .summary li + li {margin-left: 12px;padding-left: 12px; }
+	}
+	@media screen and (max-width: 320px) {
+		.cell_dataview .summary li + li {margin: 0;padding: 0; }
+	}
+.cell_dataview .summary li + li:before {content: "";display: block;position: absolute;top: 2px;left: 0;width: 1px;height: 13px;background: #d6d6d6; }
+	@media screen and (min-width: 770px) {
+		.cell_dataview .summary li + li:before {top: 5px; }
+	}
+	@media screen and (max-width: 320px) {
+		.cell_dataview .summary li + li:before {display: none; }
+	}
+.cell_dataview .link {font-size: 1.214em;font-weight: bold;color: #000;text-decoration: underline; }
+.cell_dataview .link i {position: relative;top: 5px; }
+.cell_dataview .link + .link {margin-top: 8px; }
+.cell_dataview .detail {margin-top: 5px;color: #777; }
+.cell_dataview.type2 strong {font-weight: normal; }
+.cell_dataview + .cell_dataview {margin-top: 15px; }
+@media screen and (min-width: 770px) {
+	.cell_dataview + .cell_dataview {margin-top: 20px;padding-top: 20px;border-top: solid 1px whitesmoke; }
+}
+.contents.applicant .applicant_detail.type1::after, .contents.applicant .applicant_detail.type1 .contact::after, 
+.contents.applicant .aside .control_btns::after {content: "";display: block;clear: both; }
+	@media screen and (min-width: 770px) {
+	.contents.applicant {position: relative;padding-left: 400px;padding-right: 17%;padding-top: 84px; }
+	}
+	@media print {
+		.contents.applicant {padding: 0;}
+		.contents.applicant * {text-decoration: none !important; }
+		.contents.applicant .btn3 {display: none; }
+	}
+.contents.applicant .list_box,
+.contents.applicant .aside {top: 83px;height: calc(100% - 83px);}
+	@media print {
+		.contents.applicant .list_box,
+		.contents.applicant .aside {display: none; }
+	}
+.contents.applicant .list_box {display: none;position: fixed;bottom: 0;left: 0;width: 380px;overflow-y: scroll;padding: 20px 10px 20px 20px; }
+.contents.applicant .list_box .list2 li .btns {bottom: -3px; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .list_box .list2 li .btns {bottom: -8px; }
+	}
+	@media screen and (min-width: 770px) {
+		.contents.applicant .list_box {display: block; }
+	}
+.contents.applicant .applicant_detail.type1 { position: relative;padding: 15px 15px 30px; }
+.contents.applicant .applicant_detail.type1 .job_category {padding: 0 2px;color: #999; }
+.contents.applicant .applicant_detail {padding: 25px 15px 35px; }
+	@media screen and (min-width: 770) {
+		.contents.applicant .applicant_detail {padding: 35px 2px 45px; }
+	}
+	@media print {
+		.contents.applicant .applicant_detail {padding-left: 2px;padding-right: 2px; }
+	}
+.contents.applicant .applicant_detail + .applicant_detail {border-top: solid 5px whitesmoke; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail + .applicant_detail {border-top: solid 1px #d6d6d6; }
+	}
+.contents.applicant .applicant_detail.type1 {position: relative;padding: 15px 15px 30px; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 {padding: 20px 0 40px; }
+	}
+	@media print {
+		.contents.applicant .applicant_detail.type1 {padding-left: 0;padding-right: 0; }
+	}
+.contents.applicant .applicant_detail.type1 h1 {margin-bottom: 22px;font-size: 1.40em;color: #000;letter-spacing: -2px; }
+.contents.applicant .applicant_detail.type1 h1 span {color:#000;background-image: linear-gradient(#000 0%, #000 100%);background-repeat: repeat-x;background-position: 0 27px;background-size: 2px 3px; }
+.contents.applicant .applicant_detail.type1 .job_category {padding: 0 2px;color: #999; }
+.contents.applicant .applicant_detail.type1 .job_category {padding: 0 2px;color: #999; }
+.contents.applicant .applicant_detail.type1 .photo {float: left;width: 82px; }
+	@media screen and (min-width: 770px) and (max-width: 1600px) {
+		.contents.applicant .applicant_detail.type1 .photo {width: 120px;height:145px }
+	}
+.contents.applicant .applicant_detail.type1 .photo img {width: 100%;height:100% }
+.contents.applicant .applicant_detail.type1 .photo.none {height: 110px;padding-top: 18px;background: whitesmoke;text-align: center; }
+	@media screen and (min-width: 770px) and (max-width: 1600px) {
+		.contents.applicant .applicant_detail.type1 .photo.none {height: 125px;padding-top: 20px; }
+	}
+.contents.applicant .applicant_detail.type1 .photo.none .material-icons {color: #d6d6d6; }
+	@media screen and (min-width: 770px) and (max-width: 1600px) {
+		/* line 1005, default.scss */
+		.contents.applicant .applicant_detail.type1 .photo.none .material-icons {font-size: 104px !important; }
+	}
+	@media print {
+		.contents.applicant .applicant_detail.type1 {padding-left: 0;padding-right: 0; }
+	}
+
+.contents.applicant .applicant_detail.type1 .name,
+.contents.applicant .applicant_detail.type1 .contact {padding-left: 97px;}
+@media screen and (min-width: 770px) and (max-width: 2000px) {
+	.contents.applicant .applicant_detail.type1 .name,
+	.contents.applicant .applicant_detail.type1 .contact {padding-left: 140px;}
+}
+.contents.applicant .applicant_detail.type1 .name strong,
+.contents.applicant .applicant_detail.type1 .name em,
+.contents.applicant .applicant_detail.type1 .name i,
+.contents.applicant .applicant_detail.type1 .name span,
+.contents.applicant .applicant_detail.type1 .contact strong,
+.contents.applicant .applicant_detail.type1 .contact em,
+.contents.applicant .applicant_detail.type1 .contact i,
+.contents.applicant .applicant_detail.type1 .contact span {display: block;color:#000 }
+.contents.applicant .applicant_detail.type1 .name {position: relative;padding-top: 4px; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 .name {padding-top: 0px; }
+	}
+.contents.applicant .applicant_detail.type1 .name strong { font-size: 1.429em; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 .name strong {font-size: 1.353em; }
+	}
+.contents.applicant .applicant_detail.type1 .name em {margin-top: 3px; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 .name em {margin-top: 0px; }
+	}
+.contents.applicant .applicant_detail.type1 .name .salary {position: absolute;top: 28px;right: 4px;text-align: right; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .name .salary {position: static;margin-top: 7px;font-size: 0.867em;text-align: left; }
+		.contents.applicant .applicant_detail.type1 .name .salary .material-icons {position: relative;top: -1px; }
+	}
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 .name .salary {position: static;margin-top: 5px;text-align: left; }
+	}
+.contents.applicant .applicant_detail.type1 .name .salary strong,
+.contents.applicant .applicant_detail.type1 .name .salary span {display: inline;font-size: inherit; }
+.contents.applicant .applicant_detail.type1 .contact {margin-top: 10px; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type1 .contact {position: absolute;bottom: 40px; }
+	}
+.contents.applicant .applicant_detail.type1 .contact a,
+.contents.applicant .applicant_detail.type1 .contact p {display: block;float: left; }
+
+.contents.applicant .applicant_detail.type1 .contact a i,
+.contents.applicant .applicant_detail.type1 .contact p i {vertical-align:middle;}
+
+.contents.applicant .applicant_detail.type1 .contact a span,
+.contents.applicant .applicant_detail.type1 .contact p span {vertical-align: baseline;word-break: break-all; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .contact a span,
+		.contents.applicant .applicant_detail.type1 .contact p span {font-size: 0.867em;display: inline; }
+	}
+.contents.applicant .applicant_detail.type1 .contact a span + span,
+.contents.applicant .applicant_detail.type1 .contact p span + span {margin-top: -2px; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .contact a span + span,
+		.contents.applicant .applicant_detail.type1 .contact p span + span {margin-left: -2px; } 
+	}
+.contents.applicant .applicant_detail.type1 .contact a .material-icons,
+.contents.applicant .applicant_detail.type1 .contact p .material-icons {text-indent: -2px; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .contact a .material-icons,
+		.contents.applicant .applicant_detail.type1 .contact p .material-icons {display: inline; }
+	}
+.contents.applicant .applicant_detail.type1 .contact a + a,
+.contents.applicant .applicant_detail.type1 .contact a + p,
+.contents.applicant .applicant_detail.type1 .contact p + a,
+.contents.applicant .applicant_detail.type1 .contact p + p {margin-left: 17px;padding-left: 17px;border-left: solid 1px whitesmoke; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .contact a + a,
+		.contents.applicant .applicant_detail.type1 .contact a + p,
+		.contents.applicant .applicant_detail.type1 .contact p + a,
+		.contents.applicant .applicant_detail.type1 .contact p + p {margin: 0;padding-left: 0;border: 0; }
+	}
+.contents.applicant .applicant_detail.type1 .contact a span {text-decoration: underline; }
+	@media screen and (max-width: 599px) {
+		.contents.applicant .applicant_detail.type1 .contact a:last-of-type {margin-top: 0; }
+	}
+.contents.applicant .applicant_detail.type2 > h1 {margin-bottom: 10px;font-weight: normal;color: #000; }
+.contents.applicant .applicant_detail.type2 > h1 strong {display: inline-block;position: relative;top: -1px;margin-left: 5px;font-size: 0.857em;color: #f45858; }
+.contents.applicant .applicant_detail.type3 > h1 {margin-bottom: 8px;font-size: 1.214em;color: #000; }
+.contents.applicant .applicant_detail.type3 .letter {color: #000; }
+.contents.applicant .applicant_detail.memo {display: none; }
+	@media screen and (min-width: 770px) {
+		.contents.applicant .applicant_detail.type2, .contents.applicant .applicant_detail.type3 {position: relative; }
+		.contents.applicant .applicant_detail.type2 > h1, .contents.applicant .applicant_detail.type3 > h1 {position: absolute;top:0;bottom:0;width:15%;padding:33px 2px 45px;font-size: 1.176em; }
+		.contents.applicant .applicant_detail.type2 > h1 strong, .contents.applicant .applicant_detail.type3 > h1 strong {display: block;margin-left: 1px;}
+		.contents.applicant .applicant_detail.type2 .cell_dataview,
+		.contents.applicant .applicant_detail.type2 .letter, .contents.applicant .applicant_detail.type3 .cell_dataview,
+		.contents.applicant .applicant_detail.type3 .letter {padding-top:8px;margin-left: 17%; }
+	}
+	@media print {
+		.contents.applicant .applicant_detail.memo {display: block; }
+	}
+.contents.applicant .aside .memo .memo_editor {display: none;background: whitesmoke;border: solid 1px #d6d6d6; }
+.contents.applicant .aside .memo .memo_editor textarea {width: 100%;height: 200px;padding: 15px;background: none;border: none;font-size: 0.882em; }
+.contents.applicant .aside .memo .memo_list {display: none; }
+.contents.applicant .aside .control_btns a {display: block;width: 50%;height: 50px;line-height: 50px; }
+.contents.applicant .aside .control_btns a span {color: #999;font-size: 1.118em;font-weight: normal; }
+.contents.applicant .aside .control_btns a .material-icons {display: inline-block;color: #d6d6d6;line-height: 50px; }
+.contents.applicant .aside .control_btns a.prev {float: left;text-align: left; }
+.contents.applicant .aside .control_btns a.prev span {margin-left: -8px; }
+.contents.applicant .aside .control_btns a.prev .material-icons {margin-left: -10px; }
+.contents.applicant .aside .control_btns a.next {float: right;text-align: right; }
+.contents.applicant .aside .control_btns a.next span {margin-right: -8px; }
+.contents.applicant .aside .control_btns a.next .material-icons {margin-right: -10px; }
+.contents.applicant .aside .control_btns a:hover span,
+.contents.applicant .aside .control_btns a:hover .material-icons {color: #000; }
+.contents.applicant .aside .memo + .control_btns {margin-top: 10px; }
+.contents.applicant.print_page {padding:15px 0 15px 15px; }
+.contents.applicant.print_page .applicant_detail {padding-left: 2px;padding-right: 2px; }
+	@media print {
+		.contents.applicant.print_page {padding: 0; }
+		.contents.applicant.print_page * {font-size: 0.941em; }
+		.contents.applicant.print_page .applicant_detail + .applicant_detail {border-top-width: 2px; }
+		.contents.applicant.print_page .applicant_detail.type2 {padding-top: 20px;padding-bottom: 25px; }
+		.contents.applicant.print_page + .print_page {page-break-before: always; }
+	}

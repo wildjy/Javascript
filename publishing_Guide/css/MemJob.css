@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+@import "./MemDefault.css";
+
+.list_dot li {background-image:url(https://imgorg.catch.co.kr/job/site/bl_dot01.gif);}
+.list_dot2 li {background-image:url(https://imgorg.catch.co.kr/job/site/bl_dot04.gif);}
+.list_warning li {background-image:url(https://imgorg.catch.co.kr/job/site/bl_warning.gif);}
+	.list_warning li a.arr {background-image:url(https://imgorg.catch.co.kr/job/site/bl_arr04_on.gif);}
+
+.mem_step li {background-image:url(https://imgorg.catch.co.kr/job/site/mem_step_arr.gif);}
+.box_join .row .cell {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar07.gif);}
+	.box_join .row.star {background-image:url(https://imgorg.catch.co.kr/job/site/bl_star.gif);}
+	/*.box_join h3.ck label {background-image:url(https://imgorg.catch.co.kr/job/site/ico_ck.gif);}
+	.box_join h3.ck label.selected {background-image:url(https://imgorg.catch.co.kr/job/site/ico_ck_on.gif);}*/
+.idresult .result strong {background-image:url(https://imgorg.catch.co.kr/job/site/bl_dot03.gif);}
+	
+/* popup */
+#popup_wrap h1 {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar06.gif);}
+#popup_cont h3.type1 {background-image:url(https://imgorg.catch.co.kr/job/site/bl_dot01.gif);}
+	#popup_cont .bot_area {background-image:url(https://imgorg.catch.co.kr/job/site/line_pop_bot.gif);}
+#popup_wrap.login .before fieldset .login input#txtJobID {background-image:url(https://imgorg.catch.co.kr/job/site/login_t03.gif);} /*삭제하기 2017-03-21*/
+	#popup_wrap.login .before fieldset .login input#txtJobPwd {background-image:url(https://imgorg.catch.co.kr/job/site/login_t04.gif);} /*삭제하기 2017-03-21*/
+#popup_wrap.login .before .bot strong {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar04.gif);}
+	.pbtn_join01.ico1 span {display:inline-block; padding-left:35px; background:url(https://imgorg.catch.co.kr/job/corp/ico_btn01.png) no-repeat left center;}
+
+/* LOGIN */
+#loginCont fieldset .login input#txtJobID {background-image:url(https://imgorg.catch.co.kr/job/site/login_t03.gif);}
+#loginCont fieldset .login input#txtJobPwd {background-image:url(https://imgorg.catch.co.kr/job/site/login_t04.gif);}
+#loginCont fieldset .univ input#txtPhone {background-image:url(https://imgorg.catch.co.kr/job/site/login_t05.gif);}
+#loginCont fieldset .univ input#txtNum {background-image:url(https://imgorg.catch.co.kr/job/site/login_t06.gif);}
+.list_ck2 li .btn {display:inline-block; width:62px; height:18px; font-size:0; line-height:0; background:url(https://imgorg.catch.co.kr/job/site/arr30_down.gif) no-repeat center top; vertical-align:middle; margin:2px 0 0 5px; cursor:pointer;}
+.list_ck2 li .btn.selected {background-image:url(https://imgorg.catch.co.kr/job/site/arr30_up.gif);}

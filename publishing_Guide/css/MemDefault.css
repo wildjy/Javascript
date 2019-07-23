@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+@import "./Default.css";
+
+.dsSelectBox {background-image:url(https://imgorg.catch.co.kr/job/site/select_bg.gif);}
+	.dsSelectBox div.selectedText {background-image:url(https://imgorg.catch.co.kr/job/site/Select_arr.gif);}
+.row .dsSelectBox div.selectedText {background-image:url(https://imgorg.catch.co.kr/job/site/select_arr02.gif);}
+.search_all .dsSelectBox {background-image:url(https://imgorg.catch.co.kr/job/site/select_bg03.gif);}
+	.search_all .dsSelectBox div.selectedText {background-image:url(https://imgorg.catch.co.kr/job/site/select_arr03.gif);}
+
+#wrapper {/*background:url(https://imgorg.catch.co.kr/job/site/wrap_bg04.gif) repeat-x left top;*/}
+#user .app a.ico1 {background-image:url(https://imgorg.catch.co.kr/job/site/ico_app1.png);}
+	#user .app a.ico2 {background-image:url(https://imgorg.catch.co.kr/job/site/ico_app2.png);}
+#header .util a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar01.gif);}
+	#header .util a.user strong {background-image:url(https://imgorg.catch.co.kr/job/site/arr06_down.gif);}
+#gnb>ul>li>ul>li>a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar03.gif);}
+#gnb2 .right.menu>li {background-image:url(https://imgorg.catch.co.kr/job/site/gnb2_r_bg.png);}
+	#gnb2 .right.menu>li a {background-image:url(https://imgorg.catch.co.kr/job/site/gnb2_r_bar.png);}
+	#gnb2 .right.menu>li:hover,
+	#gnb2 .right.menu>li.selected,
+	#gnb2 .right.menu>li.over {background-image:url(https://imgorg.catch.co.kr/job/site/gnb2_r_bg_on.png);}
+	#gnb2 .sm li a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_bar02.gif);}
+.lnb li.selected a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_arr02.gif);}
+/* #footer .inner {background-image:url(https://imgorg.catch.co.kr/job/site/footer_jinhak.gif);} */
+.left_menu_scr ul.exp4 a.exp4 {background-image:url(https://imgorg.catch.co.kr/job/site/bl_dot08_on.png);}
+
+/* category 별 overwirte */
+#wrapper.main #container {background-image:url(https://imgorg.catch.co.kr/job/site/main_cover_bg4.gif);}
+#wrapper.member {background-image:none;}
+#wrapper.memberGubun {background-image:url(https://imgorg.catch.co.kr/job/site/wrap_bg06.gif);}
+#wrapper.customer {background-image:url(https://imgorg.catch.co.kr/job/site/wrap_bg06.gif);}
+	#wrapper.customer .lnb li a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_arr04.gif);}
+	#wrapper.customer .lnb li a:hover,
+	#wrapper.customer .lnb li a:focus,
+	#wrapper.customer .lnb li.selected a {background-image:url(https://imgorg.catch.co.kr/job/site/bl_arr04_on.gif);}
+#wrapper.guide {background-image:url(https://imgorg.catch.co.kr/job/site/wrap_bg02.gif);}

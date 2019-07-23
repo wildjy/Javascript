@@ -1,0 +1,19 @@
+$wrapPd : 30px;
+$hdW : 200px;
+$hdH : 100px;
+$leftPd : $hdW + $wrapPd;
+
+@mixin borderBox{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@mixin trans($time:.5s, $type:ease-in){
+	-webkit-transition:all $time $type;
+	transition:all $time $type;
+}
+
+@mixin transF($x:0, $y:0){
+	-webkit-transform:translate($x, $y);
+	transform:translate($x, $y);
+}

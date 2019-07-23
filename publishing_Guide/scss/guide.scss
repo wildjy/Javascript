@@ -1,0 +1,333 @@
+@charset "utf-8";
+@import "_config.scss";
+
+body.guide{
+	text-align:left;
+
+	a{
+		text-decoration:none;
+	}
+
+	#header{
+		position: fixed;
+		top:0;
+		left:0;
+		padding:20px $wrapPd;
+		width:100%;
+		height:auto;
+		border-bottom:2px solid #111;
+		background-color:#fff;
+		z-index:5;
+
+		@include borderBox();
+
+		.logo_box{
+			float:left;
+		
+			&:after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+		}
+
+		.guide_logo{
+			margin:0;
+			a{
+				display:block;
+				font-size:20px;
+				color:#222;
+				font-weight:600;
+			}
+		}
+
+		.gnb{
+			float:right;
+
+			&:after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+
+			li{
+				float:left;
+				margin:0px 10px;
+
+				a{
+					display:inline-block;
+					padding:5px 15px;
+					font-size:16px;
+					color:#222;
+					font-weight:600;
+					line-height:18px;
+					border-radius:14px;
+
+					&.on{
+						color:#fff;
+						background-color:#111;
+					}
+				}
+
+			}
+		}
+	}
+
+	.open_gnb{
+		position: absolute;
+		top:0;
+		bottom:0;
+		left:170px;
+		display:block;
+		width:60px;
+		height:69px;
+		font-size:1px;
+		text-indent:-9999px;
+
+		&:after, &:before{
+			content:""; 
+			display:block;
+			position: absolute;
+			top:50%;
+			left:15px;
+			right:15px;
+			height:2px;
+			background-color:#222;
+		}
+
+		&:before{
+			margin-top:-8px;
+		}
+
+		&:after{
+			margin-top:8px;
+		}
+	}
+	
+	.open_gnb	span.bar{
+		position: absolute;
+		top:50%;
+		left:15px;
+		right:15px;
+		display:block;
+		height:2px;
+		background-color:#222;
+	}
+
+	#contents{
+		width:100%;
+
+		&:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+
+		.guide_nav{
+			position: fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			padding-top:$hdH;
+			width:$hdW;
+			border-right:1px solid #111;
+			background-color:#fff;
+			z-index:3;		
+		}
+
+		.guide_contents{
+			position: relative;
+			padding:$hdH $wrapPd $wrapPd $leftPd;
+		}
+
+	}
+}
+
+body.guide.is-open{
+	#contents .guide_contents{
+		padding:$hdH $wrapPd $wrapPd $wrapPd;
+		@include trans($time:.3s, $type:ease-in);
+	}
+}
+
+body.guide.is-open{
+	#contents .guide_nav{
+		left:-50%;
+		@include trans($time:.3s, $type:ease-in);
+	}
+}
+
+body.guide.is-closed{
+	#contents .guide_nav{
+		left:0%;
+		@include transF($x:0, $y:0);
+	}
+}
+
+#contents .guide_nav{
+	.nav{
+		padding:0 $wrapPd;
+
+		li{
+			// line-height:30px;
+			margin:5px 0;
+			
+			a{
+				display:inline-block;
+				padding:5px 10px;
+				font-size:15px;
+				color:#333;
+				font-weight:600;
+
+				&.on{
+					color:#fff;
+					background-color:#111;
+					border-radius:15.5px;
+				}
+			}
+		}
+	}
+}
+
+#contents{
+	.guide_main_tit{
+		padding-bottom:50px;
+		font-size:25px;
+		color:#222;
+		font-weight:600;
+	}
+	
+	.guide_Area{
+		margin-bottom:80px;
+		padding-bottom:30px;
+		border-bottom:1px dashed #333;
+	}
+
+	.guide_block{
+		margin-bottom:50px;
+
+		h3.guide_tit{
+			padding-bottom:15px;
+			font-size:20px;
+			color:#222;
+			font-weight:600;
+		}
+
+		.more{
+			display:none;
+			margin-top:15px;
+			text-align:center;
+
+			a{
+				display:block;
+				padding:15px 0;
+				font-size:15px;
+				color:#222;
+				font-weight:600;
+				border:1px solid #999;
+				background-color:#eee;
+
+				&.on{
+					color:#111;
+					border:1px solid #aaa;
+					background-color:#fff;
+				}
+			}
+		}
+	}
+}
+
+.guide_box{
+	padding:20px;
+	border:1px solid #ddd;
+	overflow-y:auto;
+
+	xmp{
+		display:block;
+		padding:0;
+		margin:0;
+		width:100%;
+		font-size:13px;
+		color:#222;
+		text-align:left;
+		line-height:1.4;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	&.min{
+		height:300px;
+	}
+}
+
+.view_guide{
+	margin-top:20px;
+	padding:25px;
+	border:1px solid #333;
+	position: relative;
+	overflow:hidden;
+	overflow-y:auto;
+	z-index:0;
+
+	.vg{
+		padding:10px 0;
+		max-width:990px;
+		margin:10px auto 0;
+		border-top:1px dashed #ddd;
+		border-bottom:1px dashed #ddd;
+
+		.class_title{
+			margin:10px 0;
+			font-size:15px;
+			color:#555;
+			
+			b{
+				color:#222;
+			}
+		}
+
+		&.at-box input[type="text"]{
+			box-sizing:content-box !important;
+		}
+	}
+
+	
+	&.min{
+		height:300px;
+	}
+}
+
+.guide_table{
+	width:100%;
+	border-spacing:0;
+	border-top:1px solid #111;
+	border-bottom:1px solid #111;
+
+	thead th{
+		text-align:center;
+	}
+
+	th{
+		padding:7px 10px;
+		font-size:13px;
+		color:#333;
+		border-top:1px solid #eee;
+		background-color:#f4f4f4;
+	}
+
+	td{
+		padding:7px 10px;
+		font-size:13px;
+		color:#333;
+		border-top:1px solid #eee;
+		border-left:1px solid #eee;
+
+		&:first-child{
+			border-left:none;
+		}
+
+		&.bl{
+			border-left:1px solid #eee;
+		}
+	}
+}

@@ -1,0 +1,1917 @@
+@charset "utf-8";
+@import "../webfont/Webfont.css";
+
+/* Reset */
+body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,fieldset,label,textarea,form,p,input,td,th {margin:0; padding:0;}
+body,h1,h2,h3,h4,input,button,select,p,dt,dd,li,textarea,th,td {font-family:malgun Gothic,'맑은 고딕',Dotum,'돋움',Sans-serif; font-size:12px; color:#272727;word-break:break-all;}
+body {background-color:#FFF; text-align:center; *word-break:break-all; -ms-word-break:break-all;}
+img,fieldset,iframe {border:0 none;}
+li {list-style:none;}
+input[type="checkbox"],
+input[type="radio"] {margin:-3px 3px 0 3px;}
+input[readonly="readonly"],
+input[disabled=""],
+select[disabled="disabled"] {background-color:#dedede !important;}
+select {line-height:20px; /*border:solid 1px #c1c1c1;*/ padding:0 1px 2px 0;}
+textarea {overflow:auto; padding:10px; box-sizing:border-box;}
+i,em,address {font-style:normal;}
+label,button {cursor:pointer;}
+th label {cursor:default;}
+button {margin:0; padding:0; border:0; background:transparent;} 
+a {color:#272727; text-decoration:none}
+	a:hover {color:inherit; text-decoration:underline;}
+button * {position:relative;}
+option {padding-right:6px;}
+hr {display:none;}
+caption,.skip,legend {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0;}
+iframe {vertical-align:top;}
+input,select,button,/*label,*/img {vertical-align:middle;}
+
+/* Common */ 
+#skip {left:0; position:absolute; top:0; z-index:999;}
+	#skip a {left:-1000px; position:absolute; top:0;}
+	#skip a:focus, #skip a:hover, #skip a:active {display:block; width:160px; text-align:center; font-weight:bold; background:#FFF; border:solid 2px #407CD5; color:#000; font-size:14px; left:0; padding:1em 0; z-index:10;}
+.clearfix:after{content:""; display:block; height:0; clear:both; visibility:hidden;}
+.show, .block {display:block;}
+.hide {display:none;}
+.uline {text-decoration:underline;}
+.tal {text-align:left !important;}
+.tac {text-align:center !important;}
+.tar {text-align:right !important;}
+.floating {position:fixed; top:0; right:0; left:0; z-index:100;}
+.iframe {text-align:left;}
+	.iframe #Contents {margin:0 !important;}
+.iframe_bd {border:solid 1px #e0e0e0;}
+.iframe_use {padding:40px 30px 0 30px;}
+.msgToggle {cursor:pointer; }
+.pointer {cursor:pointer;}
+.ps_relative {position:relative !important;}
+.ps_absolute {position:absolute !important;}
+.nowrap, .norwap, .nowrap li {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.nowrap2 li a {display:inline-block; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.hideCont {position:absolute !important; left:-9999px; top:-9999px; z-index:-9999;}
+.floatL {float:left !important;}
+.floatR {float:right !important;}
+.bdr0 {border-right-width:0 !important;}
+.bdr1 {border-right-width:1px !important;}
+.fw_100 {font-weight:100 !important;}
+.fw_normal {font-weight:normal !important;}
+.fw_bold {font-weight:bold !important;}
+.ff_spoqa {font-family:'SpoqaHanSans';}
+.font11, .font11 li {font-size:11px !important;}
+.font12 {font-size:12px !important;}
+.font13 {font-size:13px !important;}
+.font14 {font-size:14px !important;}
+.font15 {font-size:15px !important;}
+.font16 {font-size:16px !important; letter-spacing:-1px;}
+.font17 {font-size:17px !important; letter-spacing:-1px;}
+.font18 {font-size:18px !important; letter-spacing:-1px;}
+.font22 {font-size:22px !important; letter-spacing:-1px;}
+.font30 {font-size:30px !important; letter-spacing:-1px;}
+.font36 {font-size:36px !important; letter-spacing:-3px;}
+.pointc_0 {color:#e76a65 !important;} /* orange - main color */
+.pointc_1 {color:#f56464 !important;} /* light oragne */
+.pointc_2 {color:#f45757 !important;} /* light oragne */
+.pointc_3 {color:#626fdd !important;} /* light blue */
+.pointc_4 {color:#272727 !important;} /* default */
+.pointc_5 {color:#888888 !important;} /* light gray */
+.pointc_6 {color:#989898 !important;} /* light gray */
+.pointc_7 {color:#666666 !important;} /* gray */
+.pointc_8 {color:#6785dd !important;} /* sky */
+.pointc_9 {color:#0f8e84 !important;} /* 청록 */
+.pointc_18 {color:#1543bc !important;} /* blue - NCS */
+.pointc_19 {color:#1573c3 !important;} /* light blue */
+.vtop, .vtop th, .vtop td {vertical-align:top;}
+.ws {white-space:nowrap;}
+.lh15 {line-height:1.5;}
+.lh16 {line-height:16px !important;}
+.lh20 {line-height:20px !important;}
+.p0 {padding:0 !important;}
+.p5 {padding:5px !important;}
+.p10 {padding:10px !important;}
+.p15 {padding:15px !important;}
+.p20 {padding:20px !important;}
+.p30 {padding:30px !important;}
+.pt0 {padding-top:0 !important;}
+.pt5 {padding-top:5px !important;}
+.pt10 {padding-top:10px !important;}
+.pt15 {padding-top:15px !important;}
+.pt20 {padding-top:20px !important;}
+.pt25 {padding-top:25px !important;}
+.pt30 {padding-top:30px !important;}
+.pt40 {padding-top:40px !important;}
+.pr0 {padding-right:0 !important;}
+.pr5 {padding-right:5px !important;}
+.pr10 {padding-right:10px !important;}
+.pr20 {padding-right:20px !important;}
+.pr30 {padding-right:30px !important;}
+.pr50 {padding-right:50px !important;}
+.pb0 {padding-bottom:0 !important;}
+.pb15 {padding-bottom:15px !important;}
+.pb20 {padding-bottom:20px !important;}
+.pb50 {padding-bottom:50px !important;}
+.pl0 {padding-left:0 !important;}
+.pl5 {padding-left:5px !important;}
+.pl10 {padding-left:10px !important;}
+.pl15 {padding-left:15px !important;}
+.pl20 {padding-left:20px !important;}
+.pl30 {padding-left:30px !important;}
+.pl50 {padding-left:50px !important;}
+.m0 {margin:0 !important;}
+.mtm1 {margin-top:-1px !important;}
+.mtm3 {margin-top:-3px !important;}
+.mtm5 {margin-top:-5px !important;}
+.mtm10 {margin-top:-10px !important;}
+.mtm20 {margin-top:-20px !important;}
+.mtm30 {margin-top:-30px !important;}
+.mtm40 {margin-top:-40px !important;}
+.mtm45 {margin-top:-45px !important;}
+.mt0 {margin-top:0 !important;}
+.mt3 {margin-top:3px !important;}
+.mt5 {margin-top:5px !important;}
+.mt7 {margin-top:5px !important;}
+.mt10 {margin-top:10px !important;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt25 {margin-top:25px !important;}
+.mt30 {margin-top:30px !important;}
+.mt35 {margin-top:35px !important;}
+.mt40 {margin-top:40px !important;}
+.mt50 {margin-top:50px !important;}
+.mt60 {margin-top:60px !important;}
+.mt90 {margin-top:90px !important;}
+.mt120 {margin-top:120px !important;}
+.mr0 {margin-right:0 !important;}
+.mr10 {margin-right:10px !important;}
+.mr15 {margin-right:15px !important;}
+.mr20 {margin-right:20px !important;}
+.mr30 {margin-right:30px !important;}
+.mr40 {margin-right:40px !important;}
+.mr50 {margin-right:50px !important;}
+.mb0  {margin-bottom:0 !important;}
+.mb5 {margin-bottom:5px !important;}
+.mb7  {margin-bottom:7px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb25 {margin-bottom:25px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb40 {margin-bottom:40px !important;}
+.mb50 {margin-bottom:50px !important;}
+.ml0  {margin-left:0 !important;}
+.ml5  {margin-left:5px !important;}
+.ml10 {margin-left:10px !important;}
+.ml15 {margin-left:15px !important;}
+.ml20 {margin-left:20px !important;}
+.ml30 {margin-left:30px !important;}
+.ml40 {margin-left:40px !important;}
+.ml50 {margin-left:50px !important;}
+.ml60 {margin-left:60px !important;}
+.ml70 {margin-left:70px !important;}
+.ml100 {margin-left:100px !important;}
+.body_bg {background-color:#f5f5f5 !important;}
+.ir {position:absolute; top:-99999px; left:-99999px; z-index:-99999; width:1px; height:1px; overflow:hidden;}
+.onlyimg {font-size:0; line-height:0;}
+
+/* FORM */
+.select {/*line-height:37px; border:solid 1px #272727;*/ padding:6px 5px 10px 10px; font-size:14px; box-sizing:border-box;}
+.select2 {padding:4px 5px 5px 10px; font-size:14px; box-sizing:border-box;}
+.select3 {padding:9px 5px 11px 18px; border:solid 4px #000; font-size:18px; color:#333; font-family:"SpoqaHanSans"; letter-spacing:-0.04em; box-sizing:border-box;}
+.select4 {padding:6px 35px 6px 7px; font-size:14px; font-weight:bold; border:0; background:url(https://imgorg.catch.co.kr/job/site/select_arr02.gif) no-repeat right center #FFF; -webkit-appearance:none;}
+	.select4 + .select4 {border-left:solid 1px #e0e0e0;}
+	.select4:first-of-type {padding-left:0;}
+	.select4::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution:.001dpcm) { /* IE9 */
+		.select4 {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.select4 {background:none; padding-right:4px;}
+	}
+.select5 {padding:4px 35px 6px 7px; border:solid 1px #d0d0d0; background:url(https://imgorg.catch.co.kr/job/site/select_arr.gif) no-repeat right 11px #FFF; -webkit-appearance:none;}
+	.select5::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution:.001dpcm) { /* IE9 */
+		.select5 {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.select5 {background:none; padding-right:4px;}
+	}
+.select6 {height:43px;line-height:41px;padding-left:10px;font-size:16px;font-family:'NotoSansKR', sans-serif;font-weight:400;color:#333; border:solid 1px #ddd; background:url(http://image.jinhak.com/job/site/select_arr05.png) no-repeat right 50%; -webkit-appearance:none;}
+	.select6:disabled {border-color:#c8c8c8;background-color:#efefef;color:#888;opacity: 0.5;}
+	.select6::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution:.001dpcm) { /* IE9 */
+		.select6 {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.select6 {background:none; padding-right:4px;}
+	}
+.select7 {height:39px;line-height:39px;padding-left:10px;font-size:15px;font-family:'NotoSansKR', sans-serif;font-weight:400;color:#272727; border:solid 1px #272727; background:url(http://image.jinhak.com/job/site/select_arr06.png) no-repeat right 50% #fff; -webkit-appearance:none;}
+	.select7::-ms-expand {display:none;}
+	@media screen and (min-width:0\0) and (min-resolution:.001dpcm) { /* IE9 */
+		.select7 {background:none; padding-right:4px;}
+	}
+	@media \0screen { /* IE8 */
+		.select7 {background:none; padding-right:4px;}
+	}
+.input {border:solid 1px #bababa; padding-left:10px; height:27px; color:#666;}
+.input2 {border:solid 1px #272727; /*padding-left:10px; height:39px;*/ padding:7px 0 11px 10px; font-size:14px; box-sizing:border-box;}
+.input3 {padding:9px 5px 11px 18px; border:solid 4px #000; font-size:18px; color:#333; font-family:"SpoqaHanSans"; letter-spacing:-0.04em; box-sizing:border-box;}
+.textarea3 {border:solid 4px #000; font-size:18px; color:#333; font-family:"SpoqaHanSans"; letter-spacing:-0.04em; padding:15px;}
+.star {margin-top:0px; text-align:center;}
+	.star .bg {width:250px; margin:0 auto; background:url(http://image.jinhak.com/job/poll/star.gif) repeat-x left top; height:42px; text-align:left; font-size:0; line-height:0; cursor:pointer;}
+	.star .bg span {display:inline-block; height:42px; width:20%;}
+	.star .bg span.ck {background:url(http://image.jinhak.com/job/poll/star_on.gif) repeat-x left top;}
+	.star .bg2 {margin:0 auto; background:url(http://image.jinhak.com/job/poll/end.gif) repeat-x left top; height:29px; text-align:left;}
+	.star .bg2 span {display:inline-block; background:url(http://image.jinhak.com/job/poll/end_on.gif) repeat-x left top; height:29px;}
+	.star .t1 {margin-top:25px; font-size:20px; font-weight:bold;}
+
+/* Layout */
+.inner {position:relative; width:990px; margin:0 auto; text-align:left;}
+#wrapper {min-width:990px; background-color:#FFF;} /* 줄였을때 좌우여백 맞추기 위해 min-width 삭제(디자이너요청) */
+#user {background-color:#f7f7f7;}
+	#user .util {width:990px; margin:0 auto; text-align:right; height:30px; line-height:28px;}
+	#user .util a {position:relative; font-size:11px; color:#999; padding-left:13px; margin-right:8px;}
+	#user .util a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:10px; background-color:#b9b9b9;}
+	#user .util a:first-child:after {display:none;}
+	#user .util .btn {display:inline-block; border:solid 1px #bfbfbf; border-radius:3px; background-color:#FFF; font-weight:bold; height:18px; line-height:16px; padding:0 10px; text-decoration:none;}
+	#user .util .btn:after {display:none;}
+#header {position:relative; background-color:#FFF; height:125px; zoom:1; /*overflow:hidden;*/}
+	#header:after {content:""; display:table; clear:both; table-layout:fixed;}
+	#header h1 {float:left; margin:36px 0 0 10px;}
+	#header .slogan {position:absolute; left:168px; top:45px; height:29px; overflow:hidden;}
+	#header .slogan p {font-size:20px; color:#000; font-weight:normal; letter-spacing:-2px; width:250px;}
+	#header .slogan p span {color:#f45757;}
+	#header .smenu {float:right; margin:52px 36px 0 0;}
+	#header .smenu a {position:relative; padding-left:14px; margin-left:10px;}
+	#header .smenu a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:12px; background-color:#272727;}
+	#header .smenu a:first-child:after {display:none;}
+	#header .search {position:relative; float:left; margin-left:28px; margin-top:39px;}
+	#header .search > p {border:solid 2px #f45757; height:42px; overflow:hidden;}
+	#header .search input[type=text] {border:0; width:464px; padding:7px 0 10px 13px; font-size:18px; vertical-align:top;}
+	#header .search .fav {overflow:hidden; margin-top:10px;}
+	#header .search .fav:after {content:""; clear:both; display:block;}
+	#header .search .fav dt {float:left; width:55px; color:#f45757;}
+	#header .search .fav dd {position:relative; float:left; width:470px; height:20px;}
+	#header .search .fav dd ul {width:450px;}
+	#header .search .fav dd li {float:left; margin-right:12px;}
+	#header .search .fav dd li a {color:#666;}
+	#header .search .fav dd .more {position:absolute; right:0; top:0; cursor:pointer;}
+	#header .search2 {position:relative; float:right; margin-top:46px; height:32px; background-color:#f45757; border-radius:20px;}
+	#header .search2 p {height:32px; overflow:hidden;}
+	#header .search2 .inp {border:0; width:280px; /*height:33px;*/ font-size:13px; color:#FFF; background:transparent; padding:7px 20px 8px 20px;}
+	#header .search2 .inp::-ms-clear {display: none; width:0; height:0;}
+	#header .search2 .inp::-webkit-search-cancel-button {display:none;}
+	#header .search2 img {position:absolute; top:8px; right:20px;}
+	#header .quick {display:none; position:absolute; right:0; left:0; border:solid 1px #f45757; background-color:#FFF; z-index:2; overflow:hidden;}
+	#header .quick ul {padding:14px 0;}
+	#header .quick li a {display:block; font-size:14px; line-height:26px; padding:0 19px; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	#header .quick li a span {color:#f45757; padding-left:3px;}
+	#header .quick p {font-size:14px; padding:6px 19px 8px 19px; background-color:#e9e9e9; margin-bottom:3px;}
+	#header .quick p + ul {padding-top:0;}
+	#header .search .quick {margin-top:-1px;}
+	#header .search2 .quick {margin-top:3px; border-radius:20px;}
+	#header.line {border-bottom:solid 1px #7d7d7d;}
+.ico_new {display:inline-block; width:13px; height:13px; margin-left:4px; background:url(https://imgorg.catch.co.kr/job/corp/ico_new.png) no-repeat center center;}
+#gnb {position:relative; width:960px; margin:0 auto; text-align:left; height:100px; margin-bottom:20px; overflow:hidden;} /* 고객센터, 이용약관 */
+	#gnb:after {content:""; clear:both; display:block;}
+	#gnb h1 {position:absolute; top:17px;}
+	#gnb h1 img.slogan {margin-left:15px;}
+	#gnb>ul {float:right; margin-right:8px;}
+	#gnb>ul>li {float:left; margin:31px 0 0 60px;}
+	#gnb>ul>li a {position:relative; display:block; padding:0 4px 9px 0;}
+	#gnb>ul>li a:hover:after,
+	#gnb>ul>li.selected a:after {content:""; display:block; position:absolute; right:0; bottom:-5px; left:-4px; height:5px; background-color:#a890f5; border-radius:3px;}
+	#gnb>ul>li.selected ul {display:block;}
+	#gnb>ul>li>ul {display:none; position:absolute; padding-top:1px;}
+	#gnb>ul>li>ul>li {float:left;}
+	#gnb>ul>li>ul>li>a {display:block; height:40px; background:url(http://image.jinhak.com/job/site/bl_bar03.gif) no-repeat left center; padding:0 15px 0 16px;}
+	#gnb>ul>li>ul>li:first-child a {background:none; padding-left:20px;}
+	#gnb>ul>li>ul>li>a img {margin-top:13px;}
+	#gnb>ul>li#gnb03>ul {right:0;}
+	#gnb .search {float:right; margin:20px 10px 0 -10px;}
+	#gnb .search .inp {padding-left:10px; width:130px; height:24px; line-height:24px; border:0; background:#f5f5f5; /* vertical-align:middle; */ margin-right:5px;}
+	#gnb .search label {display:none;}
+	#gnb .support {position:absolute; right:6px; bottom:8px;}
+	#gnb .support img {margin-left:12px;}
+#aside {float:left; width:130px; text-align:left; margin-right:30px;} /* 고객센터, 이용약관 */
+	#aside .top {margin-bottom:7px; text-align:center; background:#a293e6; height:50px;}
+	#aside .top img {margin-top:13px;}
+	#aside .tit {border:solid 1px #ddd; font-weight:bold; color:#333; padding:12px 0 12px 20px; margin-top:5px;}
+	.lnb {border:solid 1px #ddd; margin-top:-1px;}
+	.lnb li {border-top:solid 1px #e6e6e6;}
+	.lnb li:first-child {border-top:none;}
+	.lnb li a {color:#333; display:block; padding:12px 0 12px 20px;}
+	.lnb li a:hover,
+	.lnb li a:focus,
+	.lnb li.selected a {color:#438ee9; font-weight:bold; text-decoration:none; padding-left:28px; background:url(http://image.jinhak.com/job/site/bl_arr02.gif) no-repeat 20px 18px;}
+	.left_tel {margin-top:7px;}
+	#gnb4 {position:relative; height:44px; background-color:#f6f6f6; border:solid 1px #7d7d7d; border-right-width:0; border-left-width:0; z-index:1;} /* 기본 */
+	#gnb4:after {content:""; clear:both; display:block;}
+	#gnb4 .left {float:left;}
+	#gnb4 .left>li {float:left; padding-left:35px;}
+	#gnb4 .left>li:first-child {padding-left:0;}
+	#gnb4 .left>li>a {position:relative; display:block; padding:0 10px; height:44px;}
+	#gnb4 .left>li>a>img {margin-top:13px;}
+	#gnb4 .left>li>a:hover:after,
+	#gnb4 .left>li.view>a:after,
+	#gnb4 .left>li.selected>a:after {content:""; display:block; position:absolute; right:0; bottom:-3px; left:0; height:5px; background-color:#f45757; border-radius:3px;}
+	#gnb4 .left .sm {display:none; position:absolute; padding:10px 0; left:0; right:0;}
+	#gnb4 .left .sm li {float:left; margin-left:35px;}
+	#gnb4 .left .sm li:first-child {margin-left:0;}
+	#gnb4 .left .sm.sm1 {padding-left:2px;} /* 기업 기업New Icon 으로 18+ */
+	#gnb4 .left .sm.sm2 {padding-left:579px;} /* 뉴스 기업New Icon 으로 18+ */
+	#gnb4 .left .sm.sm7 {padding-left:83px;} /* 채용 기업New Icon 으로 18+ */
+	#gnb4 .left .sm.sm3 {padding-left:365px;} 
+	#gnb4 .left .sm.sm4 {padding-left:270px;} /* 진단 기업New Icon 으로 18+ */
+	#gnb4 .left .sm.sm5 {padding-left:448px;} /* 캐치TV */
+	#gnb4 .left .sm.sm6 {padding-left:295px;} /* 캐치카페 */
+	#gnb4 .right {float:right; margin-right:30px;}
+	#gnb4 .right li {float:left; margin-left:30px;}
+	#gnb4 .right li a img {margin-top:11px;}
+	#gnb4 .ico_new {position:absolute;margin-top:6px} /* 2019-05-27 추가 */
+	#gnb4 .sm .ico_new {position:static;margin-top:0px} /* 2019-05-27 추가 */
+#container {min-height:600px; padding-top:88px; padding-bottom:70px; zoom:1;}
+	#container:after {content:""; display:table; clear:both; table-layout:fixed;}
+#Contents, #contents {position:relative; width:990px; margin:0 auto; text-align:left;}
+#footer {background-color:#474747; /*height:220px;*/}
+	#footer .inner {padding-bottom:50px; overflow:hidden; background:url(https://imgorg.catch.co.kr/job/site/footer_jinhak02.png) no-repeat right 34px;}
+	#footer .txt {margin-top:26px; color:#FFF; font-weight:bold;}
+	#footer .txt a {position:relative; color:inherit; padding-left:10px; margin-left:7px;}
+	#footer .txt a:after {content:""; display:block; position:absolute; top:3px; left:0; width:1px; height:12px; background-color:#a0a0a0;}
+	#footer .txt a strong {color:#f45757;}
+	#footer address {color:#b3b3b3; margin-top:10px; line-height:1.5;}
+	#footer address a {color:inherit;}
+	#footer .msg {margin-top:30px;}
+	#footer .msg span {display:inline-block; vertical-align:middle; margin-right:15px;}
+	#footer .msg span em {display:inline-block; vertical-align:middle; margin-left:8px; color:#b3b3b3;}
+	#footer .msg span em strong {font-weight:normal; color:#ececec;}
+#rBn {position:fixed; top:289px; left:50%; margin-left:515px; width:99px; z-index:1;}
+	#rBn .box {box-shadow:2px 3px 1px 0 rgba(0,0,0,0.1); background-color:#FFF;}
+	#rBn .bn {position:relative; border:solid 1px #BBB; border-bottom-width:0; padding:0 5px;}
+	#rBn .bn:before {content:""; display:block; position:absolute; top:-7px; left:10px; width:31px; height:33px; background:url(http://image.jinhak.com/job/corp/box1_bg.png) no-repeat left top;}
+	#rBn .bn li {border-top:dashed 2px #cac7c6; padding:25px 0 20px 0; line-height:1.5; font-size:13px; color:#474747;}
+	#rBn .bn li:first-child {border-top-width:0;}
+	#rBn .bn li a {color:inherit;}
+	#rBn .bn li.type2 {padding:12px 0; font-size:0; line-height:0;}
+	#rBn .bn li.type2 img {width:28px; margin:3.5px;}
+	#rBn .bn li.type2 .bd {border:solid 1px #e3e3e3; border-radius:5px;}
+	#rBn .bn li.type3 {padding:13px 0 10px 0;}
+	#rBn .bn li.type3 a {position:relative; display:block; font-size:12px; line-height:1.3; padding:5px 0 8px 0;}
+	#rBn .bn li.type3 a:after {content:""; display:block; position:absolute; top:0; left:50%; margin-left:-26px; width:52px; height:1px; background-color:#e0e0e0;}
+	#rBn .bn li.type3 a:first-child:after {display:none;}
+	#rBn .list {border:solid 1px #c0c0c0;}
+	#rBn .list .tit {position:relative; margin:-1px; font-size:13px; color:#FFF; font-weight:bold; background-color:#f45858; padding:15px 0 18px 0;}
+	#rBn .list ol {padding:10px 0 15px 0;}
+	#rBn .list ol li {text-align:left; list-style-type:decimal; margin-left:30px; margin-top:7px;}
+	#rBn .list ol li:first-child {margin-top:0;}
+.location {position:absolute; width:920px; margin-right:-480px; right:50%; top:211px/*105px*/; color:#777; text-align:right;}
+	.location span {color:#999;}
+.wbgray {background:#f6f6f6;padding-top:50px;padding-bottom:60px}
+
+/* error */
+#error {width:800px; margin:200px auto 0 auto;}
+	#error h1 {height:90px;}
+	#error .tit {font-size:30px;}
+	#error .tit span {padding-left:40px; background:url(http://image.jinhak.com/job/corp/bl13.png) no-repeat left 4px;}
+	#error .txt {margin:15px 0 30px 0; line-height:18px;}
+	#error .t2 {font-size:19px; line-height:1.4;}
+	#error .t3 {font-size:38px; color:#e76a65; line-height:1.4; letter-spacing:-2px;}
+	#error .t3 a {color:inherit;}
+	#error .tel {border:solid 1px #DDD; background:#e8e8e8; padding:5px 4px; font-size:0; line-height:0; width:553px; margin:30px auto 0 auto;}
+	#error .tel .core {background:#FFF; padding:20px 0;}
+	#error .box {background:#e8e8e8; width:406px; margin:20px auto; padding:10px; line-height:2;}
+
+/* fusioncharts 추가 */
+.fusioncharts-container svg {left:0 !important; top:0 !important;}
+
+/* youtube 추가*/
+/* .youtubeWrap {position:relative; width:100%; padding-bottom:56.25%;} */
+	.youtubeWrap iframe {position:absolute; width:100%; height:100%;}
+
+/* ISMS 심사관련 */
+.t_isms,
+.tbl_Isms th, .tbl_Isms td {font-size:1.2em; letter-spacing:-0.02em; color:#e76a65 !important; /*font-weight:bold;*/}
+
+/* overwirte > footer 흰색으로 */
+ #wrapper.guide #footer,
+	#wrapper.customer #footer,
+	#wrapper.member #footer,
+	#wrapper.memberGubun #footer {border-top:solid 1px #989898; background-color:#FFF;}
+	#wrapper.guide #footer .inner,
+	#wrapper.customer #footer .inner,
+	#wrapper.member #footer .inner,
+	#wrapper.memberGubun #footer .inner {background-image:url(https://imgorg.catch.co.kr/job/site/footer_jinhak03.png);}
+	#wrapper.guide #footer .txt,
+	#wrapper.customer #footer .txt,
+	#wrapper.member #footer .txt,
+	#wrapper.memberGubun #footer .txt {color:#b1b1b1;}
+	#wrapper.guide #footer .txt a:after,
+	#wrapper.customer #footer .txt a:after,
+	#wrapper.member #footer .txt a:after,
+	#wrapper.memberGubun #footer .txt a:after {background-color:#b8b8b8;}
+	#wrapper.guide #footer address,
+	#wrapper.customer #footer address,
+	#wrapper.member #footer address,
+	#wrapper.memberGubun #footer address {color:#b0b0b0;}
+	#wrapper.guide #footer .msg span em,
+	#wrapper.customer #footer .msg span em,
+	#wrapper.member #footer .msg span em,
+	#wrapper.memberGubun #footer .msg span em {color:#b1b1b1;}
+	#wrapper.guide #footer .msg span em strong,
+	#wrapper.customer #footer .msg span em strong,
+	#wrapper.member #footer .msg span em strong,
+	#wrapper.memberGubun #footer .msg span em strong {color:#a3a3a3;}
+
+/* overwirte > 가이드 */
+#wrapper.guide {background:url(http://image.jinhak.com/job/site/wrap_bg06.gif) repeat-x left -2px;} 
+	#wrapper.guide #gnb {height:80px;}
+	#wrapper.guide #container {padding-top:0;}
+	#wrapper.guide #contents {width:960px;}
+	#wrapper.guide #contents h2 {margin-bottom:25px;}
+
+/* overwirte > 고객센터 */
+#wrapper.customer {background:url(https://imgorg.jinhak.com/job/site/wrap_bg06.gif) repeat-x left -2px;} 
+	#wrapper.customer #gnb {height:80px;}
+	#wrapper.customer #container {width:970px; margin:0 auto; padding-top:0;}
+	#wrapper.customer #aside {width:170px;}
+	#wrapper.customer .lnb li a {background:url(https://imgorg.jinhak.com/job/site/bl_arr04.gif) no-repeat 131px 16px;}
+	#wrapper.customer .lnb li a:hover,
+	#wrapper.customer .lnb li a:focus,
+	#wrapper.customer .lnb li.selected a {color:#a393e6; font-weight:normal; letter-spacing:0; padding-left:20px; background:url(http://image.jinhak.com/job/site/bl_arr04_on.gif) no-repeat 131px 17px;}
+	#wrapper.customer #contents {float:left; width:750px;}
+	#wrapper.customer .pointc_5 {color:#ed145b !important}
+
+/* overwirte > 이용약관 */
+#wrapper.memberGubun {background:url(http://image.jinhak.com/job/site/wrap_bg06.gif) repeat-x left -2px;}
+	#wrapper.memberGubun #gnb {height:80px;}
+	#wrapper.memberGubun #container {padding-top:0;}
+	#wrapper.memberGubun #contents {width:800px; margin:0px auto 0 auto;}
+	#wrapper.memberGubun.wd960 #contents {width:960px;}
+
+/* overwirte > 회원가입 */
+#wrapper.member {background:none;} 
+	#wrapper.member #container {position:relative; min-height:450px; width:960px; margin:0 auto; text-align:left; padding-top:88px; padding-bottom:70px;}
+	#wrapper.member .util {position:absolute; top:20px; right:-10px;}
+	#wrapper.member .util a {position:relative; color:#333; font-weight:bold; padding-left:8px; margin-left:5px;}
+	#wrapper.member .util a:after {content:""; display:block; position:absolute; top:4px; left:0; width:1px; height:11px; background-color:#5b5b5b;}
+	#wrapper.member .util a:first-child:after {display:none;}
+	#wrapper.member #contents {width:800px; margin:40px auto 0 auto;}
+
+/* overwirte > 카페 */
+#Contents.wide {width:100%;text-align:center;min-width:1100px} /* 이용안내 wide gray bg를 위한 추가 */
+
+/* overwirte > mypage */
+.user #container {position:relative; width:960px; margin:0 auto; text-align:left;}
+#contents.dep3 {float:left; width:800px;} /* mypage */
+
+/* overwirte > mypage New */
+.mypage #container {position:relative; width:990px; margin:0 auto; text-align:left;}
+	#wrapper.mypage #aside {width:160px;}
+	#wrapper.mypage .lnb li a {font-size:12px}
+	#wrapper.mypage .lnb li a:hover,
+	#wrapper.mypage .lnb li a:focus,
+	#wrapper.mypage .lnb li.selected a {color:#f45757;padding-left:20px;background:none;}
+
+/* overwirte > 상품안내 */
+#wrapper.product {background:url(http://image.jinhak.com/job/site/wrap_bg06.gif) repeat-x left -2px;}
+	#wrapper.product #user {background-color:#fff;}
+	#wrapper.product #user .util a {color:#000; font-family:'돋움';padding-left:7px;margin-right:2px}
+	#wrapper.product #user .util a:after {content:""; display:block; position:absolute; top:0; left:0; width:1px; height:10px; background-color:#000;}
+	#wrapper.product #user .util a:first-child:after {display:none;}
+	#wrapper.product #user .btn {display:none}
+	#wrapper.product #gnb {width:990px;height:80px;margin-bottom:0}
+	#wrapper.product #gnb h1 a + img {margin-left:13px;} /* 2019-05-14 추가 */
+	#wrapper.product #gnb>ul>li {margin-left:30px;}
+	#wrapper.product #gnb>ul>li a:hover:after,
+	#wrapper.product #gnb>ul>li.selected a:after {background-color:#fff;}
+	#wrapper.product #container {padding-top:37px;width:990px;margin:0 auto;}
+	#wrapper.product #gnb .support {right:0;bottom:25px} /* 2019-05-14 추가 */
+	#wrapper.product #gnb .support .join {display:block;width:145px;height:30px;line-height:28px;border-radius:15px;font-size:12px;background:#272727;color:#fff;text-align:center;text-decoration:none} /* 2019-05-14 추가 */
+
+/* BANNER */
+.bn_type1 {border:solid 1px #272727; background:url(https://imgorg.jinhak.com/job/corp/bn_type01.gif) no-repeat left top #f45757; text-align:right; margin:20px 0; padding-right:30px;}
+	.bn_type1 a {position:relative; display:inline-block; height:108px; overflow:hidden; text-decoration:none; text-align:center;}
+	.bn_type1 .t1 {display:block; font-size:21px; color:#FFF; letter-spacing:-2px; line-height:normal !important; margin-top:20px;}
+	.bn_type1 .btn {display:block; margin-top:10px;} 
+	.bn_type1.noline a {border-top-width:0; margin:0;}
+.bn_type2 a {position:relative; display:block; height:110px; background:url(https://imgorg.jinhak.com/job/corp/bn_type02.gif); text-align:center; margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type2 a:after {content:""; display:block; position:absolute; height:16px; top:20px; right:0; left:0; background:url(http://image.jinhak.com/job/corp/bn_type02_2.png) no-repeat center top;}
+	.bn_type2 .t1 {display:block; font-size:32px; color:#FFF; letter-spacing:-1px; line-height:normal !important; margin-top:40px; font-family:'SpoqaHanSans'; font-weight:300;}
+.bn_type3 a {position:relative; display:block; height:75px; background:url(https://imgorg.jinhak.com/job/corp/bn_type03.gif); text-align:center; margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type3 .t1 {display:block; font-size:20px; color:#FFF; letter-spacing:-2px; font-weight:bold; line-height:normal !important; margin-top:22px;}
+	.bn_type3 .name {font-weight:normal;}
+	.bn_type3 .btn img {margin-left:10px; margin-top:-2px;}
+.bn_type4 a {position:relative; display:block; margin:20px 0; text-decoration:none; text-align:center; background:url(https://imgorg.jinhak.com/job/corp/bn_type04.gif); z-index:2;}
+	.bn_type4 a:after {content:""; display:block; position:absolute; top:0; right:0; bottom:0; left:50%; background:url(https://imgorg.jinhak.com/job/corp/bn_type04_4.gif); z-index:1;}
+	.bn_type4 .t1 {position:relative; display:block; font-size:33px; color:#FFF; letter-spacing:-1px; font-family:'SpoqaHanSans'; height:75px; line-height:72px; text-shadow:1px 1px 2px rgba(0,0,0,0.45); background:url(https://imgorg.jinhak.com/job/corp/bn_type04_5.png) no-repeat center top; z-index:2;}
+.bn_type5 {position:relative; background:url(http://image.jinhak.com/job/corp/bn_type05.png) no-repeat center bottom #f45757; height:208px; border:solid 1px #707070; margin:20px 0; text-align:center; overflow:hidden;}
+	.bn_type5 .t1 {display:block; font-size:32px; color:#FFF; letter-spacing:-2px; font-family:'SpoqaHanSans'; font-weight:100; line-height:1; margin:16px 0 12px 0;}
+.bn_type6 a {display:block; border:solid 1px #727272; background:url(https://imgorg.jinhak.com/job/corp/bn_type06_2.gif) repeat-x left top #e7e7e8; margin-top:20px; overflow:hidden; text-decoration:none;}
+.bn_type7 a {display:block; border:solid 1px #838383; background:#FFF; margin:20px 0; overflow:hidden; text-decoration:none;}
+.bn_type8 a {position:relative; display:block; border:solid 1px #bc6d6d; height:75px; background:url(https://imgorg.jinhak.com/job/corp/bn_type08_2.gif); margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type8 .t1 {display:block; font-size:27px; color:#d34545; letter-spacing:-1px; line-height:72px; text-align:center; font-family:'SpoqaHanSans';}
+	.bn_type8 .t1 .name {color:#333;}
+.bn_type10 a {position:relative; display:block; border:solid 1px #466c98; height:75px; background:url(http://image.jinhak.com/job/corp/bn_type10.gif); margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type10 .t1 {display:block; font-size:27px; color:#274f7c; letter-spacing:-1px; line-height:72px; text-align:center; font-family:'SpoqaHanSans';}
+	.bn_type10 .t1 .name {color:#333;}
+.bn_type11 {text-align:center; margin:20px 0;}
+	.bn_type11 a {display:inline-block; height:50px; line-height:50px; font-size:20px; color:#FFF; letter-spacing:-1px; font-family:'SpoqaHanSans'; text-decoration:none;}
+	.bn_type11 .t1 {position:relative; display:block; height:50px; border-radius:25px; padding:0 30px 0 63px; background-color:#f45757;}
+	.bn_type11 .t1:after {content:""; display:block; position:absolute; top:3px; left:3px; width:47px; height:47px; background:url(http://image.jinhak.com/job/corp/bn_type11.png) no-repeat left top;}
+.bn_type12 {text-align:center; margin:20px 0;}
+	.bn_type12 a {display:inline-block; width:161px; height:66px; background:url(http://image.jinhak.com/job/corp/bn_type12.png) no-repeat center top;}
+	.bn_type12 .t1 {font-size:0; line-height:0;}
+.bn_type13 {overflow:hidden;}
+	.bn_type13:after {content:""; clear:both; display:block;}
+	.bn_type13 .core {position:relative; float:right; width:490px; height:130px; padding:0 25px; box-sizing:border-box;}
+	.bn_type13 .core:first-child {float:left;}
+	.bn_type13 .core.bg1 {border:solid 1px #d1d8df; background-color:#eaf1f9;}
+	.bn_type13 .core.bg2 {border:solid 1px #eae1c1; background-color:#fbf8ed;}
+	.bn_type13 .t1 {font-size:32px; color:#3c3c3c; letter-spacing:-1px; font-family:'SpoqaHanSans'; line-height:1.2; margin-top:25px;}
+	.bn_type13 .t2 {font-size:13px; color:#3c3c3c; letter-spacing:-1px; margin-top:3px;}
+	.bn_type13 .btn {position:absolute; right:29px; bottom:25px;}
+.bn_type15 a {display:block; position:relative; height:108px; text-align:center; font-family:'SpoqaHanSans'; letter-spacing:-0.06em; margin:20px 0; overflow:hidden;}
+	.bn_type15 .t1 {position:relative; display:inline-block; font-size:40px; color:#FFF; font-weight:bold; line-height:108px; background:url(http://image.jinhak.com/job/corp/bn_type13_l.png) no-repeat left 28px; padding:0 60px; vertical-align:middle;}
+	.bn_type15 .t1:after {content:""; display:block; position:absolute; top:29px; right:0; width:40px; height:32px; background:url(http://image.jinhak.com/job/corp/bn_type13_r.png) no-repeat center center;}
+	.bn_type15 .btn {position:relative; display:inline-block; font-size:27px; color:#4285cc; font-weight:100; line-height:45px; height:46px; padding:0 35px; min-width:190px; background-color:#FFF; border:solid 1px #4890cf; border-radius:25px; box-shadow:1px 1px 5px 0 rgba(0,0,0,0.4); text-decoration:none; margin-left:80px; vertical-align:middle;}
+	.bn_type15 .btn:after {content:""; display:block; position:absolute; right:0; top:25px; width:22px; height:1px; background-color:#4890cf;}
+	.bn_type15.bg1 a {border:solid 1px #84a7fa; background:url(http://image.jinhak.com/job/corp/bn_type13_1.gif);}
+	.bn_type15.bg1 .t1 {text-shadow:1px 2px 1px 0 rgba(0,22,128,0.45);}
+	.bn_type15.bg2 a {border:solid 1px #9fccc0; background:url(http://image.jinhak.com/job/corp/bn_type13_2.gif);}
+	.bn_type15.bg2 .t1 {text-shadow:1px 2px 1px 0 rgba(3,83,65,0.6);}
+	.bn_type15.bg3 a {border:solid 1px #bebebe; background:url(http://image.jinhak.com/job/corp/bn_type13_3.gif);}
+	.bn_type15.bg3 .t1 {text-shadow:1px 2px 1px 0 rgba(33,117,231,0.6);}
+	.bn_type15.bg4 a {border:solid 1px #97e2e6; background:url(http://image.jinhak.com/job/corp/bn_type13_4.gif);}
+	.bn_type15.bg4 .t1 {text-shadow:1px 2px 1px 0 rgba(9,95,155,0.6);}
+	.bn_type15.bg5 a {border:solid 1px #bebebe; background:url(http://image.jinhak.com/job/corp/bn_type13_5.gif);}
+	.bn_type15.bg5 .t1 {text-shadow:1px 2px 1px 0 rgba(0,0,0,0.6);}
+.bn_type16 a {position:relative; display:block; border:solid 1px #2c2c2c; height:75px; background:url(http://image.jinhak.com/job/corp/bn_type04.gif); margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type16 .t1 {display:block; font-size:27px; color:#FFF; letter-spacing:-0.04em; line-height:72px; text-align:center; font-family:'SpoqaHanSans';}
+	.bn_type16 .t1 .name {color:#333; font-weight:bold; padding-left:44px; background:url(http://image.jinhak.com/job/corp/bn_type16_ico.png) no-repeat left center;}
+.bn_type17 a {position:relative; display:block; border:solid 1px #2c2c2c; height:75px; background:url(http://image.jinhak.com/job/corp/bn_type17.gif); margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type17 .t1 {display:block; font-size:33px; color:#FFF; letter-spacing:-0.04em; line-height:72px; text-align:center; font-family:'SpoqaHanSans';}
+.bn_type18 {border:solid 1px #838383; background:url(http://image.jinhak.com/job/corp/bn_type18.gif) no-repeat left top #FFF; padding-left:207px; margin:20px 0;}
+	.bn_type18 a {position:relative; display:block; overflow:hidden; text-decoration:none;}
+	.bn_type18 a .t1 {display:inline-block; font-size:31px; color:#0c0c0c; letter-spacing:-0.04em; height:108px; line-height:108px; font-weight:100; font-family:'SpoqaHanSans'; vertical-align:middle;}
+	.bn_type18 .btn {display:inline-block; margin:4px 0 0 15px; vertical-align:middle;}
+.bn_type19 a {position:relative; display:block; height:75px; background:url(http://image.jinhak.com/job/corp/bn_type19_1.gif); text-align:center; margin:20px 0; overflow:hidden; text-decoration:none;}
+	.bn_type19 .t1 {display:block; margin-top:22px;}
+	.bn_type19 .btn img {margin-left:15px;}
+
+/* BOX */
+.iframe_bd {border:solid 1px #c8c8c8;}
+.divide {overflow:hidden;}
+	.divide:after {content:""; clear:both; display:block;}
+	.divide.type1 .left {float:left; width:470px; position:relative;}
+	.divide.type1 .right {float:right; width:440px; position:relative;}
+	.divide.type2 .left {float:left; width:48.5%; padding-top:20px;}
+	.divide.type2 .right {float:right; width:48.5%; padding-top:20px;}
+	.divide.type4 .left {float:left; width:340px;}
+	.divide.type4 .right {float:right; width:570px;}
+	.divide.type5 .left {float:left; width:732px;}
+	.divide.type5 .right {float:right; width:236px;}
+	.divide.type6 .left {float:left; width:698px;}
+	.divide.type6 .right {float:right; width:258px;}
+	.divide.type7 .left {float:left; width:711px; padding:24px 21px 50px 0; border-right:solid 1px #cbcbcb;}
+	.divide.type7 .right {float:right; width:236px; padding:24px 0 50px 21px; border-left:solid 1px #cbcbcb; margin-left:-1px;}
+	.divide.type8 .left {float:left; width:60%;}
+	.divide.type8 .right {float:right; width:38%;}
+	.divide.type9 .left {float:left; width:444px;}
+	.divide.type9 .right {float:right; width:444px;}
+	.divide.line {border-bottom:solid 1px #DDD; padding-bottom:20px; margin-bottom:20px;}
+.box1 {position:relative; border:solid 1px #dedede; background-color:#FFF; padding:30px 15px; margin-bottom:10px;}
+	.box1:after {content:""; display:block; position:absolute; top:-7px; left:10px; width:31px; height:33px; background:url(https://imgorg.jinhak.com/job/corp/box1_bg02.png) no-repeat left top;}
+	.box1 h3 {font-size:20px; color:#0057d3; letter-spacing:-1px; font-weight:normal; margin:-12px 0 18px 0;}
+	.box1 h3 span {color:#666;}
+	.box1 h3 + .txt1 {position:absolute; right:15px; margin-top:-40px;}
+	.box1 h4 {font-size:13px; font-weight:bold; margin:15px 0 8px 0;}
+	.box1 .divide.type1 .left {width:49.3%;}
+	.box1 .divide.type1 .right {width:49.3%;}
+	.box1.shadow {border-color:#BBB; background-color:#FFF; box-shadow:2px 3px 1px 0 rgba(0,0,0,0.1);}
+	.box1.type2 {border-color:#bababa; background-color:#f8f8f8;}
+	.box1.type2:after {background-image:url(https://imgorg.jinhak.com/job/corp/box1_bg03.png);}
+	.box1.type2 h3 {color:#272727;}
+	.box1.type3 {border-color:#c3c3c3; background-color:#f3f3f3;}
+	.box1.type3:after {background-image:url(https://imgorg.jinhak.com/job/corp/box1_bg03.png);}
+	.box1.type3 h3 {color:#272727;}
+.box2 {background:#d4d4d4; padding:10px 12px 7px 12px;}
+.box3 {border:solid 1px #272727; border-top-width:0; background:#FFF; padding:0 30px 30px 30px;}
+	.box3 .tit_area {position:relative; border:solid 1px #272727; border-top-width:4px; border-right-width:0; border-left-width:0; background-color:#f6f6f6; height:45px; padding:0 15px;}
+	.box3 .tit_area p:first-child {font-size:17px; letter-spacing:-1px; line-height:42px;}
+	.box3 .tit_area .total {font-size:13px; color:#f45757; padding-left:7px; letter-spacing:0;}
+	.box3 .tit_area .right {position:absolute; right:10px; font-size:13px; top:10px;}
+	.box3>h3 {font-size:20px; font-weight:bold; letter-spacing:-1px; margin:28px 0 14px 0;}
+	.box3>h4,
+	.box3 .divide h4 {font-weight:normal; margin:18px 0 7px 0;}
+	.box3>h5 {font-size:13px; color:#272727; font-weight:bold; margin-bottom:5px;}
+	.box3.pd2 {padding-right:60px; padding-left:60px;}
+	.box3.pd3 {padding-right:15px; padding-left:15px;}
+	.box3.pd4 {padding:0 15px;}
+	.box3.pd4 .tit_area {margin-right:-15px; margin-left:-15px;}
+	.box3.line {border-top-width:1px;}
+	.box3.line2 {border-bottom-width:2px;}
+	.box3.line3 {border-top-width:4px; padding-top:0 !important;}
+	.box3.line3 .table9 tr:first-child td {background:none;}
+.box4 {position:relative; border:solid 1px #d7d7d7; padding:15px; box-shadow:2px 3px 1px 0 rgba(0,0,0,0.1); margin-right:3px; margin-bottom:4px;}
+	.box4:before {content:""; display:block; position:absolute; top:-7px; left:10px; width:31px; height:33px; background:url(https://imgorg.jinhak.com/job/corp/box4_bg.png) no-repeat left top;}
+	.box4 .t1 {font-size:11px; text-align:right;}
+	.box4 .t2 {font-size:18px; color:#666; text-align:center; margin-top:10px;}
+	.box4 .t2:first-child {margin-top:0;}
+	.box4.bg2:before {background-image:url(https://imgorg.jinhak.com/job/corp/box1_bg.png);}
+	.box4.atTable {display:table-cell; vertical-align:middle;} /* 채용상세> 재직자평판 */
+	.box4.atTable .t2 {text-align:left; margin-top:20px;}
+	.box4.atTable .t2:first-child {margin-top:0;}
+.box5 {border:solid 1px #c0c0c0; background-color:#f6f6f6; padding:17px 10px;}
+	.box5 .t1 {text-align:center; line-height:1.6;}
+	.box5 .t1 strong {text-align:center; line-height:1.6;}
+.box6 {position:relative; background-color:#f4f4f4; padding:0 20px 10px 20px; overflow:hidden;}
+	.box6:after {content:""; clear:both; display:block;}
+	.box6 .t1 {float:left; width:120px; font-size:16px; color:#333; font-weight:bold; letter-spacing:-1px; margin-top:25px;}
+	.box6 .t1 span {display:block; font-size:11px; color:#555; font-weight:normal;}
+	.box6 .t2 {position:absolute; top:15px; right:20px; font-size:11px; color:#AAA;}
+	.box6 .num {float:left; width:150px; font-size:70px; color:#626fdd; font-weight:bold; letter-spacing:-2px; text-align:center; margin-top:-2px;}
+	.box6 .info {overflow:hidden; border:solid 1px #cfcfcf; background-color:#FFF; margin-top:35px;}
+	.box6 .info:after {content:""; clear:both; display:block;}
+	.box6 .info li {float:left; height:38px; line-height:35px; color:#777; margin-left:55px; padding-left:4px; background:url(https://imgorg.jinhak.com/job/corp/bl08.gif) no-repeat left 19px;}
+	.box6 .info li:first-child {margin-left:35px;}
+	.box6 .info li strong {font-size:14px; color:#555;}
+.box7 {border:solid 1px #bfbfbf; background-color:#fcfcfc;}
+	.box7 .t1 {font-size:18px; color:#666; font-weight:bold; letter-spacing:-1px; text-align:center; padding:22px 10px 24px 10px;}
+	.box7 .t1 a,
+	.box7 .t1 span {color:inherit; display:inline-block; margin:0 10px;}
+.box8 {position:relative; border:solid 1px #272727; border-top-width:0; background:#FFF; padding:4px 10px 0 10px; box-shadow:inset 0 4px 0 0 rgba(181,181,181,0.5);}
+	.box8:before,
+	.box8:after {content:""; display:block; position:absolute; top:0; width:13px; height:16px; background-repeat:no-repeat; background-position:left top;}
+	.box8:before {left:0; background-image:url(https://imgorg.jinhak.com/job/corp/box8_bg.gif);}
+	.box8:after {right:0; background-image:url(https://imgorg.jinhak.com/job/corp/box8_bg02.gif);}
+	.box8 .core {position:relative; height:210px; overflow:hidden; background:url(https://imgorg.jinhak.com/job/corp/line_dot02.gif) repeat-x left top;}
+	.box8 .core:after {content:""; clear:both; display:block;}
+	.box8 .core:first-child {background:none;}
+	.box8 .coreMore {padding-bottom:20px;}
+	.box8 .btn {text-align:center; font-size:0; line-height:0;}
+	.box8 .btn span {display:inline-block; width:239px; height:31px; background:url(https://imgorg.jinhak.com/job/corp/btn_detail03.gif) no-repeat center top; cursor:pointer;}
+	.box8 .btn.selected span {background-image:url(https://imgorg.jinhak.com/job/corp/btn_close.gif)}
+	.box8 .char {position:absolute; bottom:50%; margin-bottom:-85px;}
+	.box8 .char.left {left:0;}
+	.box8 .char.right {right:0;}
+	.box8 .char.center {left:0; right:0; text-align:center;}
+	.box8 .t1 {position:relative; font-size:21px; color:#666; font-weight:bold; letter-spacing:-1px; text-align:center; padding-top:40px;}
+	.box8 .t2 {position:absolute; left:20px; top:75px; font-size:21px; color:#666; font-weight:bold; letter-spacing:-1px;}
+	.box8 .t2.ps2 {margin-top:-15px;}
+	.box8 .t2.ps3 {margin-top:17px;}
+	.box8 .t3 {position:relative; font-size:62px; color:#f45757; font-weight:bold; letter-spacing:-2px; text-align:center; padding-top:60px;}
+	.box8 .t3.com1,
+	.box8 .t3.com2 {float:left; width:50%; padding-left:0; padding-top:30px; font-size:50px;}
+	.box8 .t3.com2 {font-size:50px; color:#00b4cf;}
+	.box8 .t4 {position:absolute; bottom:5px; left:0; right:0; text-align:center;}
+	.box8 .t4 span {display:inline-block; font-size:11px; color:#00b4cf; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:120px; background:url(https://imgorg.jinhak.com/job/corp/graph10_05.png) no-repeat left 3px; padding-left:50px; text-align:left;}
+	.box8 .t4 span:first-child {color:#f45757; background-image:url(https://imgorg.jinhak.com/job/corp/graph10_04.png); background-position-x:right; padding-left:0; padding-right:50px; text-align:right;}
+	.box8 .t5 {position:absolute; right:10px; bottom:10px; left:10px; text-align:center; font-size:13px; color:#f45757;}
+	.box8 .t6 {font-size:62px; color:#f45757; font-weight:bold; letter-spacing:-2px; padding:60px 0 0 545px;}
+	.box8.bg2 {background:url(https://imgorg.jinhak.com/job/corp/line_dot04.gif) repeat-y center top #FFF;}
+	.box8.bg2 .core {border:solid 1px #DDD; background:#FFF; margin:-1px 27px 0 27px;}
+	.box8.bg2 .t1 {padding-top:25px;}
+	.box8.bg2 .t2 {top:70px;}
+	.box8.bg2 .t3 {padding-top:25px;}
+	.box8.bg2 .char {bottom:0; margin-bottom:0;}
+.box9 {border:solid 1px #BBB; background-color:#FFF; padding:30px;}
+.box12 {position:relative; border:solid 5px #e6e6e6; padding:24px;}
+.box14 {position:relative; border:solid 1px #272727; border-top-width:0; overflow:hidden; background:url(http://image.jinhak.com/job/corp/GOod_bg1.gif);}
+	.box14:after {content:""; clear:both; display:block;}
+	.box14:before {content:""; display:block; position:absolute; top:0; right:0; bottom:0; left:50%; background:url(http://image.jinhak.com/job/corp/GOod_bg2.gif);}
+	.box14 .t1 {position:relative; margin:16px 10px 20px 10px; font-size:31px; color:#FFF; font-weight:bold; letter-spacing:-1px; text-align:center;}
+	.box14 .core {position:relative; float:left; width:50%; text-align:center; overflow:hidden; }
+	.box14 .core ul {margin:0 16px 16px 16px; padding:35px 10px 0 10px; height:135px; background-color:#FFF; background-repeat:no-repeat; background-position:center center;}
+	.box14 .core li {float:left; width:50%; font-size:14px; font-weight:bold; margin-top:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.box14 .core.left ul {background-image:url(http://image.jinhak.com/job/corp/ico_type10_1.gif);}
+	.box14 .core.left li {color:#f45757;}
+	.box14 .core.right ul {background-image:url(http://image.jinhak.com/job/corp/ico_type10_2.gif);}
+	.box14 .core.right li {color:#888;}
+.box15 {position:relative; border:solid 1px #dfdfdf; background:#f6f6f6; padding:20px;}
+.box18 {padding:20px 30px; font-size:13px; line-height:1.6;}
+.box19 {border:solid 2px #f89494; border-radius:8px; padding:15px;}
+	.box19 .t1 {font-size:17px; color:#f56767; line-height:1.7; text-align:center; margin:25px 100px;}
+	.box19 .t1 em {white-space:nowrap;}
+	.box19 .t1 a {color:inherit;}
+.box20 {border:solid 1px #CCC; background-color:#fafafa; padding:35px 40px; overflow:hidden;}
+	.box20:after {content:""; clear:both; display:block;} 
+	.box20 > .t1 {font-size:14px; line-height:2em;}
+.box21 {border:solid 1px #272727; background:#FFF; padding:0 30px 30px 30px;} /*0425 yuhee 추가*/
+.box_select2 {position:relative; display:inline-block; cursor:pointer; height:33px; padding-right:33px;} /* 기업비교> select형태 */
+	.box_select2:after {content:""; display:block; position:absolute; top:0; right:0; width:33px; height:33px; background:url(http://image.jinhak.com/job/corp/arr8_down.png) no-repeat center center;}
+	.box_select2 .more {display:none; position:relative; background-color:#FFF; border:solid 1px #c9c9c9; margin:-30px -33px 0 0; z-index:1; cursor:default;}
+	.box_select2 .more .tit {position:relative; font-size:14px; line-height:33px; border-bottom:solid 1px #c9c9c9; padding:0 33px 0 13px;}
+	.box_select2 .more .tit:after {content:""; display:block; position:absolute; top:0; right:0; bottom:0; width:33px; border-left:solid 1px #c9c9c9; background:url(http://image.jinhak.com/job/corp/arr8_up.png) no-repeat center center;} 
+	.box_select2 .more ol {padding:5px 7px 8px 13px;}
+.box_gray2 {background:#ebebeb; padding:10px 15px;} /* mypage */
+.box_gray5 {border:solid 1px #C9C9C9; padding:13px 18px;} /* mypage */
+.box_select {background:#ebebeb; padding:10px 34px; position:relative; overflow:hidden; text-align:right;} /* 이용약관 */
+	.box_select:after {content:""; clear:both; display:block;}
+	.box_select select {vertical-align:baseline;}
+	.box_select .pointc_7 {color:#8d72e4 !important;}
+.box_sort {background:#eeefef; position:relative; margin-bottom:10px; min-height:40px; padding:0 21px;} /* mypage */
+	.box_sort .sort {padding:13px 0;}
+	.box_sort .sort a {padding-left:15px;}
+	.box_sort .sort a.selected {font-weight:bold;}
+	.box_sort .sort .up {padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_up.gif) no-repeat right 4px;}
+	.box_sort .sort .down {padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 4px;}
+	.box_sort .select {position:absolute; top:6px; right:10px;}
+	.box_sort .select.type2 {left:-3px; top:0; right:auto;}
+	.box_sort p.at_left {padding:14px 0 12px 170px;}
+	.box_sort .inp {border:solid 1px #d0d0d0; border-left-width:0; height:28px; line-height:28px; padding-left:10px; margin-left:-10px;}
+	.box_sort .more {position:absolute; top:14px; right:10px;}
+	.box_sort .more a {text-decoration:underline;}
+	.box_sort .more.type2 {top:10px;}
+	.box_sort .sch {text-align:right; padding:5px 10px;}
+	.box_sort .sch .inp {border-left-width:1px;}
+.box_pi {padding:30px 10px 0 10px;} /* mypage */
+
+/* BTN */
+a.btn_ico1 {background-image:url(http://image.jinhak.com/job/site/btn_arr01.gif); background-repeat:no-repeat; background-position:right center; padding:0 50px 0 20px; min-width:120px; text-align:left;}
+a.btn_ico2 {background-image:url(http://image.jinhak.com/job/site/btn_arr02.gif); background-repeat:no-repeat; background-position:right center; padding:0 50px 0 20px; min-width:120px; text-align:left;}
+.wd50 {width:50%; padding-right:0 !important; padding-left:0 !important;}
+.wd100 {width:100%; padding-right:0 !important; padding-left:0 !important;}
+.btn_divide {overflow:hidden;}
+	.btn_divide:after {content:""; clear:both; display:block;}
+	.btn_divide a {float:right;}
+	.btn_divide a:first-child {float:left;}
+	.btn_divide .wd50 {width:49.5%;}
+.btn_divide2 {margin:10px 0; overflow:hidden;}
+	.btn_divide2:after {content:""; clear:both; display:block;}
+	.btn_divide2 a {float:left; width:50%;}
+.btn_center {text-align:center; margin-top:40px;}
+	.btn_center img {margin:0 3px;}
+.btn_right {text-align:right; margin-top:10px;}
+	.btn_right.line {margin-top:40px; padding-top:15px; border-top:solid 2px #272727;}
+.btn_like {display:inline-block; height:34px; line-height:31px; border:solid 1px #bababa; border-radius:18px; padding:0 20px 0 50px; font-size:13px; color:#999; text-decoration:none; vertical-align:middle; background:url(https://imgorg.jinhak.com/job/corp/ico_like03.png) no-repeat 12px center;}
+	.btn_like.selected {border-color:#e95757; color:#e95757; background-image:url(https://imgorg.jinhak.com/job/corp/ico_like03_on.png);}
+.btn_rep {margin-top:40px; overflow:hidden;}
+	.btn_rep:after {content:""; clear:both; display:block;}
+	.btn_rep p {display:inline-block; text-align:center; margin:0 50px;}
+	.btn_rep p em {display:block; font-size:15px; font-weight:bold; color:#333;}
+	.btn_rep p a {display:block; margin-top:10px;}
+	.btn_rep .ico1 {background:url(http://image.jinhak.com/job/corp/rep03.gif) no-repeat center top; padding-top:110px;}
+	.btn_rep .ico2 {background:url(http://image.jinhak.com/job/corp/rep04.gif) no-repeat center top; padding-top:110px;}
+	.btn_rep .ico3 {background:url(http://image.jinhak.com/job/corp/rep05.gif) no-repeat center 50px; padding-bottom:85px;}
+	.btn_rep .ico4 {background:url(http://image.jinhak.com/job/corp/rep06.gif) no-repeat center 50px; padding-bottom:85px;}
+.btn_more {border-top:solid 1px #e1e1e3; border-left:solid 1px #e1e1e3; border-right:solid 1px #c4c4c8; border-bottom:solid 1px #c4c4c8; background:#fbfbfb; overflow:hidden; margin-top:20px;}
+	.btn_more:after {content:""; clear:both; display:block;}
+	.btn_more a {display:block; height:33px; line-height:33px; text-align:center;}
+	.btn_more a:hover {text-decoration:none;}
+	.btn_more a.more {margin-right:91px; color:#333;}
+	.btn_more a.more span {padding-right:15px; background:url(http://image.jinhak.com/job/site/arr05_down.gif) no-repeat right 6px;}
+	.btn_more a.top {margin-top:-33px; float:right; width:90px; border-left:solid 1px #e1e1e3; font-size:11px; color:#333;}
+	.btn_more a.top span {padding-right:8px; background:url(http://image.jinhak.com/job/site/arr04_up.gif) no-repeat right 5px;}
+.btn_s {text-align:right; font-size:11px; padding:0 17px; margin-top:-1px; color:#747d94; height:22px; line-height:22px; border:solid 1px #e0e0e0; border-right-color:#c8c8c8; border-left-color:#c8c8c8; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left 3px #f7f7f7;}
+	.btn_s a {color:#747d94; padding:0 3px;}
+.btn_select {overflow:hidden; display:inline; /*float:left;*/}
+	.btn_select:after {content:""; clear:both; display:block;}
+	.btn_select li {float:left; text-align:center; margin-left:-1px; border:solid 1px #dcdcdc; width:133px; height:27px; line-height:27px; background-color:#FFF;}
+	.btn_select li:first-child {margin-left:0;}
+	.btn_select li.selected {color:#FFF; position:relative; border:solid 1px #6aa1e3; background:#6aa1e3;}
+	.btn_select li a {display:block; text-decoration:none !important; color:inherit;}
+	.btn_select.type2 li {width:81px; height:32px; line-height:32px;}
+	.btn_select.type2 li.selected {border:solid 1px #eb6d6c; background:#eb6d6c; font-weight:bold;}
+	.btn_select.type3 li {border-color:#c7c7c7; width:138px; height:46px; line-height:44px; font-size:14px; color:#666; font-weight:bold;}
+	.btn_select.type3 li.selected {border:solid 1px #438ee9; background:#438ee9; color:#FFF;}
+	.btn_select.wd2 li {width:130px;}
+	.btn_select.wd2 li:first-child {width:133px;}
+	.btn_select.he2 li {width:92px; height:20px; line-height:20px;}
+.btn_file {display:inline-block; width:73px; height:21px; background:url(http://image.jinhak.com/job/site/btn_file02.gif) no-repeat left top; vertical-align:middle; margin-right:5px;}
+	.btn_file span {display:none;}
+	.btn_file.type2 {background:url(http://image.jinhak.com/job/site/btn_file.gif) no-repeat left top;}
+.mbtn1 {font-size:11px; border:solid 1px #bababa; background-color:#FFF; display:inline-block; border-radius:13px; padding:1px 9px 4px 9px;}
+	.mbtn1:hover {color:#FFF; border-color:#f45757; background-color:#f45757; text-decoration:none;}
+.mbtn2 {font-size:11px; border:solid 1px #bababa; background-color:#fafafa; display:inline-block; border-radius:13px; padding:1px 9px 4px 9px;}
+	.mbtn2 span {position:relative; padding-left:8px; font-weight:bold; margin-left:5px;}
+	.mbtn2 span:after {content:""; display:block; position:absolute; top:3px; left:0; width:1px; height:12px; background-color:#c1c1c1;}
+	.mbtn2 span em {color:#f45757;}
+	.mbtn2 span:first-child {padding-left:0; margin-left:0;}
+	.mbtn2 span:first-child:after {display:none;}
+	.mbtn2 span:first-child em {color:#9f59d9;}
+	a.mbtn2:hover {border-color:#f45757; background-color:#f45757; text-decoration:none;}
+	a.mbtn2:hover * {color:#FFF !important;}
+	.mbtn2 a:hover {text-decoration:none;}
+	.mbtn11, .mbtn13, .mbtn14, .mbtn15, .mbtn22, .mbtn23, .mbtn3, .mbtn31, .mbtn32, .mbtnKakao {display:inline-block; vertical-align:middle; text-align:center; box-sizing:border-box;} /* 2019-05-28 수정 */
+.mbtn13 {height:80px; line-height:77px; background-color:#4e4f4f; color:#FFF; font-size:30px; padding:0 9px; font-family:"SpoqaHanSans"; letter-spacing:-0.04em;} /* padding 임시 */
+	.mbtn13:hover {color:#FFF; text-decoration:none;}
+	.mbtn13.like:after {content:""; display:inline-block; width:36px; height:30px; background:url(http://image.jinhak.com/job/corp/ico_like04.png) no-repeat center center; vertical-align:middle; margin:-3px 0 0 10px;}
+	.mbtn13.like.on:after {background-image:url(http://image.jinhak.com/job/corp/ico_like04_on.png);}
+	.mbtn13.bg2 {background-color:#9a9a9a;}
+	.mbtn13.bg3 {background-color:#f45757;}
+	.mbtn13.bg4 {background-color:#000000;}
+	.mbtn13.bg5 {background-color:#bcbcbc; color:#000000;}
+	.mbtn13.bg6 {background-color:#e76a65;}
+/* 2019-05-28 추가 Start */
+.mbtn15 {border:2px solid #535353;height:29px;line-height:27px;font-size:12px;color:#272727;padding:0 10px;letter-spacing:-1px}
+	.mbtn15:hover {text-decoration:none;}
+	.mbtn15.st1 {border-color:#f66f6f;color:#f66f6f}
+/* 2019-05-28 추가 End */
+.mbtn23 {height:70px; line-height:67px; background-color:#000; text-align:center; font-size:24px; color:#FFF; padding:0 25px; font-family:"SpoqaHanSans";}
+	.mbtn23:after {content:">"; display:inline-block; vertical-align:middle; margin:-5px 0 0 8px;}
+	.mbtn23:hover {color:#FFF; text-decoration:none;}
+.mbtnKakao {height:50px; line-height:40px; background-color:#ffe100; border:solid 4px #3c1e1e; text-align:center; font-size:18px; color:#3c1e1e; padding:0 10px;}
+	.mbtnKakao:before {content:""; display:inline-block; width:30px; height:30px; background:url(http://image.jinhak.com/job/m_corp/ico_kakaoplus.png) no-repeat center center; background-size:100% auto; vertical-align:middle; margin:-3px 5px 0 0;}
+	.mbtnKakao:hover {text-decoration:none;}
+.mbtn3 {height:29px; position:relative; line-height:29px; background-color:#f45757; border-radius:20px; color:#FFF; font-size:15px; font-weight:300; padding:0 35px 0 30px;font-family:"SpoqaHanSans";}
+	.mbtn3:after {content:""; display:block; position:absolute; top:14px; right:0; width:14px; height:1px; background-color:#FFF;}
+	.mbtn3:hover {color:#FFF; text-decoration:none;}
+.mbtn31 {height:29px; position:relative; line-height:29px; background-color:#f45757; border-radius:20px; color:#FFF; font-size:15px; font-weight:300; padding:0 35px 0 30px;font-family:"SpoqaHanSans";}
+	.mbtn31:hover {color:#FFF; text-decoration:none;}
+.mbtn32 {height:31px;line-height:30px;border:1px solid #f66f6f;color:#f66f6f;background:#fff;font-size:12px;font-weight:bold;text-decoration:none;padding:0 15px;letter-spacing:-1px}
+	.mbtn32.bg1 {background:#f66f6f;border:none;color:#fff;}
+	.mbtn32.bg2 {background:#5b5b5b;border:none;color:#fff;}
+	.mbtn32.bg3 {background:#a3a3a3;border:none;color:#fff;}
+	.mbtn32:hover {color:#f66f6f; text-decoration:none;}
+	.mbtn32.bg1:hover, .mbtn32.bg2:hover, .mbtn32.bg3:hover {color:#fff;}
+.cbtn2, .cbtn3, .cbtn4, .cbtn5, .cbtn6, .cbtn7, .cbtn8, .cbtn9 {display:inline-block; text-align:center; vertical-align:middle; text-decoration:none; box-sizing:border-box;}
+.cbtn2 {font-size:11px; color:#FFF; font-weight:bold; line-height:21px !important; height:23px !important; padding:0 18px; background-color:#f87c7c; border-radius:13px;}
+	.cbtn2:hover {color:#FFF; text-decoration:none;}
+	.cbtn2.bg2 {color:#bfbfbf; background-color:#000;}
+.cbtn4 {font-size:18px; color:#FFF; line-height:35px !important; height:40px !important; padding:0 35px; background-color:#f45757; border:solid 1px #272727; border-radius:22px;}
+	.cbtn4:hover {color:#FFF; text-decoration:none;}
+.cbtn5 {font-size:12px; color:#f45757; font-weight:normal; line-height:17px !important; height:20px !important; padding:0 12px; background-color:#FFF; border:solid 1px #f45757; border-radius:12px;}
+	.cbtn5:hover {color:#f45757; text-decoration:none;}
+	.cbtn5.bg2 {border-color:#c9c9c9; color:#8e8e8e;}
+.cbtn6 {font-size:29px; color:#FFF; line-height:75px !important; height:82px !important; padding:0 20px; background-color:#9a9a9a;} /* padding 임시 */
+	.cbtn6:hover {color:#FFF; text-decoration:none;}
+	.cbtn6.type2, .cbtn6.bg2 {background-color:#f45757;}
+.cbtn7 {font-size:26px; color:#FFF; font-family:'SpoqaHanSans'; letter-spacing:-1px; line-height:48px !important; height:52px !important; padding:0 40px; background-color:#f45757; border-radius:26px;}
+	.cbtn7:hover {color:#FFF; text-decoration:none;}
+	.cbtn7.bg2 {background-color:#545e69;}
+	.cbtn7.bg3 {background-color:#FFFFFF; color:#f45757; border:solid 1px #f45757;}
+.cbtn8 {font-size:11px; color:#272727; font-weight:normal; letter-spacing:-1px; line-height:18px; height:23px; padding:0 15px; background-color:#f3f3f3; border:solid 1px #bababa; border-radius:13px;}
+	.cbtn8:hover {color:#272727; text-decoration:none;}
+	.cbtn8.bg2 {color:#65a6e9; border-color:#65a6e9; background-color:#FFF;}
+	.cbtn8.ico {position:relative; padding-right:25px;}
+	.cbtn8.ico:after {content:"i"; display:block; position:absolute; top:-1px; right:-1px; width:23px; height:23px; border-radius:50%; font-size:12px; line-height:21px; color:#FFF;}
+	.cbtn8.bg2.ico:after {background-color:#65a6e9;}
+.cbtn9 {height:60px; line-height:57px; border:solid 1px #c1c1c1; background-color:#fafafa; font-size:17px; padding:0 10px;} /* padding은 임시 */
+	.cbtn9:before {content:""; display:inline-block; width:13px; height:13px; background:url(http://image.jinhak.com/job/corp/bl15.gif) no-repeat center center; vertical-align:middle; margin:-4px 10px 0 0;}
+	.cbtn9:hover {text-decoration:none;}
+.crbtn {margin:10px 0 50px 0;text-align:right}
+	.crbtn a {border:solid 3px #070102;width:150px;height:26px;line-height:25px;color:#292929;font-size:14px;display:inline-block;text-align:center}
+	.crbtn a:hover {text-decoration:none;}
+a.btn_type1, a.btn_type2, a.btn_type3, a.btn_type4, a.btn_type5 {
+	display:inline-block; text-decoration:none !important; box-sizing:border-box; text-align:center;
+}
+.btn_type2 {height:27px; line-height:24px; color:#7963c1 !important; font-size:12px !important; padding:0 18px; border:solid 1px #7963c1; box-shadow:0 1px 0 0 #b8b8b8; background:#FFF;}
+	.ncs .btn_type2,
+	.ncsBtn .btn_type2 {border-color:#364f90; color:#364f90 !important;}
+.btn_type3 {height:41px; line-height:40px; color:#FFF !important; padding:0 30px; background-color:#1543bc; font-size:13px;}
+	.btn_type3.bg2 {background-color:#606060;}
+	.btn_type3.bg3 {background-color:#8cb739;}
+.btn_type5 {height:48px; line-height:45px; font-size:16px; color:#FFF !important; padding:0 50px; background-color:#8d72e4; border:solid 1px #3c228d;} /* padding은 임시 */
+	.btn_type5.bg2 {color:#3c228d !important; background-color:#FFFFFF;}
+	.btn_type5.bg3 {color:#FFFFFF !important; background-color:#eb6d6c; border-color:#4f4f4f;}
+	.btn_type5.bg4 {color:#eb6d6c !important; background-color:#FFFFFF; border-color:#eb6d6c;}
+
+/* GRAPH */
+.graph1 {position:relative;} /* 메인 > 원그래프+캐릭터 */
+	.graph1 .char {position:absolute; top:27px; right:0; left:0; text-align:center;}
+.graph3 {position:relative; border:solid 1px #e8e8e8; height:256px; text-align:center;} /* 상세 > 포물선그래프 */
+	.graph3 .txt {padding:9px 10px 0 10px; line-height:1.5; text-align:left;}
+	.graph3 .graph {position:relative; margin:0 auto; width:409px; height:169px; background:url(https://imgorg.jinhak.com/job/corp/graph3_01.gif) no-repeat center bottom;}
+	.graph3 .graph .pos {position:absolute; text-align:left; width:16px; bottom:0; font-size:11px; font-weight:bold; background:url(https://imgorg.jinhak.com/job/corp/graph3_02.png) no-repeat right 30px;}
+	.graph3 .graph .pos span {position:absolute; left:0; color:#333; max-width:120px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.graph3 .graph .pos em {display:block; color:#626fdd;}
+	.graph3 .graph .pos.at1 {left:0%; top:130px;}
+	.graph3 .graph .pos.at2 {left:5%; top:126px;}
+	.graph3 .graph .pos.at3 {left:10%; top:117px;}
+	.graph3 .graph .pos.at4 {left:15%; top:102px;}
+	.graph3 .graph .pos.at5 {left:20%; top:77px;}
+	.graph3 .graph .pos.at6 {left:25%; top:43px;}
+	.graph3 .graph .pos.at7 {left:30%; top:23px;}
+	.graph3 .graph .pos.at8 {left:35%; top:11px;}
+	.graph3 .graph .pos.at9 {left:40%; top:4px;}
+	.graph3 .graph .pos.at10 {left:45%; top:0;}
+	.graph3 .graph .pos.at11 {right:45%; top:0; text-align:right;}
+	.graph3 .graph .pos.at12 {right:40%; top:4px; text-align:right;}
+	.graph3 .graph .pos.at13 {right:35%; top:11px; text-align:right;}
+	.graph3 .graph .pos.at14 {right:30%; top:23px; text-align:right;}
+	.graph3 .graph .pos.at15 {right:25%; top:43px; text-align:right;}
+	.graph3 .graph .pos.at16 {right:20%; top:77px; text-align:right;}
+	.graph3 .graph .pos.at17 {right:15%; top:102px; text-align:right;}
+	.graph3 .graph .pos.at18 {right:10%; top:117px; text-align:right;}
+	.graph3 .graph .pos.at19 {right:5%; top:126px; text-align:right;}
+	.graph3 .graph .pos.at20 {right:0%; top:130px; text-align:right;}
+	.graph3 .graph .pos.at11 span,
+	.graph3 .graph .pos.at12 span,
+	.graph3 .graph .pos.at13 span,
+	.graph3 .graph .pos.at14 span,
+	.graph3 .graph .pos.at15 span,
+	.graph3 .graph .pos.at16 span,
+	.graph3 .graph .pos.at17 span,
+	.graph3 .graph .pos.at18 span,
+	.graph3 .graph .pos.at19 span,
+	.graph3 .graph .pos.at20 span {left:auto; right:0;}
+.graph4 {width:280px; overflow:hidden; margin:0 auto; text-align:left;} /* 상세 > 각진 타이어그래프 */
+	.graph4:after {content:""; clear:both; display:block;}
+	.graph4 dt {float:left; width:90px; height:27px; line-height:27px; font-size:14px; color:#666; font-weight:bold;}
+	.graph4 dd {position:relative; float:left; width:190px; height:27px; margin-bottom:18px;}
+	.graph4 dd .graph {position:relative; width:120px; height:100%; background:url(https://imgorg.jinhak.com/job/corp/graph4_01.png) repeat-x left top;}
+	.graph4 dd .graph span {display:block; height:100%;  background:url(https://imgorg.jinhak.com/job/corp/graph4_02.png) repeat-x left top;}
+	.graph4 dd .score {position:absolute; right:0; top:0; line-height:25px; font-size:28px; color:#626fdd; font-weight:bold; letter-spacing:-1px;}
+.graph5 {border:solid 1px #ececec; width:338px; height:255px;} /* 상세 > 무지개그래프 */
+	.graph5 .graph {width:338px; height:188px; position:relative;}
+	.graph5 .graph .arr {position:absolute; top:52px; width:100%; text-align:center;}
+	.graph5 .graph.type1 {background:url(https://imgorg.jinhak.com/job/site/gra2_bg3.jpg) no-repeat center top;}
+	.graph5 .graph.type2 {background:url(https://imgorg.jinhak.com/job/site/gra2_bg2.jpg) no-repeat center top;}
+	.graph5 table {width:100%; border:solid 1px #FFF; border-collapse:collapse; background:#eaeaea;}
+	.graph5 th {width:110px; height:65px; padding:0; border:0; text-align:center; font-weight:bold; color:#000;}
+	.graph5 th strong {display:block; font-size:16px; margin-top:5px; margin-left:-1px;}
+	.graph5 th em {display:block; font-size:11px; margin-top:8px; color:#555; letter-spacing:0;}
+	.graph5 td {padding:0 18px 0 0; border:0; line-height:16px;}
+.graph6 {width:300px; overflow:hidden; margin:0 auto; text-align:left;} /* 상세 > 하트 타이어그래프2 */
+	.graph6:after {content:""; clear:both; display:block;}
+	.graph6 dt {float:left; width:120px; height:31px; line-height:31px; font-size:14px; color:#666; font-weight:bold;}
+	.graph6 dd {position:relative; float:left; width:180px; height:31px; margin-bottom:10px;}
+	.graph6 dd .graph {position:relative; width:115px; height:100%; background:url(https://imgorg.jinhak.com/job/corp/graph6_01.png) repeat-x left top;}
+	.graph6 dd .graph span {display:block; height:100%; background:url(https://imgorg.jinhak.com/job/corp/graph6_02.png) repeat-x left top;}
+	.graph6 dd .score {position:absolute; right:0; top:0; line-height:29px; font-size:28px; color:#fa6a6a; font-weight:bold; letter-spacing:-1px;}
+.graph7 {border:solid 1px #272727; border-top-width:0; background:url(https://imgorg.jinhak.com/job/corp/graph7_01.gif); height:76px; overflow:hidden;} /* 상세 > 하트 타이어그래프3 */
+	.graph7:after {content:""; clear:both; display:block;}
+	.graph7 dt {float:left; width:525px; height:100%; line-height:74px; font-size:29px; letter-spacing:-1px; text-align:right; margin-right:30px;}
+	.graph7 dd {position:relative; float:left; width:220px; height:100%;}
+	.graph7 dd .graph {position:relative; width:135px; height:38px; background:url(https://imgorg.jinhak.com/job/corp/graph7_02.png) repeat-x left top; margin-top:18px; margin-right:10px;}
+	.graph7 dd .graph span {display:block; height:100%; background:url(https://imgorg.jinhak.com/job/corp/graph7_03.png) repeat-x left top;}
+	.graph7 dd .score {position:absolute; right:0; top:0; line-height:70px; font-size:40px; color:#f45757; font-weight:bold; letter-spacing:-1px;}
+.graph8 {position:relative; text-align:center; width:520px; height:30px; padding:0 3px; margin:20px auto 0 auto; border:solid 1px #d8d8d8; border-radius:15px; box-sizing:border-box;} /* 상세 > 가운데 중심인 그래프 */
+	.graph8:after {content:""; clear:both; display:block;}
+	.graph8 dl {position:relative; width:50%; height:30px; padding-top:2px; /*background-image:url(http://image.jinhak.com/job/corp/graph8_01.gif); background-repeat:no-repeat; background-position-y:top;*/}
+	.graph8 dt {position:absolute; font-size:18px; color:#666; font-weight:bold; letter-spacing:-1px; bottom:-25px;}
+	.graph8 dd {position:relative; width:100%; height:24px;}
+	.graph8 dd span {position:absolute; height:24px;}
+	.graph8 dd em {font-size:13px; font-weight:bold; line-height:24px; background-color:#FFF; padding:0 2px 2px 2px; border-radius:8px; letter-spacing:-1px; white-space:nowrap;}
+	.graph8 dl.left {float:left; background-position-x:left;}
+	.graph8 dl.left dt {left:-5px;}
+	.graph8 dl.left dd span {right:0; text-align:left; background:url(https://imgorg.jinhak.com/job/corp/graph8_02.png) no-repeat left top;}
+	.graph8 dl.left dd em {color:#3c659b; margin-left:-32px; padding-left:2px;}
+	.graph8 dl.right {float:right; background-position-x:right;}
+	.graph8 dl.right dt {right:-5px;}
+	.graph8 dl.right dd span {left:0; text-align:right; background:url(https://imgorg.jinhak.com/job/corp/graph8_03.png) no-repeat right top;}
+	.graph8 dl.right dd em {color:#f45757; margin-right:-32px; padding-right:2px;}
+	.graph8.com1 dl.left dd span {background-image:url(https://imgorg.jinhak.com/job/corp/graph8_04.png);}
+	.graph8.com1 dl dt {display:none;}
+	.graph8.com1 dl dd em {color:#f45757;}
+	.graph8.com2 {margin-top:4px;}
+	.graph8.com2 dl.left dd span {background-image:url(https://imgorg.jinhak.com/job/corp/graph8_05.png);}
+	.graph8.com2 dl.right dd span {background-image:url(https://imgorg.jinhak.com/job/corp/graph8_06.png);}
+	.graph8.com2 dl dd em {color:#00b4cf;}
+.graph9 {position:relative; width:371px; padding-top:70px; margin:0 auto 15px auto; background:url(https://imgorg.jinhak.com/job/corp/graph9_01.gif) no-repeat left bottom;} /* 상세 > 빗금 막대그래프 */
+	.graph9:after {content:""; clear:both; display:block;}
+	.graph9 dl {position:relative; float:left; width:90px; height:80px; text-align:center;}
+	.graph9 dt {position:absolute; left:0; right:0; bottom:-15px; color:#666; font-weight:bold; letter-spacing:-1px; word-spacing:-2px; text-align:center;}
+	.graph9 dd {position:relative; width:30px; height:100%; margin:0 auto;}
+	.graph9 dd .bar {position:absolute; width:100%; bottom:4px; background:url(https://imgorg.jinhak.com/job/corp/graph9_02.gif) no-repeat center top;}
+	.graph9 dd .bar span {position:absolute; left:-10px; right:-10px; top:-20px; font-size:15px; color:#2b515f; font-weight:bold; text-align:center;}
+	.graph9 dd.com1 {float:left; margin-left:13px;}
+	.graph9 dd.com1 .bar {background-image:url(https://imgorg.jinhak.com/job/corp/graph9_03.gif);}
+	.graph9 dd.com1 .bar span {font-size:13px; color:#f45757;}
+	.graph9 dd.com2 {float:right; margin-right:13px;}
+	.graph9 dd.com2 .bar {background-image:url(https://imgorg.jinhak.com/job/corp/graph9_04.gif);}
+	.graph9 dd.com2 .bar span {font-size:13px; color:#00b4cf;}
+	.graph9.at5 dl {width:73px;}
+    .graph9.at5 dl:first-child {margin-left:2px;}
+    .graph9.at5 dd.com1 {margin-left:6px;}
+    .graph9.at5 dd.com2 {margin-right:6px;}
+	.graph9.at4 dl:first-child {margin-left:7px;}
+	.graph9.at3 dl:first-child {margin-left:50px;}
+	.graph9.dt2 {margin-bottom:30px;}
+	.graph9.dt2 dt {bottom:-30px;}
+.graph10 {overflow:hidden; width:216px; margin:10px auto;} /* 비교 > 하트 타이어그래프4 */
+	.graph10:after {content:""; clear:both; display:block;}
+	.graph10 .graph {display:inline-block; position:relative; width:135px; height:38px; background:url(https://imgorg.jinhak.com/job/corp/graph10_01.png) repeat-x left top; vertical-align:top;}
+	.graph10 .graph span {display:block; height:100%; background:url(https://imgorg.jinhak.com/job/corp/graph10_02.png) repeat-x left top;}
+	.graph10 .score {display:inline-block; line-height:35px; font-size:40px; color:#f45757; font-weight:bold; letter-spacing:-1px; vertical-align:top;}
+	.graph10.bg2 .graph span {background-image:url(https://imgorg.jinhak.com/job/corp/graph10_03.png);}
+	.graph10.bg2 .score {color:#00b4cf;}
+.graph11 {position:absolute; top:50%; left:354px; margin-top:-80px; width:161px; height:161px; text-align:center; background:url(https://imgorg.jinhak.com/job/corp/graph11_00.png) no-repeat center top;} /* 상세 > 원그래프 */
+	.graph11 span {position:absolute; top:3px; left:0; right:0; text-align:center;}
+	.graph11 p {font-size:21px; color:#666; font-weight:bold; letter-spacing:-1px; line-height:161px;}
+	.graph11_wrap {position:relative; height:145px; margin-top:5px;}
+	.graph11_wrap .graph11 {top:0; left:auto; margin-top:0; width:145px; height:145px; background-image:url(https://imgorg.jinhak.com/job/corp/graph11_0_00.png);}
+	.graph11_wrap .graph11 p {font-size:28px; line-height:145px;}
+	.graph11_wrap .t6 {font-size:18px; padding:60px 0 0 0;}
+	.graph11_wrap.com1 {float:left;}
+	.graph11_wrap.com1 .graph11 {left:130px;}
+	.graph11_wrap.com1 .graph11 p {color:#f45757;}
+	.graph11_wrap.com2 {float:right;}
+	.graph11_wrap.com2 .graph11 {right:130px;}
+	.graph11_wrap.com2 .graph11 p {color:#42bfd6;}
+.graph12 {width:445px; overflow:hidden; margin:0 auto; text-align:left;} /* 상세 > 하트 타이어그래프2 */
+	.graph12:after {content:""; clear:both; display:block;}
+	.graph12 dt {float:left; width:100px; height:20px; line-height:20px; font-size:12px; color:#272727; margin-bottom:20px}
+	.graph12 dd {position:relative; float:left; width:335px; height:20px; margin-bottom:10px; margin-bottom:20px}
+	.graph12 dd .graph {position:relative; width:300px; height:100%; background:url(http://image.jinhak.com/job/corp/bizrepute_bar_bg.gif) repeat-x left 7px;}
+	.graph12 dd .graph span {display:block; height:100%; background:url(http://image.jinhak.com/job/corp/bizrepute_bar_on.gif) repeat-x left 7px;}
+	.graph12 dd .score {position:absolute; right:0; top:0; line-height:20px; font-size:17px; color:#f45757; letter-spacing:-1px;}
+
+/* ICON */
+.ico_more {padding-right:25px; background:url(https://imgorg.jinhak.com/job/corp/bl04.gif) no-repeat right 6px; cursor:pointer;}
+.ico_more2 {display:inline-block; #display:inline; zoom:1; padding-right:20px; background:url(https://imgorg.jinhak.com/job/corp/Bl07.gif) no-repeat right 5px; cursor:pointer; min-height:16px;}
+
+/* LAYER */
+.alpha {position:fixed; top:0; right:0; bottom:0; left:0; background-color:#000; opacity:0.5; filter:alpha(opacity=50); z-index:-1}
+.tooltip1 {display:none; position:absolute; border:solid 1px #272727; background-color:#FFF; box-shadow:2px 3px 1px 0 rgba(0,0,0,0.1); padding:10px 15px 12px 15px; font-size:11px; color:#666; letter-spacing:0 !important; font-weight:normal !important; line-height:1.5 !important; text-align:left !important; z-index:2;} /* 화살표 하단+가운데 */
+	.tooltip1:after {content:""; display:block; position:absolute; height:11px; right:0; bottom:-11px; left:0; background:url(https://imgorg.jinhak.com/job/corp/tooltip1_arr.png) no-repeat center bottom;}
+	.tooltip1.arr2 {margin-top:26px;} /* 화살표 상단+가운데 */
+	.tooltip1.arr2:after {height:7px; right:0; top:-7px; left:0; background:url(https://imgorg.jinhak.com/job/corp/tooltip1_arr02.png) no-repeat center top;}
+	.tooltip1.arr3 {margin-top:26px;} /* 화살표 상단+우측 */
+	.tooltip1.arr3:after {height:7px; right:71px; top:-7px; background:url(https://imgorg.jinhak.com/job/corp/tooltip1_arr02.png) no-repeat right top;}
+	.tooltip1.arr4 {margin-top:24px;} /* 화살표 상단+우측2 */
+	.tooltip1.arr4:after {height:7px; right:0; top:-7px; background:url(http://image.jinhak.com/job/corp/tooltip1_arr02.png) no-repeat right top;}
+	.tooltip1.arr5 {margin-top:10px;} /* 화살표 상단+좌측 */
+	.tooltip1.arr5:after {height:7px; left:52px; top:-7px; background:url(http://image.jinhak.com/job/corp/tooltip1_arr02.png) no-repeat left top;}
+	.tooltip1.arr6 {margin-top:30px;} /* 화살표 상단+우측3 */
+	.tooltip1.arr6:after {height:7px; right:5px; top:-7px; background:url(http://image.jinhak.com/job/corp/tooltip1_arr02.png) no-repeat right top;}
+	.tooltip1 .tit {display:block; font-size:13px; color:#0057d3; margin-bottom:5px;}
+.layer_more {display:none; position:absolute; right:0; margin-top:-15px; text-align:right; border:solid 1px #438ee9; background:#FFF; padding:6px 8px; z-index:1;}
+	/*.layer_more .txt1 {color:#438ee9; line-height:18px;}
+	.layer_more .txt2 {line-height:20px;}
+	.layer_more .txt2 span {color:#438ee9;}*/
+.layer1 {position:absolute; border:solid 1px #333; z-index:2;}
+	.layer1 .close {position:absolute; right:0; bottom:0; cursor:pointer;}
+	.layer1 .close2 {display:table; width:100%;}
+	.layer1 .close2 a {display:table-cell; width:50%; text-align:center; font-size:20px; color:#FFF; height:80px; vertical-align:middle; background-color:#f45757; text-decoration:none;}
+	.layer1 .close2 a:first-child {background-color:#9a9a9a;}
+	.layer1 .core {padding:30px; background-color:#FFF;}
+	.layer1 .lt1 {font-size:15px; height:57px; line-height:54px; text-align:center; background-color:#ebebeb;}
+	.layer1 .lt1 .date {font-size:29px; letter-spacing:-2px;}
+	.layer1 .lt1 .arr {display:inline-block; width:36px; height:36px; vertical-align:middle; margin:-10px 20px 0 20px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:center top;}
+	.layer1 .lt1 .arr.prev {background-image:url(https://imgorg.jinhak.com/job/corp/arr6_prev.png);}
+	.layer1 .lt1 .arr.next {background-image:url(https://imgorg.jinhak.com/job/corp/arr6_next.png);}
+	.layer1 .scroll {overflow-y:auto; max-height:600px;}
+	.layer1.type2 .core {padding:10px;}
+	.layer1.type2 .close {right:10px; top:10px; bottom:auto;}
+	.layer1#layerSNS .close {width:40px; height:40px; font-size:0; line-height:0; background:url(http://image.jinhak.com/job/corp/layer_close01.gif) no-repeat right bottom;}
+	.layer1 .reason {display:table-cell; width:100%; height:137px; vertical-align:middle; box-sizing:border-box; padding-left:195px; background:url(http://image.jinhak.com/job/corp/layer_img01.gif) no-repeat left center;}
+	.layer1 .reason .t1 {font-size:27px; color:#000;}
+	.layer1 .reason .t2 {font-size:20px; color:#f45757; margin-top:3px;}
+	.layer1 .reason .t3 {font-size:14px; color:#000; margin-top:9px;}
+	.layer1.atReason .core {background:url(http://image.jinhak.com/job/corp/layer_bg01.gif) repeat-x left top #FFF; padding-top:40px;} /* 마이페이지> 기업평판내역> 미승인사유 */
+.layer2 {position:absolute; border:solid 1px #333; background-color:#FFF; z-index:1;}
+	.layer2 .close {position:absolute; top:10px; right:10px; cursor:pointer;}
+	.layer2 .core {padding:10px; background-color:#FFF;}
+	.layer2 .core.pd1 {padding:120px 0 0 0;}
+	.layer2 .core.pd2 {padding:90px 0 0 0;}
+	.layer2 .core.pd3 {padding:65px 0;}
+	.layer2 .core.pd4 {padding:80px 0;}
+	.layer2 .core.pd5 {padding:30px 50px;}
+	.layer2 .core.pd6 {padding:50px 30px 30px 30px;}
+	.layer2 .lt1 {font-size:20px; color:#000; letter-spacing:-1px; line-height:57px; padding:0 58px 0 20px; background-color:#ebebeb; margin-bottom:20px; text-align:left;}
+	.layer2 .lt2 {font-size:13px; text-align:center;}
+	.layer2 .lt2 strong {display:inline-block; padding-left:8px; margin-right:20px; background:url(https://imgorg.jinhak.com/job/corp/bl05.gif) no-repeat left 4px; vertical-align:top;}
+	.layer2 .lt2 .nodata {display:inline-block; color:#888;}
+	.layer2 .lt2 a {display:inline-block; margin-right:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:140px; vertical-align:top;}
+	.layer2 .lt3 {font-size:40px; color:#333; letter-spacing:-3px;}
+	.layer2 .lt4 {font-size:30px; color:#333; letter-spacing:-2px; margin-bottom:25px;}
+	.layer2 .lt5 {font-size:15px; color:#f45757; font-weight:bold; background-color:#eaeaea; padding:25px 0; text-align:center;}
+	.layer2 .lt6 {font-size:46px; color:#333; letter-spacing:-4px;}
+	.layer2 .lt7 {font-size:26px; color:#333; letter-spacing:-2px;}
+	.layer2 .lt8 {font-size:15px; color:#666;}
+	.layer2 .lbox1 {background-color:#616161; padding:10px 14px; border-top:solid 1px #333;}
+	.layer2 .lbox1 p {color:#FFF; line-height:1.5;}
+	.layer2 .lbox2 {margin-top:-5px; margin-bottom:15px;}
+	.layer2 .lbox2 * {vertical-align:top;}
+	.layer2 .src {position:relative; display:inline-block; border:solid 1px #919191; border-radius:17px; width:53%; height:32px; text-align:left; padding-left:15px;}
+	.layer2 .src input[type="text"] {width:94%; height:100%; border:0; font-size:14px; color:#666;}
+	.layer2 .src img {position:absolute; top:5px; right:10px;}
+	.layer2 .email {position:relative; width:520px; height:39px; border:solid 2px #f45757; margin:203px auto 0 auto; text-align:left;}
+	.layer2 .email:after {content:""; display:block; position:absolute; top:-206px; right:0; left:0; height:203px; background:url(http://image.jinhak.com/job/corp/corp_img01.gif) no-repeat center top;}
+	.layer2 .email input[type=text] {float:left; width:350px; padding:6px 0 7px 10px; border:0; font-size:18px; color:#666; letter-spacing:-1px;}
+	.layer2 .email img {float:right;}
+	.layer2.type2 {border-color:#c0c0c0; box-shadow:3px 3px 2px 0 rgba(0,0,0,0.1);}
+	.layer2.type2:after {content:""; display:block; position:absolute; top:-7px; left:10px; width:31px; height:33px; background:url(http://image.jinhak.com/job/corp/box1_bg.png) no-repeat left top;}
+	.layer2.type2 .close {top:-1px; right:-1px;}
+	.layer2.type2 .core {text-align:center;}
+.layer3 {position:absolute; width:600px; z-index:1; left:50%; top:120px; margin-left:-300px;} /* 안내 */
+	.layer3 .core {padding:60px 20px; border:solid 1px #868686; background-color:#FFF; text-align:center;}
+	.layer3 .lt1 {font-size:27px; color:#272727; letter-spacing:-1px;}
+	.layer3 .lt2 {font-size:22px; color:#272727; letter-spacing:-1px;}
+	.layer3 .lbtn {margin-top:20px;}
+	.layer3.ps_relative {position:static; width:auto; margin:0; left:auto; top:auto;}
+.layer7 {display:none; position:absolute; z-index:1; left:50%;} /* 흰바탕+주황체크 타이틀 */
+	.layer7 .close {position:absolute; top:37px; right:23px; font-size:0; line-height:0; width:27px; height:27px; background:url(http://image.jinhak.com/job/corp/layer_close08.gif) no-repeat center center; z-index:1;}
+	.layer7 .core {background-color:#FFF; padding:23px;}
+	.layer7 .tit {position:relative; font-size:38px; color:#FFF; font-weight:100; font-family:'SpoqaHanSans'; letter-spacing:-1px; background:url(http://image.jinhak.com/job/corp/layer07_tit.gif); height:104px; line-height:100px; padding-left:23px;}
+	.layer7 .tit .ps {position:absolute; font-size:13px; line-height:normal; font-family:malgun Gothic,'맑은 고딕'; margin:33px 0 0 15px;}
+.dlayer {/*display:none;*/ top:0; right:0; bottom:0; left:0; z-index:3;} /* 2018-08 이후 기본 레이어 */
+	.dlayer.fix {position:fixed; text-align:center; min-width:1078px; background:url(http://image.jinhak.com/renewal2009/virtualapply/layer_png.png);} /* 반투명배경 + 스크롤불가능 */
+	.dlayer.fix:before {content:""; display:inline-block; height:100%; vertical-align:middle;}
+	.dlayer.fix .wrap {position:relative; display:inline-block; vertical-align:middle;}
+	.dlayer.abs {position:absolute;} /* 반투명배경 + 스크롤가능 */
+	.dlayer.abs:after {content:""; position:fixed; top:0; right:0; bottom:0; left:0; background:url(http://image.jinhak.com/renewal2009/virtualapply/layer_png.png);}
+	.dlayer.abs .wrap {position:absolute; left:50%; z-index:13;} /* top:inline으로 적기 , width:컨텐츠만의 넓이 + 40 + 4 , margin-left:width ÷ 2 */
+	.dlayer.onlyCont:after {position:absolute;} /* contents 부분만 가리기 */
+	.dlayer.atIframe {left:-1000%; right:auto;} /* layer가 iframe일 때 */
+	.dlayer.atIframe.abs:after {display:none;}
+	.dlayer.atIframe.view {left:0; right:0;}
+	.dlayer.atIframe.view.abs:after {display:block;}
+	.dlayer a.close,
+	.dlayer .close a,
+	.dlayer .close .button {display:inline-block; width:23px; height:23px; background:url(http://image.jinhak.com/job/site/layer_close09.gif) no-repeat center center; font-size:0; line-height:0;}
+	.dlayer .close2 {position:absolute; top:10px; right:2px; z-index:1;} /* 평판레이어 일때 */
+	.dlayer .close2 .button {display:inline-block; width:35px; height:35px; background:url(http://image.jinhak.com/job/corp/layer_close10.gif) no-repeat center center; font-size:0; line-height:0;}
+	.dlayer .wrap {text-align:left; border:solid 1px #333; background:#FFF;}
+	.dlayer .wrap > .close {text-align:right; padding-right:10px;}
+	.dlayer .wrap.bg2 {border-color:#000; background-color:#000;} /* 기업상세> 회사사진 팝업레이어 */
+	.dlayer .core {padding:20px;} /* padding 임시*/
+	.dlayer .core > .close {position:absolute; top:20px; right:20px;}
+	.dlayer .core2 {padding:10px;}
+	.dlayer .core2 .close {position:absolute; top:10px; right:45px;}
+	.dlayer .btn_divide2 {margin:0;}
+	.dlayer.wd1 .wrap {width:700px;}
+	.dlayer.wd2 .wrap {width:764px;}
+	.dlayer.wd3 .wrap {width:578px;}
+	.dlayer.wd4 .wrap {width:830px;}
+	.dlayer.wd5 .wrap {width:730px;}
+	.dlayer .lt1 {padding:30px 0;}
+	.dlayer .lt2 {font-size:28px; letter-spacing:-0.04em; text-align:center;}
+	.dlayer .lt2 .lg {font-size:35px;}
+	.dlayer .lt3 {background:#ebebeb;font-size:20px;padding:16px 0 0 20px;height:41px;color:#272727}
+	.dlayer .lt4 {font-size:20px;padding:16px 0 0 20px;height:41px;color:#272727;letter-spacing:-1px}
+	.dlayer .lt5 {background:#333;font-size:20px;padding:21px 0 0 20px;height:46px;color:#ff746e;letter-spacing:-1px}
+	.dlayer .tarea {width:100%;min-height:350px;margin-top:10px;font-size:13px;border:1px solid #272727;background:#f8f8f8;padding:10px;line-height:26px}
+	.dlayer .tarea.base {color:#aaa;background:#fff}
+.layer_vod2 {display:none; position:absolute;} /* mypage */
+	.layer_vod2 .close {text-align:right; font-size:0; line-height:0;}
+	.layer_vod2 .close img {cursor:pointer;}
+	.layer_vod2 .vod_area {border:solid 1px #cdcdcd; background:#FFF;}
+.layer_violet {display:none; position:absolute; border:solid 4px #ddd3e8; background:#FFF; padding:12px 18px; left:50%; margin-top:-40px; z-index:1;} /* mypage */
+	.layer_violet .tit {color:#8d72e4; font-size:13px; margin-bottom:15px;}
+	.layer_violet .pay {overflow:hidden; text-align:left; border-bottom:solid 1px #ebebeb; width:300px;}
+	.layer_violet .pay:after {content:""; clear:both; display:block;}
+	.layer_violet .pay dt,
+	.layer_violet .pay dd {float:left; padding:5px 0; border-top:solid 1px #ebebeb;}
+	.layer_violet .pay dt {width:25%;}
+	.layer_violet .pay dt label {padding-left:5px;}
+	.layer_violet .pay dd {width:75%;}
+.layer_roadmap {display:none;}
+
+/* LIST */
+.list_dot {overflow:hidden;}
+	.list_dot:after {content:""; clear:both; display:block;}
+	.list_dot li {position:relative; font-size:13px; color:#272727; margin-top:11px; padding-left:12px; box-sizing:border-box;}
+	.list_dot li:after {content:""; display:block; position:absolute; top:9px; left:0; width:2px; height:2px; background-color:#888;}
+	.list_dot.line {border-bottom:solid 1px #272727; padding-bottom:23px;}
+	.list_dot.lh16 li {line-height:16px;}
+	.list_dot.liMT2 li {margin-top:3px; padding-left:8px;}
+	.list_dot.font12 li {font-size:12px; margin-top:8px;}
+	.list_dot.type2 li {font-size:14px; color:#666; font-weight:bold;}
+	.list_dot.type2 li:after {width:3px; height:3px; background-color:#000;}
+	.list_dot.type3 li {float:left; width:50%;}
+	.divide .right .list_dot {padding-left:13px;}
+.list_dot2 li {position:relative; color:#666; margin-top:11px; padding-left:8px; line-height:1.6;}
+	.list_dot2 li:after {content:""; display:block; position:absolute; top:9px; left:0; width:2px; height:1px; background-color:#989898;}
+	.list_dot2 li:first-child {margin-top:0;}
+.list_decimal li {list-style-type:decimal; margin-top:11px; margin-left:20px;}
+	.list_decimal li a {font-weight:normal; color:#272727; vertical-align:top;}
+	.list_decimal.line {border-bottom:solid 1px #272727; padding-bottom:30px;}
+	.list_decimal.ws li {height:31px;}
+	.list_decimal.ws li a {display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:-28px;}
+	.list_decimal.type2>li {margin-top:2px;}
+	.list_decimal.type3>li {margin-top:5px;}
+	.divide .right .list_decimal {padding-left:13px;}
+	.divide .right .list_decimal li {font-size:13px; color:#f45757; font-weight:bold;}
+.list_decimal2 li {font-size:13px; line-height:27px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_decimal2 li span {color:#f45757;}
+.list_dangu li,
+	p.list_dangu {position:relative; color:#666; padding-left:15px; line-height:1.5;} 
+	.list_dangu li:after,
+	p.list_dangu:after {content:"※"; display:block; position:absolute; top:1px; left:0;}
+.list_bank {overflow:hidden;}
+	.list_bank:after {content:""; clear:both; display:block;}
+	.list_bank li {float:left; width:143px; padding-bottom:6px;}
+.list_bar li {position:relative; margin-top:5px; padding-left:10px;}
+	.list_bar li:first-child {margin-top:0;}
+	.list_bar li:after {content:"-"; display:block; position:absolute; top:0; left:0;}
+.list_star li, p.list_star {position:relative; font-size:13px; line-height:1.4; padding-left:10px; margin-top:5px;}
+	.list_star li:after, p.list_star:after {content:"*"; display:block; position:absolute; top:2px; left:0;}
+.list_sns {overflow:hidden;}
+	.list_sns:after {content:""; clear:both; display:block;}
+	.list_sns li {float:left; width:85px; text-align:center;}
+	.list_sns li a {display:block; text-decoration:none;}
+	.list_sns li a span {display:block; margin-top:5px;}
+.list_ck {overflow:hidden;}
+	.list_ck:after {content:""; clear:both; display:block;}
+	.list_ck li {float:left; padding:2px 40px 2px 0;}
+	.list_ck li label {white-space:nowrap;}
+	.list_ck li.br {float:none; display:block;}
+	.list_ck.wd100 li {width:100px; padding-right:0;}
+	.list_ck.wd140 li {width:140px; padding-right:0;}
+	.list_ck.wd190 li {width:180px; padding-right:10px;}
+	.list_ck.wd210 li {width:210px; padding-right:0;}
+	.list_ck.lipr10 li {padding-right:10px;}
+	.list_ck.type2 li {float:none; padding-right:0; padding-left:19px; white-space:normal; position:relative;}
+	.list_ck.type2 li input {position:absolute; left:0; top:8px;}
+	.list_ck.type2 li .ff_mal {font-size:11px; white-space:nowrap; vertical-align:middle; margin-top:-3px; display:inline-block;}
+	.list_ck.type3 li {padding-right:0; padding-left:30px;}
+	.list_ck.type3 li:first-child {padding-left:0;}
+.list_ck2 {overflow:hidden; border:solid 1px #e0e0e0; border-top-width:0;}
+	.list_ck2:after {content:""; clear:both; display:block;}
+	.list_ck2 > li {background-color:#FFF; border-top:solid 1px #e0e0e0; padding:4px 10px 6px 10px; color:#777;}
+	.list_ck2 li .t1 {position:relative;}
+	.list_ck2 li label {color:inherit;}
+	.list_ck2 li input {position:absolute; top:5px; right:0; width:18px; height:18px; margin-right:0;}
+	.list_ck2 li .ck2 {position:absolute; right:0;}
+	.list_ck2 li .ck2 label {margin-left:10px;}
+	.list_ck2 li .ck2 input {position:static; margin-top:2px;}
+	.list_ck2 li .msgDetail,
+	.list_ck2 li .msgDetail2 {margin-top:7px; background-color:#f9f9f9;}
+	.list_ck2 li .msgDetail .privercy {overflow-y:auto; height:100px;}
+	.list_ck2 li .btn {display:inline-block; width:62px; height:18px; font-size:0; line-height:0; background:url(https://imgorg.catch.co.kr/job/site/arr30_down.gif) no-repeat center top; vertical-align:middle; margin:2px 0 0 5px; cursor:pointer;}
+	.list_ck2 li .btn.selected {background-image:url(https://imgorg.catch.co.kr/job/site/arr30_up.gif);}
+.list_warning {margin:18px 0 0 18px;}
+	.list_warning li {background:url(https://imgorg.jinhak.com/job/site/bl_warning03.png) no-repeat left 3px; padding-left:18px; padding-bottom:5px; margin-bottom:10px;}
+	.list_warning li a.arr {background:url(https://imgorg.jinhak.com/job/site/bl_arr04_on.gif) no-repeat right 5px; padding:0 11px 0 15px; color:#438ee9;}
+.list_catch li {text-align:center;}
+	.list_catch li a {position:relative; display:block; text-decoration:none;}
+	.list_catch li a:after {content:""; display:block; position:absolute; top:0; right:0; left:0; height:84px; border:solid 1px #c7c8c7; z-index:1;}
+	.list_catch li .bg_white {display:block; background-color:#FFF;}
+	.list_catch li span {display:block; text-align:left; font-size:13px; color:#000; line-height:1.4; margin-top:6px; height:38px; overflow:hidden;}
+	.list_catch li img {width:100%; height:85px;}
+.list_corp {overflow:hidden}
+	.list_corp:after {content:""; clear:both; display:block;}
+	.list_corp li {text-align:center; height:159px; box-sizing:border-box;}
+	.list_corp a {text-decoration:none;}
+	.list_corp .logo {display:block; border:solid 1px #a7a7a7; background-color:#FFF; width:137px; height:95px;}
+	.list_corp .logo img {height:79px; margin-top:8px;}
+	.list_corp .ico {position:absolute; right:0; top:82px;}
+	.list_corp .t1 {font-size:14px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:6px;}
+	.list_corp .t2 span {position:relative; padding-left:5px; font-size:11px; color:#666;}
+	.list_corp .t2 span:after {content:""; display:block; position:absolute; top:3px; left:0; width:1px; height:11px; background-color:#c2c2c2;}
+	.list_corp .t2 span:first-child {padding-left:0;}
+	.list_corp .t2 span:first-child:after {display:none;}
+	.list_corp .t3 {display:block; font-size:13px; font-weight:bold; line-height:1.3; letter-spacing:-0.02em; margin-top:8px; margin-bottom:10px;}
+	.list_corp .t4 {text-align:center; margin-top:1px;}
+	.list_corp .t4 span {display:inline-block; font-size:13px; color:#f45757; font-weight:bold; line-height:1.3; letter-spacing:-0.02em; white-space:nowrap;}
+	.list_corp .btn {display:block; text-align:center; margin-top:5px;}
+	.list_corp.Clamp2 li {height:auto;}
+	.list_corp.Clamp2 .t1 {overflow:auto; text-overflow:initial; white-space:normal;}
+	.list_corp.at2 li {float:left; width:25%; padding:0 12px; text-align:center;}
+	.list_corp.at2 .logo,
+	.list_corp.at4 .logo,
+	.list_corp.at5 .logo {margin:0 auto;}
+	.list_corp.at4 li {float:left; width:25%; text-align:center;}
+	.list_corp.at5 li {float:left; width:20%; text-align:center;}
+	.list_corp.atAuto {margin-right:-20px;}
+	.list_corp.atAuto li {float:left; margin-right:20px; height:auto;}
+.list_recom_wrap {position:relative; background-color:#FFF; border:solid 1px #c3c3c3; padding:30px 15px 0 15px;}
+.list_recom {overflow:hidden; margin-left:-20px;}
+	.list_recom:after {content:""; clear:both; display:block;}
+	.list_recom li {float:left; width:25%; margin-bottom:20px;}
+	.list_recom li>div {position:relative; border:solid 1px #CCC; background-color:#FFF; margin-left:20px; height:264px; overflow:hidden;}
+	.list_recom li .pic img {width:100%; height:137px;}
+	.list_recom li .logo {position:absolute; top:77px; left:7px; border:solid 1px #DDD; background-color:#FFF;} 
+	.list_recom li .logo img {width:65px; margin:5px;}
+	.list_recom li .flag {position:absolute; top:0; right:6px;}
+	.list_recom li .t1 {position:absolute; top:140px; right:6px; font-size:17px; color:#333;}
+	.list_recom li .t1 span {display:inline-block; font-size:12px; vertical-align:text-top; padding-top:3px;}
+	.list_recom li .t1 span.up {color:#ff0000;}
+	.list_recom li .t1 span.down {color:#006cff;}
+	.list_recom li .t2 {font-size:14px; font-weight:bold; margin:25px 6px 0 9px; /* overflow:hidden; text-overflow:ellipsis; white-space:nowrap; */}
+	.list_recom li .t2 .ico {white-space:nowrap;}
+	.list_recom li .t2 .ico img {margin:0 4px 3px 0;vertical-align:middle;}
+	.list_recom li .t3 {font-size:11px; color:#666; margin:2px 6px 0 9px; height:40px;}
+	.list_recom li .t3 img {margin:3px 0;}
+	.list_recom li .t3 span {position:relative; padding-left:5px;}
+	.list_recom li .t3 span:after {content:""; display:block; position:absolute; top:3px; left:0; width:2px; height:12px; background-color:#cbcbcb;}
+	.list_recom li .t3 span:first-child {padding-left:0;}
+	.list_recom li .t3 span:first-child:after {display:none;}
+	.list_recom li .t3 span + a img {margin-left:3px;}
+	.list_recom li .t4 {position:relative; color:#666; margin:0 6px 0 9px;}
+	.list_recom li .t4 .ico {position:absolute; right:0;}
+	.list_recom li .t4.btmfix {position:absolute;width:100%;bottom:10px;} 
+	.list_recom li .t4.btmfix .ico {right:16px}
+	.list_recom li .t5 {font-size:12px; color:#666; font-weight:bold; margin:-12px 6px 0 9px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	.list_recom li .t5 a {color:inherit;}
+	.list_recom li .t6 {font-size:12px; color:#f45757; font-weight:bold; margin:7px 6px 0 9px;}
+	.list_recom li .t7 {font-size:18px; letter-spacing:-1px; margin:15px 10px 0 10px;} /* 임시 디자인 */
+	.list_recom .theme {border-width:0; text-align:center;}
+	.list_recom .theme .graph1 {margin-top:30px;}
+	.list_recom + .page {border-top:solid 2px #272727;}
+.list_newstype1 {overflow:hidden; border-bottom:solid 2px #272727; padding-bottom:4px;}
+	.list_newstype1:after {content:""; clear:both; display:block;}
+	.list_newstype1 li {float:left; width:233px; margin-left:16px; margin-bottom:16px;}
+	.list_newstype1 li:nth-child(3n-2) {margin-left:0;}
+	.list_newstype1 li a {position:relative; display:block; height:277px; border:solid 1px #DDD;}
+	.list_newstype1 .pic {display:block; border-bottom:solid 1px #ddd;}
+	.list_newstype1 .pic img {width:100%; height:164px;}
+	.list_newstype1 .t1 {display:block; font-size:16px; letter-spacing:-1px; line-height:1.2; padding:9px 10px 0 14px;;}
+	.list_newstype1 .t1 span {white-space:nowrap;}
+	.list_newstype1 .t1 span em {font-size:13px; color:#f45757; letter-spacing:0; padding-right:10px;}
+	.list_newstype1 .t2 {position:absolute; left:14px; bottom:10px; font-size:13px; padding-left:12px; line-height:1.4;}
+	.list_newstype1 .t2:after {content:""; display:block; position:absolute; top:5px; left:0; width:8px; height:9px; background:url(https://imgorg.jinhak.com/job/site/ico_play02.gif) no-repeat left top;}
+	.list_newstype1.noline {border-bottom-width:0;}
+	.list_newstype1.line2 {border-bottom-width:0; border-top:solid 1px #bababa; padding-top:20px;}
+	.list_newstype1.type2 li {width:442px; margin-left:10px; margin-bottom:10px;}
+	.list_newstype1.type2 li:nth-child(2n-1) {margin-left:0;}
+	.list_newstype1.type2 li a {position:relative; height:164px; padding-left:230px;}
+	.list_newstype1.type2 .pic {position:absolute; top:0; left:0; border-bottom-width:0; width:231px;}
+	.list_newstype1.type2 .t1 span {white-space:normal; display:block;}
+	.list_newstype1.type2 .t2 {left:244px;}
+	.list_newstype1.type3 {margin-left:-20px; padding-bottom:0; border-width:0;} /* 채용공고> CATCH JOB */
+	.list_newstype1.type3 li {width:25%; margin:0 0 20px 0;}
+	.list_newstype1.type3 li a {margin-left:20px; height:264px;}
+	.list_newstype1.type4 {margin-left:-10px;}
+	.list_newstype1.type4 li {width:33.3%; margin-left:0; box-sizing:border-box;}
+	.list_newstype1.type4 li a {margin-left:10px;}
+	.box1 .list_newstype1 li {width:50%; margin-left:0;}
+	.box1 .list_newstype1 li a {border-width:0; padding-right:20px;}
+.list_slash li {padding-left:11px; background:url(https://imgorg.jinhak.com/job/corp/bl11.png) no-repeat left 5px; line-height:1.8;}
+
+/* Slider Pager, Arr */
+.pager_type1 {position:relative;}
+	.pager_type1 .bx-has-pager {position:absolute; top:5px; right:5px; font-size:0; line-height:0;}
+	.pager_type1 .bx-pager-item {display:inline-block;}
+	.pager_type1 .bx-pager-link {display:block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager05.png) no-repeat center center;}
+	.pager_type1 .bx-pager-link.active {background-image:url(http://image.jinhak.com/job/site/pager05_on.png);}
+	.pager_type1 .swiper_pager_type {position:absolute; top:5px; right:5px; bottom:auto !important; left:auto !important; width:auto !important; z-index:2;}
+	.pager_type1 .swiper_pager_type span {display:inline-block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager05.png) no-repeat center center; opacity:1; margin:0 !important;}
+	.pager_type1 .swiper_pager_type span.swiper-pagination-bullet-active {background-image:url(http://image.jinhak.com/job/site/pager05_on.png);}
+.pager_type2 {position:relative;}
+	.pager_type2 .bx-has-pager {position:absolute; top:6px; right:5px; font-size:0; line-height:0;}
+	.pager_type2 .bx-pager-item {display:inline-block;}
+	.pager_type2 .bx-pager-link {display:block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager06.png) no-repeat center center;}
+	.pager_type2 .bx-pager-link.active {background-image:url(http://image.jinhak.com/job/site/pager06_on.png);}
+	.pager_type2.box1 .bx-has-pager {top:42px; right:18px;}
+	.pager_type2.list_recom_wrap .bx-has-pager {top:8px; right:15px;}
+	.pager_type2.ranking_theme .bx-has-pager {top:0;}
+	.pager_type2 .swiper_pager_type {position:absolute; top:5px; right:5px; bottom:auto !important; left:auto !important; width:auto !important; z-index:2;}
+	.pager_type2 .swiper_pager_type span {display:inline-block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager06.png) no-repeat center center; opacity:1; margin:0 !important;}
+	.pager_type2 .swiper_pager_type span.swiper-pagination-bullet-active {background-image:url(http://image.jinhak.com/job/site/pager06_on.png);}
+	.pager_type2.list_recom_wrap .swiper_pager_type {top:8px; right:15px;}
+.pager_type3 {position:relative;}
+	.pager_type3 .bx-has-pager {position:absolute; top:14px; right:5px; font-size:0; line-height:0;}
+	.pager_type3 .bx-pager-item {display:inline-block;}
+	.pager_type3 .bx-pager-link {display:block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager07.png) no-repeat center center;}
+	.pager_type3 .bx-pager-link.active {background-image:url(http://image.jinhak.com/job/site/pager07_on.png);}
+	.pager_type3 .swiper_pager_type {position:absolute; top:14px; right:5px; bottom:auto !important; left:auto !important; width:auto !important; z-index:2;}
+	.pager_type3 .swiper_pager_type span {display:inline-block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager07.png) no-repeat center center; opacity:1; margin:0 !important;}
+	.pager_type3 .swiper_pager_type span.swiper-pagination-bullet-active {background-image:url(http://image.jinhak.com/job/site/pager07_on.png);}
+.pager_type4 {position:relative;}
+	.pager_type4 .bx-has-pager {font-size:0; line-height:0; text-align:center;}
+	.pager_type4 .bx-pager-item {display:inline-block;}
+	/* .pager_type4 .bx-pager-link {display:block; width:20px; height:4px; background-color:#FFF; border:solid 1px #c2c2c2; margin:0 2px;}
+	.pager_type4 .bx-pager-link.active {border-color:#f56767; background-color:#f56767;} */
+	.pager_type4 .bx-pager-link {display:block; width:15px; height:15px; background:url(http://image.jinhak.com/job/site/pager06.png) no-repeat center center; }
+	.pager_type4 .bx-pager-link.active {background-image:url(http://image.jinhak.com/job/site/pager06_on.png);}
+.pager_type5 {position:relative;} /* 채용공고> recruit trend */
+	.pager_type5 .bx-has-pager {position:absolute; top:0; right:0;}
+	.pager_type5 .bx-pager-item {display:inline-block;}
+	.pager_type5 .bx-pager-link {display:block; background-color:#FFF; border:solid 1px #f45858; margin-left:5px; padding:0 4px; font-size:11px; color:#f45858; text-decoration:none;}
+	.pager_type5 .bx-pager-link.active {background-color:#f45858; color:#FFF;}
+.pager_type6 {position:relative;} /* 메인> 랭킹 (숫자 + arr) */
+	.pager_type6 .bx-controls {position:absolute; top:0; right:0; z-index:1;} /* mode:fade 일때 slide의 z-index가 1으로 바뀜 */
+	.pager_type6 .bx-pager {display:inline-block; font-size:14px; line-height:1.6;}
+	.pager_type6 .bx-pager:first-letter {font-weight:bold;}
+	.pager_type6 .bx-controls-direction {display:inline-block; vertical-align:top;}
+	.pager_type6 .bx-controls-direction a {display:inline-block; font-size:0; line-height:0; width:23px; height:23px; border:solid 1px #cecece; vertical-align:middle; background-repeat:no-repeat; background-position:center center; background-size:auto 10px; background-color:#FFF;}
+	.pager_type6 .bx-controls-direction .bx-prev {background-image:url(http://image.jinhak.com/job/corp/arr4_prev.gif); margin-left:6px;}
+	.pager_type6 .bx-controls-direction .bx-next {background-image:url(http://image.jinhak.com/job/corp/arr4_next.gif); margin-left:-1px;}
+	.pager_type6 .swiper-button-prev,
+	.pager_type6 .swiper-button-next {position:absolute; top:0; margin-top:0; z-index:2; width:23px; height:23px; border:solid 1px #cecece; vertical-align:middle; background-repeat:no-repeat; background-position:center center; background-size:auto 10px; background-color:#FFF; opacity:1 !important;}
+	.pager_type6 .swiper-button-prev {right:24px; left:auto; background-image:url(http://image.jinhak.com/job/corp/arr4_prev.gif);}
+	.pager_type6 .swiper-button-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr4_next.gif);}
+	.pager_type6 .swiper_pager_type {position:absolute; top:0; right:60px; bottom:auto !important; left:auto !important; width:auto !important; z-index:2; font-size:14px; line-height:1.6;}
+	.pager_type6 .swiper_pager_type span:first-child {font-weight:bold;}
+.arr_type1 {position:relative;}
+	.arr_type1 .bx-controls {position:absolute; left:15px; top:50%; right:15px; margin-top:-15px;}
+	.arr_type1 .bx-controls .bx-controls-direction a {position:absolute; display:block; width:18px; height:29px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:left top;}
+	.arr_type1 .bx-controls a.bx-prev {left:0; background-image:url(http://image.jinhak.com/job/corp/arr10_prev.png);}
+	.arr_type1 .bx-controls a.bx-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr10_next.png);}
+	.arr_type1.ps2 .bx-controls {left:80px; right:80px;}
+	.arr_type1.ps3 .bx-controls {left:30px; right:30px;}
+.arr_type3 {position:relative;}
+	.arr_type3 .bx-controls {position:absolute; left:2px; top:148px; right:2px;}
+	.arr_type3 .bx-controls .bx-controls-direction a {position:absolute; display:block; width:35px; height:68px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:left top;}
+	.arr_type3 .bx-controls a.bx-prev {left:0; background-image:url(http://image.jinhak.com/job/corp/arr12_prev.png);}
+	.arr_type3 .bx-controls a.bx-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr12_next.png);}
+.arr_type4 {position:relative;} /* 기업상세> 회사사진 */
+	.arr_type4 .bx-controls {position:absolute; left:30px; top:50%; right:30px; margin-top:-20px;}
+	.arr_type4 .bx-controls .bx-controls-direction a {position:absolute; display:block; width:24px; height:39px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:left top;}
+	.arr_type4 .bx-controls a.bx-prev {left:0; background-image:url(http://image.jinhak.com/job/corp/arr15_prev.png);}
+	.arr_type4 .bx-controls a.bx-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr15_next.png);}
+	.arr_type2 {position:relative;}
+	.arr_type2 .bx-controls {position:absolute; left:-70px; top:50%; right:-70px; margin-top:-26px;}
+	.arr_type2 .bx-controls .bx-controls-direction a {position:absolute; display:block; width:30px; height:52px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:left top;}
+	.arr_type2 .bx-controls a.bx-prev {left:0; background-image:url(http://image.jinhak.com/job/corp/arr11_prev.png);}
+	.arr_type2 .bx-controls a.bx-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr11_next.png);}
+.arr_type5 {position:relative;} /* 기업상세> 회사사진> 크게보기 레이어 */
+	.arr_type5 .bx-controls {position:absolute; left:10px; top:50%; right:10px; margin-top:-20px;}
+	.arr_type5 .bx-controls .bx-controls-direction a {position:absolute; display:block; width:24px; height:39px; font-size:0; line-height:0; background-repeat:no-repeat; background-position:left top;}
+	.arr_type5 .bx-controls a.bx-prev {left:0; background-image:url(http://image.jinhak.com/job/corp/arr16_prev.png);}
+	.arr_type5 .bx-controls a.bx-next {right:0; background-image:url(http://image.jinhak.com/job/corp/arr16_next.png);}
+
+/* TAB */
+.tab2 {overflow:hidden; padding:0 8px;}
+	.tab2:after {content:""; clear:both; display:block;}
+	.tab2 li {float:left;}
+	.tab2 li a {display:block; font-size:14px; color:#fefefe; font-weight:bold; height:40px; line-height:39px; text-align:center; background-color:#474747; border:solid 1px #474747; border-bottom-width:0; border-radius:8px 8px 0 0; text-decoration:none; margin-left:2px;}
+	.tab2 li:first-child a {margin-left:0;}
+	.tab2 li.selected a {color:#272727; background-color:#FFF; border-color:#afafaf;}
+	.tab2.at2 li {width:50%;}
+.tab3 {overflow:hidden;}
+	.tab3:after {content:""; clear:both; display:block;}
+	.tab3 li {position:relative; float:left;}
+	.tab3 li a {display:block; font-size:17px; font-weight:bold; letter-spacing:-1px; line-height:48px; text-align:center; background-color:#dadada; border:solid 1px #272727; border-left-width:0; text-decoration:none;}
+	.tab3 li:first-child a {border-left-width:1px;}
+	.tab3 li.selected {z-index:1;}
+	.tab3 li.selected:before {content:""; display:block; position:absolute; top:0; left:-20px; width:20px; height:50px; background:url(https://imgorg.jinhak.com/job/corp/tab3_left.png) no-repeat left top;}
+	.tab3 li.selected:after {content:""; display:block; position:absolute; top:0; right:-20px; width:20px; height:50px; background:url(https://imgorg.jinhak.com/job/corp/tab3_right.png) no-repeat right top;}
+	.tab3 li.selected a {background-color:#FFF; border-top-width:4px; border-bottom-width:0; line-height:42px; height:46px;}
+	.tab3 li .cbtn2 {margin-left:3px; margin-top:-5px;}
+	.tab3.at1 li {width:100%;}
+	.tab3.at2 li {width:50%;}
+	.tab3.at3 li {width:33.3%;}
+	.tab3.at3 li:first-child {width:33.4%;}
+	.tab3.at4 li {width:25%;}
+	.tab3.at5 li {width:20%;}
+.tab4 {overflow:hidden;}
+	.tab4:after {content:""; clear:both; display:block;}
+	.tab4 li {position:relative; float:left;}
+	.tab4 li a {display:block; font-size:17px; color:#FFF; letter-spacing:-1px; height:47px; line-height:44px; text-align:center; background-color:#69707b; text-decoration:none; margin-left:1px; box-sizing:border-box;}
+	.tab4 li:first-child a {margin-left:0;}
+	.tab4 li.selected a {color:#424f65; background:#FFF; border:solid 1px #69707b; border-top-width:3px; line-height:40px;}
+	.tab4.at2 li {width:50%;}
+	.tab4.at3 li {width:33.3%;}
+.tab5 {overflow:hidden;}
+	.tab5:after {content:""; clear:both; display:block;}
+	.tab5 li {float:left;}
+	.tab5 li a {position:relative; display:block; text-align:center; height:40px; line-height:37px; background-color:#fafafa; border:solid 1px #bababa; margin-left:-1px; font-size:15px; color:#888; text-decoration:none;}
+	.tab5 li.selected a {color:#272727; background-color:#FFF; border-color:#727272; z-index:1;} 
+	.tab5 li:first-child {width:17%;}
+	.tab5 li:first-child a {margin-left:0;}
+	.tab5.type2 {position:relative; z-index:1;}
+	.tab5.type2 li a {text-align:left; padding-left:18px; height:49px; line-height:normal;}
+	.tab5.type2 li a img {margin-top:13px;}
+	.tab5.type2 li.selected a {border-color:#bababa; border-bottom-color:#FFF;}
+	.tab5.at3 li {width:33.3%;}
+	.tab5.at3 li:first-child {width:33.4%;}
+	.tab5.at4 li {width:25%;}
+	.tab5.at6 li {width:16.6%;}
+	.tab5.at6 li:first-child {width:17%;}
+	.recr_top .view1 .li1 a,
+	.recr_top .view2 .li2 a,
+	.recr_top .view3 .li3 a,
+	.recr_top .view4 .li4 a,
+	.recr_top .view5 .li5 a,
+	.recr_top .view6 .li6 a {color:#272727; background-color:#FFf; border-color:#727272;} 
+.tab6 {overflow:hidden;}
+	.tab6:after {content:""; clear:both; display:block;}
+	.tab6 li {float:left;}
+	.tab6 li a {display:block; border:solid 1px #656565; border-left-width:0; background-color:#FFF; height:51px; line-height:48px; border-radius:10px; text-align:center;}
+	.tab6 li:first-child a {border-left-width:1px;}
+	.tab6 li.selected a {background-color:#cdcdcd;}
+	.tab6.at3 li {width:33.3%;}
+	.tab6.at3 li:first-child {width:33.4%;}
+	.recr_trend_top .view1 .li1 a,
+	.recr_trend_top .view2 .li2 a,
+	.recr_trend_top .view3 .li3 a {background-color:#cdcdcd;}
+.tab7 {overflow:hidden;}
+	.tab7:after {content:""; clear:both; display:block;}
+	.tab7 ul {position:relative; left:50%; float:left;}
+	.tab7 li {position:relative; left:-50%; float:left;}
+	.tab7 li a {position:relative; display:block; text-align:center; padding:0 30px; height:33px; line-height:30px; background-color:#FFF; border:solid 1px #dcdcdc; margin-left:-1px; font-size:13px; color:#666; text-decoration:none;}
+	.tab7 li.selected a {color:#f56767; border-color:#ec3737; z-index:1;}
+	.tab7 li:first-child a {margin-left:0;}
+.tab8 {overflow:hidden;}
+	.tab8:after {content:""; clear:both; display:block;}
+	.tab8 ul {position:relative; left:50%; float:left;}
+	.tab8 li {position:relative; left:-50%; float:left;}
+	.tab8 li a {position:relative; display:block; text-align:center; height:43px; line-height:40px; background-color:#FFF; margin-left:-1px; border:solid 1px #f45757; font-size:13px; color:#f45757; font-weight:bold; text-decoration:none;}
+	.tab8 li.selected a {color:#FFF; background-color:#f45757; z-index:1;}
+	.tab8 li:first-child a {margin-left:0;}
+	.tab8.at2 li {width:325px;}
+.tab9 {overflow:hidden; margin-right:-4px;}
+	.tab9:after {content:""; clear:both; display:block;}
+	.tab9 li {position:relative; float:left;}
+	.tab9 a {display:block;  text-align:center; border:solid 2px #e3e3e3; box-sizing:border-box; margin-right:4px;}
+	.tab9 a > span {position:absolute; right:0; bottom:40px; left:0;}
+	.tab9 li.selected a,
+	.tab9 li a:hover {border:solid 4px #f45757;}
+	.tab9.at4 li {width:25%;}
+	.tab9.ht1 a {height:220px;}
+.tab_1 /* main - 이미지 텍스트만 있는 것 */ {overflow:hidden; margin-bottom:19px;} /* 이용약관 */
+	.tab_1:after {content:""; clear:both; display:block;}
+	.tab_1 li {float:left; margin-right:20px; font-size:0; line-height:0;}
+	.tab_1.type2 {margin:0 0 15px 13px;}
+.tab_5 {overflow:hidden; margin-bottom:20px; margin-top:5px;} /* mypage */
+	.tab_5:after {content:""; clear:both; display:block;}
+	.tab_5 li {float:left;}
+	.tab_5 li a {display:block; text-align:center; height:28px; line-height:28px; border:solid 1px #e0e0e0; border-left:0; font-weight:bold;}
+	.tab_5 li a span {padding:0 9px 0 4px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 7px;}
+	.tab_5 li a:hover {text-decoration:none;}
+	.tab_5 li:first-child a {border-left:solid 1px #e0e0e0;}
+	.tab_5 li img {vertical-align:top; margin-top:7px; #vertical-align:middle; #margin-top:0;}
+	.tab_5.at6 li {width:133px;}
+	.tab_5.at6 li:first-child {width:135px;}
+.tab_6 /* 회색테두리+흰바탕+시스템폰트 */ {overflow:hidden; border-bottom:solid 1px #e0e0e0; /*margin-bottom:10px;*/} /* mypage */
+	.tab_6:after {content:""; clear:both; display:block;}
+	.tab_6 li {float:left;}
+	.tab_6 li a {display:block; text-align:center; height:28px; line-height:28px; border:solid 1px #e0e0e0; border-left:0; border-bottom:0; background:#FFF; padding:0 20px;}
+	.tab_6 li:first-child a {border-left:solid 1px #e0e0e0;}
+	.tab_6 li a:hover {text-decoration:none;}
+	.tab_6 li.selected a {font-weight:bold;}
+	.tab_6.type2 {height:38px; overflow:visible;}
+	.tab_6.type2 li a {height:37px; line-height:37px; padding:0 46px;}
+	.tab_6.type2 li.selected a {border-bottom:solid 1px #FFF;}
+.tab_14 {overflow:hidden;}
+	.tab_14:after {content:""; clear:both; display:block;}
+	.tab_14 li {float:left; margin:4px 4px 0 0;}
+	.tab_14 li a {display:block; text-align:center; height:32px; line-height:32px; border:solid 1px #cfcfcf; background:#ededed; padding:0 3px; font-size:12px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-decoration:none;}
+	.tab_14 li.selected a {border-color:#666; background:#949494; color:#FFF;}
+	.tab_14.type2 li p {border:solid 1px #bababa; height:52px; line-height:52px; text-align:center; font-weight:bold;}
+	.tab_14.wd1 li {width:180px;}
+	.tab_14.wd2 li {width:456px;}
+	.tab_14.wd3 li {width:302px;}
+.tab_15 {overflow:hidden;} /* mypage */
+	.tab_15:after {content:""; clear:both; display:block;}
+	.tab_15 li {float:left;}
+	.tab_15 li a {display:block; text-align:center; background-color:#cfcfcf; border:solid 1px #272727; border-left-width:0; font-size:14px; color:#333; font-weight:bold; height:44px; line-height:44px; text-decoration:none;}
+	.tab_15 li:first-child a {border-left-width:1px;}
+	.tab_15 li.selected a {background-color:#FFF; border-bottom-color:#FFF;}
+	.tab_15.at2 li {width:50%;}
+	.tab_15.at3 li {width:33.3%;}
+	.tab_15.at4 li {width:25%;}
+	.tab_15.at5 li {width:20%;}
+.tab_16 {overflow:hidden;} /* mypage > 관심내역 */
+	.tab_16:after {content:""; clear:both; display:block;}
+	.tab_16 li {float:left;}
+	.tab_16 li a {display:block; text-align:center; background-color:#fff; border:solid 1px #dcdcdc; border-left-width:0; font-size:13px; color:#666; height:43px; line-height:43px; text-decoration:none;}
+	.tab_16 li:first-child a {border-left-width:1px;}
+	.tab_16 li.selected a:before {border-right-width:0}
+	.tab_16 li.selected a {border-color:#ec3737; border-width:2px;height:41px; line-height:41px;color:#f56767;margin-left:-1px}
+	.tab_16 li.selected:first-child a {margin-left:0}
+	.tab_16.at2 li {width:50%;}
+	.tab_16.at3 li {width:33.3%;}
+	.tab_16.at4 li {width:25%;}
+	.tab_16.at5 li {width:20%;}
+
+/* TABLE */
+.table1 {width:100%; border:0; border-top:solid 2px #000; border-collapse:collapse; table-layout:fixed;}
+	.table1 th,
+	.table1 td {font-size:13px; padding:11px 0 12px 0; border:solid 1px #d4d4d4; border-right-width:0; text-align:center; font-weight:normal;}
+	.table1 th {background-color:#f5f5f5;}
+	.table1 tbody th:first-child,
+	.table1 tbody td:first-child {border-left-width:0;}
+	.table1 thead tr:first-child th:first-child {border-left-width:0;}
+	.table1 a {color:#f45757; text-decoration:underline;}
+	.table1 tr.sub th {padding:5px 0 6px 0;}
+	.table1 .al1 {text-align:left; padding-left:10px;}
+	.table1 .al2 {text-align:right; padding-right:10px;}
+	.table1 .al3 {text-align:left; padding:6px 0 6px 20px;}
+	.table1 .al4 {text-align:left; padding:0;}
+	.table1 .al5 {text-align:right; padding-right:50px;}
+	.table1 .strong1 td {font-weight:bold;}
+	.table1 .list_decimal li {margin-top:5px; font-size:13px;}
+	.table1 .list_decimal li:first-child {margin-top:0;}
+	.table1.thBd0 th {border-left-width:0; border-right-width:0;}
+	.table1.tdBd0 td {border-left-width:0; border-right-width:0;}
+	.table1.tdLeft td {text-align:left; padding-left:20px;}
+.table2 {width:100%; border:solid 2px #949494; border-right-width:0; border-left-width:0; border-collapse:collapse; table-layout:fixed;}
+	.table2 td {padding:14px 22px 19px 22px; border:solid 1px #e0e0e0; background-color:#FFF;}
+	.table2 .nodata {text-align:center; padding:20px;}
+	.table2 .nodata.line {border-top:solid 1px #d9d9d9 !important;}
+	.table2.type2 {border-color:#272727;} 
+	.table2.type2 td {border-right-width:0; border-left-width:0; padding-left:0;}
+	.table2.type3 {border:0;}
+	.table2.type3 td {border-right-width:0; border-left-width:0;}
+	.table2.type3 tr:first-child td {border-top-width:0;}
+.table4 {width:100%; border:0; border-collapse:collapse;}
+	.table4 thead th {padding:0; border:0; text-align:center; font-size:16px; font-weight:bold; letter-spacing:-0.04em;}
+	.table4 tbody td {padding:0; border:0; text-align:center; font-size:24px; font-weight:bold; letter-spacing:-1px;}
+	.table4 .nodata2 {font-size:14px; font-weight:normal; padding:6px 0}
+	.table4 .ico_more2 {background-position-y:4px;}
+.table5 {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.table5 td {padding:0; border:0; border-bottom:solid 1px #868686; text-align:center;}
+	.table5 .rank {font-size:14px; font-weight:bold;}
+	.table5 .comp {text-align:left; padding-top:2px; padding-bottom:7px;}
+	.table5 .me {background-color:#feeded;}
+	.table5 .compare {background-color:#e5f7fa;}
+	.table5 .btn {padding:0; text-align:right; padding-right:5px;}
+	.table5 .dim .rank {background:url(https://imgorg.jinhak.com/job/corp/bl10.gif) no-repeat center center; height:44px;}
+.table6 {width:100%; border:0; border-top:solid 2px #676767; border-bottom:solid 1px #c9cace; border-collapse:collapse; table-layout:fixed;}
+	.table6 th,
+	.table6 td {padding:7px 0 8px 0; border:solid 1px #e8e8e8; border-right-width:0; border-bottom-width:0; text-align:center; font-weight:normal;}
+	.table6 thead th {background-color:#f2f6fd; border-color:#c9cace;}
+	.table6 tbody th:first-child,
+	.table6 tbody td:first-child {border-left-width:0;}
+	.table6 thead tr:first-child th:first-child {border-left-width:0;}
+	.table6 tr.sub th {padding:6px 0 7px 0;}
+	.table6 .al1 {text-align:left; padding-left:10px; padding-right:5px;}
+	.table6 .al3 {text-align:right; padding-right:20px; padding-left:5px;}
+	.table6 tr.bg1 td,
+	.table6 .bg1 {background-color:#dfe2fb;}
+	.table6.bd {border:solid 2px #676767;}
+.table7 {width:100%; border:0; table-layout:fixed;}
+	.table7 td {padding:3px 0 4px 0; border:0; font-size:13px; color:#272727;}
+	.table7 .al1 {text-align:right;}
+	.table7 .al1 span {font-size:11px; color:#f45757; padding-right:10px;}
+.table8 {width:100%; border:solid 2px #272727; border-right-width:0; border-left-width:0; border-collapse:collapse; table-layout:fixed;}
+	.table8 td {padding:20px 0; border:solid 1px #d9d9d9; border-right-width:0; border-left-width:0; text-align:center;}
+	.table8.slim td {padding:10px 0;font-size:13px}
+	.table8 .noti td {background:#f6f6f6;border:solid 1px #727272; border-right-width:0; border-left-width:0;}
+	.table8 .ctg {color:#f45757;font-weight:bold}
+	.table8 .pic {width:120px; border:solid 1px #d8d8d8; margin:0 auto;}
+	.table8 .pic img {height:80px;}
+	.table8 .al1 {text-align:left; padding-left:20px;}
+	.table8 .t1 {font-size:13px; font-weight:bold; margin:5px auto 0 auto; width:130px;}
+	.table8 .t2 {font-size:16px; letter-spacing:-1px;}
+	.table8 .t3 {color:#999; margin-top:5px;}
+	.table8 .t4 {font-size:17px; color:#666;}
+	.table8 .start {font-size:12px; color:#3580d4;}
+	.table8 .end {font-size:12px;color:#f45757;}
+	.table8 .btn .cbtn3 {margin-left:-5px;}
+	.table8.noline {border:0;}
+	.table8.noline .btn .cbtn3 {padding:0 5px;}
+	.table8 .al1 ul {margin:8px 0;/*display:none;*/}
+	.table8 .al1 ul li {font-size:13px;line-height:18px}
+	.table8 .xbtn {vertical-align: top;}
+.table9 {width:100%; border:0; border-bottom:solid 2px #272727; border-collapse:collapse;}
+	.table9 td {border:0; background:url(https://imgorg.jinhak.com/job/corp/line_dot01.gif) repeat-x left top;}
+	.table9.atTheme td:first-child {padding:19px 20px 25px 18px;}
+	.table9 td.t_talk {padding:25px 10px 25px 0;}
+.table10 {width:100%; border:0; border-collapse:collapse; border:solid 2px #000; border-bottom-width:0;}
+	.table10 > thead > tr > th {position:relative; border:solid 1px #e6e6e6; border-bottom-width:0; padding:5px 10px 3px 10px; font-weight:bold; text-align:left;}
+	.table10 > tbody > tr > td {border:solid 1px #e6e6e6; border-top-width:0; border-bottom-width:0; padding:7px 11px 18px 0; font-size:32px; color:#f45757; /*font-family:'SpoqaHanSans'; font-weight:300;*/ letter-spacing:-1px; text-align:right;}
+	.table10 > thead > tr > th:first-child,
+	.table10 > tbody > tr > td:first-child {border-left-width:2px;}
+	.table10 > thead > tr > th:last-child,
+	.table10 > tbody > tr > td:last-child {border-right-width:2px;}
+	.table10 th .sm {position:absolute; right:10px; margin-top:0px; color:#666; font-weight:normal;}
+.table11 {width:100%; border:0; border-collapse:collapse;}
+	.table11 thead th {border:0; border-top:solid 2px #f45757; border-left:solid 1px #FFF; padding:6px 0 9px 0; color:#f45757; font-weight:bold; text-align:center; background-color:#f5f5f5;}
+	.table11 tbody td {border:0; border:solid 1px #cacaca; border-right-width:0; border-left:solid 1px #FFF; padding:4px 0 7px 0; font-size:11px; text-align:center;}
+	.table11 tbody td.al1 {text-align:left; padding-left:5px; padding-right:5px;}
+.table12 {width:100%; border:0; border-collapse:collapse;}
+	.table12 thead th {padding:6px 0 8px 0; border:0; border-bottom:solid 2px #000; text-align:center; font-weight:normal; background-color:#ebebeb; font-size:13px;}
+	.table12 tbody td {padding:9px 0 12px 0; border:0; border-bottom:solid 1px #d9d9d9; text-align:center; background-color:#fbfbfb;}
+	.table12 tbody tr:nth-child(2n) td {background-color:#FFF;}
+	.table12 .al1 {text-align:left; padding-left:20px; padding-right:10px;}
+	.table12 .t1 {display:inline-block; width:54px; height:54px; line-height:51px; border:solid 1px #f45757; border-radius:50%; text-align:center; color:#f45757;}
+	.table12 .t2 {line-height:3;}
+	.table12 .list_dot li {font-size:12px; margin-top:3px;}
+.table13 {width:100%; border:1px solid #e0e0e0; border-collapse:collapse;table-layout:fixed;}
+	.table13 th {background:#f9f9f9;border:1px solid #e0e0e0;height:38px;color:#333;font-size:12px;font-weight:normal;line-height:15px;text-align:center}
+	.table13 td {border:1px solid #e0e0e0;padding:12px 0;color:#333;font-size:12px;text-align:center}
+	.table13 td.al {text-align:left;padding-left:15px;padding-right:10px}
+	.table13 td .re {display:inline-block;background:#e76a65;color:#fff;vertical-align:top;padding:0 6px 2px 6px;font-size:11px;margin:0 8px 0 0;letter-spacing:-1px} /* 2019-04-22 추가 */
+	.table13 .img {padding:0 !important;}
+	.table13 .img img {margin:2px 0;}
+	.table13 .select7 {border:1px solid #ccc;height:31px;line-height:31px;font-size:13px;padding-left:7px}
+	.mypage .table13 td p {font-size:12px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.3em; max-height:2.6em;}
+	.table13 td p.ellipsis {display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;} /* 2019-05-28 추가 */
+.tbl_1 /* admin과 공동사용, th top만 흰색 */ {width:100%; border:0; border-bottom:solid 1px #DDD; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_1 thead th {color:#777; font-weight:normal; padding:9px 0; text-align:center; line-height:16px; letter-spacing:-1px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #F2F2F2; border:solid 1px #e0e0e0; border-left:0; border-right:0;}
+	.tbl_1 thead th:first-child {border-left:solid 1px #e0e0e0;}
+	.tbl_1 thead th.last {border-right:solid 1px #e0e0e0;}
+	.tbl_1 tbody th,
+	.tbl_1 tbody td {color:#333; text-align:center; padding:7px 0; border:0; border-top:solid 1px #ebebeb; line-height:16px; letter-spacing:-1px; background:#FFF;}
+	.tbl_1 tbody tr:first-child th,
+	.tbl_1 tbody tr:first-child td {border-top:0;}
+	.tbl_1 tbody td a {color:#333;}
+	.tbl_1 .al_l {text-align:left; padding-left:5px;}
+	.tbl_1 .al_r {text-align:right; padding-right:20px; padding-top:6px;}
+	.tbl_1 .img {padding:0 !important;}
+	.tbl_1 .img img {margin:2px 0;}
+	.tbl_1.nohead {border-top:solid 1px #DDD;}
+	.tbl_1 .detail {font-size:11px; padding-left:3px; padding-right:9px; background:url(http://image.jinhak.com/job/site/arr09_down.gif) no-repeat right 6px; color:#777; font-weight:normal !important;}
+	.tbl_1 td.view_td {padding:0 !important; border-top:0 !important;}
+	.tbl_1 .view_div {position:relative; border-top:solid 1px #ebebeb; text-align:left; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #f9f9f9; padding:20px 20px 15px 20px;}
+	.tbl_1 .view_div .tit {font-weight:bold; color:#333; background:url(http://image.jinhak.com/job/site/bl_dot01.gif) no-repeat left 7px; padding-left:9px; margin-top:16px; margin-bottom:7px;}
+	.tbl_1 .view_div .txt {padding-right:50px;}
+	.tbl_1 .view_div .close {position:absolute; right:20px; bottom:13px; cursor:pointer;}
+	.tbl_1 .hid .subj {font-weight:normal;}
+	.tbl_1 .hid .detail {background-image:url(http://image.jinhak.com/job/site/arr09_down.gif);}
+	.tbl_1 .sho .subj {font-weight:bold;}
+	.tbl_1 .sho .detail {background-image:url(http://image.jinhak.com/job/site/arr09_up.gif);}
+	.tbl_1.type2 /* popup, 상단회색 th */ {border:solid 1px #e0e0e0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_1.type2 tbody th {border:solid 1px #e0e0e0; padding:7px 6px; font-weight:bold; background:#f7f7f7; text-align:left;}
+	.tbl_1.type2 tbody td {border:solid 1px #e0e0e0; padding:7px 6px; text-align:left;}
+	.tbl_1.type2 .list_ck li {padding-top:3px; padding-bottom:2px;}
+	.tbl_1.type3 thead th {padding:7px 0; background:#fbfbfb; border-color:#ddd; font-size:11px;}
+	.tbl_1.type3 thead th:first-child {border-left:0;}
+	.tbl_1.type4 tbody td {font-size:13px; padding-top:15px; padding-bottom:15px;}
+	.tbl_1.type4 .view_div {background:none;}
+	.tbl_1.type4 td.view_td {line-height:2;}
+	.tbl_1.type5 thead th {border:solid 1px #e0e0e0;}
+	.tbl_1.type5 tbody td {border:solid 1px #e0e0e0; padding:15px 6px; font-size:13px;}
+	.tbl_1 .nowrap {display:inline-block; max-width:90%; vertical-align:top;}
+.tbl_2 /* popup, 회색 th */ {width:100%; border:0; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_2 th,
+	.tbl_2 td {padding:7px 3px; border:solid 1px #e0e0e0; text-align:left; background:#FFF; line-height:16px;}
+	.tbl_2 th {padding-left:6px; font-weight:normal;}
+	.tbl_2 .al_c {text-align:center; padding-left:0; padding-right:0;}
+	.tbl_2 .td2 {text-align:center; padding:15px 0;}
+	.tbl_2 tr.bg td {background:#ebebeb;}
+	.tbl_2 thead th {text-align:center; background:#eff0f4;}
+	.tbl_2.type2 th {background:#F3F3F3; padding-left:20px;}
+	.tbl_2.type2 td {padding-left:20px;}
+	.tbl_2.type3 thead th {background:#f7f7f7; border:solid 1px #e7e7e7; padding:11px 0; text-align:center;}
+	.tbl_2.type3 tbody td {border:solid 1px #e7e7e7; text-align:center; padding-left:0; padding-right:0;}
+	.tbl_2.type4 tbody td {border:solid 1px #DDD; text-align:center; padding:12px 0;}
+	.tbl_2.type4 tbody td a {color:#999;}
+	.tbl_2.type5 thead th {background:#f8f8f8; color:#777;}
+	.tbl_2.type5 th,
+	.tbl_2.type5 td {padding:7px 15px 9px 15px;}
+	.tbl_2 a.selected {font-weight:bold; color:#438ee9 !important;}
+	.tbl_2.vtop td {vertical-align:top;}
+	.tbl_2 .t1 {position:absolute; right:15px; }
+.tbl_3 /* 이력서, 상단입체회색 th */ {width:100%; border:solid 1px #c8c8c8; border-bottom:solid 1px #e0e0e0; border-top:0; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_3 thead th {text-align:left; padding:5px 3px 5px 17px; font-weight:bold; border:0; border-top:solid 1px #e0e0e0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #ebebeb;}
+	.tbl_3 thead th select {vertical-align:baseline;}
+	.tbl_3 thead th .exp {font-weight:normal; color:#777;}
+	.tbl_3 thead .th2 {text-align:right; font-size:11px; color:#747d94; font-weight:normal; padding-right:18px; padding-left:4px;}
+	.tbl_3 tbody th,
+	.tbl_3 tbody td {text-align:left; padding:5px 3px 5px 17px; font-weight:normal; border:0; border-top:solid 1px #e0e0e0; vertical-align:top; line-height:20px; background-color:#FFF;}
+	.tbl_3 tbody th {color:#777;}
+	.tbl_3 tbody td {padding-left:4px;}
+	.tbl_3 tbody .th2 {padding-left:0; padding-right:0; color:#555; text-align:center;}
+	.tbl_3 tbody .th3 {color:#555;}
+	.tbl_3 tbody .th4 {border-right:solid 1px #e0e0e0;}
+	.tbl_3 tbody .td2 {padding:4px 17px;}
+	.tbl_3 tbody .al_r {text-align:right; padding-right:25px;}
+	.tbl_3 tbody .al_c {text-align:center; padding-right:0; padding-left:0;}
+	.tbl_3 tbody .bar {padding:0 3px;}
+	.tbl_3 tbody .file {white-space:nowrap; display:inline-block; padding:1px 5px 1px 0;}
+	.tbl_3 tbody tr.bg1 td {background-color:#f8f8f8;}
+	.tbl_3 tr.showhide th,
+	.tbl_3 tr.showhide td {padding:0; border-top:none;}
+	.tbl_3 tr.showhide .more {padding:9px 17px 7px 78px; border-top:solid 1px #e0e0e0; line-height:20px;}
+	.tbl_3.line thead th {border:solid 1px #e0e0e0; text-align:center; font-weight:normal; padding-left:0; padding-right:0;}
+	.tbl_3.line tbody td {border:solid 1px #e0e0e0;}
+	.tbl_3 .input {height:20px;}
+.tbl_5 /* 두꺼운 회색border, th에 dot */ {width:100%; border:0; border:solid 3px #e0e0e0; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_5 th,
+	.tbl_5 td {text-align:left; padding:7px 3px 7px 30px; font-weight:normal; border:0; border-top:solid 1px #e0e0e0; vertical-align:top; line-height:20px;}
+	.tbl_5 th {background:url(http://image.jinhak.com/job/site/bl_dot02.gif) no-repeat 17px 16px;}
+	.tbl_5 td {padding-left:4px; color:#333;}
+.tbl_6 /* 입체회색 th */ {width:100%; border:solid 1px #ebebeb; border-spacing:1px; table-layout:fixed;} /* 가이드 */
+	.tbl_6 th,
+	.tbl_6 td {padding:11px 4px 11px 19px; text-align:left; border:0; border-top:solid 1px #ebebeb;}
+	.tbl_6 th {background:#f4f4f4;}
+	.tbl_6 tr:first-child th,
+	.tbl_6 tr:first-child td {border-top-width:0;}
+	.tbl_6 tr.th2 th {background:#EEE;}
+	.tbl_6 tr.th3 th {background:#FFF;}
+	.tbl_6 td.al_c {text-align:center; padding-right:0; padding-left:0;}
+	.tbl_6 td.al_l {text-align:left !important; padding-right:5px !important; padding-left:10px !important;}
+	.tbl_6 td.img {padding-top:0; padding-bottom:0;}
+	.tbl_6 td.img2 {padding-top:5px; padding-bottom:5px;}
+	.tbl_6 td.img3 {padding-top:7px; padding-bottom:7px;}
+	.tbl_6 td.bd_l {border-left-width:1px !important;}
+	.tbl_6.type2 {border:solid 1px #dcdcdc;}
+	.tbl_6.type2 th {background:#eeefef;}
+	.tbl_6.type2 th span.exp {font-weight:normal; padding-left:10px;}
+	.tbl_6.type2 th,
+	.tbl_6.type2 td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type2 tr:first-child td {border-top:solid 1px #dcdcdc;}
+	.tbl_6.type3 thead th {font-weight:normal; text-align:center; border-left:solid 1px #ebebeb;}
+	.tbl_6.type3 thead th:first-child {border-left:none;}
+	.tbl_6.type3 tbody th {font-weight:normal;}
+	.tbl_6.type3 tbody td {border-left:solid 1px #ebebeb;}
+	.tbl_6.type3 tbody tr:first-child th,
+	.tbl_6.type3 tbody tr:first-child td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type4 thead th {font-weight:normal; text-align:center; border-left:solid 1px #ebebeb; padding-right:0; padding-left:0;}
+	.tbl_6.type4 thead th:first-child {border-left:none;}
+	.tbl_6.type4 tbody th {font-weight:normal; background:none; text-align:center;}
+	.tbl_6.type4 tbody td {border-left:solid 1px #ebebeb;}
+	.tbl_6.type4 tbody tr:first-child th,
+	.tbl_6.type4 tbody tr:first-child td {border-top:solid 1px #ebebeb;}
+	.tbl_6.type4 tbody tr.q th {text-align:left;}
+	.tbl_6.type5 {border-color:#c8c8c8;}
+	.tbl_6.type5 thead th {font-weight:normal; text-align:center; border-left:solid 1px #C8C8C8; padding-right:0; padding-left:0; background-color:#E2E2E2; font-size:13px;}
+	.tbl_6.type5 thead th:first-child {border-left:none;}
+	.tbl_6.type5 tbody th,
+	.tbl_6.type5 tbody td {border-left:solid 1px #C8C8C8; border-top:solid 1px #C8C8C8; font-size:13px; vertical-align:top;}
+	.tbl_6.type5 tbody th:first-child,
+	.tbl_6.type5 tbody td:first-child {border-left-width:0;}
+	.tbl_6.type5 td.img {vertical-align:middle;}
+	.ncs .tbl_6.type4,
+	.ncs .tbl_6.type4 tbody th,
+	.ncs .tbl_6.type4 tbody td,
+	.ncs .tbl_6.type4 tbody tr:first-child th,
+	.ncs .tbl_6.type4 tbody tr:first-child td {border-color:#cdcdcd;}
+	.ncs .tbl_6.type4 thead th {background-color:#e4e4e4;}
+	.tbl_6.nothead tbody tr:first-child th,
+	.tbl_6.nothead tbody tr:first-child td {border-top-width:0;}
+	.tbl_6 td .ico1 {float:right; display:inline-block; width:20px; height:20px; font-size:0; line-height:0; background:url(http://image.jinhak.com/job/site/arr27_down.gif) no-repeat center top;}
+	.tbl_6 td .ico1.selected {background-image:url(http://image.jinhak.com/job/site/arr27_up.gif);}
+	.tbl_6 td.view_td {padding:0; border:0 !important;}
+	.tbl_6 .view_div {padding:10px; border-top:solid 1px #c8c8c8;}
+.tbl_7 /* 양옆 뚫린, 왼쪽 회색 th, 회원정보변경 */ {width:100%; border:solid 1px #c7c7c7; border-right:0; border-left:0; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_7 th,
+	.tbl_7 td {padding:6px 20px; min-height:22px; border:0; border-top:solid 1px #e6e6e6; line-height:16px;}
+	.tbl_7 th {font-weight:normal; background:#f8f8f8; text-align:right;}
+	.tbl_7 tr:first-child th,
+	.tbl_7 tr:first-child td {border-top:none;}
+	.tbl_7 td img {margin-top:-3px;}
+	.tbl_7 th strong.pointc_5 {vertical-align:middle;}
+	.tbl_7.type2 th {text-align:left; font-size:11px; vertical-align:top;}
+.tbl_9 /* table 내 */ {width:100%; border:0; border-collapse:collapse; table-layout:fixed;}
+	.tbl_9 thead th {text-align:center; font-weight:normal; padding:9px 0 5px 0; background:#ebebeb; color:#777; border:0; border-left:solid 1px #FFF;}
+	.tbl_9 thead th:first-child {border-left:0;}
+	.tbl_9 tbody td {text-align:center; padding:9px 0 5px 0; background:#FFF; color:#555; border:solid 1px #ebebeb;}
+	.tbl_9 .al_l {text-align:left; padding-left:9px;}
+.tbl_result {width:100%; border:0; border-top:solid 1px #DDD; border-bottom:solid 1px #DDD; border-collapse:collapse; table-layout:fixed;} /* mypage */
+	.tbl_result td {padding:14px 0; border:0; border-top:solid 1px #ebebeb;}
+	.tbl_result tr:first-child td {border-top:none;}
+	.tbl_result thead th {text-align:center; padding:7px 0; font-weight:normal; border:solid 1px #e0e0e0; border-right:0; border-left:0; line-height:20px; background:url(http://image.jinhak.com/job/site/line_white.gif) repeat-x left top #ebebeb;}
+	.tbl_result thead th:first-child {border-left:solid 1px #e0e0e0;}
+	.tbl_result thead th.last {border-right:solid 1px #e0e0e0;}
+	.tbl_result tbody td {padding:12px 0 10px 0;}
+	.tbl_result tbody td.logo {padding:3px 0 0 0; line-height:0;}
+	.tbl_result tbody td .subj {font-weight:bold; line-height:14px; margin-bottom:4px;}
+	.tbl_result tbody td.logo img {width:44px; height:44px; border:solid 1px #e8e8e8;}
+	.tbl_result tbody td.btn {padding:0; line-height:0; text-align:center;}
+	.tbl_result tbody td.odd .company_info.type3 {border-right:solid 1px #dbdbdb;}
+	.tbl_result tbody td img {margin-bottom:3px;}
+	.tbl_result.td_vtop tbody td {vertical-align:top;}
+	.tbl_result tbody td.al_c {text-align:center;}
+.tbl_resume {width:100%; border:1px solid #ccc; background:#fcfcfc; border-collapse:collapse;table-layout:fixed;} 
+	.tbl_resume td {text-align:center;border-bottom:1px solid #ccc;vertical-align:middle;color:#333;font-size:14px;min-height:31px;line-height:17px}
+	.tbl_resume td.al {text-align:left;padding-left:20px}
+	.tbl_resume td.btn {text-align:right;padding:14px}
+	.tbl_resume tr:last-child td {border-bottom:none}
+	.tbl_resume td .ctg {display:block;font-size:13px;margin-top:5px}
+	.tbl_resume.wd {border-top:1px solid #dedede}
+	.tbl_resume.wd td {min-height:61px}
+	.mypage .tbl_resume td.al {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+/* TEXT */
+.page {border-bottom:solid 1px #c7c7c7; font-size:13px; text-align:center;}
+	.page a {position:relative; display:inline-block; height:40px; line-height:38px; padding:0 13px; text-decoration:none; margin:0 2px;}
+	.page a:hover:after,
+	.page a.selected:after {content:""; display:block; position:absolute; left:0; right:0; bottom:-1px; height:4px; background-color:#3c3c3c; border-radius:2px;}
+	.page .prev {padding-left:15px; background:url(http://image.jinhak.com/job/corp/arr4_prev.png) no-repeat left 15px; margin-right:17px;}
+	.page .next {padding-right:15px; background:url(http://image.jinhak.com/job/corp/arr4_next.png) no-repeat right 15px; margin-left:17px;}
+	.page .prev:hover:after,
+	.page .next:hover:after {display:none;}
+.page2 {/*border-top:solid 2px #272727;*/ padding-top:10px; font-size:13px; text-align:right;}
+	.page2 a {display:inline-block; font-size:0; line-height:0; width:35px; height:35px; border:solid 1px #cecece; vertical-align:middle; background-repeat:no-repeat; background-position:center 12px;}
+	.page2 .prev {background-image:url(https://imgorg.jinhak.com/job/corp/arr4_prev.gif); margin-left:3px;}
+	.page2 .next {background-image:url(https://imgorg.jinhak.com/job/corp/arr4_next.gif); margin-left:-6px;}
+.txt1 {font-size:11px; text-align:right; margin-bottom:5px;}
+	.txt1.ps {position:absolute; right:0; margin-top:-16px;}
+	.txt1.ps2 {position:absolute; right:0; margin-top:-20px; color:#AAA;}
+	.txt1.ps3 {position:absolute; right:0; margin-top:-45px;} /* 기업비교상세 > SNS아이콘 */
+	.txt1.ps4 {position:absolute; right:0; margin-top:-32px;}
+	.txt1.c2 {color:#AAA;}
+	.txt1.pageTop {margin-top:-56px;}
+.txt2 {font-size:28px; color:#eb3737; letter-spacing:-3px; text-align:center;}
+	.txt2.type2 {font-family:SpoqaHanSans; font-weight:100; letter-spacing:-0.06em;}
+.txt3 {font-size:20px; letter-spacing:-1px; margin:23px 0 18px 0;}
+.txt4 {font-size:17px; letter-spacing:-1px; padding:12px 0 23px 9px; border-top:solid 2px #272727;}
+.txt5 {position:absolute; top:-10px; right:0;}
+.txt5_2 {font-size:15px; color:#666; line-height:1.5; letter-spacing:-0.04em;}
+.txt6 {position:absolute; top:2px; right:0;}
+.txt7 {font-size:23px; color:#333; letter-spacing:-1px;}
+.txt8 {font-size:14px; color:#333; line-height:1.6;}
+.txt9 {font-size:13px; color:#333; line-height:1.6;}
+.txt10 {font-size:22px; letter-spacing:-1px;}
+.txt11 {font-size:16px; letter-spacing:-0.06em; line-height:1.4; margin-top: 20px;}
+.tit_slash {border:solid 1px #272727; border-top-width:0; background:url(https://imgorg.jinhak.com/job/corp/graph7_01.gif); height:76px; line-height:76px; font-size:29px; letter-spacing:-1px; text-align:center;}
+.t_keyword {text-align:center; font-size:17px; letter-spacing:-1px; margin:-4px;}
+	.t_keyword a {white-space:nowrap; padding:0 20px; text-decoration:none;}
+	.t_keyword a.selected {color:#f45757;}
+	.t_keyword.type2 a {display:inline-block; height:33px; line-height:30px; border:solid 1px #AAA; background-color:#FFF; border-radius:18px; font-size:16px; color:#929292; padding:0 25px; margin:6px 2px 2px 2px;}
+	.t_keyword.type2 a.selected {color:#f56767; border-color:#f66f6f;}
+.t_dot {background:url(https://imgorg.jinhak.com/job/site/bl_dot01.gif) no-repeat left 7px; padding-left:9px;}
+	.t_dot.img {background-position:left 9px;}
+.t_keyword2 {text-align:center; line-height:1.75em;}
+	.t_keyword2 strong {color:#f45757; padding-right:15px;}
+	.t_keyword2 a {display:inline-block; padding:0 6px; color:#666; white-space:nowrap;}
+.t_down {position:absolute; right:15px; top:15px; text-decoration:underline;}
+.nodata_re {font-size:37px; font-family:"SpoqaHanSans"; font-weight:100; text-align:center; padding:200px 0 300px 0; background:url(http://image.jinhak.com/job/corp/ico_nodata.png) no-repeat center 270px;}
+.t_total {color:#333; margin-bottom:7px;}
+.t_leave {text-align:center; font-size:14px; line-height:33px; padding:66px 0 34px 0;}
+.t_tbl_r {position:absolute; right:0; font-size:11px; color:#AAA; margin-top:-18px;}
+	.t_tbl_r.type2 {position:relative; text-align:right; margin-top:-15px;}
+	.t_tbl_r.type3 {position:relative; text-align:right; margin-top:2px; margin-bottom:5px;}
+	.t_tbl_r.type4 {position:absolute; right:0; margin-top:-37px;}
+	.t_tbl_r.type5 {position:relative; text-align:right; margin-top:-22px;}
+.t_ju2 {margin-top:10px; padding-left:20px; color:#777;}
+.more_h2 {position:absolute; right:0; margin-top:-31px;}
+	.more_h2.type2 {margin-top:-21px;}
+	.more_h2.type2 a {font-size:11px; padding-right:9px; background:url(http://image.jinhak.com/job/site/arr06_down.gif) no-repeat right 6px;}
+	.more_h2.type2.selected a {background:url(http://image.jinhak.com/job/site/arr06_up.gif) no-repeat right 6px;}
+
+/* TITLE */
+#Contents>h2,
+#contents>h2 {margin-bottom:15px; overflow:hidden;} /* 이미지 타이틀 ex:NCS결제 */
+h2.type2 {font-size:17px !important; font-weight:normal; letter-spacing:-1px; margin:25px 0 15px 0 /*!important*/; padding:0; border:0 !important; height:auto !important; line-height:normal !important;} /* ex:기업비교 */
+	h2.type2.line {border-bottom:solid 2px #272727 !important; padding-bottom:10px;}
+h2.type3 {font-size:19px !important; font-weight:bold; letter-spacing:-1px; margin:30px 0 20px 0; padding:0;}
+.divide .right h2 {font-size:18px; font-weight:normal; letter-spacing:-1px; height:50px; line-height:48px; padding-left:10px; border-bottom:solid 1px #272727; border-top:solid 2px #272727; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;} /* 우측 H2 */
+#contents.dep3 h2 {font-weight:bold; font-size:20px; line-height:1.2em; color:#333; letter-spacing:-2px; margin:30px 0 20px 0; padding-top:13px; border-top:solid 1px #DDD; height:auto;}
+#contents.dep3 h2.first {margin-top:0; padding-top:0; border-top:none;} /* mypage */
+.customer #contents h2 {font-weight:bold; font-size:20px; height:50px; line-height:50px; padding-left:20px; color:#777; letter-spacing:-2px; margin-bottom:25px; background:#e8e8e8;}
+	.customer #contents h3 {font-weight:bold; font-size:14px; color:#777; margin-bottom:10px;}
+	.customer #contents h3 input[type="checkbox"] {margin-top:-3px;}
+.member #contents h2 {text-align:center; margin-bottom:30px;}
+h3.type4 {font-size:20px; font-weight:bold; line-height:1.2em; color:#333; letter-spacing:-2px; margin:25px 0 20px 0;} /* ex:NCS 결제안내 */
+
+/* Swiper Ovrewrite */
+.swiper-pagination-bullet {cursor:pointer;}
+.slideReportSwiper .list_corp {overflow:visible;}
