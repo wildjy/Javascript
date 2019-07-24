@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko" >
+	<head>
+		<title> :  : </title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+		<!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+		<meta name="format-detection" content="telephone=no">
+		<!-- <meta name="publisher" content="(주)신비웹,신비웹,sinbiweb,sinbiweb.com,www.sinbiweb.com,webmaster@sinbiweb.com" /> -->
+		<meta name="generator" content="editplus" />
+		<meta name="author" content="" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+		<!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+		<script type="text/javascript" src="js/ui.js"></script>
+		<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+		<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var ui = {
+			init : function(){
+				this.common.init();
+				this.main.init();
+				this.sub.init();
+			},
+
+			common : {
+				init : function(){
+					if($(".gnbWrap").length){
+						this.gnb();
+					}
+				}, 
+
+				gnb : function(){
+					console.log("gnb");
+					var g_nav = true,
+					s_nav = true,
+					gnb = $(".gnb");
+					sub = $(".sub");
+					gnbTarget = $(".gnb>li>a"),
+					subTarget = $(".sub>li>a"),
+					offImg = "_off.png";
+					onImg = "_on.png";
+					_active = $(".gnb>li.selected>a").children("img");
+					
+					gnb.children("li").each(function(){
+						var _ = $(this);
+						if(_.hasClass("selected")){
+							_.children("a").find("img").attr("src", _.children("a").find("img").attr("src").replace(offImg, onImg));
+							_.children(sub).show();
+						}
+					});
+		
+					sub.children("li").each(function(){
+						var _ = $(this);
+						if(_.hasClass("selected")){
+							_.children("a").find("img").attr("src", _.children("a").find("img").attr("src").replace(".png", onImg));
+						}
+					});
+					
+					gnbTarget.on("mouseover focus", function(){
+							var gnbOn = $(".gnb .on"),
+							onsrc = $(this).find("img").attr("src").replace(offImg, onImg);
+		
+							if(gnbOn.hasClass("on")){
+									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
+									gnbOn.find("img").attr("src", offsrc);
+									gnbOn.next(sub).hide();
+							};
+							gnbOn.removeClass("on");
+							$(this).addClass("on");
+							if(_active.is(":visible")){
+								_active.attr("src", _active.attr("src").replace(offImg, onImg));
+							}
+							$(this).find("img").attr("src", onsrc);
+							$(sub).hide();
+							$(this).next(sub).show();
+					});
+		
+					function hideGnb(){
+						if(g_nav && s_nav){
+							var _ = $(this);
+							var gnbOn = $(".gnb .on");
+		
+							if(gnbOn.hasClass("on")){
+									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
+									gnbOn.find("img").attr("src", offsrc);
+									gnbOn.next(sub).hide();
+									if(_active.is(":visible")){
+										_active.attr("src", _active.attr("src").replace(offImg, onImg));
+										$(".gnb>li.selected>ul").show();
+									}
+							};
+						}
+					};
+		
+					gnb.on("mouseleave", function(){
+						g_nav = true;
+						hideGnb();
+					}).on("mouseenter", function(){
+						g_nav = false;
+					}).find(sub).on("mouseleave", function(){
+						s_nav = true;
+						hideGnb();
+					}).on("mouseenter", function(){
+						s_nav = false;
+					});
+		
+					subTarget.find("img").on("mouseover", function(){
+						var src = $(this).attr("src");
+						var regex = /.png/gi;
+						matches = src.match(/_on/);
+		
+						if(!matches){
+							src = this.src.replace(regex,'_on.png');
+							$(this).attr("src", src);
+						}
+					}).on("mouseleave", function(){
+						var src = $(this).attr("src");
+						var regex = /_on.png/gi;
+						matches = src.match(/_on/);
+		
+						if(!$(this).closest(".sm>li.selected").is(":visible")){
+							src = this.src.replace(regex,'.png');
+							$(this).attr("src", src);
+						};
+					});
+				}
+			}, 
+			
+			main : {
+				init : function(){
+					this.module();
+				},
+
+				module : function(){
+					console.log("main");
+				}
+			}, 
+
+			sub : {
+				init : function(){
+					this.module();
+					if($(".openRecr_top").length){
+						this.openRecrTop();
+					}
+				}, 
+
+				openRecrTop : function(){
+					var $tab = $(".opR-tab>li"),
+					$panel = $(".tab-panel"),
+					_num = [];
+
+					for(var i = 0; i<=$tab.length; i++)
+					_num.push(i);
+
+					$.each(_num, function(){
+						$tab.eq(this).find("a").attr("href","#tab_" + this);
+						$panel.eq(this).attr("id","tab_" + this);
+					})
+					
+					$tab.eq(0).children("a").addClass("on");
+					$tab.each(function(){
+						var _ = $(this).children("a");
+						if(_.hasClass("on")){
+							$(_.attr("href")).show();
+							$(".nav-btn").addClass("on")
+						};
+					});
+
+					_tabArea = $(".openRecr_top"),
+					_h1 = _tabArea.find(".tab-panel").height();
+					console.log(_h1);
+					//_tabArea.height(_h1 + 214);
+
+					if($(".pn-cont").is(":visible")){
+						$(".nav-btn").on("click", function(){
+							var _ = $(this);
+							if(_.hasClass("on")){
+								_.removeClass("on");
+								_.next(".pn-cont").hide();
+							} else {
+								_.addClass("on");
+								_.next(".pn-cont").show();
+							}
+						});
+					}
+
+					var flag = true;
+					$(window).scroll(function(){
+						var _winTop = $(window).scrollTop();
+						if(_winTop > $(".list").offset().top){
+							$(".opRecr-Tab-Box").addClass("fixed");
+							if($(".nav-btn").hasClass("on")){
+								//$(".nav-btn").removeClass("on");
+							}
+							if(flag && _winTop > $(".list").offset().top){
+								$(".pn-cont").hide();
+								flag = false;
+								$(".nav-btn").removeClass("on");
+								if($(".pn-cont").attr('style') == 'display:none'){
+									$(".nav-btn").on("click", function(){
+										var _ = $(this);
+										_.next(".pn-cont").show();
+									});
+								}
+							}
+						} else {
+							$(".opRecr-Tab-Box").removeClass("fixed");
+							if($(".pn-cont").attr('style') == 'display:none'){
+								$(".pn-cont").show();
+							}
+							$(".pn-cont").show();
+							flag = true;
+						}
+					});
+
+					$tab.children("a").on("click", function(){
+						var _ = $(this),
+						_img = _.children("img").attr("src");
+
+						$panel.hide();
+						$tab.children("a").removeClass("on");
+						_.addClass("on");
+						$(_.attr("href")).show();
+						return false;
+					});
+
+				},
+
+				module : function(){
+					//alert();
+				}
+			}
+		}
+
+		$(document).ready(function(){
+			ui.init();
+		});
+		//]]>
+		</script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<style type="text/css">
+				.open_Recr{}
+				.open_Recr .openRecr_top{width:100%; position: relative;}
+				.open_Recr .openRecr_top .inner{width:990px; margin:0 auto;}
+				.open_Recr .openRecr_v{width:100%; height:214px; position: relative;}
+				.open_Recr .openRecr_v.bg-1{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_1.jpg") 0 0 no-repeat;}
+				.open_Recr .openRecr_v.bg-2{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_2.jpg") 0 0 no-repeat;}
+				.open_Recr .openRecr_v.bg-3{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_3.jpg") 0 0 no-repeat;}
+				.open_Recr .openRecr_v.bg-4{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_4.jpg") 0 0 no-repeat;}
+				.open_Recr .opRecr-Tab-Box{height:100%; position: relative;}
+				.open_Recr .opRecr-Tab-Box.fixed{position:fixed; top:59px; left:50%; margin-left:-495px; width:990px; z-index:1;}
+				.open_Recr .opR-tab{position: absolute; top:-59px; left:0; right:0; border-right:1px solid #474747; z-index:1;}
+				.open_Recr .opR-tab:after{content:""; display:block; clear:both;}
+				.open_Recr .opR-tab>li{float:left; width:calc(100% / 4); border-left:1px solid #503F39;}
+				.open_Recr .opR-tab>li>a{display:block; height:59px; font-size:0; text-align:center;}
+				.open_Recr .opR-tab>li>a.tab-1{background:rgba(0,0,0,.65) url("https://imgorg.catch.co.kr/job/recruit/opR-tab1_off.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.on.tab-1{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab1_on.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.tab-2{background:rgba(0,0,0,.65) url("https://imgorg.catch.co.kr/job/recruit/opR-tab2_off.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.on.tab-2{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab2_on.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.tab-3{background:rgba(0,0,0,.65) url("https://imgorg.catch.co.kr/job/recruit/opR-tab3_off.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.on.tab-3{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab3_on.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.tab-4{background:rgba(0,0,0,.65) url("https://imgorg.catch.co.kr/job/recruit/opR-tab4_off.png") 50% 50% no-repeat;}
+				.open_Recr .opR-tab>li>a.on.tab-4{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab4_on.png") 50% 50% no-repeat;}
+				
+				.open_Recr .tab-panel{display:none; padding:0 20px 0 20px; width:100%; border:1px solid #474747; background-color: #F6F6F6;}
+				.open_Recr .tab-panel .nav-btn{margin:0 -20px; padding:20px; background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_open_btn.png") 98% 50% no-repeat;}
+				.open_Recr .tab-panel .nav-btn.on{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_close_btn.png") 98% 50% no-repeat;}
+				.open_Recr .tab-panel .nav-btn>a{display:inline-block; padding-left:25px; background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_menu.png") 0 50% no-repeat;}
+				.open_Recr .tab-panel .pn-cont{padding-bottom:30px;}
+				/* .open_Recr .opRecr-Tab-Box.fixed .pn-cont{display:none;} */
+				</style>
+
+				<div class="open_Recr">
+					<div class="openRecr_top">
+						<div class="inner">
+							<div class="openRecr_v bg-1"></div>
+	
+							<div class="opRecr-Tab-Box">
+								<ul class="opR-tab">
+									<li><a href="#self" class="tab-1">나만의 PICK</a></li>
+									<li><a href="#self" class="tab-2">10대 기업</a></li>
+									<li><a href="#self" class="tab-3">30대 기업</a></li>
+									<li><a href="#self" class="tab-4">1000대 기업</a></li>
+								</ul>
+	
+								<div class="tab-panel">
+									<p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text1.png" alt="키워드" /></a></p>
+	
+									<div class="pn-cont">
+										<p>
+											<img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_infoTxt.png" alt="회사만 고르냐? 나도 고른다! 취향저격 공고, 이것만은 포기 못하는 키워드최대 5가지를 선택하세요." />
+										</p>
+	
+										<ul>
+											<li><a href="#self"></a></li>
+										</ul>
+									</div>
+								</div>
+	
+								<div class="tab-panel">
+									<ul class="ten_tab">
+										<li>
+											<a href="#self">
+												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_1.jpg" alt="" />
+												<span>삼성</span>
+											</a>
+										</li>
+										<li>
+											<a href="#self">
+												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_2.jpg" alt="" />
+												<span>삼성</span>
+											</a>
+										</li>
+										<li>
+											<a href="#self">
+												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_3.jpg" alt="" />
+												<span>삼성</span>
+											</a>
+										</li>
+										<li>
+											<a href="#self">
+												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_4.jpg" alt="" />
+												<span>삼성</span>
+											</a>
+										</li>
+										<li>
+											<a href="#self">
+												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_5.jpg" alt="" />
+												<span>삼성</span>
+											</a>
+										</li>
+									</ul>
+	
+									<p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text1.png" alt="키워드" /></a></p>
+										
+									<div class="pn-cont">
+											10대 기업
+										<ul>
+											<li><a href="#self"></a></li>
+										</ul>
+									</div>
+								</div>
+	
+								<div class="tab-panel">
+										30대 기업
+								</div>
+	
+								<div class="tab-panel">
+										1000대 기업
+								</div>
+							</div><!-- end : opRecr-Tab-Box -->
+						</div>
+					</div><!-- end : openRecr_top -->
+					
+					<div class="list" style="margin-top:40px; height:2000px; background-color:#eee;">222</div>
+	
+				</div><!-- end : open_Recr -->
+	
+		</div><!-- end : id : wrap -->
+	</body>
+</html>
