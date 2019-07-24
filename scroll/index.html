@@ -179,19 +179,25 @@
 						};
 					});
 
-					_tabArea = $(".openRecr_top"),
+					var _tabArea = $(".openRecr_top"),
 					_h1 = $(".opRecr-Tab-Box").height();
 					console.log(_h1);
 					_tabArea.height(_h1 + 214);
 
           $(".nav-btn").on("click", function(){
-            var _ = $(this);
+            var _ = $(this),
+            _hideH = _.next(".pn-cont").innerHeight();
+            _calcH = _tabArea.height();
+            console.log(_hideH);
+
             if(_.hasClass("on")){
                 _.removeClass("on");
                 _.next(".pn-cont").hide();
+                _tabArea.height(_calcH - _hideH);
             } else {
                 _.addClass("on");
                 _.next(".pn-cont").show();
+                _tabArea.height(_calcH + _hideH);
             }
           });
 
@@ -211,7 +217,7 @@
 
 							if(flag){
 								_panel.hide();
-								_opBtn.removeClass("on");
+                _opBtn.removeClass("on");
                 //console.log("b");
                 flag = false;
 							}
@@ -233,7 +239,10 @@
 						$panel.hide();
 						$tab.children("a").removeClass("on");
 						_.addClass("on");
-						$(_.attr("href")).show();
+            $(_.attr("href")).show();
+            var _a = $(_.attr("href")).innerHeight() + 2;
+            console.log(_a);
+            _tabArea.height(_a + 214)
 						return false;
 					});
 
@@ -363,7 +372,8 @@
                   <div class="pn-cont">
                     30대 기업
                     <ul>
-                        <li><a href="#self"></a></li>
+                        <li><a href="#self">탭</a></li>
+                        <li><a href="#self">탭</a></li>
                     </ul>
                   </div>
 								</div>
@@ -374,7 +384,9 @@
                   <div class="pn-cont">
                       1000대 기업
                     <ul>
-                        <li><a href="#self"></a></li>
+                        <li><a href="#self">탭탭</a></li>
+                        <li><a href="#self">탭탭</a></li>
+                        <li><a href="#self">탭탭</a></li>
                     </ul>
                   </div>
 								</div>
