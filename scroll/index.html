@@ -40,7 +40,7 @@
 					if($(".gnbWrap").length){
 						this.gnb();
 					}
-				}, 
+				},
 
 				gnb : function(){
 					console.log("gnb");
@@ -53,7 +53,7 @@
 					offImg = "_off.png";
 					onImg = "_on.png";
 					_active = $(".gnb>li.selected>a").children("img");
-					
+
 					gnb.children("li").each(function(){
 						var _ = $(this);
 						if(_.hasClass("selected")){
@@ -61,18 +61,18 @@
 							_.children(sub).show();
 						}
 					});
-		
+
 					sub.children("li").each(function(){
 						var _ = $(this);
 						if(_.hasClass("selected")){
 							_.children("a").find("img").attr("src", _.children("a").find("img").attr("src").replace(".png", onImg));
 						}
 					});
-					
+
 					gnbTarget.on("mouseover focus", function(){
 							var gnbOn = $(".gnb .on"),
 							onsrc = $(this).find("img").attr("src").replace(offImg, onImg);
-		
+
 							if(gnbOn.hasClass("on")){
 									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
 									gnbOn.find("img").attr("src", offsrc);
@@ -87,12 +87,12 @@
 							$(sub).hide();
 							$(this).next(sub).show();
 					});
-		
+
 					function hideGnb(){
 						if(g_nav && s_nav){
 							var _ = $(this);
 							var gnbOn = $(".gnb .on");
-		
+
 							if(gnbOn.hasClass("on")){
 									var offsrc = gnbOn.find("img").attr("src").replace(onImg, offImg);
 									gnbOn.find("img").attr("src", offsrc);
@@ -104,7 +104,7 @@
 							};
 						}
 					};
-		
+
 					gnb.on("mouseleave", function(){
 						g_nav = true;
 						hideGnb();
@@ -116,12 +116,12 @@
 					}).on("mouseenter", function(){
 						s_nav = false;
 					});
-		
+
 					subTarget.find("img").on("mouseover", function(){
 						var src = $(this).attr("src");
 						var regex = /.png/gi;
 						matches = src.match(/_on/);
-		
+
 						if(!matches){
 							src = this.src.replace(regex,'_on.png');
 							$(this).attr("src", src);
@@ -130,15 +130,15 @@
 						var src = $(this).attr("src");
 						var regex = /_on.png/gi;
 						matches = src.match(/_on/);
-		
+
 						if(!$(this).closest(".sm>li.selected").is(":visible")){
 							src = this.src.replace(regex,'.png');
 							$(this).attr("src", src);
 						};
 					});
 				}
-			}, 
-			
+			},
+
 			main : {
 				init : function(){
 					this.module();
@@ -147,7 +147,7 @@
 				module : function(){
 					console.log("main");
 				}
-			}, 
+			},
 
 			sub : {
 				init : function(){
@@ -155,7 +155,7 @@
 					if($(".openRecr_top").length){
 						this.openRecrTop();
 					}
-				}, 
+				},
 
 				openRecrTop : function(){
 					var $tab = $(".opR-tab>li"),
@@ -169,7 +169,7 @@
 						$tab.eq(this).find("a").attr("href","#tab_" + this);
 						$panel.eq(this).attr("id","tab_" + this);
 					})
-					
+
 					$tab.eq(0).children("a").addClass("on");
 					$tab.each(function(){
 						var _ = $(this).children("a");
@@ -180,48 +180,48 @@
 					});
 
 					_tabArea = $(".openRecr_top"),
-					_h1 = _tabArea.find(".tab-panel").height();
+					_h1 = $(".opRecr-Tab-Box").height();
 					console.log(_h1);
-					//_tabArea.height(_h1 + 214);
+					_tabArea.height(_h1 + 214);
 
-					if($(".pn-cont").is(":visible")){
-						$(".nav-btn").on("click", function(){
-							var _ = $(this);
-							if(_.hasClass("on")){
-								_.removeClass("on");
-								_.next(".pn-cont").hide();
-							} else {
-								_.addClass("on");
-								_.next(".pn-cont").show();
-							}
-						});
-					}
+          $(".nav-btn").on("click", function(){
+            var _ = $(this);
+            if(_.hasClass("on")){
+                _.removeClass("on");
+                _.next(".pn-cont").hide();
+            } else {
+                _.addClass("on");
+                _.next(".pn-cont").show();
+            }
+          });
 
 					var flag = true;
 					$(window).scroll(function(){
-						var _winTop = $(window).scrollTop();
-						if(_winTop > $(".list").offset().top){
-							$(".opRecr-Tab-Box").addClass("fixed");
-							if($(".nav-btn").hasClass("on")){
-								//$(".nav-btn").removeClass("on");
-							}
-							if(flag && _winTop > $(".list").offset().top){
-								$(".pn-cont").hide();
-								flag = false;
-								$(".nav-btn").removeClass("on");
-								if($(".pn-cont").attr('style') == 'display:none'){
-									$(".nav-btn").on("click", function(){
-										var _ = $(this);
-										_.next(".pn-cont").show();
-									});
-								}
+            var _winTop = $(this).scrollTop(),
+            _fixTab = $(".opRecr-Tab-Box"),
+            _opBtn = $(".nav-btn"),
+            _panel = $(".pn-cont");
+
+						if(_winTop >= $(".list").offset().top){
+              _fixTab.addClass("fixed");
+
+							if(_opBtn.hasClass("on")){
+								_opBtn.removeClass("on");
+              };
+
+							if(flag){
+								_panel.hide();
+								_opBtn.removeClass("on");
+                //console.log("b");
+                flag = false;
 							}
 						} else {
-							$(".opRecr-Tab-Box").removeClass("fixed");
-							if($(".pn-cont").attr('style') == 'display:none'){
-								$(".pn-cont").show();
+							_fixTab.removeClass("fixed");
+							if(_opBtn.hasClass("on") == false){
+                //console.log("a");
+                _opBtn.addClass("on");
+								_panel.show();
 							}
-							$(".pn-cont").show();
 							flag = true;
 						}
 					});
@@ -277,7 +277,7 @@
 				.open_Recr .opR-tab>li>a.on.tab-3{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab3_on.png") 50% 50% no-repeat;}
 				.open_Recr .opR-tab>li>a.tab-4{background:rgba(0,0,0,.65) url("https://imgorg.catch.co.kr/job/recruit/opR-tab4_off.png") 50% 50% no-repeat;}
 				.open_Recr .opR-tab>li>a.on.tab-4{background:rgba(255,255,255) url("https://imgorg.catch.co.kr/job/recruit/opR-tab4_on.png") 50% 50% no-repeat;}
-				
+
 				.open_Recr .tab-panel{display:none; padding:0 20px 0 20px; width:100%; border:1px solid #474747; background-color: #F6F6F6;}
 				.open_Recr .tab-panel .nav-btn{margin:0 -20px; padding:20px; background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_open_btn.png") 98% 50% no-repeat;}
 				.open_Recr .tab-panel .nav-btn.on{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_close_btn.png") 98% 50% no-repeat;}
@@ -290,7 +290,7 @@
 					<div class="openRecr_top">
 						<div class="inner">
 							<div class="openRecr_v bg-1"></div>
-	
+
 							<div class="opRecr-Tab-Box">
 								<ul class="opR-tab">
 									<li><a href="#self" class="tab-1">나만의 PICK</a></li>
@@ -298,80 +298,112 @@
 									<li><a href="#self" class="tab-3">30대 기업</a></li>
 									<li><a href="#self" class="tab-4">1000대 기업</a></li>
 								</ul>
-	
+
 								<div class="tab-panel">
 									<p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text1.png" alt="키워드" /></a></p>
-	
+
 									<div class="pn-cont">
 										<p>
 											<img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_infoTxt.png" alt="회사만 고르냐? 나도 고른다! 취향저격 공고, 이것만은 포기 못하는 키워드최대 5가지를 선택하세요." />
 										</p>
-	
+
 										<ul>
 											<li><a href="#self"></a></li>
 										</ul>
 									</div>
 								</div>
-	
+
 								<div class="tab-panel">
 									<ul class="ten_tab">
 										<li>
 											<a href="#self">
-												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_1.jpg" alt="" />
+												<img src="https://imgorg.catch.co.kr/job/recruit/brand10_obj_1.jpg" alt="" />
 												<span>삼성</span>
 											</a>
 										</li>
 										<li>
 											<a href="#self">
-												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_2.jpg" alt="" />
+												<img src="https://imgorg.catch.co.kr/job/recruit/brand10_obj_2.jpg" alt="" />
 												<span>삼성</span>
 											</a>
 										</li>
 										<li>
 											<a href="#self">
-												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_3.jpg" alt="" />
+												<img src="https://imgorg.catch.co.kr/job/recruit/brand10_obj_3.jpg" alt="" />
 												<span>삼성</span>
 											</a>
 										</li>
 										<li>
 											<a href="#self">
-												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_4.jpg" alt="" />
+												<img src="https://imgorg.catch.co.kr/job/recruit/brand10_obj_4.jpg" alt="" />
 												<span>삼성</span>
 											</a>
 										</li>
 										<li>
 											<a href="#self">
-												<img src="https://imgorg.catch.co.kr/job/corp/brand10_obj_5.jpg" alt="" />
+												<img src="https://imgorg.catch.co.kr/job/recruit/brand10_obj_5.jpg" alt="" />
 												<span>삼성</span>
 											</a>
 										</li>
 									</ul>
-	
-									<p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text1.png" alt="키워드" /></a></p>
-										
+
+									<p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text2.png" alt="직무" /></a></p>
+
 									<div class="pn-cont">
-											10대 기업
+										10대 기업
 										<ul>
 											<li><a href="#self"></a></li>
 										</ul>
 									</div>
 								</div>
-	
+
 								<div class="tab-panel">
-										30대 기업
+                  <p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text2.png" alt="직무" /></a></p>
+
+                  <div class="pn-cont">
+                    30대 기업
+                    <ul>
+                        <li><a href="#self"></a></li>
+                    </ul>
+                  </div>
 								</div>
-	
+
 								<div class="tab-panel">
-										1000대 기업
+                  <p class="nav-btn"><a href="#self"><img src="https://imgorg.catch.co.kr/job/recruit/open_Recr_text2.png" alt="직무" /></a></p>
+
+                  <div class="pn-cont">
+                      1000대 기업
+                    <ul>
+                        <li><a href="#self"></a></li>
+                    </ul>
+                  </div>
 								</div>
 							</div><!-- end : opRecr-Tab-Box -->
 						</div>
 					</div><!-- end : openRecr_top -->
-					
-					<div class="list" style="margin-top:40px; height:2000px; background-color:#eee;">222</div>
-	
+
+               <div class="list" style="margin-top:40px; height:2000px; background-color:#eee;">
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+                  <p>222</p>
+               </div>
+
 				</div><!-- end : open_Recr -->
-	
+
 		</div><!-- end : id : wrap -->
 	</body>
 </html>
