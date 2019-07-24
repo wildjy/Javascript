@@ -182,7 +182,7 @@
 					var _tabArea = $(".openRecr_top"),
 					_h1 = $(".opRecr-Tab-Box").height();
 					console.log(_h1);
-					_tabArea.height(_h1 + 214);
+					//_tabArea.height(_h1 + 214);
 
           $(".nav-btn").on("click", function(){
             var _ = $(this),
@@ -193,22 +193,23 @@
             if(_.hasClass("on")){
                 _.removeClass("on");
                 _.next(".pn-cont").hide();
-                _tabArea.height(_calcH - _hideH);
+               // _tabArea.height(_calcH - _hideH);
             } else {
                 _.addClass("on");
                 _.next(".pn-cont").show();
-                _tabArea.height(_calcH + _hideH);
+               // _tabArea.height(_calcH + _hideH);
             }
           });
 
 					var flag = true;
 					$(window).scroll(function(){
             var _winTop = $(this).scrollTop(),
+            _posTop = $(".openRecr_v").offset().top + $(".openRecr_v").height() - $(".opR-tab").height(),
             _fixTab = $(".opRecr-Tab-Box"),
             _opBtn = $(".nav-btn"),
             _panel = $(".pn-cont");
 
-						if(_winTop >= $(".list").offset().top){
+						if(_winTop >= _posTop - 10){
               _fixTab.addClass("fixed");
 
 							if(_opBtn.hasClass("on")){
@@ -242,7 +243,7 @@
             $(_.attr("href")).show();
             var _a = $(_.attr("href")).innerHeight() + 2;
             console.log(_a);
-            _tabArea.height(_a + 214)
+            //_tabArea.height(_a + 214)
 						return false;
 					});
 
@@ -272,8 +273,9 @@
 				.open_Recr .openRecr_v.bg-2{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_2.jpg") 0 0 no-repeat;}
 				.open_Recr .openRecr_v.bg-3{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_3.jpg") 0 0 no-repeat;}
 				.open_Recr .openRecr_v.bg-4{background:url("https://imgorg.catch.co.kr/job/recruit/openRecr_visual_4.jpg") 0 0 no-repeat;}
-				.open_Recr .opRecr-Tab-Box{height:100%; position: relative;}
+				.open_Recr .opRecr-Tab-Box{position: relative;}
 				.open_Recr .opRecr-Tab-Box.fixed{position:fixed; top:59px; left:50%; margin-left:-495px; width:990px; z-index:1;}
+				.open_Recr .opRecr-Tab-Box.fixed .opR-tab{background-color:#111;}
 				.open_Recr .opR-tab{position: absolute; top:-59px; left:0; right:0; border-right:1px solid #474747; z-index:1;}
 				.open_Recr .opR-tab:after{content:""; display:block; clear:both;}
 				.open_Recr .opR-tab>li{float:left; width:calc(100% / 4); border-left:1px solid #503F39;}
