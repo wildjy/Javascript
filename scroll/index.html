@@ -207,6 +207,11 @@
 								if(_opBtn.hasClass("on")){
 									_opBtn.removeClass("on");
 								};
+								
+								$tab.on("click", function(){
+									//$(".nav-btn").removeClass("on");
+									$(".pn-cont").hide();
+								});
 
 								if(flag){
 									_panel.hide();
@@ -219,7 +224,10 @@
 									//console.log("a");
 									_opBtn.addClass("on");
 									_panel.show();
+								
 								}
+								$(".nav-btn").addClass("on");
+								$(".pn-cont").show();
 								flag = true;
 							}
 						});
