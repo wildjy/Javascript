@@ -45,7 +45,7 @@ var ui = {
 				this.gnb(".gnb-module", "default");
 				this.gnb(".gnb-module-1", "click");
 			}
-		}, 
+		},
 
 		gnb : function(gnb, type){
 			console.log(gnb);
@@ -66,7 +66,7 @@ var ui = {
 				_sub = _.find(".sub");
 				_gnbTarget = _.find(".gnb>li>a"),
 				_subTarget = _.find(".sub>li>a"),
-				console.log(_gnb);
+				//console.log(_gnb);
 
 				_gnb.children("li").each(function(){
 					var _ = $(this);
@@ -75,17 +75,18 @@ var ui = {
 						_.children(_sub).show();
 					}
 				});
-				
+
 				if(type == "default"){
 					_gnbTarget.on("mouseover focus", function(){
-						console.log($(this));
+						//console.log($(this));
 						var _ = $(this),
 						_on = _.find(".gnb .on");
-						console.log(_on);
+						//console.log(_on);
 						if(_on.hasClass("on")){
 							_on.removeClass("on");
 							_on.next(_sub).hide();
 						};
+            _on.removeClass("on");
 						$(this).addClass("on");
 						_sub.hide();
 						$(this).next(_sub).show();
@@ -102,7 +103,7 @@ var ui = {
 							};
 						}
 					}
-		
+
 					_gnb.on("mouseleave", function(){
 						g = true;
 						hide();
@@ -118,7 +119,7 @@ var ui = {
 
 				if(type == "click"){
 					_gnbTarget.on("click", function(){
-						console.log($(this));
+						//console.log($(this));
 						if($(this).hasClass("on")){
 							$(this).removeClass("on");
 							$(this).next(_sub).hide();
@@ -132,8 +133,8 @@ var ui = {
 				}
 			});
 		}
-	}, 
-	
+	},
+
 	main : {
 		init : function(){
 			this.module();
@@ -142,7 +143,7 @@ var ui = {
 		module : function(){
 			console.log("main");
 		}
-	}, 
+	},
 
 	sub : {
 		init : function(){
@@ -164,7 +165,7 @@ $(document).ready(function(){
 #wrap{}
 .gnb{}
 .gnb:after{content:""; display:block; clear:both;}
-</style> 
+</style>
 	</head>
 
 	<body>
@@ -187,7 +188,7 @@ $(document).ready(function(){
 							<li><a href="#self">서브메뉴_8</a></li>
 						</ul>
 					</li>
-					<li class="selected"><a href="#self">메뉴_3</a>
+					<li class=""><a href="#self">메뉴_3</a>
 						<ul class="sub">
 							<li><a href="#self">서브메뉴_9</a></li>
 							<li><a href="#self">서브메뉴_10</a></li>

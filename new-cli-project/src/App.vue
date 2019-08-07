@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <p>{{ count }} </p>
-    <button @click="count++">추가</button>
-  </div>
+  <v-app>
+    <v-content>
+      <User/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-  export default{
-    data(){
-      return {
-        title : "안녕하세요.",
-        count : 1
-      }
-    }
+import User from "./components/User"
+
+export default {
+  name: "App",
+  components: {
+    User
   }
+}
 </script>
