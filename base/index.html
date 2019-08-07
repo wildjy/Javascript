@@ -40,14 +40,97 @@ var ui = {
 
 	common : {
 		init : function(){
-			if($(".test").length){
-				this.module();
+			if($(".gnb-module").length){
+				//this.module();
+				this.gnb(".gnb-module", "default");
+				this.gnb(".gnb-module-1", "click");
 			}
-			this.gnb();
 		}, 
 
-		gnb : function(){
-			console.log("common");
+		gnb : function(gnb, type){
+			console.log(gnb);
+			console.log(type);
+			var _target = $(gnb);
+
+			/*
+			event : function(){
+
+			};
+			*/
+
+			_target.each(function(){
+				var g = true,
+				s = true,
+				_ = $(this),
+				_gnb = _.find(".gnb"),
+				_sub = _.find(".sub");
+				_gnbTarget = _.find(".gnb>li>a"),
+				_subTarget = _.find(".sub>li>a"),
+				console.log(_gnb);
+
+				_gnb.children("li").each(function(){
+					var _ = $(this);
+					if(_.hasClass("selected")){
+						_.children("a").addClass("on");
+						_.children(_sub).show();
+					}
+				});
+				
+				if(type == "default"){
+					_gnbTarget.on("mouseover focus", function(){
+						console.log($(this));
+						var _ = $(this),
+						_on = _.find(".gnb .on");
+						console.log(_on);
+						if(_on.hasClass("on")){
+							_on.removeClass("on");
+							_on.next(_sub).hide();
+						};
+						$(this).addClass("on");
+						_sub.hide();
+						$(this).next(_sub).show();
+					});
+
+					function hide(){
+						if(g && s){
+							var _on = $(".gnb .on");
+							if(_on.hasClass("on")){
+								_on.removeClass("on");
+								_on.next(_sub).hide();
+								$(".gnb>li.selected").children("a").addClass("on");
+								$(".gnb>li.selected").children(_sub).show();
+							};
+						}
+					}
+		
+					_gnb.on("mouseleave", function(){
+						g = true;
+						hide();
+					}).on("mouseenter", function(){
+						g = false;
+					}).find(_sub).on("mouseleave", function(){
+						s = true;
+						hide();
+					}).on("mouseenter", function(){
+						s = false;
+					});
+				}
+
+				if(type == "click"){
+					_gnbTarget.on("click", function(){
+						console.log($(this));
+						if($(this).hasClass("on")){
+							$(this).removeClass("on");
+							$(this).next(_sub).hide();
+						} else {
+							_gnbTarget.removeClass("on");
+							_gnbTarget.next(_sub).hide();
+							$(this).addClass("on");
+							$(this).next(_sub).show();
+						}
+					})
+				}
+			});
 		}
 	}, 
 	
@@ -78,13 +161,71 @@ $(document).ready(function(){
 //]]>
 </script>
 <style type="text/css">
-
+#wrap{}
+.gnb{}
+.gnb:after{content:""; display:block; clear:both;}
 </style> 
 	</head>
 
 	<body>
 		<div id="wrap">
+			<div class="gnbWrap gnb-module">
+				<ul class="gnb">
+					<li><a href="#self">메뉴_1</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_1</a></li>
+							<li><a href="#self">서브메뉴_2</a></li>
+							<li><a href="#self">서브메뉴_3</a></li>
+							<li><a href="#self">서브메뉴_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">메뉴_2</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_5</a></li>
+							<li><a href="#self">서브메뉴_6</a></li>
+							<li><a href="#self">서브메뉴_7</a></li>
+							<li><a href="#self">서브메뉴_8</a></li>
+						</ul>
+					</li>
+					<li class="selected"><a href="#self">메뉴_3</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_9</a></li>
+							<li><a href="#self">서브메뉴_10</a></li>
+							<li><a href="#self">서브메뉴_11</a></li>
+							<li><a href="#self">서브메뉴_12</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">메뉴_4</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_13</a></li>
+							<li><a href="#self">서브메뉴_14</a></li>
+							<li><a href="#self">서브메뉴_15</a></li>
+							<li><a href="#self">서브메뉴_16</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
+			<div class="gnbWrap gnb-module-1">
+				<ul class="gnb">
+					<li><a href="#self">메뉴_1</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_1</a></li>
+							<li><a href="#self">서브메뉴_2</a></li>
+							<li><a href="#self">서브메뉴_3</a></li>
+							<li><a href="#self">서브메뉴_4</a></li>
+						</ul>
+					</li>
+					<li class="selected"><a href="#self">메뉴_2</a>
+						<ul class="sub">
+							<li><a href="#self">서브메뉴_5</a></li>
+							<li><a href="#self">서브메뉴_6</a></li>
+							<li><a href="#self">서브메뉴_7</a></li>
+							<li><a href="#self">서브메뉴_8</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div><!-- end : id : wrap -->
 	</body>
 </html>
