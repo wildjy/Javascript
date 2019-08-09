@@ -1,0 +1,36 @@
+$font-family: 'ZCOOL XiaoWei', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+
+$img-path: '/images/';
+$img-comm-path: $img-path + 'common/';
+
+$major-color: #0085c9;
+$min-width: 1200px;
+
+// Mixin Group
+@mixin placeholder-init{
+    font-family: $font-family;
+    font-weight: 300;
+    color: #999;
+}
+@mixin text-ellipis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin text-multi-line($num, $line-height, $height, $static){
+    line-height: $line-height;
+    @if($static){
+        height: $height;
+    }else{
+        max-height: $height;
+    }
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+@mixin sd-border($width, $color){
+    border: $width solid $color;
+}
