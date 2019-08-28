@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+  <!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ui = {
+      init: function () {
+        if ($("#wrap").length) {
+          this.common.init();
+          this.main.init();
+          this.sub.init();
+        }
+      },
+
+      common: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("common");
+
+          var inter1, inter2, inter3;
+          var bnr1 = $(".bnr1");
+          var bnr2 = $(".bnr2");
+          var bnr3 = $(".bnr3");
+
+          setinterAni();
+
+          function setinterAni() {
+            bnr1.animate({'width': '200px', 'opacity': 1}, 1000, function(){
+              bnr1.animate({'width': 0, 'opacity': 0}, 1000);
+            });
+            bnr2.animate({'width': '300px', 'opacity': 1}, 1200, function(){
+              bnr2.animate({'width': 0, 'opacity': 0}, 800);
+            });
+            bnr3.animate({'width': '250px', 'opacity': 1}, 1100, function(){
+              bnr3.animate({'width': 0, 'opacity': 0}, 900);
+            });
+
+            inter1 = setInterval(function(){
+              bnr1.animate({'width': '200px', 'opacity': 1}, 1000, function(){
+                bnr1.animate({'width': 0, 'opacity': 0}, 1000);
+              });
+            }, 2000);
+            inter2 = setInterval(function(){
+              bnr2.animate({'width': '300px', 'opacity': 1}, 1200, function(){
+                bnr2.animate({'width': 0, 'opacity': 0}, 800);
+              });
+            }, 2000);
+            inter3 = setInterval(function(){
+              bnr3.animate({'width': '250px', 'opacity': 1}, 1100, function(){
+                bnr3.animate({'width': 0, 'opacity': 0}, 900);
+              });
+            }, 2000);
+          }
+
+          function clearInterAni(){
+            clearInterval(inter1);
+            clearInterval(inter2);
+            clearInterval(inter3);
+          }
+        }
+      },
+
+      main: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("main");
+        }
+      },
+
+      sub: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("sub");
+        }
+      }
+    }
+
+    $(document).ready(function () {
+      ui.init();
+    });
+    //]]>
+  </script>
+  <style type="text/css">
+	.bnr{position:fixed;left:10px;height:50px;width:0;opacity:0;}
+	.bnr.bnr1{background:red;top:10px;}
+	.bnr.bnr2{background:blue;top:70px;}
+	.bnr.bnr3{background:green;top:130px;}
+
+	.btns{position: fixed;left:10px;top:200px;}
+	.btn{display:block;width:100px;height:30px;background:#000;color:#fff;border:0;cursor:pointer;border-radius:3px;margin-bottom:10px;}
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+		<div class="bnr bnr1"></div>
+		<div class="bnr bnr2"></div>
+		<div class="bnr bnr3"></div>
+		<div class="btns">
+			<button class="btn btn1" onclick="clearInterAni()">멈춤</button>
+			<button class="btn btn2" onclick="setinterAni()">재실행</button>
+		</div>
+  </div><!-- end : id : wrap -->
+</body>
+
+</html>
