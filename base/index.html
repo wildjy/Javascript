@@ -130,7 +130,7 @@
                 };
               });
 						};
-						
+
 						if(type == "full"){
               _gnbTarget.on("mouseover focus", function () {
                 var _this = $(this),
@@ -182,6 +182,39 @@
 
         module: function () {
           //console.log("main");
+
+          //main_visual_slider
+          var $mainSlider = $(".main-visual");
+          $mainSlider.on('init', function(event, slick){
+
+          });
+
+          $mainSlider.slick({
+            autoplay: true,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+          });
+
+          $mainSlider.find(".pause").on('click', function() {
+            $mainSlider.slick('slickPause');
+            //$(this).fadeOut();
+            //$mainSlider.find(".play").fadeIn();
+          });
+
+          $mainSlider.find(".play").on('click', function() {
+            $mainSlider.slick('slickPlay');
+            //$(this).fadeOut();
+            //$mainSlider.find(".pause").fadeIn();
+          });
+
+          $mainSlider.on('beforeChange', function(slider, event, slick, currentSlide, nextSlide){
+            var nextPanel = $('[data-slick-index=' + currentSlide + ']');
+            $(".slick-slide").removeClass("active");
+            $(nextPanel).addClass('active');
+          });
         }
       },
 
