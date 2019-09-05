@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+  <!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ui = {
+      init: function () {
+        if ($("#wrap").length) {
+          this.common.init();
+          this.main.init();
+          this.sub.init();
+        }
+      },
+
+      common: {
+        init: function () {
+          if ($(".gnb-module").length) {
+            //this.module();
+            this.gnb(".gnb-module", "default");
+            this.gnb(".gnb-module-1", "click");
+            this.gnb(".gnb-module-full", "full");
+          };
+        },
+
+        gnb: function (gnb, type) {
+          console.log(gnb);
+          console.log(type);
+          var _target = $(gnb);
+
+          _target.each(function () {
+            var g = true,
+              s = true,
+              _ = $(this),
+              _gnb = _.find(".gnb"),
+              _sub = _.find(".sub");
+         		  _gnbTarget = _.find(".gnb>li>a"),
+              _subTarget = _.find(".sub>li>a"),
+              //console.log(_gnb);
+
+						_gnb.children("li").each(function () {
+							var _ = $(this);
+							if (_.hasClass("selected")) {
+								_.children("a").addClass("on");
+								_.children(_sub).show();
+							}
+						});
+
+            if (type == "default") {
+              _gnbTarget.on("mouseover focus", function () {
+                var _this = $(this),
+                  _on = _this.find(".gnb .on");
+                //console.log(_on);
+                if (_on.hasClass("on")) {
+                  _on.removeClass("on");
+                  _on.next(_sub).hide();
+                };
+                _.find(".gnb>li>a").removeClass("on");
+                $(this).addClass("on");
+                _.find(".gnb>li .sub").hide();
+                $(this).next(_sub).show();
+              });
+
+              function hide() {
+                if (g && s) {
+									//console.log(_);
+                  var _on = _.find(".gnb .on");
+                  if (_on.hasClass("on")) {
+                    _on.removeClass("on");
+                    _on.next(_sub).hide();
+                    _.find(".gnb>li.selected").children("a").addClass("on");
+                    _.find(".gnb>li.selected").children(_sub).show();
+                  };
+                };
+              };
+
+              _gnb.on("mouseleave", function () {
+                g = true;
+                hide();
+              }).on("mouseenter", function () {
+                g = false;
+              }).find(_sub).on("mouseleave", function () {
+                s = true;
+                hide();
+              }).on("mouseenter", function () {
+                s = false;
+              });
+            };
+
+            if (type == "click") {
+              _gnbTarget.on("click", function () {
+								//console.log($(this));
+								var _this = $(this);
+
+                if (_this.hasClass("on")) {
+                  _this.removeClass("on");
+                  _this.next(_sub).hide();
+                } else {
+                  _.find(".gnb>li>a").removeClass("on");
+                  _.find(_sub).hide();
+                  _this.addClass("on");
+                  _this.next(_sub).show();
+                };
+              });
+						};
+
+						if(type == "full"){
+              _gnbTarget.on("mouseover focus", function () {
+                var _this = $(this),
+                  _on = _this.find(".gnb .on");
+                //console.log(_on);
+                if (_on.hasClass("on")) {
+                  _on.removeClass("on");
+                  _on.next(_sub).hide();
+                };
+                _.find(".gnb>li>a").removeClass("on");
+                $(this).addClass("on");
+                _.find(".gnb>li .sub").hide();
+                $(this).next(_sub).show();
+              });
+
+              function hide() {
+                if (g && s) {
+									//console.log(_);
+                  var _on = _.find(".gnb .on");
+                  if (_on.hasClass("on")) {
+                    _on.removeClass("on");
+                    _on.next(_sub).hide();
+                    _.find(".gnb>li.selected").children("a").addClass("on");
+                    _.find(".gnb>li.selected").children(_sub).show();
+                  };
+                };
+              };
+
+              _gnb.on("mouseleave", function () {
+                g = true;
+                hide();
+              }).on("mouseenter", function () {
+                g = false;
+              }).find(_sub).on("mouseleave", function () {
+                s = true;
+                hide();
+              }).on("mouseenter", function () {
+                s = false;
+              });
+						}
+          });
+        }
+      },
+
+      main: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          //console.log("main");
+
+          //main_visual_slider
+          var $mainSlider = $(".main-visual");
+          $mainSlider.on('init', function(event, slick){
+
+          });
+
+          $mainSlider.slick({
+            autoplay: true,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+          });
+
+          $mainSlider.find(".pause").on('click', function() {
+            $mainSlider.slick('slickPause');
+            //$(this).fadeOut();
+            //$mainSlider.find(".play").fadeIn();
+          });
+
+          $mainSlider.find(".play").on('click', function() {
+            $mainSlider.slick('slickPlay');
+            //$(this).fadeOut();
+            //$mainSlider.find(".pause").fadeIn();
+          });
+
+          $mainSlider.on('beforeChange', function(slider, event, slick, currentSlide, nextSlide){
+            var nextPanel = $('[data-slick-index=' + currentSlide + ']');
+            $(".slick-slide").removeClass("active");
+            $(nextPanel).addClass('active');
+          });
+        }
+      },
+
+      sub: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          //console.log("sub");
+        }
+      }
+    }
+
+    $(document).ready(function () {
+      ui.init();
+    });
+    //]]>
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="gnbWrap gnb-module">
+			<h1 class="title">Gnb 네비게이션 - mouseover</h1>
+      <ul class="gnb">
+        <li><a href="#self">메뉴_1</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_1</a></li>
+            <li><a href="#self">서브메뉴_2</a></li>
+            <li><a href="#self">서브메뉴_3</a></li>
+            <li><a href="#self">서브메뉴_4</a></li>
+          </ul>
+        </li>
+        <li><a href="#self">메뉴_2</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_5</a></li>
+            <li><a href="#self">서브메뉴_6</a></li>
+            <li><a href="#self">서브메뉴_7</a></li>
+            <li><a href="#self">서브메뉴_8</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="#self">메뉴_3</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_9</a></li>
+            <li><a href="#self">서브메뉴_10</a></li>
+            <li><a href="#self">서브메뉴_11</a></li>
+            <li><a href="#self">서브메뉴_12</a></li>
+          </ul>
+        </li>
+        <li><a href="#self">메뉴_4</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_13</a></li>
+            <li><a href="#self">서브메뉴_14</a></li>
+            <li><a href="#self">서브메뉴_15</a></li>
+            <li><a href="#self">서브메뉴_16</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="gnbWrap gnb-module-1">
+			<h2 class="title">Gnb 네비게이션 - click</h2>
+      <ul class="gnb">
+        <li><a href="#self">메뉴_1</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_1</a></li>
+            <li><a href="#self">서브메뉴_2</a></li>
+            <li><a href="#self">서브메뉴_3</a></li>
+            <li><a href="#self">서브메뉴_4</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="#self">메뉴_2</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_5</a></li>
+            <li><a href="#self">서브메뉴_6</a></li>
+            <li><a href="#self">서브메뉴_7</a></li>
+            <li><a href="#self">서브메뉴_8</a></li>
+          </ul>
+        </li>
+        <li><a href="#self">메뉴_3</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_9</a></li>
+            <li><a href="#self">서브메뉴_10</a></li>
+            <li><a href="#self">서브메뉴_11</a></li>
+            <li><a href="#self">서브메뉴_12</a></li>
+          </ul>
+        </li>
+        <li><a href="#self">메뉴_4</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_13</a></li>
+            <li><a href="#self">서브메뉴_14</a></li>
+            <li><a href="#self">서브메뉴_15</a></li>
+            <li><a href="#self">서브메뉴_16</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="gnbWrap gnb-module-full">
+			<h2 class="title">Gnb 네비게이션 - click</h2>
+      <ul class="gnb">
+        <li><a href="#self">메뉴_1</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_1</a></li>
+            <li><a href="#self">서브메뉴_2</a></li>
+            <li><a href="#self">서브메뉴_3</a></li>
+            <li><a href="#self">서브메뉴_4</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="#self">메뉴_2</a>
+          <ul class="sub">
+            <li><a href="#self">서브메뉴_5</a></li>
+            <li><a href="#self">서브메뉴_6</a></li>
+            <li><a href="#self">서브메뉴_7</a></li>
+            <li><a href="#self">서브메뉴_8</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div><!-- end : id : wrap -->
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+  <!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/basePopup.css" />
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ui = {
+      init: function () {
+        if ($("#wrap").length) {
+          this.common.init();
+          this.main.init();
+          this.sub.init();
+        }
+      },
+
+      common: {
+        init: function () {
+          if ($(".popup").length) {
+            this.popLayer(".pop-btn", "default", true); //default popup
+            this.popLayer(".video-pop-btn", "video", false); //video popup
+          };
+        },
+
+        popLayer : function(target, type, center){
+          /*
+            base Popup
+            - setting
+            target = 'free class name'. popup trigger btn,
+                     data true or no;
+            type = "default" : default popup, *publishing popup*
+                   "video" : youTube link, *auto popup Append* , target btn-"date-video : youtube URL add,
+
+                   add.. style..
+            true, false = popup align center
+                          "true" : center mode
+                          "false" : not center mode *css custom position..
+          */
+          var _num = [],
+          _target = $(target);
+          console.log(center);
+          for(var i = 0; i<_target.length; i++)
+          _num.push(i);
+
+          $.each(_num, function(){
+
+            switch(type){
+              case "default" :
+                var _layer = $(".layerPop");
+
+                _target.eq(this).attr("rel", "#ly_" + this);
+                _layer.eq(this).attr("id", "ly_" + this);
+                //console.log("default")
+              break;
+              case "video" :
+                var $html = '';
+                $html += "<div class='layerPop "+ type +"'>";
+                $html += "<div class='inLayer'>";
+                $html += "<div class='cont'>";
+                $html += "<div class='info'>";
+                $html += "<p class='ctg-name'></p>";
+                $html += "<p class='name'></p>";
+                $html += "<p class='type'></p>";
+                $html += "</div>";
+                $html += "<div class='close'><a href='#self'><img src='https://imgorg.catch.co.kr/job/inside/layer-close.png' alt='팝업닫기'></a></div>";
+                $html += "</div>";
+
+                var popup = $($html);
+                $("#wrap").append(popup);
+                var _layer = $("."+ type +"");
+
+                _target.eq(this).attr("rel", "#vly_" + this);
+                _layer.eq(this).attr("id", "vly_" + this);
+                //console.log("video")
+                break;
+            };
+          });
+
+          _target.each(function(){
+            var _ = $(this);
+
+            _.on("click", function(){
+              var _pop = $($(this).attr("rel")),
+              // data setting : url, data type..
+              _data = $(this).next(".data"),
+              _data_1 = _data.find(".data-1").html(),
+              _data_2 = _data.find(".data-2").html(),
+              _data_3 = _data.find(".data-3").html(),
+              _url = $(this).attr("data-video");
+
+              console.log(_)
+              switch(center){
+                case true :
+                  _pop.children("div").addClass("center");
+                  //not center mode - popup btn : class "not-c" add
+                  if(_.hasClass("not-c")){
+                    _pop.children("div").removeClass("center");
+                  }
+                  console.log("center align")
+                break;
+                case false :
+                  //center mode - popup btn : class "fix-c" add
+                  if(_.hasClass("fix-c")){
+                    _pop.children("div").addClass("center");
+                  }
+                  console.log("not center align")
+                break;
+              };
+
+              switch(type){
+                case "default" :
+                  _pop.fadeIn();
+                  console.log("default")
+                break;
+                case "video" :
+                  _pop.find(".cont").prepend("<div class='video'><iframe src='" + _url + "?feature=player_embedded&vq=hd1080&showinfo=0&autoplay=1&loop=1;playlist=G0RTfxQeMAw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>");
+                  _pop.find(".ctg-name").html(_data_1);
+                  _pop.find(".name").html(_data_2);
+                  _pop.find(".type").html(_data_3);
+                  if(!_data.is(":visible") && _data_1 == undefined){
+                    $(".info").hide();
+                  } else {
+                    $(".info").show();
+                  }
+                  _pop.fadeIn();
+                  console.log("video")
+                break;
+              };
+
+              _pop.find(".close>a").on("click", function(){
+                var _ = $(this).closest(".layerPop");
+                if(type == "video"){
+                  _.find(".video").remove();
+                }
+                _.hide();
+                return false;
+              });
+            });
+          });
+        },
+
+        module: function () {
+          console.log("main");
+        }
+      },
+
+      main: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("main");
+        }
+      },
+
+      sub: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("sub");
+        }
+      }
+    }
+
+    $(document).ready(function () {
+      ui.init();
+    });
+    //]]>
+  </script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="popup-btn-zip">
+      <a href="#self" class="pop-btn popup">default Popup 1</a>
+      <a href="#self" class="pop-btn not-c popup">default Popup 2</a>
+
+      <div>
+        <a href="#self" class="video-pop-btn popup" data-video="https://www.youtube.com/embed/bESW5opUOGc">youTube Popup_data 1</a>
+        <span class="data hidden">
+          <span class="data-1">캐치TV</span>
+          <span class="data-2">NHN엔터테이먼트 공채 완전 정복</span>
+          <span class="data-3">현직자인터뷰</span>
+        </span>
+      </div>
+
+      <div><a href="#self" class="video-pop-btn fix-c popup" data-video="https://www.youtube.com/embed/1nsx-0X2BNw">youTube Popup 2 - center</a></div>
+
+      <div>
+        <a href="#self" class="video-pop-btn popup" data-video="https://www.youtube.com/embed/nAxeLkUcNUM">youTube Popup_data 3</a>
+        <span class="data hidden">
+          <span class="data-1">캐치TV</span>
+          <span class="data-2">NHN엔터테이먼트 공채 완전 정복</span>
+          <span class="data-3">현직자인터뷰</span>
+        </span>
+      </div>
+
+      <div><a href="#self" class="video-pop-btn popup" data-video="https://www.youtube.com/embed/bESW5opUOGc">youTube Popup 4</a></div>
+    </div>
+
+    <div class="layerPop">
+      <div class="inLayer">
+      <!-- //contents -->
+      디자인에 맞게 팝업 스타일 publising 111
+      <!-- //contents -->
+      <div class="close"><a href="#self"><img src="https://imgorg.catch.co.kr/job/inside/layer-close.png" alt="팝업닫기" /></a></div>
+      </div>
+    </div>
+
+    <div class="layerPop">
+      <div class="inLayer">
+        <!-- //contents -->
+        <div style="text-align:center;"><img src="images/history_img1.jpg" alt=""></div>
+        디자인에 맞게 팝업 스타일 publising 222
+        <!-- //contents -->
+        <div class="close"><a href="#self"><img src="https://imgorg.catch.co.kr/job/inside/layer-close.png" alt="팝업닫기" /></a></div>
+      </div>
+    </div>
+  </div><!-- end : id : wrap -->
+</body>
+</html>
