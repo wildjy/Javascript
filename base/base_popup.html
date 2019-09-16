@@ -116,6 +116,7 @@
               console.log(_)
               switch(center){
                 case true :
+                  //++ center mode : true ++
                   _pop.children("div").addClass("center");
                   //not center mode - popup btn : class "not-c" add
                   if(_.hasClass("not-c")){
@@ -124,6 +125,7 @@
                   console.log("center align")
                 break;
                 case false :
+                  //++ center mode : false ++
                   //center mode - popup btn : class "fix-c" add
                   if(_.hasClass("fix-c")){
                     _pop.children("div").addClass("center");
