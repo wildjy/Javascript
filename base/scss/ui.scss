@@ -3,6 +3,17 @@
 
 #wrap {
   width: 100%;
+
+  *{
+    line-height:1;
+  }
+}
+
+.vw{
+  font-size: 40px;
+  @media all and (max-width:640px){
+    font-size: calc-vw(40px);
+  }
 }
 
 .gnbWrap {
