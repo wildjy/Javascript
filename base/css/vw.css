@@ -116,4 +116,12 @@
     line-height: 3.125vw;
   }
 }
+
+#tmpl-btn {
+  padding: 5px 15px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #111;
+  border: 1px solid #000;
+}
 /*# sourceMappingURL=vw.css.map */
