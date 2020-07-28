@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!-- <meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:url" content="" /> -->
+  <!-- <link rel="shortcut icon" type="text/css" href="images/ico/favicon_ns.ico" /> -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="js/ui.js"></script>
+  <script type="text/javascript" src="js/slick_center.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ui = {
+      init: function () {
+        if ($("#wrap").length) {
+          this.common.init();
+          this.main.init();
+          this.sub.init();
+        }
+      },
+
+      common: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("common");
+        }
+      },
+
+      main: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("main");
+        }
+      },
+
+      sub: {
+        init: function () {
+          this.module();
+        },
+
+        module: function () {
+          console.log("sub");
+        }
+      },
+
+      centerSlick : function($slick){
+        if($($slick).is(":visible")){
+          $($slick).slick({
+            autoplay:false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '200px',
+            autoplaySpeed: 3500,
+            speed:500
+          })
+        }
+      }
+    }
+
+    $(document).ready(function () {
+      ui.init();
+      ui.centerSlick(".book_center_slider_2");
+    });
+    //]]>
+  </script>
+
+<style>
+  ul.book_center_slider_2{width:100%; min-height:535px; padding:0 100px;}
+  ul.book_center_slider_2 li img{display:block; width:100%;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+  }
+  ul.book_center_slider_2 .slick-list{padding-top:140px !important; padding-bottom:60px !important; }
+  ul.book_center_slider_2 .slick-slide{position:relative; top:0;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    -webkit-transform:scale(0.9,0.9);
+    -moz-transform:scale(0.9,0.9);
+    -ms-transform:scale(0.9,0.9);
+    -o-transform:scale(0.9,0.9);
+    transform:scale(0.9,0.9);
+  }
+  ul.book_center_slider_2 .slick-slide img{
+    -webkit-transform:scale(0.9,0.9);
+    -moz-transform:scale(0.9,0.9);
+    -ms-transform:scale(0.9,0.9);
+    -o-transform:scale(0.9,0.9);
+    transform:scale(0.9,0.9);
+  }
+  ul.book_center_slider_2 .slick-center{top:-30px;
+    -webkit-transform:scale(2,2);
+    -moz-transform:scale(2,2);
+    -ms-transform:scale(2,2);
+    -o-transform:scale(2,2);
+    transform:scale(2,2);
+  }
+  ul.book_center_slider_2 .slick-center img{
+    -webkit-transform:scale(0.9,0.9);
+    -moz-transform:scale(0.9,0.9);
+    -ms-transform:scale(0.9,0.9);
+    -o-transform:scale(0.9,0.9);
+    transform:scale(0.9,0.9);
+  }
+  ul.book_center_slider_2 .slick-prev{
+    -webkit-transform: translate(-40px,0) scale(0.9,0.9);
+    -moz-transform: translate(-40px,0) scale(0.9,0.9);
+    -ms-transform: translate(-40px,0) scale(0.9,0.9);
+    -o-transform: translate(-40px,0) scale(0.9,0.9);
+    transform: translate(-40px,0) scale(0.9,0.9);
+  }
+  ul.book_center_slider_2 .slick-prev + .slick-slide + .slick-slide{
+    -webkit-transform: translate(40px,0) scale(0.9,0.9);
+    -moz-transform: translate(40px,0) scale(0.9,0.9);
+    -ms-transform: translate(40px,0) scale(0.9,0.9);
+    -o-transform: translate(40px,0) scale(0.9,0.9);
+    transform: translate(40px,0) scale(0.9,0.9);
+  }
+  ul.book_center_slider_2 .slick-arrow{position:absolute; top:50%; width:42px; height:80px; margin-top:-40px; font-size:0; background: url("/template/1/images/arrow_slide_03.png") 0 0 no-repeat; -webkit-background-size: 100%; background-size:100%; border:none; cursor:pointer;}
+  ul.book_center_slider_2 .slick-arrow.slick-prev{left:0;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  ul.book_center_slider_2 .slick-arrow.slick-next{right:0; }
+  </style>
+</head>
+
+<body>
+  <a href="#content" class="skip-navi">본문 바로가기</a>
+  <div id="wrapper">
+    <ul class="book_center_slider_2">
+      <li><img src="http://dasdeutsch.whz.co.kr//template/1/images/landing02_01_obj01.png" alt=""></li>
+      <li><img src="http://dasdeutsch.whz.co.kr//template/1/images/landing02_01_obj02.png" alt=""></li>
+      <li><img src="http://dasdeutsch.whz.co.kr//template/1/images/landing02_01_obj03.png" alt=""></li>
+      <li><img src="http://dasdeutsch.whz.co.kr//template/1/images/landing02_01_obj04.png" alt=""></li>
+      <li><img src="http://dasdeutsch.whz.co.kr//template/1/images/landing02_01_obj05.png" alt=""></li>
+    </ul>
+  </div><!-- //wrapper -->
+</body>
+
+</html>

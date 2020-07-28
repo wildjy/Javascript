@@ -1,0 +1,68 @@
+
+@import "text", "input", "table", "tab","layerPopup", "btnModule";
+
+$font-family: 'ZCOOL XiaoWei', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+
+$viewport: 640;
+$img-path: '/images/';
+$img-comm-path: $img-path + 'common/';
+
+$major-color: #0085c9;
+$min-width: 1200px;
+
+// Mixin Group
+@mixin placeholder-init{
+    font-family: $font-family;
+    font-weight: 300;
+    color: #999;
+}
+@mixin text-ellipis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin text-multi-line($num, $line-height, $height, $static){
+    line-height: $line-height;
+    @if($static){
+        height: $height;
+    }else{
+        max-height: $height;
+    }
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+@mixin sd-border($width, $color){
+    border: $width solid $color;
+}
+@function calc-vw($vw) {
+    $vw-context: ($viewport * 0.01) * 1px;
+    @return ($vw / $vw-context) * 1vw;
+}
+@mixin calc-vw-2($vw, $vw1, $type) {
+    $vw-context: ($viewport * 0.01) * 1px;
+    $a:($vw / $vw-context) * 1vw;
+    $b:($vw1 / $vw-context) * 1vw;
+    @if $type == padding {
+        padding: #{$a} #{$b};
+    } @else if $type == margin {
+        margin: #{$a} #{$b};
+    } @else if $type == auto {
+        margin: #{$a} auto #{$b};
+    }
+}
+@mixin calc-vw-4($vw, $vw1, $vw2, $vw3, $type) {
+    $vw-context: ($viewport * 0.01) * 1px;
+    $a:($vw / $vw-context) * 1vw;
+    $b:($vw1 / $vw-context) * 1vw;
+    $c:($vw2 / $vw-context) * 1vw;
+    $d:($vw3 / $vw-context) * 1vw;
+    @if $type == padding {
+        padding: #{$a} #{$b} #{$c} #{$d};
+    } @else if $type == margin {
+        margin: #{$a} #{$b} #{$c} #{$d};
+    }
+}

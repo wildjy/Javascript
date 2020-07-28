@@ -1,0 +1,870 @@
+//Mobile share - mInput
+
+@charset "utf-8";
+
+$viewport: 640;
+
+@mixin after{
+	content:"";
+	display:block;
+	clear:both;
+}
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@function calc-vw($vw) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	@return ($vw / $vw-context) * 1vw;
+}
+@mixin calc-vw-2($vw, $vw1, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b};
+	} @else if $type == margin {
+			margin: #{$a} #{$b};
+	} @else if $type == auto {
+			margin: #{$a} auto #{$b};
+	}
+}
+@mixin calc-vw-4($vw, $vw1, $vw2, $vw3, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	$c:($vw2 / $vw-context) * 1vw;
+	$d:($vw3 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == margin {
+			margin: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == radius {
+			border-radius: #{$a} #{$b} #{$c} #{$d};
+	}
+}
+
+@mixin calc-calc($vw, $type){
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	@if $type == width {
+			width:calc(100% - #{$a});
+	} @else if $type == width2 {
+			width:calc(100%/2 - #{$a});
+	} @else if $type == calc2 {
+			height:calc(100%/2 - #{$a});
+	}
+}
+@mixin fontSize($size) {
+	$lineHeight : $size + 10;
+	font-size:$size;
+  line-height:$lineHeight;
+	@media screen and (max-width:640px){
+		font-size:calc-vw($size * 2) !important;
+		line-height:calc-vw($size * 2 + 10) !important;
+	}
+}
+@mixin hidden { // 폰트 감추기
+	overflow: hidden;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	width: 0;
+	height: 0;
+	border: 0;
+	font-size:0;
+	line-height:0;
+}
+// transform
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin fontSizeZip {
+	&.fs_8{@include fontSize(8px)} &.fs_9{@include fontSize(9px)} &.fs_10{@include fontSize(10px)} &.fs_11{@include fontSize(11px)}
+	&.fs_12{@include fontSize(12px)} &.fs_13{@include fontSize(13px);} &.fs_14{@include fontSize(14px);} &.fs_15{@include fontSize(15px);}
+	&.fs_16{@include fontSize(16px);} &.fs_17{@include fontSize(17px);} &.fs_18{@include fontSize(18px);} &.fs_19{@include fontSize(19px);}
+	&.fs_20{@include fontSize(20px);} &.fs_21{@include fontSize(21px);} &.fs_22{@include fontSize(22px);} &.fs_23{@include fontSize(23px);}
+	&.fs_24{@include fontSize(24px);} &.fs_25{@include fontSize(25px);}	&.fs_26{@include fontSize(26px);} &.fs_27{@include fontSize(27px);}
+	&.fs_28{@include fontSize(28px);} &.fs_29{@include fontSize(29px);} &.fs_30{@include fontSize(30px);} &.fs_31{@include fontSize(31px);}
+	&.fs_32{@include fontSize(32px);} &.fs_33{@include fontSize(33px);} &.fs_34{@include fontSize(34px);} &.fs_35{@include fontSize(35px);}
+}
+
+//input
+// [[[ checkbox, radio size ]]]
+$size : 20px;
+//
+.input_Style{
+  text-align:left;
+  position: relative;
+  input{
+    -webkit-appearance: none;
+  }
+  &.c,
+  &.center{
+    input{
+      text-align:center;
+    }
+  }
+  &.r,
+  &.right{
+    input{
+      text-align:right;
+    }
+  }
+
+  //text
+  >input[type=text]{
+    padding:5px 10px;
+    @include fontSizeZip;
+    @include fontSize(16px);
+    background-color: #fff;
+    border:1px solid #707070;
+    &.readOnly{
+      background-color: #eee;
+      border-color:#C2C2C2;
+    }
+    &:read-only,
+    &:-moz-read-only{
+      background-color: #eee;
+      border-color:#C2C2C2;
+    }
+    &:disabled,
+    &:disabled{
+      background-color: #eee;
+      border-color:#C2C2C2;
+    }
+    &[disabled='disabled']{
+      background-color: #eee;
+      border-color:#C2C2C2;
+    }
+    &[disabled='disabled']::-ms-value {
+      background-color: #eee;
+      border-color:#C2C2C2;
+    }
+    &.full{
+      padding:5px 0;
+      width:100%;
+    }
+    &.full90{
+      width:90%;
+    }
+    &.noL{
+      border:none;
+    }
+  }
+
+  //textarea
+  >textarea,
+  .textarea{
+    padding:5px 10px;
+    @include fontSize(16px);
+    background-color: #fff;
+    border:1px solid #707070;
+    resize:none;
+  }
+
+  //checkbox
+  >input[type=checkbox]{
+    @include hidden;
+    &:checked + label{
+      &:before{
+        background:#fff url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_on.svg") 50% 50% no-repeat;
+        background-size: 90%;
+        border:1px solid #005fc1;
+      }
+    }
+    &.none + label,
+    &:disabled + label{
+      color:#ccc;
+      cursor:default;
+      &:before{
+        background-color: #F5F5F5;
+        background-size: 90%;
+        border:1px solid #E6E6E6;
+      }
+    }
+
+    & + label{
+      display:block;
+      padding-left:$size + 8px;
+      height:$size + 8px;
+      @include fontSizeZip;
+      @include fontSize($size - 5px);
+      color:#272727;
+      letter-spacing:-.4px;
+      position: relative;
+      @media screen and (max-width:640px){
+        height:auto;
+      }
+      cursor:pointer;
+      &:before{
+        position: absolute;
+        top:50%;
+        left:0px;
+        margin-top:-($size/2) - 3px;
+        display:block;
+        content:"";
+        width:$size;
+        height:$size;
+        font-size:0;
+        text-align:center;
+        background-color: #fff;
+        border:1px solid #ccc;
+        @media screen and (max-width:640px){
+          margin-top:calc-vw((-$size*2)/2) !important;
+          width:calc-vw($size * 2) !important;
+          height:calc-vw($size * 2) !important;
+        }
+      }
+      &:after{
+        display:none;
+        position: absolute;
+        top:0;
+        left:0px;
+        content:"";
+        width:100%;
+        height:100%;
+        font-size:0;
+        text-align:center;
+        background-color: #fff;
+        border:1px solid #ccc;
+      }
+    }
+  }
+
+  //radio
+  >input[type=radio]{
+    @include hidden;
+    &:checked + label{
+      &:before{
+        background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio_on.svg") 0 0 no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.none + label,
+    &:disabled + label{
+      color:#ccc;
+      cursor:default;
+      &:before{
+        background-color: #F5F5F5;
+        background-size: 90%;
+        border:1px solid #E6E6E6;
+      }
+    }
+    & + label{
+      display:inline-block;
+      padding-left:$size + 8px;
+      height:$size + 8px;
+      @include fontSizeZip;
+      @include fontSize($size - 5px);
+      color:#272727;
+      letter-spacing:-.4px;
+      position: relative;
+      cursor:pointer;
+      @media screen and (max-width:640px){
+        padding-left:calc-vw($size * 2 + 16px) !important;
+        height:auto;
+      }
+      &:before{
+        position: absolute;
+        top:50%;
+        left:0px;
+        margin-top:-($size/2) - 1px;
+        display:block;
+        content:"";
+        width:$size;
+        height:$size;
+        font-size:0;
+        text-align:center;
+        background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio.svg") 0 0 no-repeat;
+        background-size: 100%;
+        @media screen and (max-width:640px){
+          margin-top:calc-vw((-$size*2)/2) !important;
+          width:calc-vw($size * 2) !important;
+          height:calc-vw($size * 2) !important;
+        }
+      }
+    }
+  }
+
+  &.type_1{
+    >input[type=checkbox]{
+      &:checked + label{
+        &:before{
+          background-image:none;
+        }
+        &:after{
+          display:block;
+          margin-left:5px;
+          width: $size;
+          height: $size;
+          background: url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
+          background-size: $size auto;
+          border:none;
+          @media screen and (max-width:640px){
+            margin-top:calc-vw(-5px);
+            margin-left:calc-vw(10px);
+            width:calc-vw($size * 2) !important;
+            height:calc-vw($size * 2) !important;
+            background-size: calc-vw($size*2);
+          }
+        }
+      }
+      & + label{
+        @media screen and (max-width:640px){
+          padding-left:calc-vw($size * 2 + 16px) !important;
+        }
+      }
+    }
+    >input[type=radio]{
+      &:checked + label{
+        &:before{
+          //background-image:none;
+        }
+        &:after{
+          // display:block;
+          // margin-top:-1px;
+          // margin-left:3px;
+          // width: 16px;
+          // height: 16px;
+          // background: url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
+          // background-size: 16px auto;
+          // border:none;
+        }
+      }
+    }
+  }
+
+  &.not_txt{
+    >input[type=checkbox]{
+      &:checked + label{
+        &:before{
+        }
+      }
+      & + label{
+        padding-left:0px;
+        width:$size;
+        height:$size + 8px;
+        font-size:0px;
+      }
+    }
+    >input[type=radio]{
+      &:checked + label{
+        &:before{
+        }
+      }
+      & + label{
+        padding-left:0px;
+        width:$size;
+        height:$size;
+        font-size:0px;
+      }
+    }
+  }
+  &.atType{
+    >input[type=checkbox]{
+      &:checked + label{
+        color:#005fc1;
+        background-color: #fff;
+        border:1px solid #005fc1;
+        &:before{
+          display:none;
+          background-image:none;
+        }
+        &:after{
+          display:none;
+        }
+      }
+      & + label{
+        padding-left:0;
+        height:auto;
+        @include fontSize(15px);
+        text-align:center;
+        border:1px solid #ddd;
+        &:before{
+          display:none;
+        }
+      }
+    }
+    >input[type=radio]{
+      &:checked + label{
+        color:#005fc1;
+        background-color: #fff;
+        border:1px solid #005fc1;
+        &:before{
+          display:none;
+          background-image:none;
+        }
+        &:after{
+          display:none;
+        }
+      }
+      & + label{
+        display:block;
+        padding-left:0;
+        height:auto;
+        @include fontSize(15px);
+        text-align:center;
+        border:1px solid #ddd;
+        &:before{
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+@media \0screen { /* IE8 */
+  .input_Style{
+    >input[type=checkbox]{
+			visibility: visible;
+      top: 50%;
+      left: 0px;
+      margin-top:-($size/2) - 3px;
+      width:$size;
+      height:$size;
+      z-index: 2;
+
+      & + label{
+        &:before{
+          border:none;
+        }
+      }
+    }
+    >input[type=radio]{
+			visibility: visible;
+      top: 50%;
+      left: 0px;
+      margin-top:-($size/2) - 3px;
+      width:$size;
+      height:$size;
+      z-index: 2;
+
+      & + label{
+        padding-left:$size + 10px;
+        &:before{
+          background-image:none;
+          border:none;
+        }
+      }
+    }
+  }
+}
+
+.select_Style{
+  padding:5px 24px 5px 16px;
+  height:auto;
+  @include fontSize(16px);
+	border: solid 1px #707070;
+	background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
+	-webkit-appearance: none;
+  @media screen and (max-width:640px){
+    @include calc-vw-4(15px, 24px, 15px, 16px, padding);
+    @include fontSize(13px);
+  }
+	&::-ms-expand {
+		display: none;
+	}
+  &:disabled{
+    background-color: #eee;
+    border:1px solid #C2C2C2;
+  }
+  &[disabled='disabled']::-ms-value {
+    background-color: #eee;
+    border-color:#C2C2C2;
+  }
+}
+
+@media \0screen { /* IE8 */
+  select,
+  .select_Style{
+    padding:5px 16px 5px 16px;
+    background-image:none;
+  }
+}
+
+.custom_select,
+.date_select{
+	display:inline-block;
+	width:252px;
+	height:39px;
+	padding:0;
+	text-align:left;
+	background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
+	border:1px solid #707070;
+  position: relative;
+  -webkit-appearance: none;
+  &.disabled{
+    background-color: #eee;
+    border-color:#C2C2C2;
+  }
+	.val_tit{
+    display:block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+		padding:0px 24px 0px 16px;
+    width:100%;
+    @include fontSize(13px);
+		text-align:left;
+    @include ellipsis;
+    cursor:pointer;
+	}
+	.drop{
+		display:none;
+		position: absolute;
+		top:37px;
+		left:-1px;
+		right:-1px;
+    padding:10px 16px 16px 16px;
+    max-height:200px;
+		border:1px solid #707070;
+    background-color: #fff;
+    overflow:hidden;
+    overflow-y:auto !important;
+    z-index:5;
+		ul{
+      &.line{
+        margin-top:10px;
+        padding-top:10px;
+        border-top:1px dashed #989898;
+      }
+			li{
+				padding:5px 0;
+				button{
+					display:block;
+					width:100%;
+          @include fontSize(13px);
+					color:#272727;
+					text-align:left;
+					&:hover{
+						font-weight:600;
+					}
+				}
+			}
+		}
+  }
+  //date 날짜입력
+	.date_input{
+		.tit{
+			padding-bottom:5px;
+			font-size:13px;
+			color:#272727;
+		}
+		>div{
+			position: relative;
+			&:before{
+				position: absolute;
+				top:4px;
+				left:75px;
+				content:"~";
+				display:block;
+				font-size:12px;
+			}
+			input{
+				float:left;
+				margin-left:15px;
+				padding:0 5px;
+				width:70px;
+				height:28px;
+				position: relative;
+				&:first-child{
+					margin-left:0;
+				}
+			}
+			input::-webkit-input-placeholder {font-size:12px;}
+			input::-moz-placeholder {font-size:12px;}
+			input:-ms-input-placeholder {font-size:12px;}
+			input:-moz-placeholder {font-size:12px;}
+			button{
+				float:left;
+				display:block;
+				margin-left:2px;
+				width:38px;
+				height:28px;
+				font-size:12px;
+				background-color: #EDEDED;
+				border:1px solid #545454;
+			}
+			&:after{
+				@include after;
+			}
+		}
+	}
+}
+
+//common_search
+.common_search{
+	margin-top:20px;
+	text-align:center;
+  @media screen and (max-width:640px){
+    height:calc-vw(70px);
+  }
+  &.left{
+    text-align:left;
+  }
+  &.right{
+    text-align:right;
+  }
+	.date_select{
+		//vertical-align:-16px;
+	}
+	.select_com1{
+		display:inline-block;
+		padding:5px 24px 5px 16px;
+		vertical-align:top;
+	}
+	.input_com1{
+		padding:5px 10px;
+		border:1px solid #ddd;
+		border-right:none;
+	}
+	.schBtn{
+		display:inline-block;
+    padding: 5px 17px;
+		height: 39px;
+    @include fontSize(14px);
+		color: #1b3b5c;
+		vertical-align:-3px;
+		background-color: #EDEDED;
+		border: solid 1px #ddd;
+		border-left:none;
+	}
+	.schBox{
+    display:inline-block;
+    height:100%;
+		.input_com1{
+			float:left;
+		}
+		.schBtn{
+			float:left;
+		}
+		&:after{
+			@include after;
+		}
+	}
+	&.icon{
+		margin:0 auto;
+		input{
+			float:left;
+      display:block;
+      width:calc(100% - 39px);
+      @media screen and (max-width:640px){
+        @include calc-calc(80px, width);
+        @include calc-vw-2(0px,10px, padding);
+        height:100%;
+      }
+		}
+		.schBtn{
+			float:left;
+			display:block;
+			width:39px;
+			font-size:0;
+			background-color: #fff;
+			position: relative;
+      @media screen and (max-width:640px){
+        width:calc-vw(80px);
+        height:100%;
+      }
+			&:after{
+				position: absolute;
+				top:50%;
+				left:50%;
+				width:18px;
+				height:18px;
+				content:"";
+				display:block;
+        background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
+        background-size: 100%;
+				@include translate(-50%, -50%);
+        @media screen and (max-width:640px){
+          width:calc-vw(30px);
+          height:calc-vw(30px);
+        }
+			}
+		}
+		&:after{
+			@include after;
+		}
+	}
+	&.add{
+    .schBox{
+      border:2px solid #0A2B6D;
+      border-radius:40px;
+    }
+		input{
+			float:left;
+      display:block;
+      padding-right:0;
+      width:calc(100% - 39px);
+      border:1px solid transparent;
+      border-radius:40px 0 0 40px;
+      @media screen and (max-width:640px){
+        @include calc-calc(80px, width);
+        @include calc-vw-2(0px,10px, padding);
+        height:100%;
+      }
+		}
+		.schBtn{
+			float:left;
+			display:block;
+			width:39px;
+			font-size:0;
+      background-color: #fff;
+      border:1px solid transparent;
+			position: relative;
+      border-radius:0 40px 40px 0;
+      @media screen and (max-width:640px){
+        width:calc-vw(80px);
+        height:100%;
+      }
+			&:after{
+				position: absolute;
+				top:50%;
+				left:50%;
+				width:23px;
+				height:23px;
+				content:"";
+				display:block;
+        background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_addOption.png") 50% 50% no-repeat;
+        background-size: 100%;
+				@include translate(-50%, -50%);
+        @media screen and (max-width:640px){
+          // width:calc-vw(30px);
+          // height:calc-vw(30px);
+        }
+			}
+		}
+		&:after{
+			@include after;
+		}
+	}
+}
+
+.input_Style{
+  &.multi_search{
+    display:inline-block;
+    position: relative;
+    &.is_Active{
+      .btnZip{
+        .select_btn{
+          display:none;
+        }
+      }
+    }
+    label{
+      display:none;
+      width:0;
+      height:0;
+      font-size:0;
+    }
+    input{
+      width:100%;
+      height:38px;
+    }
+    .btnZip{
+      position: absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      width:55px;
+      &:after{
+        @include after;
+      }
+    }
+    .btn{
+      display:block;
+      float:left;
+      width:30px;
+      height:100%;
+      font-size:0;
+      position: relative;
+      &:after{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: 60%;
+        height: 60%;
+        content: "";
+        display: block;
+        background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
+        background-size: 100%;
+        @include translate(-50%,-50%);
+      }
+    }
+    .select_btn{
+      display:block;
+      float:left;
+      width:25px;
+      height:100%;
+      font-size:0;
+      position: relative;
+      &:after{
+        position: absolute;
+        top:50%;
+        right:0;
+        width: 16px;
+        height: 5px;
+        content: "";
+        display: block;
+        background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") 50% 50% no-repeat;
+        background-size: 100%;
+        @include translate(0%,-50%);
+      }
+    }
+    .drop{
+      display:none;
+      position: absolute;
+      top:37px;
+      left:0px;
+      right:0px;
+      padding:10px 16px 16px 16px;
+      max-height:200px;
+      border:1px solid #707070;
+      background-color: #fff;
+      overflow:hidden;
+      overflow-y:auto !important;
+      z-index:5;
+      ul{
+        &.line{
+          margin-top:10px;
+          padding-top:10px;
+          border-top:1px dashed #989898;
+        }
+        li{
+          padding:5px 0;
+          button{
+            display:block;
+            width:100%;
+            @include fontSize(13px);
+            color:#272727;
+            text-align:left;
+            &:hover{
+              font-weight:600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

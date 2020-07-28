@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "_config";
+
+#wrap {
+  width: 100%;
+}
+
+.scroll_Module{
+  @include fontSize(20px);
+  text-align:center;
+  .top{
+    height:250px;
+    background-color: red;
+  }
+  #fixWrap{
+    height:150px;
+    position: relative;
+    .fixed_target {
+      height:100%;
+      &.is_fixed{
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        width:auto;
+        height:80px;
+        color:#fff;
+        background-color: #000;
+      }
+    }
+  }
+  .bottom{
+    height:2400px;
+    background-color: #eee;
+  }
+}

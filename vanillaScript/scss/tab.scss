@@ -1,0 +1,590 @@
+//Mobile share - mInput
+
+@charset "utf-8";
+
+@mixin fontSize($size) {
+	$lineHeight : $size + 10;
+	font-size:$size;
+  line-height:$lineHeight;
+	@media screen and (max-width:640px){
+		font-size:calc-vw($size * 2) !important;
+		line-height:calc-vw($size * 2 + 10) !important;
+	}
+}
+@mixin after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+$viewport: 640;
+
+@function calc-vw($vw) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	@return ($vw / $vw-context) * 1vw;
+}
+@mixin calc-vw-2($vw, $vw1, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b};
+	} @else if $type == margin {
+			margin: #{$a} #{$b};
+	} @else if $type == auto {
+			margin: #{$a} auto #{$b};
+	}
+}
+@mixin calc-vw-4($vw, $vw1, $vw2, $vw3, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	$c:($vw2 / $vw-context) * 1vw;
+	$d:($vw3 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == margin {
+			margin: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == radius {
+			border-radius: #{$a} #{$b} #{$c} #{$d};
+	}
+}
+
+@mixin calc-calc($vw, $type){
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	@if $type == width {
+			width:calc(100% - #{$a});
+	} @else if $type == width2 {
+			width:calc(100%/2 - #{$a});
+	} @else if $type == calc2 {
+			height:calc(100%/2 - #{$a});
+	}
+}
+
+//common_Tab
+.common_Tab{
+	//tab length
+	&.at2{
+		li{
+			width:50%;
+		}
+	}
+	&.at3{
+		li{
+			width:33.33%;
+		}
+	}
+	&.at4{
+		li{
+			width:25%;
+		}
+	}
+	&.at5{
+		li{
+			width:20%;
+		}
+	}
+	&.at6{
+		li{
+			width:16.66%;
+		}
+	}
+	&.at7{
+		li{
+			width:calc(100%/7);
+		}
+	}
+	&.h-40{
+		li{
+			>span,
+			>a,
+			>button{
+				padding:10px 0;
+				@include fontSize(15px);
+				@media screen and(max-width:640px){
+					@include calc-vw-2(10px, 0px, padding);
+					@include fontSize(13px);
+				}
+			}
+		}
+	}
+	&.h-60{
+		li{
+			>span,
+			>a,
+			>button{
+				padding:15px 0;
+				@include fontSize(15px);
+				@media screen and(max-width:640px){
+					@include calc-vw-2(15px, 0px, padding);
+					@include fontSize(13px);
+				}
+			}
+		}
+	}
+	&.lh-20{
+		li{
+			>span,
+			>a,
+			>button{
+				line-height:20px;
+			}
+		}
+	}
+	//init
+	li{
+		float:left;
+		text-align:center;
+		border:1px solid #E5E5E5;
+    border-left:none;
+    position: relative;
+		&:first-child{
+			border-left:1px solid #E5E5E5;
+		}
+		>button{
+			width:100%;
+		}
+		//selected active
+    //default
+		&.selected{
+      a,
+      button{
+				margin-left:-1px;
+				color:#fff;
+				font-weight:600;
+				background-color: #062B6E;
+				.arrow{ // 화살표
+					display:inline-block;
+					padding-right: 25px;
+					background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr_down4_on.gif") no-repeat right 10px;
+				}
+			}
+    }
+    //line > background
+		&.selected_1{
+			margin-left:-1px;
+      &:first-child{
+        border-left:1px solid #B2C3D1;
+      }
+      &:last-of-type{
+        border-left:1px solid #B2C3D1;
+      }
+			border:1px solid #B2C3D1;
+			a,
+      button{
+				background-color: #F2F5F8;
+			}
+		}
+		//disabled
+		&.disabled{
+      a,
+      button{
+        cursor: default;
+      }
+      &:after{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        content:"";
+        display:block;
+        background-color:rgba(255,255,255,.7);
+      }
+		}
+		>a,
+		>button{
+			display:block;
+			padding:20px 0;
+			@include fontSize(18px);
+			color:#707070;
+			background-color: #fff;
+			@media screen and(max-width:640px){
+				@include calc-vw-2(20px, 0px, padding);
+				@include fontSize(13px);
+			}
+			>span{
+				color:inherit;
+			}
+			// virtual
+			.arrow{ // 화살표
+				display:inline-block;
+				padding-right: 25px;
+				background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr_down4.gif") no-repeat right 10px;
+			}
+			em {
+				font-size: 14px;
+				font-weight: normal !important;
+			}
+			// end : virtual
+			&:hover{
+				//color:#223464;
+			}
+		}
+
+		// virtual
+		.msg_layer{ // 상단 말풍선
+			position: absolute;
+			top:-10px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			img {
+				vertical-align: middle;
+				margin: -3px 1px 0 0;
+			}
+			em {
+				display: inline-block;
+				padding:0 5px;
+				font-size: 11px;
+				line-height:20px;
+				color: #062b6e;
+				background-color: #FFF;
+				border: solid 1px #062b6e;
+				box-shadow: 1px 1px 0 0 rgba(0,0,0,0.37);
+				&.star{
+					padding-left:15px;
+					background:#fff url("https://imgorg.jinhak.com/renewal2009/virtualapply/bl_50.gif") 5px 50% no-repeat;
+				}
+			}
+			&.bg { // 상단 말풍선 Bg
+				em {
+					background-color: #fffdd2;
+					position: relative;
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: 0;
+						bottom: -9px;
+						left: 0;
+						height: 9px;
+						background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr16_down.png") center bottom no-repeat;
+					}
+				}
+			}
+		}
+		.ico1 { // 카메라
+			background-image:none;
+			i {
+				&:before {
+					content: "";
+					display: inline-block;
+					margin: -2px 5px 0 0;
+					width: 22px;
+					height: 18px;
+					vertical-align: middle;
+					background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/ico_type2_01.png") left top no-repeat;
+				}
+			}
+		}
+		.ico2 { // 엑셀
+			background-image:none;
+			i {
+				&:before {
+					content: "";
+					display: inline-block;
+					margin: -2px 5px 0 0;
+					width: 20px;
+					height: 19px;
+					vertical-align: middle;
+					background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/ico_type2_02.png") left top no-repeat;
+				}
+			}
+		}
+		// end : virtual
+	}
+	&:after{
+		@include after;
+	}
+	//tab Style Type
+  &.type1{ // left,right border hidden
+    li{
+			border-bottom:2px solid #D5D5D5;
+      &:first-child{
+        border-left:none;
+      }
+      &:last-of-type{
+        border-right:none;
+			}
+			&.selected{
+				>a,
+				>button{
+					color:#fff;
+				}
+			}
+			&.selected_1{
+				border-bottom:2px solid #B2C3D1;
+			}
+			&.selected_1{
+				border-bottom:2px solid #B2C3D1;
+			}
+			>a,
+			>button{
+				color:#062b6f;
+				font-weight:600;
+			}
+		}
+  }
+	&.type2{ // selected 강조
+		&.white{
+			li{
+        a,
+        button{
+          background-color: #fff;
+        }
+			}
+		}
+    li{
+      border:1px solid #E5E5E5;
+      border-bottom:1px solid #101010;
+      &:first-child{
+        border-left:none;
+      }
+      &:last-of-type{
+        border-right:none;
+      }
+      &.selected{
+        border:1px solid #101010;
+				border-bottom:none;
+				&:before{
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:-1px;
+					content:"";
+					display:block;
+					border-left:1px solid #101010;
+				}
+        a,
+        button{
+          color:#101010;
+          background-color: #fff;
+        }
+      }
+      a,
+      button{
+        color:#101010;
+        background-color: #F1F1F1;
+      }
+    }
+	}
+	&.type3{ // selected 강조
+		border-top:1px solid #545454;
+    li{
+      border:1px solid #E5E5E5;
+      &:first-child{
+        border-left:none;
+      }
+      &:last-of-type{
+        border-right:none;
+      }
+      &.selected{
+        a,
+        button{
+          color:#272727;
+          background-color: #E6EDF3;
+        }
+			}
+      >a,
+      >button{
+        color:#272727;
+        background-color: #F7F7F7;
+      }
+    }
+	}
+	&.type4{ // selected 강조
+		border-left:1px solid #101010;
+    li{
+			border:1px solid #101010;
+			border-left:none;
+      &.selected{
+				border-bottom: 1px solid transparent;
+        a,
+        button{
+					margin-left:0;
+					color:#1b73d4;
+					font-weight:600;
+					background-color: #fff;
+        }
+			}
+      >a,
+      >button{
+        color:#272727;
+				background-color: #fff;
+      }
+    }
+	}
+  &.type5{ // selected 강조
+    li{
+      border:1px solid #E5E5E5;
+      &:first-child{
+        border-left:none;
+      }
+      &:last-of-type{
+        border-right:none;
+      }
+      &.selected{
+        border:1px solid #101010;
+				&:before{
+					position: absolute;
+					top:0;
+					bottom:0;
+					left:-1px;
+					content:"";
+					display:block;
+					border-left:1px solid #101010;
+				}
+        a,
+        button{
+          color:#101010;
+          background-color: #fff;
+        }
+      }
+      a,
+      button{
+        color:#101010;
+        background-color: #F1F1F1;
+      }
+    }
+	}
+  &.type6{ // selected 강조
+    li{
+      border:1px solid #E5E5E5;
+      &:first-child{
+        border-left:none;
+      }
+      &:last-of-type{
+        border-right:none;
+      }
+      &.selected{
+        a,
+        button{
+          color:#fff;
+					background-color: #AFAFAF;
+        }
+      }
+      a,
+      button{
+        color:#101010;
+        background-color: #fff;
+      }
+    }
+	}
+	&.icon{
+		li{
+      border-left:none;
+      border-right:none;
+      position: relative;
+      &:first-of-type{
+        &:after{
+          display:none;
+        }
+      }
+      &:after{
+        content:"";
+        display:block;
+        position: absolute;
+        top:25px;
+        bottom:25px;
+        left:0;
+        width:1px;
+        background-color: #E9E9E9;
+			}
+			span,
+			a{
+				&:before{
+					margin:0 auto 10px;
+					content:"";
+					display:block;
+					width:65px;
+					height:65px;
+					background-color: #fff;
+					border:1px solid #ddd;
+					border-radius:50%;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+				&.icon_1{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab1_off.png");
+					}
+				}
+				&.icon_2{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab2_off.png");
+					}
+				}
+				&.icon_3{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab3_off.png");
+					}
+				}
+				&.icon_4{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab4_off.png");
+					}
+				}
+				&.icon_5{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab5_off.png");
+					}
+				}
+				&.icon_6{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab6_off.png");
+					}
+				}
+				&.icon_7{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab7_off.png");
+					}
+				}
+			}
+			&.selected{
+				a{
+					&:before{
+						border:1px solid #ACC0D1;
+    				box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.15);
+					}
+				}
+				.icon_1{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab1_on.png");
+					}
+				}
+				.icon_2{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab2_on.png");
+					}
+				}
+				.icon_3{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab3_on.png");
+					}
+				}
+				.icon_4{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab4_on.png");
+					}
+				}
+				.icon_5{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab5_on.png");
+					}
+				}
+				.icon_6{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab6_on.png");
+					}
+				}
+				.icon_7{
+					&:before{
+						background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab7_on.png");
+					}
+				}
+			}
+		}
+	}
+}

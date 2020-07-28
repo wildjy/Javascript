@@ -1,0 +1,201 @@
+.common_Tab.at2 li { width: 50%; }
+
+.common_Tab.at3 li { width: 33.33%; }
+
+.common_Tab.at4 li { width: 25%; }
+
+.common_Tab.at5 li { width: 20%; }
+
+.common_Tab.at6 li { width: 16.66%; }
+
+.common_Tab.at7 li { width: calc(100%/7); }
+
+.common_Tab.h-40 li > span, .common_Tab.h-40 li > a, .common_Tab.h-40 li > button { padding: 10px 0; font-size: 15px; line-height: 25px; }
+
+@media screen and (max-width: 640px) { .common_Tab.h-40 li > span, .common_Tab.h-40 li > a, .common_Tab.h-40 li > button { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+
+@media screen and (max-width: 640px) { .common_Tab.h-40 li > span, .common_Tab.h-40 li > a, .common_Tab.h-40 li > button { padding: 1.5625vw 0vw; font-size: 13px; line-height: 23px; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .common_Tab.h-40 li > span, .common_Tab.h-40 li > a, .common_Tab.h-40 li > button { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.common_Tab.h-60 li > span, .common_Tab.h-60 li > a, .common_Tab.h-60 li > button { padding: 15px 0; font-size: 15px; line-height: 25px; }
+
+@media screen and (max-width: 640px) { .common_Tab.h-60 li > span, .common_Tab.h-60 li > a, .common_Tab.h-60 li > button { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+
+@media screen and (max-width: 640px) { .common_Tab.h-60 li > span, .common_Tab.h-60 li > a, .common_Tab.h-60 li > button { padding: 2.34375vw 0vw; font-size: 13px; line-height: 23px; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .common_Tab.h-60 li > span, .common_Tab.h-60 li > a, .common_Tab.h-60 li > button { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.common_Tab.lh-20 li > span, .common_Tab.lh-20 li > a, .common_Tab.lh-20 li > button { line-height: 20px; }
+
+.common_Tab li { float: left; text-align: center; border: 1px solid #E5E5E5; border-left: none; position: relative; }
+
+.common_Tab li:first-child { border-left: 1px solid #E5E5E5; }
+
+.common_Tab li > button { width: 100%; }
+
+.common_Tab li.selected a, .common_Tab li.selected button { margin-left: -1px; color: #fff; font-weight: 600; background-color: #062B6E; }
+
+.common_Tab li.selected a .arrow, .common_Tab li.selected button .arrow { display: inline-block; padding-right: 25px; background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr_down4_on.gif") no-repeat right 10px; }
+
+.common_Tab li.selected_1 { margin-left: -1px; border: 1px solid #B2C3D1; }
+
+.common_Tab li.selected_1:first-child { border-left: 1px solid #B2C3D1; }
+
+.common_Tab li.selected_1:last-of-type { border-left: 1px solid #B2C3D1; }
+
+.common_Tab li.selected_1 a, .common_Tab li.selected_1 button { background-color: #F2F5F8; }
+
+.common_Tab li.disabled a, .common_Tab li.disabled button { cursor: default; }
+
+.common_Tab li.disabled:after { position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ""; display: block; background-color: rgba(255, 255, 255, 0.7); }
+
+.common_Tab li > a, .common_Tab li > button { display: block; padding: 20px 0; font-size: 18px; line-height: 28px; color: #707070; background-color: #fff; }
+
+@media screen and (max-width: 640px) { .common_Tab li > a, .common_Tab li > button { font-size: 5.625vw !important; line-height: 7.1875vw !important; } }
+
+@media screen and (max-width: 640px) { .common_Tab li > a, .common_Tab li > button { padding: 3.125vw 0vw; font-size: 13px; line-height: 23px; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .common_Tab li > a, .common_Tab li > button { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.common_Tab li > a > span, .common_Tab li > button > span { color: inherit; }
+
+.common_Tab li > a .arrow, .common_Tab li > button .arrow { display: inline-block; padding-right: 25px; background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr_down4.gif") no-repeat right 10px; }
+
+.common_Tab li > a em, .common_Tab li > button em { font-size: 14px; font-weight: normal !important; }
+
+.common_Tab li .msg_layer { position: absolute; top: -10px; left: 0; right: 0; text-align: center; }
+
+.common_Tab li .msg_layer img { vertical-align: middle; margin: -3px 1px 0 0; }
+
+.common_Tab li .msg_layer em { display: inline-block; padding: 0 5px; font-size: 11px; line-height: 20px; color: #062b6e; background-color: #FFF; border: solid 1px #062b6e; -webkit-box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.37); box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.37); }
+
+.common_Tab li .msg_layer em.star { padding-left: 15px; background: #fff url("https://imgorg.jinhak.com/renewal2009/virtualapply/bl_50.gif") 5px 50% no-repeat; }
+
+.common_Tab li .msg_layer.bg em { background-color: #fffdd2; position: relative; }
+
+.common_Tab li .msg_layer.bg em:after { content: ""; display: block; position: absolute; right: 0; bottom: -9px; left: 0; height: 9px; background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/arr16_down.png") center bottom no-repeat; }
+
+.common_Tab li .ico1 { background-image: none; }
+
+.common_Tab li .ico1 i:before { content: ""; display: inline-block; margin: -2px 5px 0 0; width: 22px; height: 18px; vertical-align: middle; background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/ico_type2_01.png") left top no-repeat; }
+
+.common_Tab li .ico2 { background-image: none; }
+
+.common_Tab li .ico2 i:before { content: ""; display: inline-block; margin: -2px 5px 0 0; width: 20px; height: 19px; vertical-align: middle; background: url("https://imgorg.jinhak.com/renewal2009/virtualapply/ico_type2_02.png") left top no-repeat; }
+
+.common_Tab:after { content: ""; display: block; clear: both; }
+
+.common_Tab.type1 li { border-bottom: 2px solid #D5D5D5; }
+
+.common_Tab.type1 li:first-child { border-left: none; }
+
+.common_Tab.type1 li:last-of-type { border-right: none; }
+
+.common_Tab.type1 li.selected > a, .common_Tab.type1 li.selected > button { color: #fff; }
+
+.common_Tab.type1 li.selected_1 { border-bottom: 2px solid #B2C3D1; }
+
+.common_Tab.type1 li.selected_1 { border-bottom: 2px solid #B2C3D1; }
+
+.common_Tab.type1 li > a, .common_Tab.type1 li > button { color: #062b6f; font-weight: 600; }
+
+.common_Tab.type2.white li a, .common_Tab.type2.white li button { background-color: #fff; }
+
+.common_Tab.type2 li { border: 1px solid #E5E5E5; border-bottom: 1px solid #101010; }
+
+.common_Tab.type2 li:first-child { border-left: none; }
+
+.common_Tab.type2 li:last-of-type { border-right: none; }
+
+.common_Tab.type2 li.selected { border: 1px solid #101010; border-bottom: none; }
+
+.common_Tab.type2 li.selected:before { position: absolute; top: 0; bottom: 0; left: -1px; content: ""; display: block; border-left: 1px solid #101010; }
+
+.common_Tab.type2 li.selected a, .common_Tab.type2 li.selected button { color: #101010; background-color: #fff; }
+
+.common_Tab.type2 li a, .common_Tab.type2 li button { color: #101010; background-color: #F1F1F1; }
+
+.common_Tab.type3 { border-top: 1px solid #545454; }
+
+.common_Tab.type3 li { border: 1px solid #E5E5E5; }
+
+.common_Tab.type3 li:first-child { border-left: none; }
+
+.common_Tab.type3 li:last-of-type { border-right: none; }
+
+.common_Tab.type3 li.selected a, .common_Tab.type3 li.selected button { color: #272727; background-color: #E6EDF3; }
+
+.common_Tab.type3 li > a, .common_Tab.type3 li > button { color: #272727; background-color: #F7F7F7; }
+
+.common_Tab.type4 { border-left: 1px solid #101010; }
+
+.common_Tab.type4 li { border: 1px solid #101010; border-left: none; }
+
+.common_Tab.type4 li.selected { border-bottom: 1px solid transparent; }
+
+.common_Tab.type4 li.selected a, .common_Tab.type4 li.selected button { margin-left: 0; color: #1b73d4; font-weight: 600; background-color: #fff; }
+
+.common_Tab.type4 li > a, .common_Tab.type4 li > button { color: #272727; background-color: #fff; }
+
+.common_Tab.type5 li { border: 1px solid #E5E5E5; }
+
+.common_Tab.type5 li:first-child { border-left: none; }
+
+.common_Tab.type5 li:last-of-type { border-right: none; }
+
+.common_Tab.type5 li.selected { border: 1px solid #101010; }
+
+.common_Tab.type5 li.selected:before { position: absolute; top: 0; bottom: 0; left: -1px; content: ""; display: block; border-left: 1px solid #101010; }
+
+.common_Tab.type5 li.selected a, .common_Tab.type5 li.selected button { color: #101010; background-color: #fff; }
+
+.common_Tab.type5 li a, .common_Tab.type5 li button { color: #101010; background-color: #F1F1F1; }
+
+.common_Tab.type6 li { border: 1px solid #E5E5E5; }
+
+.common_Tab.type6 li:first-child { border-left: none; }
+
+.common_Tab.type6 li:last-of-type { border-right: none; }
+
+.common_Tab.type6 li.selected a, .common_Tab.type6 li.selected button { color: #fff; background-color: #AFAFAF; }
+
+.common_Tab.type6 li a, .common_Tab.type6 li button { color: #101010; background-color: #fff; }
+
+.common_Tab.icon li { border-left: none; border-right: none; position: relative; }
+
+.common_Tab.icon li:first-of-type:after { display: none; }
+
+.common_Tab.icon li:after { content: ""; display: block; position: absolute; top: 25px; bottom: 25px; left: 0; width: 1px; background-color: #E9E9E9; }
+
+.common_Tab.icon li span:before, .common_Tab.icon li a:before { margin: 0 auto 10px; content: ""; display: block; width: 65px; height: 65px; background-color: #fff; border: 1px solid #ddd; border-radius: 50%; background-repeat: no-repeat; background-position: 50% 50%; }
+
+.common_Tab.icon li span.icon_1:before, .common_Tab.icon li a.icon_1:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab1_off.png"); }
+
+.common_Tab.icon li span.icon_2:before, .common_Tab.icon li a.icon_2:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab2_off.png"); }
+
+.common_Tab.icon li span.icon_3:before, .common_Tab.icon li a.icon_3:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab3_off.png"); }
+
+.common_Tab.icon li span.icon_4:before, .common_Tab.icon li a.icon_4:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab4_off.png"); }
+
+.common_Tab.icon li span.icon_5:before, .common_Tab.icon li a.icon_5:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab5_off.png"); }
+
+.common_Tab.icon li span.icon_6:before, .common_Tab.icon li a.icon_6:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab6_off.png"); }
+
+.common_Tab.icon li span.icon_7:before, .common_Tab.icon li a.icon_7:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab7_off.png"); }
+
+.common_Tab.icon li.selected a:before { border: 1px solid #ACC0D1; -webkit-box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.15); box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.15); }
+
+.common_Tab.icon li.selected .icon_1:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab1_on.png"); }
+
+.common_Tab.icon li.selected .icon_2:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab2_on.png"); }
+
+.common_Tab.icon li.selected .icon_3:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab3_on.png"); }
+
+.common_Tab.icon li.selected .icon_4:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab4_on.png"); }
+
+.common_Tab.icon li.selected .icon_5:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab5_on.png"); }
+
+.common_Tab.icon li.selected .icon_6:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab6_on.png"); }
+
+.common_Tab.icon li.selected .icon_7:before { background-image: url("https://imgorg.jinhak.com/renewal2020/icon/icon_virtual_tab7_on.png"); }

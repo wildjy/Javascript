@@ -1,0 +1,393 @@
+// 공통 scss
+
+@charset "utf-8";
+
+$viewport: 640;
+@function calc-vw($vw) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	@return ($vw / $vw-context) * 1vw;
+}
+@mixin calc-vw-2($vw, $vw1, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b};
+	} @else if $type == margin {
+			margin: #{$a} #{$b};
+	} @else if $type == auto {
+			margin: #{$a} auto #{$b};
+	}
+}
+@mixin calc-vw-4($vw, $vw1, $vw2, $vw3, $type) {
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	$b:($vw1 / $vw-context) * 1vw;
+	$c:($vw2 / $vw-context) * 1vw;
+	$d:($vw3 / $vw-context) * 1vw;
+	@if $type == padding {
+			padding: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == margin {
+			margin: #{$a} #{$b} #{$c} #{$d};
+	} @else if $type == radius {
+			border-radius: #{$a} #{$b} #{$c} #{$d};
+	}
+}
+
+@mixin calc-calc($vw, $type){
+	$vw-context: ($viewport * 0.01) * 1px;
+	$a:($vw / $vw-context) * 1vw;
+	@if $type == width {
+			width:calc(100% - #{$a});
+	} @else if $type == width2 {
+			width:calc(100%/2 - #{$a});
+	} @else if $type == calc2 {
+			height:calc(100%/2 - #{$a});
+	}
+}
+
+@mixin fontSize($size) {
+	$lineHeight : $size + 10;
+	font-size:$size !important;
+	line-height:$lineHeight !important;
+	@media screen and (max-width:640px){
+		font-size:calc-vw($size * 2) !important;
+		line-height:calc-vw($size * 2 + 10) !important;
+	}
+}
+// new_Table : 2020~
+.table_Style{
+  width:100%;
+	border-top:1px solid #37404E;
+	&.fs_8{
+		th,
+		td{
+			@include fontSize(8px);
+		}
+	}
+	&.fs_9{
+		th,
+		td{
+			@include fontSize(9px);
+		}
+	}
+	&.fs_10{
+		th,
+		td{
+			@include fontSize(10px);
+		}
+	}
+	&.fs_11{
+		th,
+		td{
+			@include fontSize(11px);
+		}
+	}
+	&.fs_12{
+		th,
+		td{
+			@include fontSize(12px);
+		}
+	}
+	&.fs_13{
+		th,
+		td{
+			@include fontSize(13px);
+		}
+	}
+	&.fs_14{
+		th,
+		td{
+			@include fontSize(14px);
+		}
+	}
+	&.fs_15{
+		th,
+		td{
+			@include fontSize(15px);
+		}
+	}
+	&.fs_16{
+		th,
+		td{
+			@include fontSize(16px);
+		}
+	}
+	&.fs_17{
+		th,
+		td{
+			@include fontSize(17px);
+		}
+	}
+	&.fs_18{
+		th,
+		td{
+			@include fontSize(18px);
+		}
+	}
+	&.fs_19{
+		th,
+		td{
+			@include fontSize(19px);
+		}
+	}
+	&.fs_20{
+		th,
+		td{
+			@include fontSize(20px);
+		}
+	}
+  th,
+  td{
+    @include fontSize(15px);
+    text-align:center;
+		@media screen and(max-width:640px){
+			@include fontSize(12px);
+		}
+		.mFont10{
+			@media screen and(max-width:640px){
+				@include fontSize(10px);
+			}
+		}
+		.mFont11{
+			@media screen and(max-width:640px){
+				@include fontSize(11px);
+			}
+		}
+		.mFont12{
+			@media screen and(max-width:640px){
+				@include fontSize(12px);
+			}
+		}
+    &.a_L{
+      text-align:left !important;
+    }
+    &.a_C{
+      text-align:center !important;
+    }
+    &.a_R{
+      text-align:right !important;
+		}
+		&.greyBg{
+			background-color: #F2F2F2;
+		}
+		&.yellowBg{
+			background-color: #FEFFEF;
+		}
+		a{
+			&.link{
+				text-decoration: underline;
+			}
+		}
+		.btn-Style{
+			padding:2px 10px;
+			font-size:13px;
+		}
+  }
+  tr{
+    th,
+    td{
+      &:first-child{
+        border-left:none;
+      }
+      &:last-child{
+        border-right:none;
+      }
+    }
+  }
+  thead{
+		th{
+			padding:10px 0;
+			background-color: #F2F2F2;
+			border:1px solid #C0C0C0;
+			border-top:none;
+			.tooltip2{
+				&:hover{
+				}
+				&:after{
+					left:3px;
+					right:3px;
+					@include fontSize(11px);
+					color:#1e7fea;
+					background-color: #fff;
+					border:1px solid #1e7fea;
+					outline:none;
+				}
+			}
+		}
+	}
+	tbody{
+		th{
+			padding:10px 0;
+			background-color: #fff;
+			border:1px solid #C0C0C0;
+			border-top:none;
+		}
+		td{
+			padding:10px 0;
+			background-color: #fff;
+			border:1px solid #C0C0C0;
+			&.t_line{
+				border-top:1px solid #37404E;
+			}
+		}
+	}
+
+	&.type1{ // side 구분선 없음
+		thead{
+			th{
+				border:none;
+				border-bottom:1px solid #C0c0c0;
+			}
+		}
+		tbody{
+			th{
+				padding:10px;
+				border:none;
+				@media screen and (max-width:640px){
+					padding:calc-vw(10px);
+				}
+			}
+			td{
+				padding:10px;
+				border:none;
+				border-bottom:1px solid #C0c0c0;
+				@media screen and (max-width:640px){
+					padding:calc-vw(10px);
+				}
+			}
+		}
+	}
+
+	&.type2{ // icon_합격예측
+		border-top:2px solid #000;
+		border-bottom:1px solid #ddd;
+		thead{
+			th{
+				padding:20px 0;
+				@include fontSize(15px);
+				background-color: #E0E8F1;
+				border:none;
+				span{
+					position: relative;
+					&:after{
+						display:inline-block;
+						content:"";
+						margin-left:10px;
+						width:13px;
+						height:8px;
+						background: url("https://imgorg.jinhak.com/renewal2020/icon/icon_Table_head.png") 0 0 no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
+		tbody{
+			th{
+				padding:10px;
+				border:none;
+			}
+			td{
+				padding:10px;
+				border:none;
+				border-bottom:1px solid #C0c0c0;
+			}
+		}
+	}
+
+	&.type3{ // thead side 구분선 없음
+		thead{
+			th{
+				border:none;
+				border-bottom:1px solid #C0c0c0;
+			}
+		}
+		tbody{
+			th{
+				padding:10px;
+				border:none;
+			}
+			td{
+				padding:10px;
+			}
+		}
+	}
+
+	//horizontal tbody>th Background-color:grey
+	&.horizontal{
+		&.notB{ // border 강조 없음
+			border-top:none;
+			tbody{
+				tr{
+					&:first-of-type{
+						th,
+						td{
+							border-top:1px solid #C0C0C0;
+						}
+					}
+					th{
+						border-top:1px solid #C0C0C0;
+						border-right:none;
+					}
+					td{
+						border-left:none;
+					}
+				}
+			}
+		}
+
+		&.separate{
+			border-collapse:separate;
+			border-spacing:0 10px;
+			th{
+				border-top:1px solid #C0C0C0;
+				border-right:none;
+			}
+			td{
+				border-left:none;
+			}
+		}
+
+		&.center{
+			tbody{
+				th,
+				td{
+					text-align:center;
+				}
+			}
+		}
+		&.td_c{
+			tbody{
+				td{
+					text-align:center;
+				}
+			}
+		}
+		tbody{
+			tr{
+				&:first-of-type{
+					th,
+					td{
+						border-top:1px solid #37404E;
+					}
+				}
+			}
+			th{
+				padding:10px 0;
+				background-color: #F2F2F2;
+				border:1px solid #C0C0C0;
+				border-top:none;
+				border-left:none;
+			}
+			td{
+				padding:10px;
+				text-align:left;
+				&.greyTb{
+					border-top:1px solid #C0C0C0 !important;
+				}
+			}
+		}
+	}
+}
+
+

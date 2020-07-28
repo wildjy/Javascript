@@ -1,0 +1,785 @@
+.garph_info { position: absolute; top: 0; display: table; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.75); }
+
+.garph_info span { display: table-cell; width: 100%; vertical-align: middle; }
+
+.garph_info b { display: block; font-size: 14px; line-height: 24px; color: #fff; }
+
+.common_graph { margin-bottom: 30px; border-top: 1px solid #CFD7DD; }
+
+.common_graph .inner { height: 100%; position: relative; }
+
+.common_graph.vertical { border-bottom: 2px solid #272727; }
+
+.common_graph.vertical .inner { margin: 0 auto; }
+
+.common_graph.vertical.at1 .graph { width: 100%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(2) { left: 100%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(3) { left: 200%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(4) { left: 300%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(5) { left: 400%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(6) { left: 500%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(7) { left: 600%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(8) { left: 700%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(9) { left: 800%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(10) { left: 900%; }
+
+.common_graph.vertical.at1 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at1 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at1 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at2 .graph { width: 50%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(2) { left: 50%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(3) { left: 100%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(4) { left: 150%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(5) { left: 200%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(6) { left: 250%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(7) { left: 300%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(8) { left: 350%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(9) { left: 400%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(10) { left: 450%; }
+
+.common_graph.vertical.at2 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at2 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at2 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at3 .graph { width: 33.33333%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(2) { left: 33.33333%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(3) { left: 66.66667%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(4) { left: 100%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(5) { left: 133.33333%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(6) { left: 166.66667%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(7) { left: 200%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(8) { left: 233.33333%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(9) { left: 266.66667%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(10) { left: 300%; }
+
+.common_graph.vertical.at3 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at3 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at3 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at4 .graph { width: 25%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(2) { left: 25%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(3) { left: 50%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(4) { left: 75%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(5) { left: 100%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(6) { left: 125%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(7) { left: 150%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(8) { left: 175%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(9) { left: 200%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(10) { left: 225%; }
+
+.common_graph.vertical.at4 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at4 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at4 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at5 .graph { width: 20%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(2) { left: 20%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(3) { left: 40%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(4) { left: 60%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(5) { left: 80%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(6) { left: 100%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(7) { left: 120%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(8) { left: 140%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(9) { left: 160%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(10) { left: 180%; }
+
+.common_graph.vertical.at5 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at5 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at5 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at6 .graph { width: 16.66667%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(2) { left: 16.66667%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(3) { left: 33.33333%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(4) { left: 50%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(5) { left: 66.66667%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(6) { left: 83.33333%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(7) { left: 100%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(8) { left: 116.66667%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(9) { left: 133.33333%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(10) { left: 150%; }
+
+.common_graph.vertical.at6 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at6 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at6 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at7 .graph { width: 14.28571%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(2) { left: 14.28571%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(3) { left: 28.57143%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(4) { left: 42.85714%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(5) { left: 57.14286%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(6) { left: 71.42857%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(7) { left: 85.71429%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(8) { left: 100%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(9) { left: 114.28571%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(10) { left: 128.57143%; }
+
+.common_graph.vertical.at7 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at7 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at7 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at8 .graph { width: 12.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(2) { left: 12.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(3) { left: 25%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(4) { left: 37.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(5) { left: 50%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(6) { left: 62.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(7) { left: 75%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(8) { left: 87.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(9) { left: 100%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(10) { left: 112.5%; }
+
+.common_graph.vertical.at8 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at8 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at8 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at9 .graph { width: 11.11111%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(2) { left: 11.11111%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(3) { left: 22.22222%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(4) { left: 33.33333%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(5) { left: 44.44444%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(6) { left: 55.55556%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(7) { left: 66.66667%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(8) { left: 77.77778%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(9) { left: 88.88889%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(10) { left: 100%; }
+
+.common_graph.vertical.at9 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at9 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at9 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical.at10 .graph { width: 10%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(2) { left: 10%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(3) { left: 20%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(4) { left: 30%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(5) { left: 40%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(6) { left: 50%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(7) { left: 60%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(8) { left: 70%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(9) { left: 80%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(10) { left: 90%; }
+
+.common_graph.vertical.at10 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.vertical.at10 .graph dd { margin-left: -30px; width: 60px; }
+
+.common_graph.vertical.at10 .graph dd .guage { border-radius: 30px 30px 0 0; }
+
+.common_graph.vertical .graph { position: absolute; bottom: 0; height: 100%; text-align: center; }
+
+.common_graph.vertical .graph dt { position: absolute; bottom: -30px; left: 0; width: 100%; font-size: 15px; line-height: 25px; color: #272727; }
+
+.common_graph.vertical .graph dd { position: absolute; top: 0; bottom: 0; left: 50%; }
+
+.common_graph.vertical .graph dd .val { position: absolute; top: -30px; left: 0; right: 0; font-size: 15px; line-height: 25px; color: #272727; }
+
+.common_graph.vertical .graph dd .guage { position: absolute; bottom: 0px; left: 0; right: 0; background-color: #BDBCCA; border: 2px solid #272727; border-bottom: none; }
+
+.common_graph.horizontal { border-left: 2px solid #272727; }
+
+.common_graph.horizontal.at1 .graph { height: 100%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(2) { top: 100%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(3) { top: 200%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(4) { top: 300%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(5) { top: 400%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(6) { top: 500%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(7) { top: 600%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(8) { top: 700%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(9) { top: 800%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(10) { top: 900%; }
+
+.common_graph.horizontal.at1 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at1 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at2 .graph { height: 50%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(2) { top: 50%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(3) { top: 100%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(4) { top: 150%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(5) { top: 200%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(6) { top: 250%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(7) { top: 300%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(8) { top: 350%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(9) { top: 400%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(10) { top: 450%; }
+
+.common_graph.horizontal.at2 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at2 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at3 .graph { height: 33.33333%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(2) { top: 33.33333%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(3) { top: 66.66667%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(4) { top: 100%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(5) { top: 133.33333%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(6) { top: 166.66667%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(7) { top: 200%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(8) { top: 233.33333%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(9) { top: 266.66667%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(10) { top: 300%; }
+
+.common_graph.horizontal.at3 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at3 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at4 .graph { height: 25%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(2) { top: 25%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(3) { top: 50%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(4) { top: 75%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(5) { top: 100%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(6) { top: 125%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(7) { top: 150%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(8) { top: 175%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(9) { top: 200%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(10) { top: 225%; }
+
+.common_graph.horizontal.at4 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at4 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at5 .graph { height: 20%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(2) { top: 20%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(3) { top: 40%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(4) { top: 60%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(5) { top: 80%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(6) { top: 100%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(7) { top: 120%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(8) { top: 140%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(9) { top: 160%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(10) { top: 180%; }
+
+.common_graph.horizontal.at5 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at5 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at6 .graph { height: 16.66667%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(2) { top: 16.66667%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(3) { top: 33.33333%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(4) { top: 50%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(5) { top: 66.66667%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(6) { top: 83.33333%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(7) { top: 100%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(8) { top: 116.66667%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(9) { top: 133.33333%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(10) { top: 150%; }
+
+.common_graph.horizontal.at6 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at6 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at7 .graph { height: 14.28571%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(2) { top: 14.28571%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(3) { top: 28.57143%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(4) { top: 42.85714%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(5) { top: 57.14286%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(6) { top: 71.42857%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(7) { top: 85.71429%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(8) { top: 100%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(9) { top: 114.28571%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(10) { top: 128.57143%; }
+
+.common_graph.horizontal.at7 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at7 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at8 .graph { height: 12.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(2) { top: 12.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(3) { top: 25%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(4) { top: 37.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(5) { top: 50%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(6) { top: 62.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(7) { top: 75%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(8) { top: 87.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(9) { top: 100%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(10) { top: 112.5%; }
+
+.common_graph.horizontal.at8 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at8 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at9 .graph { height: 11.11111%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(2) { top: 11.11111%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(3) { top: 22.22222%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(4) { top: 33.33333%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(5) { top: 44.44444%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(6) { top: 55.55556%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(7) { top: 66.66667%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(8) { top: 77.77778%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(9) { top: 88.88889%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(10) { top: 100%; }
+
+.common_graph.horizontal.at9 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at9 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal.at10 .graph { height: 10%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(2) { top: 10%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(3) { top: 20%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(4) { top: 30%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(5) { top: 40%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(6) { top: 50%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(7) { top: 60%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(8) { top: 70%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(9) { top: 80%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(10) { top: 90%; }
+
+.common_graph.horizontal.at10 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.horizontal.at10 .graph dd .guage { margin-top: -30px; height: 60px; border-radius: 0 30px 30px 0; }
+
+.common_graph.horizontal .graph { position: absolute; top: 0; left: 0; padding-right: 10px; width: 100%; text-align: left; }
+
+.common_graph.horizontal .graph dt { position: absolute; top: 50%; left: 15px; font-size: 15px; line-height: 25px; color: #272727; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); z-index: 1; }
+
+.common_graph.horizontal .graph dd { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+.common_graph.horizontal .graph dd .val { position: absolute; top: 50%; right: 15px; font-size: 15px; line-height: 25px; color: #000; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); z-index: 1; }
+
+.common_graph.horizontal .graph dd .guage { position: absolute; top: 50%; left: 0; right: 0; height: 100%; }
+
+.common_graph .guage.active { background-color: red !important; }
+
+.common_graph .guage.disable { height: 50%; background-color: #fff !important; border: 2px dotted #272727 !important; border-bottom: none !important; }
+
+.common_graph.sample.vertical { margin-bottom: 30px; height: 170px; border-top: 1px solid #CFD7DD; }
+
+.common_graph.sample.vertical .guage { background-color: #BDBCCA; border: 2px solid #272727; border-bottom: 0; }
+
+.common_graph.sample.horizontal { margin-bottom: 30px; height: 250px; border: 1px solid #CFD7DD; }
+
+.common_graph.sample.horizontal.at3 .graph { height: 33.33333%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(2) { top: 33.33333%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(3) { top: 66.66667%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(4) { top: 100%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(5) { top: 133.33333%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(6) { top: 166.66667%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(7) { top: 200%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(8) { top: 233.33333%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(9) { top: 266.66667%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(10) { top: 300%; }
+
+.common_graph.sample.horizontal.at3 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.sample.horizontal.at3 .graph dd .guage { margin-top: -22.5px; height: 45px; border-radius: 0 22.5px 22.5px 0; }
+
+.common_graph.sample.horizontal.at4 .graph { height: 25%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(2) { top: 25%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(3) { top: 50%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(4) { top: 75%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(5) { top: 100%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(6) { top: 125%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(7) { top: 150%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(8) { top: 175%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(9) { top: 200%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(10) { top: 225%; }
+
+.common_graph.sample.horizontal.at4 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.sample.horizontal.at4 .graph dd .guage { margin-top: -22.5px; height: 45px; border-radius: 0 22.5px 22.5px 0; }
+
+.common_graph.sample.horizontal .guage { background-color: #6A67D0; border: 2px solid #272727; border-left: 0; }
+
+.common_graph.colorSample.vertical .guage { background-color: #00FFA9; border: 2px solid #000; border-bottom: 0; }
+
+.common_graph.customSample.vertical .guage { background-color: #FF00AE; border: 2px solid #000; border-bottom: 0; }
+
+.common_graph.customSample.vertical.at2 .graph { width: 50%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(1) { left: 0%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(2) { left: 50%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(3) { left: 100%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(4) { left: 150%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(5) { left: 200%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(6) { left: 250%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(7) { left: 300%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(8) { left: 350%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(9) { left: 400%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(10) { left: 450%; }
+
+.common_graph.customSample.vertical.at2 .graph:nth-of-type(1) { left: 0px; }
+
+.common_graph.customSample.vertical.at2 .graph dd { margin-left: -30px; width: 100px; }
+
+.common_graph.customSample.vertical.at2 .graph dd .guage { border-radius: 50px 50px 0 0; }
+
+.common_graph.customSample.horizontal .guage { background-color: #00FFA9; border: 2px solid #000; border-left: 0; }
+
+.common_graph.customSample.horizontal.at2 .graph { height: 50%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(1) { top: 0%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(2) { top: 50%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(3) { top: 100%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(4) { top: 150%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(5) { top: 200%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(6) { top: 250%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(7) { top: 300%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(8) { top: 350%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(9) { top: 400%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(10) { top: 450%; }
+
+.common_graph.customSample.horizontal.at2 .graph:nth-of-type(1) { top: 0px; }
+
+.common_graph.customSample.horizontal.at2 .graph dd .guage { margin-top: -15px; height: 30px; border-radius: 0 15px 15px 0; }
+
+.graph_Style { position: relative; }
+
+.graph_Style.myStyle { margin: 0 auto 50px; width: 1058px; height: 376px; background: #fff url("https://imgorg.jinhak.com/renewal2020/graph/graph_default.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type { float: left; margin-left: 2px; width: 320px; height: 100%; text-align: center; position: relative; }
+
+.graph_Style.myStyle .type:first-of-type { margin-left: 0; width: 206px; }
+
+.graph_Style.myStyle .type:nth-child(2n) { width: 230px; }
+
+.graph_Style.myStyle .type:nth-child(3) { width: 178px; }
+
+.graph_Style.myStyle .type:nth-child(5) { width: 206px; }
+
+.graph_Style.myStyle .type > .tit { position: absolute; top: 50%; left: 0; right: 0; font-size: 26px; line-height: 36px; color: #fff; font-weight: 600; text-align: center; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); z-index: 2; }
+
+.graph_Style.myStyle .type > span { position: absolute; bottom: -30px; right: -55px; width: 110px; font-size: 13px; line-height: 23px; color: #272727; text-align: center; }
+
+.graph_Style.myStyle .type.active:first-of-type { background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c01.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type.active:nth-child(2) { background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c02.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type.active:nth-child(3) { background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c03.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type.active:nth-child(4) { background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c04.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type.active:nth-child(5) { background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c05.png") 50% bottom no-repeat; }
+
+.graph_Style.myStyle .type.active > span { color: #062b6f; }
+
+.graph_Style.myStyle .my { position: absolute; padding-left: 20px; font-size: 13px; line-height: 23px; color: #ff004c; font-weight: 600; z-index: 2; }
+
+.graph_Style.myStyle .my:before { position: absolute; top: 50%; left: 0; margin-top: -8px; content: ""; display: block; width: 16px; height: 16px; border-radius: 50%; background-color: #ff004c; }
+
+.graph_Style.myStyle .my.ps1 { bottom: -10px; left: 20px; }
+
+.graph_Style.myStyle .my.ps2 { bottom: 80px; left: 97px; }
+
+.graph_Style.myStyle .my.ps3 { bottom: 185px; left: 200px; }
+
+.graph_Style.myStyle .my.ps4 { bottom: 212px; left: 234px; }
+
+.graph_Style.myStyle .my.ps5 { bottom: 239px; left: 269px; }
+
+.graph_Style.myStyle .my.ps6 { bottom: 265px; left: 304px; }
+
+.graph_Style.myStyle .my.ps7 { bottom: 288px; left: 342px; }
+
+.graph_Style.myStyle .my.ps8 { bottom: 305px; left: 374px; }
+
+.graph_Style.myStyle .my.ps9 { bottom: 320px; left: 413px; }
+
+.graph_Style.myStyle .my.ps10 { bottom: 331px; left: 448px; }
+
+.graph_Style.myStyle .my.ps11 { bottom: 339px; left: 483px; }
+
+.graph_Style.myStyle .my.ps12 { bottom: 340px; left: 523px; }
+
+.graph_Style.myStyle .my.ps13 { bottom: 337px; left: 550px; }
+
+.graph_Style.myStyle .my.ps14 { bottom: 329px; left: 585px; }
+
+.graph_Style.myStyle .my.ps15 { bottom: 316px; left: 620px; }
+
+.graph_Style.myStyle .my.ps16 { bottom: 301px; left: 655px; }
+
+.graph_Style.myStyle .my.ps17 { bottom: 284px; left: 690px; }
+
+.graph_Style.myStyle .my.ps18 { bottom: 262px; left: 725px; }
+
+.graph_Style.myStyle .my.ps19 { bottom: 239px; left: 760px; }
+
+.graph_Style.myStyle .my.ps20 { bottom: 212px; left: 795px; }
+
+.graph_Style.myStyle .my.ps21 { bottom: 173px; left: 843px; }
+
+.graph_Style.myStyle .my.ps22 { bottom: 80px; right: 97px; padding-left: 0; padding-right: 20px; }
+
+.graph_Style.myStyle .my.ps22:before { left: inherit; right: 0px; }
+
+.graph_Style.myStyle .my.ps23 { bottom: -10px; right: 20px; padding-left: 0; padding-right: 20px; }
+
+.graph_Style.myStyle .my.ps23:before { left: inherit; right: 0px; }
+
+.graph_Style:after { content: ""; display: block; clear: both; }

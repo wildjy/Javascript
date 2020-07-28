@@ -1,0 +1,444 @@
+//Mobile share - graph
+
+@charset "utf-8";
+
+@mixin after{
+	content:"";
+	display:block;
+	clear:both;
+}
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin fontSize($size) {
+	$lineHeight : $size + 10;
+	font-size:$size;
+  line-height:$lineHeight;
+}
+
+@mixin graphPosition($size, $length, $type){ //graph size, length, type[vertical, horizontal]
+  @if $type == vertical {
+    .graph{
+      width:(100/$length) + %;
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}){
+          left:((100/$length) * ($i - 1)) + %;
+        }
+      }
+      &:nth-of-type(1){
+        left:0px;
+      }
+      dd{
+        margin-left:-($size/2 + px);
+        width:$size + px;
+        .guage{
+          border-radius: ($size/2) + px ($size/2) + px 0 0;
+        }
+      }
+    }
+  } @else if $type == horizontal {
+    .graph{
+      height:(100/$length) + %;
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}){
+          top:((100/$length) * ($i - 1)) + %;
+        }
+      }
+      &:nth-of-type(1){
+        top:0px;
+      }
+      dd{
+        .guage{
+          margin-top:-($size/2) + px;
+          height:$size + px;
+          border-radius: 0 ($size/2) + px ($size/2) + px 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin graphColor($bgc, $bcolor, $type){ //background-color, border-color, type
+  @if $type == vertical {
+    .guage{
+      background-color: $bgc;
+      border:2px solid $bcolor;
+      border-bottom:0;
+    }
+  } @else if $type == horizontal {
+    .guage{
+      background-color: $bgc;
+      border:2px solid $bcolor;
+      border-left:0;
+    }
+  }
+}
+//
+.garph_info{
+  position: absolute;
+  top:0;
+  display:table;
+  width:100%;
+  height:100%;
+  text-align:center;
+  background-color: rgba(0,0,0,.75);
+  span{
+    display:table-cell;
+    width:100%;
+    vertical-align: middle;
+  }
+  b{
+    display:block;
+    @include fontSize(14px);
+    color:#fff;
+  }
+}
+.common_graph{
+  margin-bottom:30px;
+  border-top:1px solid #CFD7DD;
+  .inner{
+    //width:70%;
+    height:100%;
+    position: relative;
+  }
+  &.vertical{
+    border-bottom:2px solid #272727;
+    .inner{
+      margin:0 auto;
+    }
+    //position
+    &.at1{
+      @include graphPosition(60, 1, vertical);
+    }
+    &.at2{
+      @include graphPosition(60, 2, vertical);
+    }
+    &.at3{
+      @include graphPosition(60, 3, vertical);
+    }
+    &.at4{
+      @include graphPosition(60, 4, vertical);
+    }
+    &.at5{
+      @include graphPosition(60, 5, vertical);
+    }
+    &.at6{
+      @include graphPosition(60, 6, vertical);
+    }
+    &.at7{
+      @include graphPosition(60, 7, vertical);
+    }
+    &.at8{
+      @include graphPosition(60, 8, vertical);
+    }
+    &.at9{
+      @include graphPosition(60, 9, vertical);
+    }
+    &.at10{
+      @include graphPosition(60, 10, vertical);
+    }
+
+    .graph{
+      position: absolute;
+      bottom:0;
+      height:100%;
+      text-align:center;
+      dt{
+        position: absolute;
+        bottom:-30px;
+        left:0;
+        width:100%;
+        @include fontSize(15px);
+        color:#272727;
+      }
+      dd{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:50%;
+        .val{
+          position: absolute;
+          top:-30px;
+          left:0;
+          right:0;
+          @include fontSize(15px);
+          color:#272727;
+        }
+        .guage{
+          position: absolute;
+          bottom:0px;
+          left:0;
+          right:0;
+          background-color: #BDBCCA;
+          border:2px solid #272727;
+          border-bottom:none;
+        }
+      }
+    }
+  }
+  &.horizontal{
+    border-left:2px solid #272727;
+
+    //position
+    &.at1{
+      @include graphPosition(60, 1, horizontal);
+    }
+    &.at2{
+      @include graphPosition(60, 2, horizontal);
+    }
+    &.at3{
+      @include graphPosition(60, 3, horizontal);
+    }
+    &.at4{
+      @include graphPosition(60, 4, horizontal);
+    }
+    &.at5{
+      @include graphPosition(60, 5, horizontal);
+    }
+    &.at6{
+      @include graphPosition(60, 6, horizontal);
+    }
+    &.at7{
+      @include graphPosition(60, 7, horizontal);
+    }
+    &.at8{
+      @include graphPosition(60, 8, horizontal);
+    }
+    &.at9{
+      @include graphPosition(60, 9, horizontal);
+    }
+    &.at10{
+      @include graphPosition(60, 10, horizontal);
+    }
+
+    .graph{
+      position: absolute;
+      top:0;
+      left:0;
+      padding-right:10px;
+      width:100%;
+      text-align:left;
+      dt{
+        position: absolute;
+        top:50%;
+        left:15px;
+        @include fontSize(15px);
+        color:#272727;
+        @include translate(0,-50%);
+        z-index:1;
+      }
+      dd{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        .val{
+          position: absolute;
+          top:50%;
+          right:15px;
+          @include fontSize(15px);
+          color:#000;
+          @include translate(0,-50%);
+          z-index:1;
+        }
+        .guage{
+          position: absolute;
+          top:50%;
+          left:0;
+          right:0;
+          height:100%;
+          //background-color: #BDBCCA;
+          //border:2px solid #272727;
+        }
+      }
+    }
+  }
+  .guage{
+    &.active{
+      background-color: red !important;
+    }
+    &.disable{
+      height:50%;
+      background-color: #fff !important;
+      border:2px dotted #272727 !important;
+      border-bottom:none !important;
+    }
+  }
+}
+
+
+// sample
+// sample - vertical
+.common_graph{
+  &.sample{
+    &.vertical{
+      margin-bottom:30px;
+      height:170px;
+      border-top:1px solid #CFD7DD;
+      @include graphColor(#BDBCCA, #272727, vertical); //background-color, border-color, type
+    }
+    &.horizontal{
+      margin-bottom:30px;
+      height:250px;
+      border:1px solid #CFD7DD;
+      .inner{
+        //width:90%;
+      }
+      &.at3{
+        @include graphPosition(45, 3, horizontal);
+      }
+      &.at4{
+        @include graphPosition(45, 4, horizontal);
+      }
+      @include graphColor(#6A67D0, #272727, horizontal);
+    }
+  }
+  //colorSample
+  &.colorSample{
+    &.vertical{
+      @include graphColor(#00FFA9, #000, vertical);
+    }
+  }
+  //customSample
+  &.customSample{
+    &.vertical{
+      @include graphColor(#FF00AE, #000, vertical);
+      &.at2{
+        @include graphPosition(100, 2, vertical);
+      }
+    }
+    &.horizontal{
+      @include graphColor(#00FFA9, #000, horizontal);
+      &.at2{
+        @include graphPosition(30, 2, horizontal);
+      }
+    }
+  }
+}
+
+
+
+
+
+//수시정시진단 position Graph
+.graph_Style{
+  position: relative;
+  &.myStyle{
+    margin:0 auto 50px;
+    width:1058px;
+    height:376px;
+    background:#fff url("https://imgorg.jinhak.com/renewal2020/graph/graph_default.png") 50% bottom no-repeat;
+    .type{
+      float:left;
+      margin-left:2px;
+      width:320px;
+      height:100%;
+      text-align:center;
+      position: relative;
+      &:first-of-type{
+        margin-left:0;
+        width:206px;
+      }
+      &:nth-child(2n){
+        width:230px;
+      }
+      &:nth-child(3){
+        width:178px;
+      }
+      &:nth-child(5){
+        width:206px;
+      }
+      >.tit{
+        position: absolute;
+        top:50%;
+        left:0;
+        right:0;
+        @include fontSize(26px);
+        color:#fff;
+        font-weight:600;
+        text-align:center;
+        @include translate(0,-50%);
+        z-index:2;
+      }
+      >span{
+        position: absolute;
+        bottom:-30px;
+        right:-55px;
+        width:110px;
+        @include fontSize(13px);
+        color:#272727;
+        text-align:center;
+      }
+      &.active{
+        &:first-of-type{
+          background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c01.png") 50% bottom no-repeat;
+        }
+        &:nth-child(2){
+          background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c02.png") 50% bottom no-repeat;
+        }
+        &:nth-child(3){
+          background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c03.png") 50% bottom no-repeat;
+        }
+        &:nth-child(4){
+          background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c04.png") 50% bottom no-repeat;
+        }
+        &:nth-child(5){
+          background: url("https://imgorg.jinhak.com/renewal2020/graph/graph_c05.png") 50% bottom no-repeat;
+        }
+        >span{
+          color:#062b6f;
+        }
+      }
+    }
+
+    .my{
+      position: absolute;
+      padding-left:20px;
+      @include fontSize(13px);
+      color:#ff004c;
+      font-weight:600;
+      z-index:2;
+      &:before{
+        position: absolute;
+        top:50%;
+        left:0;
+        margin-top:-8px;
+        content:"";
+        display:block;
+        width:16px;
+        height:16px;
+        border-radius:50%;
+        background-color: #ff004c;
+      }
+      @mixin at{
+        padding-left:0;
+        padding-right:20px;
+        &:before{
+          left:inherit;
+          right:0px;
+        }
+      }
+      //position
+      &.ps1{bottom:-10px;left:20px;} &.ps2{bottom:80px;left:97px;} &.ps3{bottom:185px;left:200px;} &.ps4{bottom:212px;left:234px;}
+      &.ps5{bottom:239px;left:269px;} &.ps6{bottom:265px;left:304px;} &.ps7{bottom:288px;left:342px;} &.ps8{bottom:305px;left:374px;}
+      &.ps9{bottom:320px;left:413px;} &.ps10{bottom:331px;left:448px;} &.ps11{bottom:339px;left:483px;} &.ps12{bottom:340px;left:523px;}
+      &.ps13{bottom:337px;left:550px;} &.ps14{bottom:329px;left:585px;} &.ps15{bottom:316px;left:620px;} &.ps16{bottom:301px;left:655px;}
+      &.ps17{bottom:284px;left:690px;} &.ps18{bottom:262px;left:725px;} &.ps19{bottom:239px;left:760px;} &.ps20{bottom:212px;left:795px;}
+      &.ps21{bottom:173px;left:843px;}
+      &.ps22{bottom:80px;right:97px; @include at;}
+      &.ps23{bottom:-10px;right:20px; @include at;}
+    }
+  }
+  &:after{
+    @include after;
+  }
+}

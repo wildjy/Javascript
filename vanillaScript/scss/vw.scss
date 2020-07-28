@@ -1,0 +1,101 @@
+@charset "utf-8";
+@import "_config";
+
+.skip-navi {
+  display:block;
+  position:absolute;
+  left:0;
+  top:0;
+  overflow:hidden;
+  width:1px;
+  height:1px;
+  text-align:center;
+  color:#fff;
+  z-index:101;
+  &:active, &:focus {
+      width:100%;
+      height:auto;
+      background:$major-color;
+      padding:5px 0;
+  }
+}
+
+#wrapper{
+  padding:30px;
+  background-color: #e0e0e0;
+  @media screen and (max-width:640px){
+    padding:calc-vw(30px);
+  }
+  .vw-wrap{
+    padding:50px;
+    background-color: #fff;
+    @media screen and (max-width:640px){
+      padding:calc-vw(50px);
+    }
+    p{
+      padding:15px 0;
+      @media screen and (max-width:640px){
+        @include calc-vw-2(15px, 0px, padding);
+      }
+    }
+    .vw-test{
+      padding:20px 150px;
+      font-size:50px;
+      color:#111;
+      line-height:50px;
+      @media screen and (max-width:640px){
+        @include calc-vw-2(20px, 150px, padding);
+        font-size:calc-vw(50px);
+        line-height:calc-vw(50px);
+      }
+    }
+    .vw-test1{
+      margin:15px 200px;
+      font-size:40px;
+      color:#111;
+      line-height:40px;
+      @media screen and (max-width:640px){
+        @include calc-vw-2(15px, 200px, margin);
+        font-size:calc-vw(40px);
+        line-height:calc-vw(40px);
+      }
+    }
+    .vw-test2{
+      padding:70px 20px 40px 25px;
+      font-size:30px;
+      color:#111;
+      line-height:30px;
+      @media screen and (max-width:640px){
+        @include calc-vw-4(70px, 20px, 40px, 25px, padding);
+        font-size:calc-vw(30px);
+        line-height:calc-vw(30px);
+      }
+    }
+    .vw-test3{
+      margin:10px auto 30px;
+      padding:40px 80px;
+      width:100%;
+      max-width:450px;
+      font-size:20px;
+      color:#fff;
+      text-align:center;
+      line-height:20px;
+      background-color: #111;
+      @media screen and (max-width:640px){
+        @include calc-vw-2(10px, 30px, auto);
+        @include calc-vw-2(10px, 80px, padding);
+        max-width:calc-vw(450px);
+        font-size:calc-vw(20px);
+        line-height:calc-vw(20px);
+      }
+    }
+  }
+}
+
+#tmpl-btn{
+  padding:5px 15px;
+  font-size:15px;
+  color:#fff;
+  background-color:#111;
+  border:1px solid #000;
+}

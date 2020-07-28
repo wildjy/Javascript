@@ -1,127 +1,33 @@
-.skip-navi {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  text-align: center;
-  color: #fff;
-  z-index: 101;
-}
+.skip-navi { display: block; position: absolute; left: 0; top: 0; overflow: hidden; width: 1px; height: 1px; text-align: center; color: #fff; z-index: 101; }
 
-.skip-navi:active, .skip-navi:focus {
-  width: 100%;
-  height: auto;
-  background: #0085c9;
-  padding: 5px 0;
-}
+.skip-navi:active, .skip-navi:focus { width: 100%; height: auto; background: #0085c9; padding: 5px 0; }
 
-#wrapper {
-  padding: 30px;
-  background-color: #e0e0e0;
-}
+#wrapper { padding: 30px; background-color: #e0e0e0; }
 
-@media screen and (max-width: 640px) {
-  #wrapper {
-    padding: 4.6875vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper { padding: 4.6875vw; } }
 
-#wrapper .vw-wrap {
-  padding: 50px;
-  background-color: #fff;
-}
+#wrapper .vw-wrap { padding: 50px; background-color: #fff; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap {
-    padding: 7.8125vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap { padding: 7.8125vw; } }
 
-#wrapper .vw-wrap p {
-  padding: 15px 0;
-}
+#wrapper .vw-wrap p { padding: 15px 0; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap p {
-    padding: 2.34375vw 0vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap p { padding: 2.34375vw 0vw; } }
 
-#wrapper .vw-wrap .vw-test {
-  padding: 20px 150px;
-  font-size: 50px;
-  color: #111;
-  line-height: 50px;
-}
+#wrapper .vw-wrap .vw-test { padding: 20px 150px; font-size: 50px; color: #111; line-height: 50px; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap .vw-test {
-    padding: 3.125vw 23.4375vw;
-    font-size: 7.8125vw;
-    line-height: 7.8125vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap .vw-test { padding: 3.125vw 23.4375vw; font-size: 7.8125vw; line-height: 7.8125vw; } }
 
-#wrapper .vw-wrap .vw-test1 {
-  margin: 15px 200px;
-  font-size: 40px;
-  color: #111;
-  line-height: 40px;
-}
+#wrapper .vw-wrap .vw-test1 { margin: 15px 200px; font-size: 40px; color: #111; line-height: 40px; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap .vw-test1 {
-    margin: 2.34375vw 31.25vw;
-    font-size: 6.25vw;
-    line-height: 6.25vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap .vw-test1 { margin: 2.34375vw 31.25vw; font-size: 6.25vw; line-height: 6.25vw; } }
 
-#wrapper .vw-wrap .vw-test2 {
-  padding: 70px 20px 40px 25px;
-  font-size: 30px;
-  color: #111;
-  line-height: 30px;
-}
+#wrapper .vw-wrap .vw-test2 { padding: 70px 20px 40px 25px; font-size: 30px; color: #111; line-height: 30px; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap .vw-test2 {
-    padding: 10.9375vw 3.125vw 6.25vw 3.90625vw;
-    font-size: 4.6875vw;
-    line-height: 4.6875vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap .vw-test2 { padding: 10.9375vw 3.125vw 6.25vw 3.90625vw; font-size: 4.6875vw; line-height: 4.6875vw; } }
 
-#wrapper .vw-wrap .vw-test3 {
-  margin: 10px auto 30px;
-  padding: 40px 80px;
-  width: 100%;
-  max-width: 450px;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  line-height: 20px;
-  background-color: #111;
-}
+#wrapper .vw-wrap .vw-test3 { margin: 10px auto 30px; padding: 40px 80px; width: 100%; max-width: 450px; font-size: 20px; color: #fff; text-align: center; line-height: 20px; background-color: #111; }
 
-@media screen and (max-width: 640px) {
-  #wrapper .vw-wrap .vw-test3 {
-    margin: 1.5625vw auto 4.6875vw;
-    padding: 1.5625vw 12.5vw;
-    max-width: 70.3125vw;
-    font-size: 3.125vw;
-    line-height: 3.125vw;
-  }
-}
+@media screen and (max-width: 640px) { #wrapper .vw-wrap .vw-test3 { margin: 1.5625vw auto 4.6875vw; padding: 1.5625vw 12.5vw; max-width: 70.3125vw; font-size: 3.125vw; line-height: 3.125vw; } }
 
-#tmpl-btn {
-  padding: 5px 15px;
-  font-size: 15px;
-  color: #fff;
-  background-color: #111;
-  border: 1px solid #000;
-}
-/*# sourceMappingURL=vw.css.map */
+#tmpl-btn { padding: 5px 15px; font-size: 15px; color: #fff; background-color: #111; border: 1px solid #000; }
