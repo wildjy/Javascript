@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : class : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="wrap">
+      <p class="p_Style fs_25 center mb50"><b>Class 제어</b></p>
+      <div class="studyArea">
+        <div class="btn-Align center mb20">
+          <button type="button" class="btn-Style blue01-line r5" id="addClass" onclick="addActive('addClass', 'active')">Add</button>
+
+          <button type="button" class="btn-Style blue01-line r5" id="" onclick="thisAddActive(this, 'active')">this Add</button>
+
+          <button type="button" class="active btn-Style blue01-line r5" id="removeClass" onclick="removeActive('removeClass', 'active')">Remove</button>
+
+          <button type="button" class="active btn-Style blue01-line r5" id="" onclick="thisRemoveActive(this, 'active')">this Remove</button>
+
+          <button type="button" class="btn-Style blue01-line r5" id="toggle" onclick="toggleActive(this, 'toggle', 'active')">toggle</button>
+        </div>
+      </div><!-- end : studyArea -->
+    </div>
+  </div>
+</body>
+</html>

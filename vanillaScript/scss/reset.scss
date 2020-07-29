@@ -139,9 +139,7 @@ textarea{
     left: -9999px;
     text-indent: -9999px;
 }
-.mt10{
-   margin-top:10px !important;
-}
+
 /* 2019-07-17 재영 추가 css text숨기기, 웹접근성 고려 참고 : https://yeoninim.tistory.com/m/36 */
 .hidden{
    position: absolute !important;
@@ -152,3 +150,11 @@ textarea{
    clip:rect(1px, 1px, 1px, 1px);
 }
 /* 2019-07-17 */
+
+@mixin zipMarginPadding {
+	@for $i from 5 through 100 {
+		.mt#{$i}{margin-top:#{$i}px !important;} .mb#{$i}{margin-bottom:#{$i}px !important;} .ml#{$i}{margin-left:#{$i}px !important;} .mr#{$i}{margin-right:#{$i}px !important;}
+		.pt#{$i}{padding-top:#{$i}px !important;} .pb#{$i}{padding-bottom:#{$i}px !important;} .pl#{$i}{padding-left:#{$i}px !important;} .pr#{$i}{padding-right:#{$i}px !important;}
+	}
+}
+@include zipMarginPadding;

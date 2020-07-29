@@ -6371,7 +6371,21 @@ span.btn-Style.r50, a.btn-Style.r50, button.btn-Style.r50, input.btn-Style.r50 {
 
 .btn-Align.line2.right { text-align: right; }
 
+html, body { height: 100%; }
+
 #wrap { width: 100%; }
+
+#centerWrap { height: 100%; position: relative; }
+
+#centerWrap .wrap { position: absolute; top: 50%; left: 0; right: 0; overflow-y: auto; -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); }
+
+.studyArea { color: #fff; }
+
+.studyArea .CodeMirror { height: 200px; }
+
+.CodeMirror-line > span { color: #fff; }
+
+span.btn-Style.active, a.btn-Style.active, button.btn-Style.active, input.btn-Style.active { color: red; border: 1px solid red; }
 
 .scroll_Module { font-size: 20px !important; line-height: 30px !important; text-align: center; }
 
@@ -6381,8 +6395,18 @@ span.btn-Style.r50, a.btn-Style.r50, button.btn-Style.r50, input.btn-Style.r50 {
 
 .scroll_Module #fixWrap { height: 150px; position: relative; }
 
-.scroll_Module #fixWrap .fixed_target { height: 100%; }
+.scroll_Module #fixWrap .fixed_default { position: absolute; top: 0; left: 0; width: 70px; height: 100px; background-color: purple; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
 
-.scroll_Module #fixWrap .fixed_target.is_fixed { position: fixed; top: 0; left: 0; right: 0; width: auto; height: 80px; color: #fff; background-color: #000; }
+.scroll_Module #fixWrap .fixed_default.active { color: #272727; background-color: yellow; }
+
+.scroll_Module #fixWrap .fixed_default.show { top: 110px; }
+
+.scroll_Module #fixWrap .fixed_default.show.is_fixed { position: fixed; top: 210px; }
+
+.scroll_Module #fixWrap .fixed_default.is_fixed { position: fixed; top: 100px; left: 0; right: 0; z-index: 1; }
+
+.scroll_Module #fixWrap .fixed_target { height: 150px; }
+
+.scroll_Module #fixWrap .fixed_target.is_fixed { position: fixed; top: 0; left: 0; right: 0; width: auto; height: 80px; color: #fff; background-color: #000; z-index: 1; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
 
 .scroll_Module .bottom { height: 2400px; background-color: #eee; }

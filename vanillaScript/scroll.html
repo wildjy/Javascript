@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>: scroll : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="wrap" class="scroll_Module">
+    <div class="top">상단</div>
+
+    <div id="fixWrap">
+      <div class="fixed_default">
+        <div id="toggle">default fixed</div>
+      </div>
+
+      <div class="fixed_target">
+        fixed 될 영역
+      </div>
+    </div>
+
+    <div class="bottom">
+      <p class="p_Style fs_18"><b>getBoundingClientRect()</b> : Viewport의 시작지점 기준</p>
+      <ul class="ul_Style fs15_icon bar mb50">
+        <li>const target = document.getElementById('target'); // 요소의 id 값이 target이라 가정</li>
+        <li>const clientRect = target.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)</li>
+        <li>const relativeTop = clientRect.top; // Viewport의 시작지점을 기준으로한 상대좌표 Y 값.</li>
+      </ul>
+
+      <p class="p_Style fs_18"><b>요소의 절대좌표 구하기</b></p>
+      <ul class="ul_Style fs15_icon bar mb50">
+        <li>const absoluteTop = window.pageYOffset + element.getBoundingClientRect().top</li>
+      </ul>
+
+      <p class="p_Style fs_18"><b>Viewport의 시작지점(상대좌표) 구하기</b></p>
+      <ul class="ul_Style fs15_icon bar mb50">
+        <li>const relativeTop = element.getBoundingClientRect().top</li>
+      </ul>
+
+      <p class="p_Style fs_18"><b>부모요소의 시작지점(상대좌표) 구하기</b></p>
+      <ul class="ul_Style fs15_icon bar mb50">
+        <li>// 1번에서 안내한 절대좌표 구하는 방법을 함수로 구현<br />
+          function getAbsoluteTop(element) {<br />
+              return window.pageYOffset + element.getBoundingClientRect().top;<br />
+          }
+        ​</li>
+        <li>const parentElement = element.parentElement;</li>
+        <li>const parentAbsoluteTop = getAbsoluteTop(parentElement);</li>
+        <li>const absoulteTop = getAbsoluteTop(element);</li>
+        ​
+        <li>const relativeTop = absoluteTop - parentAbsoluteTop;</li>
+      </ul>
+
+      <p class="p_Style fs_18"><b>getBoundingClientRect()</b> : 활용</p>
+      <ul class="ul_Style fs15_icon bar">
+        <li>const target = document.getElementById('target'); // 요소의 id 값이 target이라 가정</li>
+        <li>const clientRect = target.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)</li>
+        <li>const relativeTop = clientRect.top; // Viewport의 시작지점을 기준으로한 상대좌표 Y 값.</li>
+        <li>const scrolledTopLength = window.pageYOffset; // 스크롤된 길이<br />
+        //const scrolledTopLength = pageYOffset; // window 객체 없이 pageYOffset 메서드를 써도 가능하다.</li>
+        <li>const absoluteTop = scrolledTopLength + relativeTop; // 절대좌표</li>
+      </ul>
+
+    </div>
+  </div><!-- end : id : wrap -->
+  <div class="studyArea">
+    <script type="text/javascript">
+    //<![CDATA[
+      //[parent, fix relative, fix target, class, type]
+      ui_Project.ui.scroll(".scroll_Module", "#fixWrap", ".fixed_default", "is_fixed", "default");
+      ui_Project.ui.scroll(".scroll_Module", "#fixWrap", ".fixed_target", "is_fixed", "menu");
+    //]]>
+    </script>
+  </div>
+</body>
+</html>
