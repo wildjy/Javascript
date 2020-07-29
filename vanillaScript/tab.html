@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : tab : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="wrap">
+      <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
+      <div class="studyArea">
+        <ul class="common_Tab at3">
+          <li class=""><button type="button"><span>탭(Tab)1</span></button></li>
+          <li class=""><button type="button"><span>탭(Tab)2</span></button></li>
+          <li class="selected" id="selected"><button type="button"><span>탭(Tab)3</span></button></li>
+        </ul>
+        <div class="tabPanel">탭1 contents..</div>
+        <div class="tabPanel">탭2 contents..</div>
+        <div class="tabPanel">탭3 contents..</div>
+      </div><!-- end : studyArea -->
+
+      <script type="text/javascript">
+      //<![CDATA[
+        //[parent, fix relative, fix target, class, type]
+        ui_Project.ui.tabModule('.common_Tab', '.tabPanel', 'selected');
+      //]]>
+      </script>
+    </div>
+  </div>
+</body>
+</html>
