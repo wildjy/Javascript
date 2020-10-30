@@ -89,26 +89,28 @@
     var i = 0;
     function up($slider, $slide){
       var _length = document.querySelector($slider);
+      var _height = document.querySelector($slide).offsetHeight; // slide height
       var eleCount = _length.childElementCount;
 
       i++;
       //console.log(i);
       if(i < eleCount){
-        document.querySelector($slider).style.top = -70 * i + "px";
+        document.querySelector($slider).style.top = -(_height * i) + "px";
       } else {
         console.log("stop");
         i = eleCount - 1;
       }
     }
 
-    function down($slider){
+    function down($slider, $slide){
       var _length = document.querySelector($slider);
+      var _height = document.querySelector($slide).offsetHeight; // slide height
       var eleCount = _length.childElementCount;
 
       i--;
       //console.log(i);
       if(i >= 0){
-        document.querySelector($slider).style.top = -70 * i + "px";
+        document.querySelector($slider).style.top = -(_height * i) * i + "px";
       } else {
         console.log("stop");
         i = 0;
