@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title> : tab : </title>
+  <title>: scroll : </title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
@@ -51,27 +51,71 @@
 </head>
 
 <body>
-  <div id="centerWrap">
-    <div class="wrap">
-      <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
-      <div class="studyArea">
-        <ul class="common_Tab at3" id="common_Tab">
-          <li class="" ><button type="button"><span>탭(Tab)1</span></button></li>
-          <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
-          <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
-        </ul>
-        <div class="tabPanel">탭1 contents..</div>
-        <div class="tabPanel">탭2 contents..</div>
-        <div class="tabPanel">탭3 contents..</div>
-      </div><!-- end : studyArea -->
-    <div id="test"></div>
-      <script type="text/javascript">
-      //<![CDATA[
-        //[parent, fix relative, fix target, class, type]
-        ui_Project.ui.tabModule('.common_Tab', '.tabPanel', 'selected');
-      //]]>
-      </script>
+  <div id="wrap" class="scroll_Module">
+    <!-- bottom_fixed -->
+    <div class="bottom_fixed">
+      <div class="inner">
+        <div class="sliderOption">
+          <div class="slide">slide - 1</div>
+          <!-- // slide-->
+
+          <div class="slide">slide - 2</div>
+          <!-- // slide-->
+
+          <div class="slide">slide - 3</div>
+          <!-- // slide-->
+        </div>
+        <!-- // sliderOption-->
+
+        <div class="control_Box">
+          <div class="control">
+            <a href="javascript:void(0)" class="btn up" onclick="up('.sliderOption', '.slide')">▲</a>
+            <a href="javascript:void(0)" class="btn down" onclick="down('.sliderOption', '.slide')">▼</a>
+          </div>
+        </div>
+        <!-- // control_Box-->
+      </div>
     </div>
+    <!-- // bottom_fixed -->
+
+  </div><!-- end : id : wrap -->
+  <style type="text/css">
+    .studyArea .CodeMirror{height:800px;}
+    .cm-operator{color:#fff;}
+  </style>
+  <div class="studyArea">
+    <script type="text/javascript">
+    //<![CDATA[
+    var i = 0;
+    function up($slider, $slide){
+      var _length = document.querySelector($slider);
+      var eleCount = _length.childElementCount;
+
+      i++;
+      //console.log(i);
+      if(i < eleCount){
+        document.querySelector($slider).style.top = -70 * i + "px";
+      } else {
+        console.log("stop");
+        i = eleCount - 1;
+      }
+    }
+
+    function down($slider){
+      var _length = document.querySelector($slider);
+      var eleCount = _length.childElementCount;
+
+      i--;
+      //console.log(i);
+      if(i >= 0){
+        document.querySelector($slider).style.top = -70 * i + "px";
+      } else {
+        console.log("stop");
+        i = 0;
+      }
+    }
+    //]]>
+    </script>
   </div>
 </body>
 </html>

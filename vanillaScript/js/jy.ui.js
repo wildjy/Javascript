@@ -6,12 +6,12 @@ function hasClass(ele,cls) {
   return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
 };
 function addClass(ele,cls) {
-  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+  if (!this.hasClass(ele,cls)) ele.className += " " + cls;
 };
 function removeClass(ele,cls) {
   if (hasClass(ele,cls)) {
     var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-    ele.className=ele.className.replace(reg,' ');
+    ele.className=ele.className.replace(reg,'');
   }
 };
 
@@ -74,6 +74,16 @@ function iframeShow(obj, cls, type, callback){
 	test.css({"display" : type});
 }
 
+// Get a index number from siblings
+function getIndex(ele) {
+  var _i = 0;
+  while((ele = ele.previousSibling) != null ) {
+    _i++;
+  }
+
+  return _i;
+}
+
 var ui_Project = {
   init : function () {
     this.common.init();
@@ -91,18 +101,27 @@ var ui_Project = {
       var _tab = _target.getElementsByTagName("li");
       var _panel = document.querySelectorAll($panel);
       //console.log(_target)
-      console.log(_tab)
+      //console.log(_tab.getElementsByClassName("selected"))
       console.log(_panel)
 
+      function getElementIndex(element, range) {
+        // 추가
+        if (!!range) return [].indexOf.call(element, range);
+        return [].indexOf.call(element.parentNode.children, element);
+      }
 
+      var ele = document.getElementById('common_Tab').getElementsByClassName('selected');
+      var testElements = document.getElementsByClassName('selected');
+      var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
+        //console.log(testElement.index);
+        return testElement.getIndex;
+      });
       Array.prototype.forEach.call(_tab, function(tab, index) {
-        var a = tab.getAttribute('class').indexOf('selected');
-        var b = [a];
-        console.log(b.indexOf(true))
-        if(a === true){
+        //console.log(tab.setAttribute("data-tabNum", index));
+        //console.log(tab.setAttribute("data-tabNum", index));
+        console.log(index);
 
-        }
-        //_panel[_isTab].style.display = 'block';
+        // _panel[_isTab].style.display = 'block';
       });
 
       function hidePanel(){
@@ -116,13 +135,13 @@ var ui_Project = {
       // call
       Array.prototype.forEach.call(_tab, function(tabList, index) {
         //console.log(tabList);
-        console.log(index);
+        //console.log(index);
         tabList.children[0].setAttribute("data-tabNum", index); //data-tabNum setting
 
         _panel[0].style.display = 'block'; // first tab panel show
         tabList.children[0].addEventListener('click', function(e) {
           var _isTab = this.getAttribute('data-tabNum'); //data-tabNum search
-          //console.log(this);
+          console.log(this);
           //console.log(_isTab);
           // tab
           Array.prototype.forEach.call(_tab, function(tabList, index) {

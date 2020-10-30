@@ -101,3 +101,84 @@ input{
     background-color: #eee;
   }
 }
+
+//up-down css
+
+.bottom_fixed{
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #000;
+  z-index:1;
+  .inner{
+    margin:0 auto;
+    width:1160px;
+    height:70px;
+    overflow:hidden;
+    position: relative;
+
+    .sliderOption{
+      position: absolute;
+      top:0;
+      left:0;
+      right:250px;
+      overflow:hidden;
+      @include transition(all, .3s, ease-out);
+    }
+    .slide{
+      padding:10px 0;
+      height:70px;
+      color:#000;
+      background-color: #fff;
+    }
+
+    .control_Box{
+      position: absolute;
+      top:50%;
+      right:0;
+      padding-left:30px;
+      @include translate(0,-50%);
+      a{
+        display:block;
+      }
+      .control{
+        position: absolute;
+        top:50%;
+        left:0;
+        @include translate(0,-50%);
+        a{
+          margin:5px 0;
+          color:#fff;
+          &:hover{
+            color:yellow;
+          }
+        }
+        .btn{
+          &.up{
+          }
+          &.down{
+          }
+        }
+      }
+      .result_show{
+        padding:5px 0;
+        width:180px;
+        @include fontSize(24px);
+        color:#fff600;
+        font-weight:600;
+        text-align:center;
+        border:1px solid #fff600;
+        border-radius:50px;
+        &:after{
+          display:inline-block;
+          content:"";
+          margin-left:5px;
+          width:30px;
+          height:11px;
+          background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_yellow_result.png") right 50% no-repeat;
+        }
+      }
+    }
+  }
+}

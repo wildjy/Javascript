@@ -6410,3 +6410,27 @@ span.btn-Style.active, a.btn-Style.active, button.btn-Style.active, input.btn-St
 .scroll_Module #fixWrap .fixed_target.is_fixed { position: fixed; top: 0; left: 0; right: 0; width: auto; height: 80px; color: #fff; background-color: #000; z-index: 1; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
 
 .scroll_Module .bottom { height: 2400px; background-color: #eee; }
+
+.bottom_fixed { position: fixed; bottom: 0; left: 0; right: 0; background-color: #000; z-index: 1; }
+
+.bottom_fixed .inner { margin: 0 auto; width: 1160px; height: 70px; overflow: hidden; position: relative; }
+
+.bottom_fixed .inner .sliderOption { position: absolute; top: 0; left: 0; right: 250px; overflow: hidden; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+
+.bottom_fixed .inner .slide { padding: 10px 0; height: 70px; color: #000; background-color: #fff; }
+
+.bottom_fixed .inner .control_Box { position: absolute; top: 50%; right: 0; padding-left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+.bottom_fixed .inner .control_Box a { display: block; }
+
+.bottom_fixed .inner .control_Box .control { position: absolute; top: 50%; left: 0; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+.bottom_fixed .inner .control_Box .control a { margin: 5px 0; color: #fff; }
+
+.bottom_fixed .inner .control_Box .control a:hover { color: yellow; }
+
+.bottom_fixed .inner .control_Box .result_show { padding: 5px 0; width: 180px; font-size: 24px !important; line-height: 34px !important; color: #fff600; font-weight: 600; text-align: center; border: 1px solid #fff600; border-radius: 50px; }
+
+@media screen and (max-width: 640px) { .bottom_fixed .inner .control_Box .result_show { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
+
+.bottom_fixed .inner .control_Box .result_show:after { display: inline-block; content: ""; margin-left: 5px; width: 30px; height: 11px; background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_yellow_result.png") right 50% no-repeat; }

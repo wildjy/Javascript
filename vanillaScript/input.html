@@ -53,23 +53,74 @@
 <body>
   <div id="centerWrap">
     <div class="wrap">
-      <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
+      <p class="p_Style fs_25 center mb50"><b>input 제어</b></p>
       <div class="studyArea">
-        <ul class="common_Tab at3" id="common_Tab">
-          <li class="" ><button type="button"><span>탭(Tab)1</span></button></li>
-          <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
-          <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
-        </ul>
-        <div class="tabPanel">탭1 contents..</div>
-        <div class="tabPanel">탭2 contents..</div>
-        <div class="tabPanel">탭3 contents..</div>
+        <div class="inputModue">
+          <input type="checkbox" id="chk" />
+          <label for="chk">checkbox</label>
+        </div>
+        <div class="inputModue">
+          <input type="checkbox" id="chk1" />
+          <label for="chk1">checkbox</label>
+        </div>
       </div><!-- end : studyArea -->
-    <div id="test"></div>
-      <script type="text/javascript">
-      //<![CDATA[
-        //[parent, fix relative, fix target, class, type]
-        ui_Project.ui.tabModule('.common_Tab', '.tabPanel', 'selected');
-      //]]>
+
+    <script type="text/javascript">
+      //hasClass
+      function hasClass(ele,cls) {
+        return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+      }
+      //addClass
+      function addClass(ele,cls) {
+        if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+      }
+      //removeClass
+      function removeClass(ele,cls) {
+        if (hasClass(ele,cls)) {
+          var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+          ele.className=ele.className.replace(reg,' ');
+        }
+      }
+      var sortUi = {
+        sort : function(){
+          var sort = document.querySelector(".inputModue");
+          var sortAll = document.querySelectorAll(".inputModue");
+          var _input = sort.getElementsByTagName("input");
+          console.log(sortAll)
+
+          Array.prototype.forEach.call(sortAll, function(input, index) {
+            console.log(input.getElementsByTagName("input"))
+            var _ipt = input.firstChild;
+            console.log(_ipt)
+            //console.log(index)
+            _ipt.addEventListener('click', function(e) {
+              console.log(this.checked)
+              if(this.checked == false){
+                console.log("a")
+                removeClass(this.parentNode, "on")
+              } else {
+                console.log("b")
+                addClass(this.parentNode, "on")
+              }
+            })
+          })
+
+          // Array.prototype.forEach.call(_input, function(input, index) {
+          //   console.log(_input)
+          //   input.addEventListener('click', function(e) {
+          //     console.log(this.checked)
+          //     if(this.checked == false){
+          //       console.log("a")
+          //       removeClass(this.parentNode, "on")
+          //     } else {
+          //       console.log("b")
+          //       addClass(this.parentNode, "on")
+          //     }
+          //   })
+          // })
+        }
+      }
+      sortUi.sort();
       </script>
     </div>
   </div>
