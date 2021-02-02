@@ -60,7 +60,7 @@ $viewport: 640;
 	$lineHeight : $size + 10;
 	font-size:$size;
   line-height:$lineHeight;
-	@media screen and (max-width:640px){
+	@media screen and (max-width:$viewport + px){
 		font-size:calc-vw($size * 2) !important;
 		line-height:calc-vw($size * 2 + 10) !important;
 	}
@@ -116,22 +116,44 @@ $size : 20px;
   position: relative;
   input{
     -webkit-appearance: none;
+    &.l,
+    &.left{
+      text-align:left !important;
+    }
+    &.c,
+    &.center{
+      text-align:center !important;
+    }
+    &.r,
+    &.right{
+      text-align:right !important;
+    }
+  }
+  &.l,
+  &.left{
+    text-align:left;
+    input{
+      text-align:left;
+    }
   }
   &.c,
   &.center{
+    text-align:center;
     input{
       text-align:center;
     }
   }
   &.r,
   &.right{
+    text-align:right;
     input{
       text-align:right;
     }
   }
 
   //text
-  >input[type=text]{
+  >input[type=text],
+  >input[type=password]{
     padding:5px 10px;
     @include fontSizeZip;
     @include fontSize(16px);
@@ -186,7 +208,7 @@ $size : 20px;
     @include hidden;
     &:checked + label{
       &:before{
-        background:#fff url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_on.svg") 50% 50% no-repeat;
+        background:#fff url("https://image.jinhak.com/renewal2020/svg/input_checkbox_on.svg") 50% 50% no-repeat;
         background-size: 90%;
         border:1px solid #005fc1;
       }
@@ -203,7 +225,7 @@ $size : 20px;
     }
 
     & + label{
-      display:block;
+      display:inline-block;
       padding-left:$size + 8px;
       height:$size + 8px;
       @include fontSizeZip;
@@ -211,7 +233,8 @@ $size : 20px;
       color:#272727;
       letter-spacing:-.4px;
       position: relative;
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
+        padding-left:calc-vw($size * 2 + 16px) !important;
         height:auto;
       }
       cursor:pointer;
@@ -228,7 +251,7 @@ $size : 20px;
         text-align:center;
         background-color: #fff;
         border:1px solid #ccc;
-        @media screen and (max-width:640px){
+        @media screen and (max-width:$viewport + px){
           margin-top:calc-vw((-$size*2)/2) !important;
           width:calc-vw($size * 2) !important;
           height:calc-vw($size * 2) !important;
@@ -255,7 +278,7 @@ $size : 20px;
     @include hidden;
     &:checked + label{
       &:before{
-        background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio_on.svg") 0 0 no-repeat;
+        background: url("https://image.jinhak.com/renewal2020/svg/input_radio_on.svg") 0 0 no-repeat;
         background-size: 100%;
       }
     }
@@ -264,9 +287,8 @@ $size : 20px;
       color:#ccc;
       cursor:default;
       &:before{
-        background-color: #F5F5F5;
-        background-size: 90%;
-        border:1px solid #E6E6E6;
+        opacity:.5;
+        border-radius: 50%;
       }
     }
     & + label{
@@ -279,7 +301,7 @@ $size : 20px;
       letter-spacing:-.4px;
       position: relative;
       cursor:pointer;
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
         padding-left:calc-vw($size * 2 + 16px) !important;
         height:auto;
       }
@@ -294,14 +316,25 @@ $size : 20px;
         height:$size;
         font-size:0;
         text-align:center;
-        background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio.svg") 0 0 no-repeat;
+        background: url("https://image.jinhak.com/renewal2020/svg/input_radio.svg") 0 0 no-repeat;
         background-size: 100%;
-        @media screen and (max-width:640px){
+        @media screen and (max-width:$viewport + px){
           margin-top:calc-vw((-$size*2)/2) !important;
           width:calc-vw($size * 2) !important;
           height:calc-vw($size * 2) !important;
         }
       }
+    }
+  }
+
+  //reset
+  >input[type=checkbox],
+  >input[type=radio]{
+    &.reset + label{
+      color:#272727;
+      font-weight:normal;
+      background-color: #fff;
+      border:none;
     }
   }
 
@@ -316,10 +349,10 @@ $size : 20px;
           margin-left:5px;
           width: $size;
           height: $size;
-          background: url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
+          background: url("https://image.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
           background-size: $size auto;
           border:none;
-          @media screen and (max-width:640px){
+          @media screen and (max-width:$viewport + px){
             margin-top:calc-vw(-5px);
             margin-left:calc-vw(10px);
             width:calc-vw($size * 2) !important;
@@ -329,7 +362,7 @@ $size : 20px;
         }
       }
       & + label{
-        @media screen and (max-width:640px){
+        @media screen and (max-width:$viewport + px){
           padding-left:calc-vw($size * 2 + 16px) !important;
         }
       }
@@ -345,7 +378,7 @@ $size : 20px;
           // margin-left:3px;
           // width: 16px;
           // height: 16px;
-          // background: url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
+          // background: url("https://image.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center;
           // background-size: 16px auto;
           // border:none;
         }
@@ -402,6 +435,9 @@ $size : 20px;
         &:before{
           display:none;
         }
+        @media screen and (max-width:$viewport + px){
+          //padding-left:0 !important;
+        }
       }
     }
     >input[type=radio]{
@@ -426,6 +462,50 @@ $size : 20px;
         border:1px solid #ddd;
         &:before{
           display:none;
+        }
+        @media screen and (max-width:$viewport + px){
+          padding-left:0 !important;
+        }
+      }
+    }
+  }
+  &.atType1{
+    >input[type=checkbox]{
+      &:checked + label{
+        color:#1B7FEE;
+        background-color: #fff;
+        border:1px solid #1B7FEE;
+        &:before{
+          background-color: #1B7FEE;
+          border:1px solid #1B7FEE;
+          background-image:none;
+        }
+        &:after{
+          display:none;
+        }
+      }
+      & + label{
+        display:block;
+        padding:10px 0 10px 30px;
+        height:auto;
+        @include fontSize(15px);
+        text-align:left;
+        border:1px solid #ddd;
+        @media screen and (max-width:$viewport + px){
+          @include fontSize(12px);
+        }
+        &:before{
+          content:"";
+          display:block;
+          margin-top:0 !important;
+          left:10px;
+          width:15px !important;
+          height:15px !important;
+          border:1px solid #ddd;
+          @include translate(0,-50%);
+          @media screen and (max-width:$viewport + px){
+            left:calc-vw(10px);
+          }
         }
       }
     }
@@ -472,11 +552,12 @@ $size : 20px;
 .select_Style{
   padding:5px 24px 5px 16px;
   height:auto;
+  @include fontSizeZip;
   @include fontSize(16px);
 	border: solid 1px #707070;
-	background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
+	background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
 	-webkit-appearance: none;
-  @media screen and (max-width:640px){
+  @media screen and (max-width:$viewport + px){
     @include calc-vw-4(15px, 24px, 15px, 16px, padding);
     @include fontSize(13px);
   }
@@ -508,7 +589,7 @@ $size : 20px;
 	height:39px;
 	padding:0;
 	text-align:left;
-	background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
+	background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF;
 	border:1px solid #707070;
   position: relative;
   -webkit-appearance: none;
@@ -529,6 +610,9 @@ $size : 20px;
 		text-align:left;
     @include ellipsis;
     cursor:pointer;
+    @media screen and (max-width:$viewport + px){
+      @include calc-vw-4(0px, 24px, 0px, 16px, padding);
+    }
 	}
 	.drop{
 		display:none;
@@ -617,7 +701,7 @@ $size : 20px;
 .common_search{
 	margin-top:20px;
 	text-align:center;
-  @media screen and (max-width:640px){
+  @media screen and (max-width:$viewport + px){
     height:calc-vw(70px);
   }
   &.left{
@@ -638,7 +722,14 @@ $size : 20px;
 		padding:5px 10px;
 		border:1px solid #ddd;
 		border-right:none;
-	}
+  }
+  .input_Style{
+    display:inline-block;
+    input[type=text],
+    input[type=password]{
+      padding:5px 10px 6px;
+    }
+  }
 	.schBtn{
 		display:inline-block;
     padding: 5px 17px;
@@ -669,7 +760,7 @@ $size : 20px;
 			float:left;
       display:block;
       width:calc(100% - 39px);
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
         @include calc-calc(80px, width);
         @include calc-vw-2(0px,10px, padding);
         height:100%;
@@ -682,7 +773,7 @@ $size : 20px;
 			font-size:0;
 			background-color: #fff;
 			position: relative;
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
         width:calc-vw(80px);
         height:100%;
       }
@@ -694,10 +785,10 @@ $size : 20px;
 				height:18px;
 				content:"";
 				display:block;
-        background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
+        background: url("https://image.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
         background-size: 100%;
 				@include translate(-50%, -50%);
-        @media screen and (max-width:640px){
+        @media screen and (max-width:$viewport + px){
           width:calc-vw(30px);
           height:calc-vw(30px);
         }
@@ -719,7 +810,7 @@ $size : 20px;
       width:calc(100% - 39px);
       border:1px solid transparent;
       border-radius:40px 0 0 40px;
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
         @include calc-calc(80px, width);
         @include calc-vw-2(0px,10px, padding);
         height:100%;
@@ -734,7 +825,7 @@ $size : 20px;
       border:1px solid transparent;
 			position: relative;
       border-radius:0 40px 40px 0;
-      @media screen and (max-width:640px){
+      @media screen and (max-width:$viewport + px){
         width:calc-vw(80px);
         height:100%;
       }
@@ -746,10 +837,10 @@ $size : 20px;
 				height:23px;
 				content:"";
 				display:block;
-        background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_addOption.png") 50% 50% no-repeat;
+        background: url("https://image.jinhak.com/renewal2020/btn/btn_addOption.png") 50% 50% no-repeat;
         background-size: 100%;
 				@include translate(-50%, -50%);
-        @media screen and (max-width:640px){
+        @media screen and (max-width:$viewport + px){
           // width:calc-vw(30px);
           // height:calc-vw(30px);
         }
@@ -781,6 +872,9 @@ $size : 20px;
     input{
       width:100%;
       height:38px;
+      @media screen and (max-width:$viewport + px) {
+        @include fontSize(13px);
+      }
     }
     .btnZip{
       position: absolute;
@@ -807,7 +901,7 @@ $size : 20px;
         height: 60%;
         content: "";
         display: block;
-        background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
+        background: url("https://image.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat;
         background-size: 100%;
         @include translate(-50%,-50%);
       }
@@ -827,7 +921,7 @@ $size : 20px;
         height: 5px;
         content: "";
         display: block;
-        background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") 50% 50% no-repeat;
+        background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") 50% 50% no-repeat;
         background-size: 100%;
         @include translate(0%,-50%);
       }

@@ -4897,9 +4897,9 @@ body { counter-reset: my-sec-counter; }
 
 .input_Style input { -webkit-appearance: none; }
 
-.input_Style.c input, .input_Style.center input { text-align: center; }
+.input_Style.c input, .input_Style.c select, .input_Style.c textarea, .input_Style.center input, .input_Style.center select, .input_Style.center textarea { text-align: center; }
 
-.input_Style.r input, .input_Style.right input { text-align: right; }
+.input_Style.r input, .input_Style.r select, .input_Style.r textarea, .input_Style.right input, .input_Style.right select, .input_Style.right textarea { text-align: right; }
 
 .input_Style > input[type=text] { padding: 5px 10px; font-size: 16px; line-height: 26px; background-color: #fff; border: 1px solid #707070; }
 

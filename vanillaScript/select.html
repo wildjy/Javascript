@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : class : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="wrap">
+      <p class="p_Style fs_25 center mb50"><b>select 제어</b></p>
+      <div class="studyArea">
+
+				<script type="text/javascript">
+        //<![CDATA[
+        function sel(){
+          var selectOpt = document.getElementById("gradeSelect");
+          for(var i=0; i<selectOpt.length; i++){
+            if(selectOpt[i].value==2){
+              selectOpt[i].selected = true;
+            }
+          }
+          console.log(selectOpt.value);
+
+          //append
+          var newDiv = document.createElement("div");
+          newDiv.innerHTML = selectOpt.value;
+          newDiv.setAttribute("class", "remove");
+          newDiv.setAttribute("onclick", "remove()"); // 이벤트 추가
+          console.log(newDiv);
+
+          var firstDiv = document.getElementById("first");
+          document.getElementById("dom").appendChild(newDiv);//부모의 마지막 자식으로 삽입
+          //document.getElementById("dom").insertBefore(newDiv, firstDiv);//부모의 자식중 기준자식 앞에 삽입
+
+          if(selectOpt.value === "option_3"){
+            console.log("b");
+          } else {
+            console.log("a");
+          }
+        }
+
+        function remove(){
+            var _target = document.querySelector(".remove");
+            var _parent = _target.parentElement; // 부모 찾기
+
+            console.log(_target);
+            console.log("remove");
+            _parent.removeChild(_target)// 삭제
+
+            Array.prototype.forEach.call(_target, function(tab, index) {
+              //console.log(tab.setAttribute("data-tabNum", index));
+              //console.log(tab.setAttribute("data-tabNum", index));
+              console.log(index);
+            });
+          }
+        //remove()
+
+        //]]>
+        </script>
+        <style type="text/css">
+        #dom{text-align:center;}
+        .remove{display:inline-block;padding:2px 10px;border:1px solid #222;}
+        .remove:after{content:"삭제"; display:inline-block; padding-left:5px; color:red;}
+        </style>
+
+        <div class="input_Style center">
+          <label for="select_1" class="label">default - input</label>
+          <select name="" id="gradeSelect" class="select_Style" style="width:150px;" onchange="sel()">
+            <option value="option_1">option_1</option>
+            <option value="option_2">option_2</option>
+            <option value="option_3">option_3</option>
+          </select>
+        </div>
+        <div id="dom">
+          <div id="first"></div>
+        </div>
+
+      </div><!-- end : studyArea -->
+    </div>
+  </div>
+</body>
+</html>

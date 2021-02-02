@@ -2,143 +2,157 @@
 
 .input_Style input { -webkit-appearance: none; }
 
+.input_Style input.l, .input_Style input.left { text-align: left !important; }
+
+.input_Style input.c, .input_Style input.center { text-align: center !important; }
+
+.input_Style input.r, .input_Style input.right { text-align: right !important; }
+
+.input_Style.l, .input_Style.left { text-align: left; }
+
+.input_Style.l input, .input_Style.left input { text-align: left; }
+
+.input_Style.c, .input_Style.center { text-align: center; }
+
 .input_Style.c input, .input_Style.center input { text-align: center; }
+
+.input_Style.r, .input_Style.right { text-align: right; }
 
 .input_Style.r input, .input_Style.right input { text-align: right; }
 
-.input_Style > input[type=text] { padding: 5px 10px; font-size: 16px; line-height: 26px; background-color: #fff; border: 1px solid #707070; }
+.input_Style > input[type=text], .input_Style > input[type=password] { padding: 5px 10px; font-size: 16px; line-height: 26px; background-color: #fff; border: 1px solid #707070; }
 
-.input_Style > input[type=text].fs_8 { font-size: 8px; line-height: 18px; }
+.input_Style > input[type=text].fs_8, .input_Style > input[type=password].fs_8 { font-size: 8px; line-height: 18px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_8 { font-size: 2.5vw !important; line-height: 4.0625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_8, .input_Style > input[type=password].fs_8 { font-size: 2.5vw !important; line-height: 4.0625vw !important; } }
 
-.input_Style > input[type=text].fs_9 { font-size: 9px; line-height: 19px; }
+.input_Style > input[type=text].fs_9, .input_Style > input[type=password].fs_9 { font-size: 9px; line-height: 19px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_9 { font-size: 2.8125vw !important; line-height: 4.375vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_9, .input_Style > input[type=password].fs_9 { font-size: 2.8125vw !important; line-height: 4.375vw !important; } }
 
-.input_Style > input[type=text].fs_10 { font-size: 10px; line-height: 20px; }
+.input_Style > input[type=text].fs_10, .input_Style > input[type=password].fs_10 { font-size: 10px; line-height: 20px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_10 { font-size: 3.125vw !important; line-height: 4.6875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_10, .input_Style > input[type=password].fs_10 { font-size: 3.125vw !important; line-height: 4.6875vw !important; } }
 
-.input_Style > input[type=text].fs_11 { font-size: 11px; line-height: 21px; }
+.input_Style > input[type=text].fs_11, .input_Style > input[type=password].fs_11 { font-size: 11px; line-height: 21px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_11 { font-size: 3.4375vw !important; line-height: 5vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_11, .input_Style > input[type=password].fs_11 { font-size: 3.4375vw !important; line-height: 5vw !important; } }
 
-.input_Style > input[type=text].fs_12 { font-size: 12px; line-height: 22px; }
+.input_Style > input[type=text].fs_12, .input_Style > input[type=password].fs_12 { font-size: 12px; line-height: 22px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_12 { font-size: 3.75vw !important; line-height: 5.3125vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_12, .input_Style > input[type=password].fs_12 { font-size: 3.75vw !important; line-height: 5.3125vw !important; } }
 
-.input_Style > input[type=text].fs_13 { font-size: 13px; line-height: 23px; }
+.input_Style > input[type=text].fs_13, .input_Style > input[type=password].fs_13 { font-size: 13px; line-height: 23px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_13 { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_13, .input_Style > input[type=password].fs_13 { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
 
-.input_Style > input[type=text].fs_14 { font-size: 14px; line-height: 24px; }
+.input_Style > input[type=text].fs_14, .input_Style > input[type=password].fs_14 { font-size: 14px; line-height: 24px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_14 { font-size: 4.375vw !important; line-height: 5.9375vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_14, .input_Style > input[type=password].fs_14 { font-size: 4.375vw !important; line-height: 5.9375vw !important; } }
 
-.input_Style > input[type=text].fs_15 { font-size: 15px; line-height: 25px; }
+.input_Style > input[type=text].fs_15, .input_Style > input[type=password].fs_15 { font-size: 15px; line-height: 25px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_15 { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_15, .input_Style > input[type=password].fs_15 { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
 
-.input_Style > input[type=text].fs_16 { font-size: 16px; line-height: 26px; }
+.input_Style > input[type=text].fs_16, .input_Style > input[type=password].fs_16 { font-size: 16px; line-height: 26px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_16 { font-size: 5vw !important; line-height: 6.5625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_16, .input_Style > input[type=password].fs_16 { font-size: 5vw !important; line-height: 6.5625vw !important; } }
 
-.input_Style > input[type=text].fs_17 { font-size: 17px; line-height: 27px; }
+.input_Style > input[type=text].fs_17, .input_Style > input[type=password].fs_17 { font-size: 17px; line-height: 27px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_17 { font-size: 5.3125vw !important; line-height: 6.875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_17, .input_Style > input[type=password].fs_17 { font-size: 5.3125vw !important; line-height: 6.875vw !important; } }
 
-.input_Style > input[type=text].fs_18 { font-size: 18px; line-height: 28px; }
+.input_Style > input[type=text].fs_18, .input_Style > input[type=password].fs_18 { font-size: 18px; line-height: 28px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_18 { font-size: 5.625vw !important; line-height: 7.1875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_18, .input_Style > input[type=password].fs_18 { font-size: 5.625vw !important; line-height: 7.1875vw !important; } }
 
-.input_Style > input[type=text].fs_19 { font-size: 19px; line-height: 29px; }
+.input_Style > input[type=text].fs_19, .input_Style > input[type=password].fs_19 { font-size: 19px; line-height: 29px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_19 { font-size: 5.9375vw !important; line-height: 7.5vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_19, .input_Style > input[type=password].fs_19 { font-size: 5.9375vw !important; line-height: 7.5vw !important; } }
 
-.input_Style > input[type=text].fs_20 { font-size: 20px; line-height: 30px; }
+.input_Style > input[type=text].fs_20, .input_Style > input[type=password].fs_20 { font-size: 20px; line-height: 30px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_20 { font-size: 6.25vw !important; line-height: 7.8125vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_20, .input_Style > input[type=password].fs_20 { font-size: 6.25vw !important; line-height: 7.8125vw !important; } }
 
-.input_Style > input[type=text].fs_21 { font-size: 21px; line-height: 31px; }
+.input_Style > input[type=text].fs_21, .input_Style > input[type=password].fs_21 { font-size: 21px; line-height: 31px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_21 { font-size: 6.5625vw !important; line-height: 8.125vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_21, .input_Style > input[type=password].fs_21 { font-size: 6.5625vw !important; line-height: 8.125vw !important; } }
 
-.input_Style > input[type=text].fs_22 { font-size: 22px; line-height: 32px; }
+.input_Style > input[type=text].fs_22, .input_Style > input[type=password].fs_22 { font-size: 22px; line-height: 32px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_22 { font-size: 6.875vw !important; line-height: 8.4375vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_22, .input_Style > input[type=password].fs_22 { font-size: 6.875vw !important; line-height: 8.4375vw !important; } }
 
-.input_Style > input[type=text].fs_23 { font-size: 23px; line-height: 33px; }
+.input_Style > input[type=text].fs_23, .input_Style > input[type=password].fs_23 { font-size: 23px; line-height: 33px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_23 { font-size: 7.1875vw !important; line-height: 8.75vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_23, .input_Style > input[type=password].fs_23 { font-size: 7.1875vw !important; line-height: 8.75vw !important; } }
 
-.input_Style > input[type=text].fs_24 { font-size: 24px; line-height: 34px; }
+.input_Style > input[type=text].fs_24, .input_Style > input[type=password].fs_24 { font-size: 24px; line-height: 34px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_24 { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_24, .input_Style > input[type=password].fs_24 { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
 
-.input_Style > input[type=text].fs_25 { font-size: 25px; line-height: 35px; }
+.input_Style > input[type=text].fs_25, .input_Style > input[type=password].fs_25 { font-size: 25px; line-height: 35px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_25 { font-size: 7.8125vw !important; line-height: 9.375vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_25, .input_Style > input[type=password].fs_25 { font-size: 7.8125vw !important; line-height: 9.375vw !important; } }
 
-.input_Style > input[type=text].fs_26 { font-size: 26px; line-height: 36px; }
+.input_Style > input[type=text].fs_26, .input_Style > input[type=password].fs_26 { font-size: 26px; line-height: 36px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_26 { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_26, .input_Style > input[type=password].fs_26 { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
 
-.input_Style > input[type=text].fs_27 { font-size: 27px; line-height: 37px; }
+.input_Style > input[type=text].fs_27, .input_Style > input[type=password].fs_27 { font-size: 27px; line-height: 37px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_27 { font-size: 8.4375vw !important; line-height: 10vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_27, .input_Style > input[type=password].fs_27 { font-size: 8.4375vw !important; line-height: 10vw !important; } }
 
-.input_Style > input[type=text].fs_28 { font-size: 28px; line-height: 38px; }
+.input_Style > input[type=text].fs_28, .input_Style > input[type=password].fs_28 { font-size: 28px; line-height: 38px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_28 { font-size: 8.75vw !important; line-height: 10.3125vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_28, .input_Style > input[type=password].fs_28 { font-size: 8.75vw !important; line-height: 10.3125vw !important; } }
 
-.input_Style > input[type=text].fs_29 { font-size: 29px; line-height: 39px; }
+.input_Style > input[type=text].fs_29, .input_Style > input[type=password].fs_29 { font-size: 29px; line-height: 39px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_29 { font-size: 9.0625vw !important; line-height: 10.625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_29, .input_Style > input[type=password].fs_29 { font-size: 9.0625vw !important; line-height: 10.625vw !important; } }
 
-.input_Style > input[type=text].fs_30 { font-size: 30px; line-height: 40px; }
+.input_Style > input[type=text].fs_30, .input_Style > input[type=password].fs_30 { font-size: 30px; line-height: 40px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_30 { font-size: 9.375vw !important; line-height: 10.9375vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_30, .input_Style > input[type=password].fs_30 { font-size: 9.375vw !important; line-height: 10.9375vw !important; } }
 
-.input_Style > input[type=text].fs_31 { font-size: 31px; line-height: 41px; }
+.input_Style > input[type=text].fs_31, .input_Style > input[type=password].fs_31 { font-size: 31px; line-height: 41px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_31 { font-size: 9.6875vw !important; line-height: 11.25vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_31, .input_Style > input[type=password].fs_31 { font-size: 9.6875vw !important; line-height: 11.25vw !important; } }
 
-.input_Style > input[type=text].fs_32 { font-size: 32px; line-height: 42px; }
+.input_Style > input[type=text].fs_32, .input_Style > input[type=password].fs_32 { font-size: 32px; line-height: 42px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_32 { font-size: 10vw !important; line-height: 11.5625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_32, .input_Style > input[type=password].fs_32 { font-size: 10vw !important; line-height: 11.5625vw !important; } }
 
-.input_Style > input[type=text].fs_33 { font-size: 33px; line-height: 43px; }
+.input_Style > input[type=text].fs_33, .input_Style > input[type=password].fs_33 { font-size: 33px; line-height: 43px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_33 { font-size: 10.3125vw !important; line-height: 11.875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_33, .input_Style > input[type=password].fs_33 { font-size: 10.3125vw !important; line-height: 11.875vw !important; } }
 
-.input_Style > input[type=text].fs_34 { font-size: 34px; line-height: 44px; }
+.input_Style > input[type=text].fs_34, .input_Style > input[type=password].fs_34 { font-size: 34px; line-height: 44px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_34 { font-size: 10.625vw !important; line-height: 12.1875vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_34, .input_Style > input[type=password].fs_34 { font-size: 10.625vw !important; line-height: 12.1875vw !important; } }
 
-.input_Style > input[type=text].fs_35 { font-size: 35px; line-height: 45px; }
+.input_Style > input[type=text].fs_35, .input_Style > input[type=password].fs_35 { font-size: 35px; line-height: 45px; }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_35 { font-size: 10.9375vw !important; line-height: 12.5vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text].fs_35, .input_Style > input[type=password].fs_35 { font-size: 10.9375vw !important; line-height: 12.5vw !important; } }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=text] { font-size: 5vw !important; line-height: 6.5625vw !important; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=text], .input_Style > input[type=password] { font-size: 5vw !important; line-height: 6.5625vw !important; } }
 
-.input_Style > input[type=text].readOnly { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text].readOnly, .input_Style > input[type=password].readOnly { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text]:-moz-read-only, .input_Style > input[type=text]:-moz-read-only { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text]:-moz-read-only, .input_Style > input[type=text]:-moz-read-only, .input_Style > input[type=password]:-moz-read-only, .input_Style > input[type=password]:-moz-read-only { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text]:read-only, .input_Style > input[type=text]:-moz-read-only { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text]:read-only, .input_Style > input[type=text]:-moz-read-only, .input_Style > input[type=password]:read-only, .input_Style > input[type=password]:-moz-read-only { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text]:disabled, .input_Style > input[type=text]:disabled { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text]:disabled, .input_Style > input[type=text]:disabled, .input_Style > input[type=password]:disabled, .input_Style > input[type=password]:disabled { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text][disabled='disabled'] { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text][disabled='disabled'], .input_Style > input[type=password][disabled='disabled'] { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text][disabled='disabled']::-ms-value { background-color: #eee; border-color: #C2C2C2; }
+.input_Style > input[type=text][disabled='disabled']::-ms-value, .input_Style > input[type=password][disabled='disabled']::-ms-value { background-color: #eee; border-color: #C2C2C2; }
 
-.input_Style > input[type=text].full { padding: 5px 0; width: 100%; }
+.input_Style > input[type=text].full, .input_Style > input[type=password].full { padding: 5px 0; width: 100%; }
 
-.input_Style > input[type=text].full90 { width: 90%; }
+.input_Style > input[type=text].full90, .input_Style > input[type=password].full90 { width: 90%; }
 
-.input_Style > input[type=text].noL { border: none; }
+.input_Style > input[type=text].noL, .input_Style > input[type=password].noL { border: none; }
 
 .input_Style > textarea, .input_Style .textarea { padding: 5px 10px; font-size: 16px; line-height: 26px; background-color: #fff; border: 1px solid #707070; resize: none; }
 
@@ -146,13 +160,13 @@
 
 .input_Style > input[type=checkbox] { overflow: hidden; position: absolute; top: -1px; left: -1px; width: 0; height: 0; border: 0; font-size: 0; line-height: 0; }
 
-.input_Style > input[type=checkbox]:checked + label:before { background: #fff url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_on.svg") 50% 50% no-repeat; background-size: 90%; border: 1px solid #005fc1; }
+.input_Style > input[type=checkbox]:checked + label:before { background: #fff url("https://image.jinhak.com/renewal2020/svg/input_checkbox_on.svg") 50% 50% no-repeat; background-size: 90%; border: 1px solid #005fc1; }
 
 .input_Style > input[type=checkbox].none + label, .input_Style > input[type=checkbox]:disabled + label { color: #ccc; cursor: default; }
 
 .input_Style > input[type=checkbox].none + label:before, .input_Style > input[type=checkbox]:disabled + label:before { background-color: #F5F5F5; background-size: 90%; border: 1px solid #E6E6E6; }
 
-.input_Style > input[type=checkbox] + label { display: block; padding-left: 28px; height: 28px; font-size: 15px; line-height: 25px; color: #272727; letter-spacing: -.4px; position: relative; cursor: pointer; }
+.input_Style > input[type=checkbox] + label { display: inline-block; padding-left: 28px; height: 28px; font-size: 15px; line-height: 25px; color: #272727; letter-spacing: -.4px; position: relative; cursor: pointer; }
 
 .input_Style > input[type=checkbox] + label.fs_8 { font-size: 8px; line-height: 18px; }
 
@@ -268,7 +282,7 @@
 
 @media screen and (max-width: 640px) { .input_Style > input[type=checkbox] + label { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
 
-@media screen and (max-width: 640px) { .input_Style > input[type=checkbox] + label { height: auto; } }
+@media screen and (max-width: 640px) { .input_Style > input[type=checkbox] + label { padding-left: 8.75vw !important; height: auto; } }
 
 .input_Style > input[type=checkbox] + label:before { position: absolute; top: 50%; left: 0px; margin-top: -13px; display: block; content: ""; width: 20px; height: 20px; font-size: 0; text-align: center; background-color: #fff; border: 1px solid #ccc; }
 
@@ -278,11 +292,11 @@
 
 .input_Style > input[type=radio] { overflow: hidden; position: absolute; top: -1px; left: -1px; width: 0; height: 0; border: 0; font-size: 0; line-height: 0; }
 
-.input_Style > input[type=radio]:checked + label:before { background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio_on.svg") 0 0 no-repeat; background-size: 100%; }
+.input_Style > input[type=radio]:checked + label:before { background: url("https://image.jinhak.com/renewal2020/svg/input_radio_on.svg") 0 0 no-repeat; background-size: 100%; }
 
 .input_Style > input[type=radio].none + label, .input_Style > input[type=radio]:disabled + label { color: #ccc; cursor: default; }
 
-.input_Style > input[type=radio].none + label:before, .input_Style > input[type=radio]:disabled + label:before { background-color: #F5F5F5; background-size: 90%; border: 1px solid #E6E6E6; }
+.input_Style > input[type=radio].none + label:before, .input_Style > input[type=radio]:disabled + label:before { opacity: .5; border-radius: 50%; }
 
 .input_Style > input[type=radio] + label { display: inline-block; padding-left: 28px; height: 28px; font-size: 15px; line-height: 25px; color: #272727; letter-spacing: -.4px; position: relative; cursor: pointer; }
 
@@ -402,13 +416,15 @@
 
 @media screen and (max-width: 640px) { .input_Style > input[type=radio] + label { padding-left: 8.75vw !important; height: auto; } }
 
-.input_Style > input[type=radio] + label:before { position: absolute; top: 50%; left: 0px; margin-top: -11px; display: block; content: ""; width: 20px; height: 20px; font-size: 0; text-align: center; background: url("https://imgorg.jinhak.com/renewal2020/svg/input_radio.svg") 0 0 no-repeat; background-size: 100%; }
+.input_Style > input[type=radio] + label:before { position: absolute; top: 50%; left: 0px; margin-top: -11px; display: block; content: ""; width: 20px; height: 20px; font-size: 0; text-align: center; background: url("https://image.jinhak.com/renewal2020/svg/input_radio.svg") 0 0 no-repeat; background-size: 100%; }
 
 @media screen and (max-width: 640px) { .input_Style > input[type=radio] + label:before { margin-top: -3.125vw !important; width: 6.25vw !important; height: 6.25vw !important; } }
 
+.input_Style > input[type=checkbox].reset + label, .input_Style > input[type=radio].reset + label { color: #272727; font-weight: normal; background-color: #fff; border: none; }
+
 .input_Style.type_1 > input[type=checkbox]:checked + label:before { background-image: none; }
 
-.input_Style.type_1 > input[type=checkbox]:checked + label:after { display: block; margin-left: 5px; width: 20px; height: 20px; background: url("https://imgorg.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center; background-size: 20px auto; border: none; }
+.input_Style.type_1 > input[type=checkbox]:checked + label:after { display: block; margin-left: 5px; width: 20px; height: 20px; background: url("https://image.jinhak.com/renewal2020/svg/input_checkbox_1_on.svg") no-repeat center center; background-size: 20px auto; border: none; }
 
 @media screen and (max-width: 640px) { .input_Style.type_1 > input[type=checkbox]:checked + label:after { margin-top: -0.78125vw; margin-left: 1.5625vw; width: 6.25vw !important; height: 6.25vw !important; background-size: 6.25vw; } }
 
@@ -442,6 +458,26 @@
 
 .input_Style.atType > input[type=radio] + label:before { display: none; }
 
+@media screen and (max-width: 640px) { .input_Style.atType > input[type=radio] + label { padding-left: 0 !important; } }
+
+.input_Style.atType1 > input[type=checkbox]:checked + label { color: #1B7FEE; background-color: #fff; border: 1px solid #1B7FEE; }
+
+.input_Style.atType1 > input[type=checkbox]:checked + label:before { background-color: #1B7FEE; border: 1px solid #1B7FEE; background-image: none; }
+
+.input_Style.atType1 > input[type=checkbox]:checked + label:after { display: none; }
+
+.input_Style.atType1 > input[type=checkbox] + label { display: block; padding: 10px 0 10px 30px; height: auto; font-size: 15px; line-height: 25px; text-align: left; border: 1px solid #ddd; }
+
+@media screen and (max-width: 640px) { .input_Style.atType1 > input[type=checkbox] + label { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+
+@media screen and (max-width: 640px) { .input_Style.atType1 > input[type=checkbox] + label { font-size: 12px; line-height: 22px; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .input_Style.atType1 > input[type=checkbox] + label { font-size: 3.75vw !important; line-height: 5.3125vw !important; } }
+
+.input_Style.atType1 > input[type=checkbox] + label:before { content: ""; display: block; margin-top: 0 !important; left: 10px; width: 15px !important; height: 15px !important; border: 1px solid #ddd; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+@media screen and (max-width: 640px) { .input_Style.atType1 > input[type=checkbox] + label:before { left: 1.5625vw; } }
+
 @media \0screen { /* IE8 */
   .input_Style > input[type=checkbox] { visibility: visible; top: 50%; left: 0px; margin-top: -13px; width: 20px; height: 20px; z-index: 2; }
   .input_Style > input[type=checkbox] + label:before { border: none; }
@@ -449,7 +485,119 @@
   .input_Style > input[type=radio] + label { padding-left: 30px; }
   .input_Style > input[type=radio] + label:before { background-image: none; border: none; } }
 
-.select_Style { padding: 5px 24px 5px 16px; height: auto; font-size: 16px; line-height: 26px; border: solid 1px #707070; background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF; -webkit-appearance: none; }
+.select_Style { padding: 5px 24px 5px 16px; height: auto; font-size: 16px; line-height: 26px; border: solid 1px #707070; background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF; -webkit-appearance: none; }
+
+.select_Style.fs_8 { font-size: 8px; line-height: 18px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_8 { font-size: 2.5vw !important; line-height: 4.0625vw !important; } }
+
+.select_Style.fs_9 { font-size: 9px; line-height: 19px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_9 { font-size: 2.8125vw !important; line-height: 4.375vw !important; } }
+
+.select_Style.fs_10 { font-size: 10px; line-height: 20px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_10 { font-size: 3.125vw !important; line-height: 4.6875vw !important; } }
+
+.select_Style.fs_11 { font-size: 11px; line-height: 21px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_11 { font-size: 3.4375vw !important; line-height: 5vw !important; } }
+
+.select_Style.fs_12 { font-size: 12px; line-height: 22px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_12 { font-size: 3.75vw !important; line-height: 5.3125vw !important; } }
+
+.select_Style.fs_13 { font-size: 13px; line-height: 23px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_13 { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.select_Style.fs_14 { font-size: 14px; line-height: 24px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_14 { font-size: 4.375vw !important; line-height: 5.9375vw !important; } }
+
+.select_Style.fs_15 { font-size: 15px; line-height: 25px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_15 { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+
+.select_Style.fs_16 { font-size: 16px; line-height: 26px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_16 { font-size: 5vw !important; line-height: 6.5625vw !important; } }
+
+.select_Style.fs_17 { font-size: 17px; line-height: 27px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_17 { font-size: 5.3125vw !important; line-height: 6.875vw !important; } }
+
+.select_Style.fs_18 { font-size: 18px; line-height: 28px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_18 { font-size: 5.625vw !important; line-height: 7.1875vw !important; } }
+
+.select_Style.fs_19 { font-size: 19px; line-height: 29px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_19 { font-size: 5.9375vw !important; line-height: 7.5vw !important; } }
+
+.select_Style.fs_20 { font-size: 20px; line-height: 30px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_20 { font-size: 6.25vw !important; line-height: 7.8125vw !important; } }
+
+.select_Style.fs_21 { font-size: 21px; line-height: 31px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_21 { font-size: 6.5625vw !important; line-height: 8.125vw !important; } }
+
+.select_Style.fs_22 { font-size: 22px; line-height: 32px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_22 { font-size: 6.875vw !important; line-height: 8.4375vw !important; } }
+
+.select_Style.fs_23 { font-size: 23px; line-height: 33px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_23 { font-size: 7.1875vw !important; line-height: 8.75vw !important; } }
+
+.select_Style.fs_24 { font-size: 24px; line-height: 34px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_24 { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
+
+.select_Style.fs_25 { font-size: 25px; line-height: 35px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_25 { font-size: 7.8125vw !important; line-height: 9.375vw !important; } }
+
+.select_Style.fs_26 { font-size: 26px; line-height: 36px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_26 { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
+
+.select_Style.fs_27 { font-size: 27px; line-height: 37px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_27 { font-size: 8.4375vw !important; line-height: 10vw !important; } }
+
+.select_Style.fs_28 { font-size: 28px; line-height: 38px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_28 { font-size: 8.75vw !important; line-height: 10.3125vw !important; } }
+
+.select_Style.fs_29 { font-size: 29px; line-height: 39px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_29 { font-size: 9.0625vw !important; line-height: 10.625vw !important; } }
+
+.select_Style.fs_30 { font-size: 30px; line-height: 40px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_30 { font-size: 9.375vw !important; line-height: 10.9375vw !important; } }
+
+.select_Style.fs_31 { font-size: 31px; line-height: 41px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_31 { font-size: 9.6875vw !important; line-height: 11.25vw !important; } }
+
+.select_Style.fs_32 { font-size: 32px; line-height: 42px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_32 { font-size: 10vw !important; line-height: 11.5625vw !important; } }
+
+.select_Style.fs_33 { font-size: 33px; line-height: 43px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_33 { font-size: 10.3125vw !important; line-height: 11.875vw !important; } }
+
+.select_Style.fs_34 { font-size: 34px; line-height: 44px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_34 { font-size: 10.625vw !important; line-height: 12.1875vw !important; } }
+
+.select_Style.fs_35 { font-size: 35px; line-height: 45px; }
+
+@media screen and (max-width: 640px) { .select_Style.fs_35 { font-size: 10.9375vw !important; line-height: 12.5vw !important; } }
 
 @media screen and (max-width: 640px) { .select_Style { font-size: 5vw !important; line-height: 6.5625vw !important; } }
 
@@ -466,13 +614,15 @@
 @media \0screen { /* IE8 */
   select, .select_Style { padding: 5px 16px 5px 16px; background-image: none; } }
 
-.custom_select, .date_select { display: inline-block; width: 252px; height: 39px; padding: 0; text-align: left; background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF; border: 1px solid #707070; position: relative; -webkit-appearance: none; }
+.custom_select, .date_select { display: inline-block; width: 252px; height: 39px; padding: 0; text-align: left; background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") no-repeat right center #FFF; border: 1px solid #707070; position: relative; -webkit-appearance: none; }
 
 .custom_select.disabled, .date_select.disabled { background-color: #eee; border-color: #C2C2C2; }
 
 .custom_select .val_tit, .date_select .val_tit { display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; padding: 0px 24px 0px 16px; width: 100%; font-size: 13px; line-height: 23px; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
 
 @media screen and (max-width: 640px) { .custom_select .val_tit, .date_select .val_tit { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+@media screen and (max-width: 640px) { .custom_select .val_tit, .date_select .val_tit { padding: 0vw 3.75vw 0vw 2.5vw; } }
 
 .custom_select .drop, .date_select .drop { display: none; position: absolute; top: 37px; left: -1px; right: -1px; padding: 10px 16px 16px 16px; max-height: 200px; border: 1px solid #707070; background-color: #fff; overflow: hidden; overflow-y: auto !important; z-index: 5; }
 
@@ -520,6 +670,10 @@
 
 .common_search .input_com1 { padding: 5px 10px; border: 1px solid #ddd; border-right: none; }
 
+.common_search .input_Style { display: inline-block; }
+
+.common_search .input_Style input[type=text], .common_search .input_Style input[type=password] { padding: 5px 10px 6px; }
+
 .common_search .schBtn { display: inline-block; padding: 5px 17px; height: 39px; font-size: 14px; line-height: 24px; color: #1b3b5c; vertical-align: -3px; background-color: #EDEDED; border: solid 1px #ddd; border-left: none; }
 
 @media screen and (max-width: 640px) { .common_search .schBtn { font-size: 4.375vw !important; line-height: 5.9375vw !important; } }
@@ -542,7 +696,7 @@
 
 @media screen and (max-width: 640px) { .common_search.icon .schBtn { width: 12.5vw; height: 100%; } }
 
-.common_search.icon .schBtn:after { position: absolute; top: 50%; left: 50%; width: 18px; height: 18px; content: ""; display: block; background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.common_search.icon .schBtn:after { position: absolute; top: 50%; left: 50%; width: 18px; height: 18px; content: ""; display: block; background: url("https://image.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 640px) { .common_search.icon .schBtn:after { width: 4.6875vw; height: 4.6875vw; } }
 
@@ -558,7 +712,7 @@
 
 @media screen and (max-width: 640px) { .common_search.add .schBtn { width: 12.5vw; height: 100%; } }
 
-.common_search.add .schBtn:after { position: absolute; top: 50%; left: 50%; width: 23px; height: 23px; content: ""; display: block; background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_addOption.png") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.common_search.add .schBtn:after { position: absolute; top: 50%; left: 50%; width: 23px; height: 23px; content: ""; display: block; background: url("https://image.jinhak.com/renewal2020/btn/btn_addOption.png") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 .common_search.add:after { content: ""; display: block; clear: both; }
 
@@ -570,17 +724,21 @@
 
 .input_Style.multi_search input { width: 100%; height: 38px; }
 
+@media screen and (max-width: 640px) { .input_Style.multi_search input { font-size: 13px; line-height: 23px; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .input_Style.multi_search input { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
 .input_Style.multi_search .btnZip { position: absolute; top: 0; bottom: 0; right: 0; width: 55px; }
 
 .input_Style.multi_search .btnZip:after { content: ""; display: block; clear: both; }
 
 .input_Style.multi_search .btn { display: block; float: left; width: 30px; height: 100%; font-size: 0; position: relative; }
 
-.input_Style.multi_search .btn:after { position: absolute; top: 50%; left: 50%; width: 60%; height: 60%; content: ""; display: block; background: url("https://imgorg.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.input_Style.multi_search .btn:after { position: absolute; top: 50%; left: 50%; width: 60%; height: 60%; content: ""; display: block; background: url("https://image.jinhak.com/renewal2020/svg/icon_search_grey.svg") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 .input_Style.multi_search .select_btn { display: block; float: left; width: 25px; height: 100%; font-size: 0; position: relative; }
 
-.input_Style.multi_search .select_btn:after { position: absolute; top: 50%; right: 0; width: 16px; height: 5px; content: ""; display: block; background: url("https://imgorg.jinhak.com/renewal2019/common/arr8_down.png") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); }
+.input_Style.multi_search .select_btn:after { position: absolute; top: 50%; right: 0; width: 16px; height: 5px; content: ""; display: block; background: url("https://image.jinhak.com/renewal2019/common/arr8_down.png") 50% 50% no-repeat; background-size: 100%; -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); }
 
 .input_Style.multi_search .drop { display: none; position: absolute; top: 37px; left: 0px; right: 0px; padding: 10px 16px 16px 16px; max-height: 200px; border: 1px solid #707070; background-color: #fff; overflow: hidden; overflow-y: auto !important; z-index: 5; }
 
