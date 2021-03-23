@@ -199,7 +199,34 @@ var ui_Project = {
       };
 
       window.addEventListener('scroll', scrolling);
-    }
+    },
+
+		toggle_Module :  function(target, btn, panel, cls, callback){
+			//target = item, btn = open_btn, panel = show/hide contents, cls = class
+			var _item = document.querySelectorAll(target);
+			var _btn = document.querySelectorAll(btn);
+			var _panel = document.querySelectorAll(panel);
+
+      Array.prototype.forEach.call(_item, function(item, index) {
+				var _this = item.querySelectorAll(btn);
+
+        _this[0].addEventListener('click', function(e) {
+          //console.log(_panel);
+					if(hasClass(this, cls)){
+						this.classList.remove(cls);
+						this.nextElementSibling.classList.remove(cls);
+					} else {
+						for ( var i = 0; i < _panel.length; i++ ) {
+							//console.log(i);
+							_panel[i].classList.remove(cls);
+							_btn[i].classList.remove(cls);
+						}
+						this.classList.add(cls)
+						this.nextElementSibling.classList.add(cls);
+					}
+        });
+      });
+		}
   }
 }
 

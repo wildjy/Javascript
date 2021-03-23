@@ -182,3 +182,122 @@ input{
     }
   }
 }
+
+
+.more_Box{
+  margin:0 auto 50px;
+	padding:40px 20px;
+  max-width:300px;
+	text-align:left;
+	background-color: #fff;
+	border:1px solid #CED0D4;
+	border-radius:20px;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,.05);
+	position: relative;
+	@media screen and (max-width:640px){
+		@include calc-vw-2(40px, 20px, padding);
+		border-radius:calc-vw(20px);
+	}
+	&.center{
+		text-align:center;
+	}
+	.info{
+		.tit{
+			margin-bottom:20px;
+			padding-bottom:15px;
+			@include fontSize(34px);
+			border-bottom:1px solid #272727;
+			@media screen and (max-width:640px){
+				margin-bottom:calc-vw(20px);
+				padding-bottom:calc-vw(15px);
+				@include fontSize(17px);
+			}
+		}
+		.text{
+			.txt{
+				@include fontSize(26px);
+				@media screen and (max-width:640px){
+					@include fontSize(13px);
+				}
+
+			}
+		}
+	}
+
+	.box{
+		margin-top:20px;
+		padding:20px 15px;
+		background-color: #F3F6F9;
+		@media screen and (max-width:640px){
+			margin-top:calc-vw(20px);
+			@include calc-vw-2(20px, 15px, padding);
+		}
+		table{
+		}
+
+		th, td,
+		dt, dd{
+			@include fontSize(30px);
+			font-weight:normal;
+			@media screen and (max-width:640px){
+				@include fontSize(15px);
+			}
+			&.blue,
+			.blue{
+				color:#1b7fee;
+			}
+		}
+		th, dt{
+			padding-bottom:10px;
+			@media screen and (max-width:640px){
+				padding-bottom:calc-vw(10px);
+				//@include calc-vw-2(10px, 0px, padding);
+			}
+		}
+		td, dd{
+			@include fontSize(26px);
+			font-weight:normal;
+			@media screen and (max-width:640px){
+				@include fontSize(13px);
+			}
+		}
+	}
+
+	.moreBtn{
+		position: absolute;
+		bottom:-30px;
+		left:50%;
+		@include translate(-50%,0);
+		@media screen and (max-width:640px){
+			bottom:calc-vw(-30px);
+		}
+		&.is_show{
+			button{
+				background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_on.png");
+			}
+		}
+		button{
+			width:60px;
+			height:60px;
+			font-size:0;
+			background-color: #1B7FEE;
+			background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_off.png");
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: 21px;
+			border-radius:50%;
+			cursor:pointer;
+			@media screen and (max-width:640px){
+				width:calc-vw(60px);
+				height:calc-vw(60px);
+				background-size: calc-vw(21px);
+			}
+		}
+	}
+	.detail{
+		display:none;
+		&.is_show{
+			display:block;
+		}
+	}
+}

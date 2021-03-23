@@ -6592,3 +6592,65 @@ span.btn-Style.active, a.btn-Style.active, button.btn-Style.active, input.btn-St
 @media screen and (max-width: 640px) { .bottom_fixed .inner .control_Box .result_show { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
 
 .bottom_fixed .inner .control_Box .result_show:after { display: inline-block; content: ""; margin-left: 5px; width: 30px; height: 11px; background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_yellow_result.png") right 50% no-repeat; }
+
+.more_Box { margin: 0 auto 50px; padding: 40px 20px; max-width: 300px; text-align: left; background-color: #fff; border: 1px solid #CED0D4; border-radius: 20px; -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05); box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05); position: relative; }
+
+@media screen and (max-width: 640px) { .more_Box { padding: 6.25vw 3.125vw; border-radius: 3.125vw; } }
+
+.more_Box.center { text-align: center; }
+
+.more_Box .info .tit { margin-bottom: 20px; padding-bottom: 15px; font-size: 34px !important; line-height: 44px !important; border-bottom: 1px solid #272727; }
+
+@media screen and (max-width: 640px) { .more_Box .info .tit { font-size: 10.625vw !important; line-height: 12.1875vw !important; } }
+
+@media screen and (max-width: 640px) { .more_Box .info .tit { margin-bottom: 3.125vw; padding-bottom: 2.34375vw; font-size: 17px !important; line-height: 27px !important; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .info .tit { font-size: 5.3125vw !important; line-height: 6.875vw !important; } }
+
+.more_Box .info .text .txt { font-size: 26px !important; line-height: 36px !important; }
+
+@media screen and (max-width: 640px) { .more_Box .info .text .txt { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
+
+@media screen and (max-width: 640px) { .more_Box .info .text .txt { font-size: 13px !important; line-height: 23px !important; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .info .text .txt { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.more_Box .box { margin-top: 20px; padding: 20px 15px; background-color: #F3F6F9; }
+
+@media screen and (max-width: 640px) { .more_Box .box { margin-top: 3.125vw; padding: 3.125vw 2.34375vw; } }
+
+.more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 30px !important; line-height: 40px !important; font-weight: normal; }
+
+@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 9.375vw !important; line-height: 10.9375vw !important; } }
+
+@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 15px !important; line-height: 25px !important; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
+
+.more_Box .box th.blue, .more_Box .box th .blue, .more_Box .box td.blue, .more_Box .box td .blue, .more_Box .box dt.blue, .more_Box .box dt .blue, .more_Box .box dd.blue, .more_Box .box dd .blue { color: #1b7fee; }
+
+.more_Box .box th, .more_Box .box dt { padding-bottom: 10px; }
+
+@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box dt { padding-bottom: 1.5625vw; } }
+
+.more_Box .box td, .more_Box .box dd { font-size: 26px !important; line-height: 36px !important; font-weight: normal; }
+
+@media screen and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
+
+@media screen and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 13px !important; line-height: 23px !important; } }
+
+@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
+
+.more_Box .moreBtn { position: absolute; bottom: -30px; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
+
+@media screen and (max-width: 640px) { .more_Box .moreBtn { bottom: -4.6875vw; } }
+
+.more_Box .moreBtn.is_show button { background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_on.png"); }
+
+.more_Box .moreBtn button { width: 60px; height: 60px; font-size: 0; background-color: #1B7FEE; background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_off.png"); background-position: 50% 50%; background-repeat: no-repeat; background-size: 21px; border-radius: 50%; cursor: pointer; }
+
+@media screen and (max-width: 640px) { .more_Box .moreBtn button { width: 9.375vw; height: 9.375vw; background-size: 3.28125vw; } }
+
+.more_Box .detail { display: none; }
+
+.more_Box .detail.is_show { display: block; }
