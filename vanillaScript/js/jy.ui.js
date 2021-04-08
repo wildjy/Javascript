@@ -226,7 +226,76 @@ var ui_Project = {
 					}
         });
       });
-		}
+		},
+
+    slick_Module : function(selector, newObj, callback){
+
+      var slickObj = {
+        infinite: true,
+        autoplay: false,
+        touchMove: false,
+        pauseOnHover: false,
+        variableWidth: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplaySpeed: 1000,
+        speed: 200,
+        arrows: true,
+        dots: false
+      };
+      //console.log(slickObj)
+
+      // var _slick = document.getElementsByClassName(selector)[0];
+      // //console.log(_slick);
+      // $(_slick).slick({
+      //   ...newObj ? {...slickObj, ...newObj} : slickObj
+      // });
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
+      var _slick = document.getElementsByClassName(selector)[0];
+      //console.log(_slick);
+      $(_slick).slick(_extends({}, newObj ? _extends({}, slickObj, newObj) : slickObj));
+    },
+
+    swiper_Module : function(selector, newObj, callback){
+
+      var _swiper = document.getElementsByClassName(selector)[0];
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }return target;
+      };
+
+      var swiperObj = {
+        pagitaion: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0
+      };
+
+      var isSwiper = new Swiper(_swiper, newObj ? _extends({}, swiperObj, newObj) : swiperObj);
+
+      for (var i = 0; i < $(_swiper).find(".swiper-slide").length; i++) {
+        if ($(_swiper).find(".swiper-slide").eq(i).hasClass("selected")) {
+          //isSwiper.slideTo(i, 100)
+        }
+      }
+
+    }
   }
 }
 

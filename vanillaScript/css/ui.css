@@ -6529,7 +6529,7 @@ span.btn-Style.r50, a.btn-Style.r50, button.btn-Style.r50, input.btn-Style.r50 {
 
 .btn-Align.line2.right { text-align: right; }
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow: hidden; }
 
 #wrap { width: 100%; }
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : slick : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="">
+      <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
+      <div class="studyArea">
+
+        <div class="slickSlider">
+          <div class="slick_1 slider_list">
+            <div class="slick-slide"><a href="javascript:void(0)">11</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">22</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">33</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">44</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">55</a></div>
+          </div>
+          <div class="slick_2 slider_list">
+            <div class="slick-slide"><a href="javascript:void(0)">11</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">22</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">33</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">44</a></div>
+            <div class="slick-slide"><a href="javascript:void(0)">55</a></div>
+          </div>
+        </div>
+
+        <div  style="width:1200px; margin:0 auto; overflow:hidden;">
+          <div class="swiper_1 swiperSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide "><a href="#ch_1">ㄱ</a></div><!-- selected -->
+              <div class="swiper-slide"><a href="#ch_2">ㄴ</a></div>
+              <div class="swiper-slide selected"><a href="#ch_3">ㄷ</a></div>
+              <div class="swiper-slide "><a href="#ch_4">ㄹ</a></div>
+              <div class="swiper-slide"><a href="#ch_5">ㅁ</a></div>
+              <div class="swiper-slide"><a href="#ch_6">ㅂ</a></div>
+              <div class="swiper-slide"><a href="#ch_7">ㅅ</a></div>
+              <div class="swiper-slide"><a href="#ch_8">ㅇ</a></div>
+              <div class="swiper-slide "><a href="#ch_9">ㅈ</a></div>
+              <div class="swiper-slide"><a href="#ch_10">ㅊ</a></div>
+              <div class="swiper-slide"><a href="#ch_11">ㅋ</a></div>
+              <div class="swiper-slide"><a href="#ch_12">ㅌ</a></div>
+              <div class="swiper-slide"><a href="#ch_13">ㅍ</a></div>
+              <div class="swiper-slide"><a href="#ch_14">ㅎ</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end : studyArea -->
+
+      <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+      <link rel="stylesheet" type="text/css" href="css/slick.css" />
+      <script type="text/javascript" src="js/slick.min.js"></script>
+
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+      <script type="text/javascript">
+      //<![CDATA[
+        //https://es6console.com/kn86fwqo/ : compiler
+        //[parent, fix relative, fix target, class, type]
+        ui_Project.ui.slick_Module('slick_1');
+        ui_Project.ui.slick_Module('slick_2', {autoplay : true});
+        ui_Project.ui.swiper_Module('swiper_1', {loop: true});
+      //]]>
+      </script>
+      <style type="text/css">
+        .slider_list{}
+        .slick-slide{padding:3vw 10vw; font-size:5vw; text-align:center; border:1px solid #000;}
+        /* .swiper_1{width:100%;} */
+        .swiper-slide{width:10%; text-align:center; border:1px solid #000;}
+      </style>
+
+    </div>
+  </div>
+</body>
+</html>
