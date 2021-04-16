@@ -55,7 +55,7 @@
     <div class="wrap">
       <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
       <div class="studyArea">
-        <ul class="common_Tab at3" id="common_Tab">
+        <ul class="tab_1 common_Tab at3" id="common_Tab">
           <li class="" ><button type="button"><span>탭(Tab)1</span></button></li>
           <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
           <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
@@ -63,12 +63,21 @@
         <div class="tabPanel">탭1 contents..</div>
         <div class="tabPanel">탭2 contents..</div>
         <div class="tabPanel">탭3 contents..</div>
+
+        <ul class="tab_2 common_Tab at3" id="common_Tab">
+          <li class="" ><button type="button"><span>탭(Tab)1</span></button></li>
+          <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
+          <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
+        </ul>
+        <div class="tabPanel1">탭1 contents..</div>
+        <div class="tabPanel1">탭2 contents..</div>
+        <div class="tabPanel1">탭3 contents..</div>
       </div><!-- end : studyArea -->
     <div id="test"></div>
       <script type="text/javascript">
       //<![CDATA[
-        //[parent, fix relative, fix target, class, type]
-        ui_Project.ui.tabModule('.common_Tab', '.tabPanel', 'selected');
+        ui_Project.ui.tabModule('.tab_1', '.tabPanel', 'selected');
+        ui_Project.ui.tabModule('.tab_2', '.tabPanel1', 'selected');
       //]]>
       </script>
     </div>

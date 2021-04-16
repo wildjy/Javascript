@@ -229,7 +229,6 @@ var ui_Project = {
 		},
 
     slick_Module : function(selector, newObj, callback){
-
       var slickObj = {
         infinite: true,
         autoplay: false,

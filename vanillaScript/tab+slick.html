@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : slick : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="">
+      <p class="p_Style fs_25 center mb50"><b>tab 제어</b></p>
+      <div class="studyArea">
+
+        <ul class="tab_1 common_Tab at3" id="common_Tab">
+          <li class="selected" ><a href="#tab_1"><span>탭(Tab)1</span></a></li>
+          <li class="" ><a href="#tab_2"><span>탭(Tab)2</span></a></li>
+          <li class=""><a href="#tab_3"><span>탭(Tab)3</span></a></li>
+        </ul>
+
+        <div class="tabPanel" id="tab_1">탭1 contents..
+
+          <div class="slickSlider">
+            <div class="slick_1 slider_list">
+              <div class="slick-slide"><a href="javascript:void(0)">11</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">22</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">33</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">44</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">55</a></div>
+            </div>
+          </div>
+
+          <ul class="tab_2 common_Tab at2" id="common_Tab">
+            <li class="selected" ><a href="#tab1_1"><span>탭22(Tab)1</span></a></li>
+            <li class="" ><a href="#tab1_2"><span>탭22(Tab)2</span></a></li>
+          </ul>
+
+          <div class="tabPanel_1" id="tab1_1">
+
+            <div class="slickSlider">
+              <div class="slick_3 slider_list">
+                <div class="slick-slide"><a href="javascript:void(0)">11</a></div>
+                <div class="slick-slide"><a href="javascript:void(0)">22</a></div>
+                <div class="slick-slide"><a href="javascript:void(0)">33</a></div>
+                <div class="slick-slide"><a href="javascript:void(0)">44</a></div>
+                <div class="slick-slide"><a href="javascript:void(0)">55</a></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="tabPanel_1" id="tab1_2">
+            33
+
+          </div>
+        </div>
+        <div class="tabPanel" id="tab_2">탭2 contents..
+
+          <div class="slickSlider">
+            <div class="slick_2 slider_list">
+              <div class="slick-slide"><a href="javascript:void(0)">11</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">22</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">33</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">44</a></div>
+              <div class="slick-slide"><a href="javascript:void(0)">55</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="tabPanel" id="tab_3">탭3 contents..</div>
+
+
+      </div><!-- end : studyArea -->
+
+      <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+      <link rel="stylesheet" type="text/css" href="css/slick.css" />
+      <script type="text/javascript" src="js/slick.min.js"></script>
+      <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+      <script type="text/javascript">
+      //<![CDATA[
+        //https://es6console.com/kn86fwqo/ : compiler
+        ui_Project.ui.slick_Module('slick_1', {autoplay : true});
+        ui_Project.ui.slick_Module('slick_2', {autoplay : true});
+        ui_Project.ui.slick_Module('slick_3', {autoplay : true, autoplaySpeed : 0, speed: 1500,});
+
+        function tab(tab, panel, cls, slick){
+          var _tab = $(tab);
+          var _target = _tab.find("li")
+          var _panel = $(panel);
+          var _destroy = function(){
+            if($(this).find(".slider_list").length){
+              $(this).find(".slider_list").slick("unslick");
+            }
+          }
+
+          $("" + panel + ":not(" + $(""+ tab +" li." + cls + " a").attr("href") + ")").hide(0, _destroy);
+          _target.find("a").on("click", function(){
+            var _ = $(this),
+            _rel = _.attr("href");
+
+            _target.removeClass(cls);
+            _panel.hide(0, _destroy);
+            _.parent().addClass(cls);
+            $(_rel).show(0, function(){
+              if($(this).find(".slider_list").length){
+                $(this).find(".slider_list").slick("init");
+                //$(this).find(".slider_list").slick('slickGoTo', 0);
+                //$(this).find(".slider_list").slick('refresh');
+              }
+            });
+            return false;
+          })
+        };
+
+        tab(".tab_1", ".tabPanel", "selected");
+        tab(".tab_2", ".tabPanel_1", "selected");
+      //]]>
+      </script>
+      <style type="text/css">
+        .slider_list{}
+        .slick-slide{padding:1vw 10vw; font-size:3vw; text-align:center; border:1px solid #000;}
+
+        .tab_2 li{width:150px !important;}
+      </style>
+
+    </div>
+  </div>
+</body>
+</html>
