@@ -294,7 +294,45 @@ var ui_Project = {
         }
       }
 
-    }
+    },
+
+		fontSizeChange : function(target, btn, change, set, cls){
+			/*
+				target = controls parent Element,
+				btn = controls btn ,
+				change = contents Element,
+				set = change find target Element, ( + css style setting )
+				cls = add class
+			*/
+			var _target = document.getElementById(target);
+			var _sizeBtn = _target.querySelectorAll(btn);
+			var _changeTarget = document.getElementById(change);
+			var _changeContents = _changeTarget.querySelectorAll(set);
+
+			_changeTarget.setAttribute('class', '');
+
+			Array.prototype.forEach.call(_changeContents, function(setFont, index) {
+				Array.prototype.forEach.call(_sizeBtn, function(sizeBtn, index) {
+					sizeBtn.addEventListener('click', function(e) {
+						//console.log(sizeBtn);
+						//console.log(setFont);
+						var _size = this.getAttribute('id'); // size
+						var _set = set.replace('.', '');
+
+						setFont.setAttribute('class', _set); //class setting
+						setFont.classList.add(_size);
+
+						Array.prototype.forEach.call(_sizeBtn, function(btn, index) {
+							removeClass(btn, cls);
+						});
+						this.classList.add(cls);
+
+						e.preventDefault();
+					})
+				});
+			});
+		}
+
   }
 }
 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title> : fontSize Control module : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+  <style type="text/css">
+  .studyArea .CodeMirror{height:500px}
+  </style>
+</head>
+
+<body>
+  <div id="centerWrap">
+    <div class="wrap">
+      <p class="p_Style fs_25 center mb50"><b>fontSize Control module</b></p>
+      <div class="studyArea">
+
+
+
+        <div><button type="button" class="btn size" onclick="toggleShow(this, 'sizeControl','is_active', 'block');">Size Control(click)</button>
+          <div class="sizeControl " id="sizeControl"><!-- is_active -->
+            <a href="javascript:void(0)" class="sizeBtn" id="small"><span>가</span></a>
+            <a href="javascript:void(0)" class="sizeBtn is_active" id="medium"><span>가</span></a>
+            <a href="javascript:void(0)" class="sizeBtn" id="large"><span>가</span></a>
+          </div>
+        </div>
+
+        <p class="titleSize">타이틀 Title !!!</p>
+        <div class="fontSize">
+          가나다라마바사아자차카다ABFDGFGREWGA!$^65456598039819048390
+        </div>
+
+        <style type="text/css">
+          .btn{padding:.2vw .5vw;font-size:1vw; color:#000; font-weight:600;border:1px solid #aaa}
+          .sizeControl{display:none; height:60px;}
+          .sizeControl.is_active{display:block;}
+          .sizeControl a{display:inline-block; padding:10px 15px; background-color: #fff;border-radius:50%;}
+          .sizeControl a.is_active{background-color: #000;}
+          .sizeControl a.is_active>span{color:#fff;}
+          .sizeControl a>span{font-size:15px;}
+          /* size setting */
+          .titleSize{margin-bottom:15px; padding-bottom:15px; font-size:5vw; color:red; border-bottom:1px solid #000;}
+          .titleSize.small{font-size:4vw;}
+          .titleSize.medium{font-size:5vw;}
+          .titleSize.large{font-size:6vw;}
+
+          .fontSize{font-size:3vw;}
+          .fontSize.small{font-size:2vw;}
+          .fontSize.medium{font-size:3vw;}
+          .fontSize.large{font-size:4vw;}
+        </style>
+        <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function(){
+          /*
+            fontSizeChange : function(target, btn, change, set, cls);
+
+            target = controls parent Element,
+            btn = controls btn ,
+            change = contents Element,
+            set = change find target Element, ( + css style setting )
+            cls = add class
+          */
+          ui_Project.ui.fontSizeChange('sizeControl', '.sizeBtn', 'centerWrap', '.titleSize', 'is_active');
+          ui_Project.ui.fontSizeChange('sizeControl', '.sizeBtn', 'centerWrap', '.fontSize', 'is_active');
+        });
+        //]]>
+        </script>
+      </div><!-- end : studyArea -->
+    </div>
+  </div>
+</body>
+</html>
