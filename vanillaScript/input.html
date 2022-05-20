@@ -27,26 +27,26 @@
   <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
   <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
   <script type="text/javascript">
-  $(document).ready(function(){
-    $('.studyArea, .flex-code, .css-code').each(function(i){
-      var codeArea = $(this);
-      var codeHtml = codeArea.html();
-      if(codeArea.hasClass('hidden')) codeArea.empty();
-      CodeMirror($(this)[0], {
-        value: codeHtml,
-        mode: 'htmlmixed',
-        lineNumbers: !$(this).is('.inline'),
-        readOnly: true,
-        styleActiveLine: false,
-        autoClearEmptyLines:true,
-        lineWrapping: true,
-        matchBrackets: true,
-        theme: 'monokai',
-        height: 'auto',
-        scrollbarStyle: "simple"
+    $(document).ready(function () {
+      $('.studyArea, .flex-code, .css-code').each(function (i) {
+        var codeArea = $(this);
+        var codeHtml = codeArea.html();
+        if (codeArea.hasClass('hidden')) codeArea.empty();
+        CodeMirror($(this)[0], {
+          value: codeHtml,
+          mode: 'htmlmixed',
+          lineNumbers: !$(this).is('.inline'),
+          readOnly: true,
+          styleActiveLine: false,
+          autoClearEmptyLines: true,
+          lineWrapping: true,
+          matchBrackets: true,
+          theme: 'monokai',
+          height: 'auto',
+          scrollbarStyle: "simple"
+        });
       });
     });
-  });
   </script>
 </head>
 
@@ -55,74 +55,103 @@
     <div class="wrap">
       <p class="p_Style fs_25 center mb50"><b>input 제어</b></p>
       <div class="studyArea">
-        <div class="inputModue">
+        <div class="inputModule">
           <input type="checkbox" id="chk" />
           <label for="chk">checkbox</label>
         </div>
-        <div class="inputModue">
+        <div class="inputModule">
           <input type="checkbox" id="chk1" />
           <label for="chk1">checkbox</label>
         </div>
+        <div class="inputModule">
+          <label for="text">checkbox</label>
+          <input type="text" id="text" />
+        </div>
       </div><!-- end : studyArea -->
-
-    <script type="text/javascript">
-      //hasClass
-      function hasClass(ele,cls) {
-        return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-      }
-      //addClass
-      function addClass(ele,cls) {
-        if (!this.hasClass(ele,cls)) ele.className += " "+cls;
-      }
-      //removeClass
-      function removeClass(ele,cls) {
-        if (hasClass(ele,cls)) {
-          var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-          ele.className=ele.className.replace(reg,' ');
+      <style>
+        .inputModule input {
+          border: 1px solid #ccc;
         }
-      }
-      var sortUi = {
-        sort : function(){
-          var sort = document.querySelector(".inputModue");
-          var sortAll = document.querySelectorAll(".inputModue");
-          var _input = sort.getElementsByTagName("input");
-          console.log(sortAll)
 
-          Array.prototype.forEach.call(sortAll, function(input, index) {
-            console.log(input.getElementsByTagName("input"))
-            var _ipt = input.firstChild;
-            console.log(_ipt)
-            //console.log(index)
-            _ipt.addEventListener('click', function(e) {
-              console.log(this.checked)
-              if(this.checked == false){
-                console.log("a")
-                removeClass(this.parentNode, "on")
-              } else {
-                console.log("b")
-                addClass(this.parentNode, "on")
-              }
-            })
-          })
-
-          // Array.prototype.forEach.call(_input, function(input, index) {
-          //   console.log(_input)
-          //   input.addEventListener('click', function(e) {
-          //     console.log(this.checked)
-          //     if(this.checked == false){
-          //       console.log("a")
-          //       removeClass(this.parentNode, "on")
-          //     } else {
-          //       console.log("b")
-          //       addClass(this.parentNode, "on")
-          //     }
-          //   })
-          // })
+        .inputModule.active input {
+          border: 1px solid blue
         }
-      }
-      sortUi.sort();
+
+        .inputModule.error input {
+          border: 1px solid red
+        }
+      </style>
+      <script type="text/javascript">
+        //hasClass
+        function hasClass(ele, cls) {
+          return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+        }
+        //addClass
+        function addClass(ele, cls) {
+          if (!this.hasClass(ele, cls)) ele.className += " " + cls;
+        }
+        //removeClass
+        function removeClass(ele, cls) {
+          if (hasClass(ele, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            ele.className = ele.className.replace(reg, ' ');
+          }
+        }
+        var inputCheckModule = {
+          checkModule: function (target, active, error) {
+
+            var sortAll = document.querySelectorAll(target);
+            //console.log(sortAll)
+
+            Array.prototype.forEach.call(sortAll, function (input, index) {
+              //console.log(input.getElementsByTagName("input"))
+              var _thisChk = input.querySelectorAll("input[type=checkbox]");
+              var _thisText = input.querySelectorAll("input[type=text]");
+
+              //console.log(_thisChk)
+
+              // checkbox
+              Array.prototype.forEach.call(_thisChk, function (btns, index) {
+                btns.addEventListener('click', function (e) {
+                  //console.log(this.checked)
+                  if (this.checked == false) {
+                    //console.log("a")
+                    removeClass(this.parentNode, active);
+                  } else {
+                    //console.log("b")
+                    addClass(this.parentNode, active);
+                  }
+                })
+              });
+              // checkbox
+
+              // text
+              Array.prototype.forEach.call(_thisText, function (btns, index) {
+                btns.addEventListener('focusout', function (e) {
+                  //console.log(this.value)
+                  if (this.value == "") {
+                    //console.log("error")
+                    addClass(this.parentNode, error);
+                    removeClass(this.parentNode, active);
+                  } else {
+                    //console.log("active")
+                    if (!hasClass(this, error)) {
+                      //console.log("remove error")
+                      removeClass(this.parentNode, error);
+                    }
+                    addClass(this.parentNode, active);
+                  }
+                })
+              });
+              // text
+            });
+
+          }
+        }
+        inputCheckModule.checkModule(".inputModule", "active", "error");
       </script>
     </div>
   </div>
 </body>
+
 </html>

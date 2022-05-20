@@ -60,18 +60,23 @@
           <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
           <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
         </ul>
-        <div class="tabPanel">탭1 contents..</div>
-        <div class="tabPanel">탭2 contents..</div>
-        <div class="tabPanel">탭3 contents..</div>
+        <div class="panel tabPanel">탭1 contents..</div>
+        <div class="panel tabPanel">탭2 contents..</div>
+        <div class="panel tabPanel">탭3 contents..</div>
 
         <ul class="tab_2 common_Tab at3" id="common_Tab">
           <li class="" ><button type="button"><span>탭(Tab)1</span></button></li>
-          <li class="selected" ><button type="button"><span>탭(Tab)2</span></button></li>
-          <li class=""><button type="button"><span>탭(Tab)3</span></button></li>
+          <li class="" ><button type="button"><span>탭(Tab)2</span></button></li>
+          <li class="selected"><button type="button"><span>탭(Tab)3</span></button></li>
         </ul>
-        <div class="tabPanel1">탭1 contents..</div>
-        <div class="tabPanel1">탭2 contents..</div>
-        <div class="tabPanel1">탭3 contents..</div>
+        <div class="panel tabPanel1">탭1 contents..</div>
+        <div class="panel tabPanel1">탭2 contents..</div>
+        <div class="panel tabPanel1">탭3 contents..</div>
+
+        <div class="btn-Align center">
+          <a href="javascript:void(0)" class="btn-Style w200 grey02-line r5" onclick="ui_Project.ui.tabModule('.common_Tab', '.panel', 'selected', 'reset')">리셋</a>
+          <a href="javascript:void(0)" class="btn-Style w200 blue01-line r5" onclick="ui_Project.ui.tabModule('.common_Tab', '.tabPanel', 'selected', 'hide')">Hide</a>
+        </div>
       </div><!-- end : studyArea -->
     <div id="test"></div>
       <script type="text/javascript">
