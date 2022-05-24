@@ -94,9 +94,10 @@
         function removeClass(ele, cls) {
           if (hasClass(ele, cls)) {
             var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-            ele.className = ele.className.replace(reg, ' ');
+            ele.className = ele.className.replace(reg, '');
           }
         }
+
         var inputCheckModule = {
           checkModule: function (target, active, error) {
 
@@ -104,9 +105,9 @@
             //console.log(sortAll)
 
             Array.prototype.forEach.call(sortAll, function (input, index) {
-              //console.log(input.getElementsByTagName("input"))
               var _thisChk = input.querySelectorAll("input[type=checkbox]");
-              var _thisText = input.querySelectorAll("input[type=text]");
+              var _thisText = input.querySelectorAll("input[type=text], input[type=password]");
+              var _thisClear = input.querySelectorAll(".btnClear");
 
               //console.log(_thisChk)
 
@@ -115,39 +116,85 @@
                 btns.addEventListener('click', function (e) {
                   //console.log(this.checked)
                   if (this.checked == false) {
-                    //console.log("a")
+                    console.log("a")
                     removeClass(this.parentNode, active);
                   } else {
-                    //console.log("b")
+                    console.log("b")
                     addClass(this.parentNode, active);
                   }
                 })
               });
               // checkbox
 
+              // clear btn
+              Array.prototype.forEach.call(_thisClear, function (clearBtn, index) {
+                clearBtn.addEventListener('click', function () {
+                  // **** parent selector ****
+                  var _parent = this.parentNode.parentNode.parentNode;
+                  // **** parent selector ****
+
+                  removeClass(_parent, active);
+                  clearBtn.parentNode.parentNode.querySelector('input').value = "";
+                });
+              });
+
+
               // text
               Array.prototype.forEach.call(_thisText, function (btns, index) {
+                btns.addEventListener('focusin', function (e) {
+                  // **** parent selector ****
+                  var _parent = this.parentNode;
+                  // **** parent selector ****
+
+                  if (!hasClass(this, error)) {
+                    removeClass(_parent, error);
+                  }
+                  if (this.value == "") {
+                    addClass(_parent, active);
+                    addClass(_parent, "on");
+                  } else {
+                    //removeClass(_parent, active);
+                    addClass(_parent, "on");
+                  }
+                });
+
+                btns.addEventListener('change', function (e) {
+                  // **** parent selector ****
+                  var _parent = this.parentNode;
+                  // **** parent selector ****
+
+                  if (!this.value == "") { // && e.keyCode == 13 && e.keyCode == 9
+                    addClass(_parent, active);
+                  }
+                });
+
                 btns.addEventListener('focusout', function (e) {
+                  // **** parent selector ****
+                  var _parent = this.parentNode;
+                  // **** parent selector ****
+
                   //console.log(this.value)
                   if (this.value == "") {
                     //console.log("error")
-                    addClass(this.parentNode, error);
-                    removeClass(this.parentNode, active);
+                    removeClass(_parent, "on");
+                    removeClass(_parent, active);
+                    addClass(_parent, error);
                   } else {
                     //console.log("active")
                     if (!hasClass(this, error)) {
                       //console.log("remove error")
-                      removeClass(this.parentNode, error);
+                      removeClass(_parent, error);
                     }
-                    addClass(this.parentNode, active);
+                    removeClass(_parent, "on");
                   }
                 })
+
               });
-              // text
             });
 
           }
         }
+
         inputCheckModule.checkModule(".inputModule", "active", "error");
       </script>
     </div>
