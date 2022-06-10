@@ -53,7 +53,8 @@
 <body>
   <div id="wrap">
 
-    <div id="sum"></div>
+    <div id="sum" class="empty"></div>
+
     <div class="stepCheck flex">
       <div class="input_Style button">
         <input type="checkbox" name="a1" class="checkStep" id="button1" />
@@ -88,7 +89,7 @@
     <script type="text/javascript">
       //<![CDATA[
       var _sum = document.getElementById("sum");
-      var _sumChild = document.getElementById("sum").childNodes;
+      var _sumChild = _sum.childNodes;
       var _check = document.querySelectorAll(".checkStep");
 
       Array.prototype.forEach.call(_check, function (btns, index) {
@@ -101,11 +102,16 @@
             _add.appendChild(newText)
             _add.setAttribute("id", this.getAttribute("name"))
 
+            removeClass(_sum, "empty");
             _sum.appendChild(_add)
           } else {
             var _this = this.getAttribute("name");
             var _del = document.getElementById(_this);
             _sum.removeChild(_del);
+
+            if(_sumChild.length === 0){
+              addClass(_sum, "empty");
+            }
           }
         });
       });
