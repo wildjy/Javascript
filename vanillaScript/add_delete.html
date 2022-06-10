@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>: scroll : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.studyArea, .flex-code, .css-code').each(function (i) {
+        var codeArea = $(this);
+        var codeHtml = codeArea.html();
+        if (codeArea.hasClass('hidden')) codeArea.empty();
+        CodeMirror($(this)[0], {
+          value: codeHtml,
+          mode: 'htmlmixed',
+          lineNumbers: !$(this).is('.inline'),
+          readOnly: true,
+          styleActiveLine: false,
+          autoClearEmptyLines: true,
+          lineWrapping: true,
+          matchBrackets: true,
+          theme: 'monokai',
+          height: 'auto',
+          scrollbarStyle: "simple"
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <div id="sum"></div>
+    <div class="stepCheck flex">
+      <div class="input_Style button">
+        <input type="checkbox" name="a1" class="checkStep" id="button1" />
+        <label for="button1">적정지원</label>
+      </div>
+      <div class="input_Style button">
+        <input type="checkbox" name="a2" class="checkStep" id="button2" />
+        <label for="button2">소신지원</label>
+      </div>
+      <div class="input_Style button">
+        <input type="checkbox" name="a3" class="checkStep" id="button3" />
+        <label for="button3">위험지원</label>
+      </div>
+      <div class="input_Style button">
+        <input type="checkbox" name="a4" class="checkStep" id="button4" />
+        <label for="button4">매우위험</label>
+      </div>
+    </div>
+
+
+  </div><!-- end : id : wrap -->
+  <style type="text/css">
+    .studyArea .CodeMirror {
+      height: 800px;
+    }
+
+    .cm-operator {
+      color: #fff;
+    }
+  </style>
+  <div class="studyArea">
+    <script type="text/javascript">
+      //<![CDATA[
+      var _sum = document.getElementById("sum");
+      var _sumChild = document.getElementById("sum").childNodes;
+      var _check = document.querySelectorAll(".checkStep");
+
+      Array.prototype.forEach.call(_check, function (btns, index) {
+        btns.addEventListener('click', function (e) {
+          var child = this.parentNode.childNodes[3].textContent;
+          if(this.checked == true){
+            var _add = document.createElement('span');
+            var newText = document.createTextNode(child);
+
+            _add.appendChild(newText)
+            _add.setAttribute("id", this.getAttribute("name"))
+
+            _sum.appendChild(_add)
+          } else {
+            var _this = this.getAttribute("name");
+            var _del = document.getElementById(_this);
+            _sum.removeChild(_del);
+          }
+        });
+      });
+
+      // :::: jQuery use ::::
+      // $(document).ready(function(){
+      // 	var _sum = $(".sum");
+      // 	$(".stepCheck input[type=checkbox]").each(function(){
+      // 		$(this).on("click", function(){
+      // 			if($(this).prop("checked")){
+      // 				var _ = "<span id='"+$(this).attr('name')+"'>" + $(this).next("label").html() + "</span>";
+      // 				_sum.append(_)
+      // 			} else {
+      // 				var _this = $(this).attr("name");
+      // 				$(".sum").find("#"+_this).remove();
+      // 			}
+      // 		})
+      // 	})
+      // })
+      //]]>
+    </script>
+  </div>
+</body>
+
+</html>
