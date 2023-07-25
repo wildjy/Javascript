@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>: scroll : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/sticky_Layout.css" />
+</head>
+
+<body>
+  <header id="header">상단</header>
+
+  <div class="sticky_wrap">
+    <section class="intro section"><!-- section : object height의 총 높이가 나와야 함 -->
+      <div class="intro__video">
+        <!-- <picture class="poster">
+          <source srcset="/assets/img/cover-poster--pc.jpg" media="(min-width: 640px)">
+          <img srcset="/assets/img/cover-poster--mo.jpg" alt="네이버 1784 Brand flim">
+        </picture> -->
+        <video id="intro" autoplay muted loop>
+          <source src="https://vod-homepage.pstatic.net/cdn-vod/1784/siteBG_PC_0408.mp4"></source>
+        </video>
+      </div>
+
+      <div class="test">
+
+        <div class="sticky_box" style="background-color: rgba( 0, 0, 0, .8);">
+          <div>
+            <div class="sticky_obj" id="opacty_1">
+              <div class="obj">sticky</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sticky_box" style="height:1000px; background-color: #fff">
+          <div>
+            <div class="sticky_obj">
+              <div class="obj">sticky222</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      2
+    </section>
+    <section class="section">
+      3
+    </section>
+    <section class="section">
+      4
+    </section>
+  </div>
+  <!-- // : class : sticky_wrap -->
+
+  <script type="text/javascript">
+    //<![CDATA[
+      var _video = document.getElementById("video");
+      var _opacity1 = document.getElementById("opacty_1");
+      //_video.play();
+
+      var prevWindowWidth, currentWindowHeight, scradar, sequence, pcBreak = 640,
+      isSmall = window.matchMedia("only screen and (max-width: 760px)").matche,
+      addRootStyles = function(e) {
+        var t = document.createElement("div");
+        t.style.width = "100vw", t.style.height = "100vh",
+        document.documentElement.append(t),
+        document.documentElement.style.setProperty("--vw", t.offsetWidth || windowWidth),
+        document.documentElement.style.setProperty("--vh", t.offsetHeight || windowHeight),
+        // !currentWindowHeight && document.querySelector(".section__slide-section") && "1" === document.querySelector(".section__slide-section").dataset.scradarIn ? document.documentElement.style.setProperty("--full-height", innerHeight + "px") : e && prevWindowHeight < (t.offsetHeight || windowHeight) && (document.documentElement.style.setProperty("--full-height", (t.offsetHeight || windowHeight) + "px"),
+        // currentWindowHeight = t.offsetHeight || windowHeight, prevWindowHeight = currentWindowHeight, resetAnimation()),
+        t.remove()
+      }
+
+      const frameCount = 148;
+      const section = document.querySelectorAll(".sticky_box");
+
+			Array.prototype.forEach.call(section, function (secTarget, index) {
+				const _this = secTarget.childNodes[1].getBoundingClientRect().height;
+				secTarget.style.height = _this + "px";
+			});
+
+      window.addEventListener('scroll', () => {
+        const html = document.documentElement;
+        const scrollTop = html.scrollTop;
+        const maxScrollTop = html.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollTop / maxScrollTop;
+        const frameIndex = Math.min(
+          frameCount - 1,
+          Math.ceil(scrollFraction * frameCount)
+        );
+        var y1 = (1/-300) * scrollTop + (1000/300);
+        console.log(y1)
+        console.log(scrollFraction)
+        _opacity1.style.opacity = y1;
+        //requestAnimationFrame(() => console.log(frameIndex + 1))
+      });
+
+      window.addEventListener("resize", function() {
+        windowWidth = window.innerWidth,
+        windowHeight = window.innerHeight;
+        var e = (isSmall = window.matchMedia("only screen and (max-width: 760px)").matches) && prevWindowWidth === windowWidth;
+        if (addRootStyles(e), e) return !1;
+        prevWindowWidth = windowWidth, setContentSize(), resetAnimation(), initSwiper()
+      }),
+      addRootStyles();
+
+      var r = document.querySelector(':root');
+
+      function myFunction_get() {
+        console.log(r.style.getPropertyValue('--bg'));
+      }
+
+      function myFunction_set() {
+        r.style.setProperty('--bg', 'lightblue');
+      }
+      myFunction_get();
+      myFunction_set();
+
+      //ui_Project.ui.activeScroll('.section', 'is_active', 'bottom', 0, true);
+    //]]>
+  </script>
+</body>
+
+</html>

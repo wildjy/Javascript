@@ -3,7 +3,10 @@
 
 html,body{
   height:100%;
+}
+body{
   overflow:hidden;
+  overflow-y:auto;
 }
 #wrap {
   width: 100%;
@@ -100,6 +103,44 @@ input{
   .bottom{
     height:2400px;
     background-color: #eee;
+  }
+}
+.scrollSection, "1",
+.scroll_wrap{
+  height:100%;
+  position: relative;
+}
+.scrollSection{
+  .header{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:80px;
+    background-color: rgba(255, 255, 255, .6);
+    z-index:1;
+  }
+  .section{
+    height:100%;
+    .inner_section{
+      height:100%;
+      &:nth-child(2n){
+        //background-color: #000;
+      }
+    }
+    &:nth-child(1){
+      background-color: red;
+    }
+    &:nth-child(2){
+      background: url("https://image.jinhak.com/jinhakImages/company/test_bg.jpg") 50% 50% no-repeat;
+      background-size: fixed;
+    }
+    &:nth-child(3){
+      background-color: yellow;
+    }
+    &:nth-child(4){
+      background-color: green;
+    }
   }
 }
 

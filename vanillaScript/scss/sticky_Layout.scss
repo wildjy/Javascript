@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import "_config";
+
+:root {
+  --win-width : 100vw;
+  --win-height : 100vh;
+  --bg: #000;
+  --white: #ffffff;
+}
+
+// html{
+//   height:100%;
+// }
+body{
+  height:100%;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+header{
+  position: fixed;
+  top:0;
+  width:var(--win-width);
+  //background-color: var(--white);
+  z-index:20;
+}
+.sticky_wrap{
+  width:var(--win-width);
+  position: relative;
+  section{
+    position: relative;
+    height:var(--win-height);
+    &.intro{
+      height:auto;
+    }
+  }
+}
+
+.sticky_box{
+  position: relative;
+  >div{
+    height:1500px;
+    position: relative;
+  }
+  &:nth-child(1){
+    .sticky_obj{
+      top:50%;
+      left:50%;
+      @include translate(-50%, -50%);
+    }
+  }
+  &:nth-child(2){
+    .sticky_obj{
+      left:50%;
+      background-color: blue;
+      @include translate(-50%, 0%);
+    }
+  }
+}
+
+.sticky_obj{
+  position: sticky;
+  top:0;
+  width:500px;
+  height:calc(var(--win-height) / 2);
+  background-color: red;
+  >.obj{
+    position: absolute;
+    top:50%;
+    left:50%;
+    color:#fff;
+    background-color: #000;
+  }
+}
+
+.intro__video{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+}
+

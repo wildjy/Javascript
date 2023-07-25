@@ -308,6 +308,65 @@ var ui_Project = {
       window.addEventListener('scroll', scrolling);
     },
 
+		activeScroll : function($target, $class, $type, $size, $mode){
+			//$target(object target), $class(addClass), $type[default, center, bottom], $size[default:0, wTriger +- size], &mode[true, false] scroll reset
+			var _target = document.querySelectorAll($target);
+
+			Array.prototype.forEach.call(_target, function(obj, index) {
+				var clientRect = obj.getBoundingClientRect();
+				var y_pos = window.pageYOffset;
+        console.log(obj)
+				switch ($type){
+				default : // default : wTriger = window top
+						var wTriger = window.pageYOffset + clientRect.top;
+						break;
+				case "t_calcBottom" : // wTriger = window middle + top
+					var wTriger = (window.pageYOffset + clientRect.top) - $size;
+					break;
+				case "center" : // wTriger = window middle
+					var wTriger = window.pageYOffset + clientRect.top - window.innerHeight / 2;
+					break;
+				case "c_calcTop" : // wTriger = window middle + top
+					var wTriger = (window.pageYOffset + clientRect.top - window.innerHeight / 2) + $size;
+					break;
+				case "c_calcBottom" : // wTriger = window middle - bottom
+					var wTriger = (window.pageYOffset + clientRect.top - window.innerHeight / 2) - $size;
+					break;
+
+				case "bottom" : // wTriger = window bottom
+					var wTriger = window.pageYOffset + clientRect.top - window.innerHeight;
+					break;
+				case "b_calcTop" : // wTriger = window bottom + top
+					var wTriger = (window.pageYOffset + clientRect.top - window.innerHeight) + $size;
+					break;
+				};
+
+				//refresh active
+				if(y_pos > wTriger){
+					//addClass(obj, $class);
+				}
+
+				function scrolling(){
+					var y_pos = window.pageYOffset;
+
+          if (y_pos > wTriger) {
+						addClass(obj, $class);
+					} else {
+						if ($mode === false) {
+							//console.log("false")
+            } else {
+
+            // if (hasClass(obj, $class)) {
+						// 	removeClass(obj, $class);
+            // }
+							removeClass(obj, $class);
+						}
+					}
+				}
+				window.addEventListener('scroll', scrolling);
+			});
+    },
+
 		toggle_Module :  function(target, btn, panel, cls, callback){
 			//target = item, btn = open_btn, panel = show/hide contents, cls = class
 			var _item = document.querySelectorAll(target);

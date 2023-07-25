@@ -6529,146 +6529,28 @@ span.btn-Style.r50, a.btn-Style.r50, button.btn-Style.r50, input.btn-Style.r50 {
 
 .btn-Align.line2.right { text-align: right; }
 
-html, body { height: 100%; }
+:root { --win-width: 100vw; --win-height: 100vh; --bg: #000; --white: #ffffff; }
 
-body { overflow: hidden; overflow-y: auto; }
+body { height: 100%; background-color: var(--bg); overflow-x: hidden; }
 
-#wrap { width: 100%; }
+header { position: fixed; top: 0; width: var(--win-width); z-index: 20; }
 
-#centerWrap { height: 100%; position: relative; }
+.sticky_wrap { width: var(--win-width); position: relative; }
 
-#centerWrap .wrap { position: absolute; top: 50%; left: 0; right: 0; overflow-y: auto; -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%); }
+.sticky_wrap section { position: relative; height: var(--win-height); }
 
-.studyArea { color: #fff; }
+.sticky_wrap section.intro { height: auto; }
 
-.studyArea .CodeMirror { height: 200px; }
+.sticky_box { position: relative; }
 
-.CodeMirror-line > span { color: #fff; }
+.sticky_box > div { height: 1500px; position: relative; }
 
-span.btn-Style.active, a.btn-Style.active, button.btn-Style.active, input.btn-Style.active { color: red; border: 1px solid red; }
+.sticky_box:nth-child(1) .sticky_obj { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
-.scroll_Module { font-size: 20px !important; line-height: 30px !important; text-align: center; }
+.sticky_box:nth-child(2) .sticky_obj { left: 50%; background-color: blue; -webkit-transform: translate(-50%, 0%); transform: translate(-50%, 0%); }
 
-@media screen and (max-width: 640px) { .scroll_Module { font-size: 6.25vw !important; line-height: 7.8125vw !important; } }
+.sticky_obj { position: -webkit-sticky; position: sticky; top: 0; width: 500px; height: calc(var(--win-height) / 2); background-color: red; }
 
-.scroll_Module .top { height: 250px; background-color: red; }
+.sticky_obj > .obj { position: absolute; top: 50%; left: 50%; color: #fff; background-color: #000; }
 
-.scroll_Module #fixWrap { height: 150px; position: relative; }
-
-.scroll_Module #fixWrap .fixed_default { position: absolute; top: 0; left: 0; width: 70px; height: 100px; background-color: purple; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
-
-.scroll_Module #fixWrap .fixed_default.active { color: #272727; background-color: yellow; }
-
-.scroll_Module #fixWrap .fixed_default.show { top: 110px; }
-
-.scroll_Module #fixWrap .fixed_default.show.is_fixed { position: fixed; top: 210px; }
-
-.scroll_Module #fixWrap .fixed_default.is_fixed { position: fixed; top: 100px; left: 0; right: 0; z-index: 1; }
-
-.scroll_Module #fixWrap .fixed_target { height: 150px; }
-
-.scroll_Module #fixWrap .fixed_target.is_fixed { position: fixed; top: 0; left: 0; right: 0; width: auto; height: 80px; color: #fff; background-color: #000; z-index: 1; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
-
-.scroll_Module .bottom { height: 2400px; background-color: #eee; }
-
-.scrollSection, .scroll_wrap { height: 100%; position: relative; }
-
-.scrollSection .header { position: absolute; top: 0; left: 0; right: 0; height: 80px; background-color: rgba(255, 255, 255, 0.6); z-index: 1; }
-
-.scrollSection .section { height: 100%; }
-
-.scrollSection .section .inner_section { height: 100%; }
-
-.scrollSection .section:nth-child(1) { background-color: red; }
-
-.scrollSection .section:nth-child(2) { background: url("https://image.jinhak.com/jinhakImages/company/test_bg.jpg") 50% 50% no-repeat; background-size: fixed; }
-
-.scrollSection .section:nth-child(3) { background-color: yellow; }
-
-.scrollSection .section:nth-child(4) { background-color: green; }
-
-.bottom_fixed { position: fixed; bottom: 0; left: 0; right: 0; background-color: #000; z-index: 1; }
-
-.bottom_fixed .inner { margin: 0 auto; width: 1160px; height: 70px; overflow: hidden; position: relative; }
-
-.bottom_fixed .inner .sliderOption { position: absolute; top: 0; left: 0; right: 250px; overflow: hidden; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
-
-.bottom_fixed .inner .slide { padding: 10px 0; height: 70px; color: #000; background-color: #fff; }
-
-.bottom_fixed .inner .control_Box { position: absolute; top: 50%; right: 0; padding-left: 30px; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
-
-.bottom_fixed .inner .control_Box a { display: block; }
-
-.bottom_fixed .inner .control_Box .control { position: absolute; top: 50%; left: 0; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
-
-.bottom_fixed .inner .control_Box .control a { margin: 5px 0; color: #fff; }
-
-.bottom_fixed .inner .control_Box .control a:hover { color: yellow; }
-
-.bottom_fixed .inner .control_Box .result_show { padding: 5px 0; width: 180px; font-size: 24px !important; line-height: 34px !important; color: #fff600; font-weight: 600; text-align: center; border: 1px solid #fff600; border-radius: 50px; }
-
-@media screen and (max-width: 640px) { .bottom_fixed .inner .control_Box .result_show { font-size: 7.5vw !important; line-height: 9.0625vw !important; } }
-
-.bottom_fixed .inner .control_Box .result_show:after { display: inline-block; content: ""; margin-left: 5px; width: 30px; height: 11px; background: url("https://imgorg.jinhak.com/renewal2020/btn/btn_yellow_result.png") right 50% no-repeat; }
-
-.more_Box { margin: 0 auto 50px; padding: 40px 20px; max-width: 300px; text-align: left; background-color: #fff; border: 1px solid #CED0D4; border-radius: 20px; -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05); box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05); position: relative; }
-
-@media screen and (max-width: 640px) { .more_Box { padding: 6.25vw 3.125vw; border-radius: 3.125vw; } }
-
-.more_Box.center { text-align: center; }
-
-.more_Box .info .tit { margin-bottom: 20px; padding-bottom: 15px; font-size: 34px !important; line-height: 44px !important; border-bottom: 1px solid #272727; }
-
-@media screen and (max-width: 640px) { .more_Box .info .tit { font-size: 10.625vw !important; line-height: 12.1875vw !important; } }
-
-@media screen and (max-width: 640px) { .more_Box .info .tit { margin-bottom: 3.125vw; padding-bottom: 2.34375vw; font-size: 17px !important; line-height: 27px !important; } }
-
-@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .info .tit { font-size: 5.3125vw !important; line-height: 6.875vw !important; } }
-
-.more_Box .info .text .txt { font-size: 26px !important; line-height: 36px !important; }
-
-@media screen and (max-width: 640px) { .more_Box .info .text .txt { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
-
-@media screen and (max-width: 640px) { .more_Box .info .text .txt { font-size: 13px !important; line-height: 23px !important; } }
-
-@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .info .text .txt { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
-
-.more_Box .box { margin-top: 20px; padding: 20px 15px; background-color: #F3F6F9; }
-
-@media screen and (max-width: 640px) { .more_Box .box { margin-top: 3.125vw; padding: 3.125vw 2.34375vw; } }
-
-.more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 30px !important; line-height: 40px !important; font-weight: normal; }
-
-@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 9.375vw !important; line-height: 10.9375vw !important; } }
-
-@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 15px !important; line-height: 25px !important; } }
-
-@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .box th, .more_Box .box td, .more_Box .box dt, .more_Box .box dd { font-size: 4.6875vw !important; line-height: 6.25vw !important; } }
-
-.more_Box .box th.blue, .more_Box .box th .blue, .more_Box .box td.blue, .more_Box .box td .blue, .more_Box .box dt.blue, .more_Box .box dt .blue, .more_Box .box dd.blue, .more_Box .box dd .blue { color: #1b7fee; }
-
-.more_Box .box th, .more_Box .box dt { padding-bottom: 10px; }
-
-@media screen and (max-width: 640px) { .more_Box .box th, .more_Box .box dt { padding-bottom: 1.5625vw; } }
-
-.more_Box .box td, .more_Box .box dd { font-size: 26px !important; line-height: 36px !important; font-weight: normal; }
-
-@media screen and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 8.125vw !important; line-height: 9.6875vw !important; } }
-
-@media screen and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 13px !important; line-height: 23px !important; } }
-
-@media screen and (max-width: 640px) and (max-width: 640px) { .more_Box .box td, .more_Box .box dd { font-size: 4.0625vw !important; line-height: 5.625vw !important; } }
-
-.more_Box .moreBtn { position: absolute; bottom: -30px; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
-
-@media screen and (max-width: 640px) { .more_Box .moreBtn { bottom: -4.6875vw; } }
-
-.more_Box .moreBtn.is_show button { background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_on.png"); }
-
-.more_Box .moreBtn button { width: 60px; height: 60px; font-size: 0; background-color: #1B7FEE; background-image: url("https://image.jinhak.com/jinhakImages/icon/icon_more_off.png"); background-position: 50% 50%; background-repeat: no-repeat; background-size: 21px; border-radius: 50%; cursor: pointer; }
-
-@media screen and (max-width: 640px) { .more_Box .moreBtn button { width: 9.375vw; height: 9.375vw; background-size: 3.28125vw; } }
-
-.more_Box .detail { display: none; }
-
-.more_Box .detail.is_show { display: block; }
+.intro__video { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; }
