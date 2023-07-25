@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>: scroll : </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=0.25, maximum-scale=1 minimum-scale=0, width=1400px" /> -->
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css">
+  <link type="text/css" rel="stylesheet" href="css/monokai.css">
+  <link type="text/css" rel="stylesheet" href="css/simplescrollbars.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/codemirror.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="js/active-line.js"></script>
+  <script type="text/javascript" src="js/xml.js"></script>
+  <script type="text/javascript" src="js/matchbrackets.js"></script>
+  <script type="text/javascript" src="js/htmlmixed.js"></script>
+  <script type="text/javascript" src="js/simplescrollbars.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/ui.css" />
+  <script type="text/javascript" src="js/jy.ui.js"></script>
+  <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.studyArea, .flex-code, .css-code').each(function(i){
+      var codeArea = $(this);
+      var codeHtml = codeArea.html();
+      if(codeArea.hasClass('hidden')) codeArea.empty();
+      CodeMirror($(this)[0], {
+        value: codeHtml,
+        mode: 'htmlmixed',
+        lineNumbers: !$(this).is('.inline'),
+        readOnly: true,
+        styleActiveLine: false,
+        autoClearEmptyLines:true,
+        lineWrapping: true,
+        matchBrackets: true,
+        theme: 'monokai',
+        height: 'auto',
+        scrollbarStyle: "simple"
+      });
+    });
+  });
+  </script>
+  <style>
+    .scroll_dark{}
+    .scroll_dark>div{height: 100vh;}
+    .scroll_dark>div.dark{background-color: #333;}
+  </style>
+</head>
+
+<body>
+  <script>
+    /*
+    디바운싱 & 쓰로틀링
+    1. 디바운싱 : 맨 마짐작에 발생한 이벤트만 처리! (use : ajax검색 )
+    2. 쓰로틀링 : 이벤트가 한번 발생하면 일정 시간 락다운! (use : scroll event )
+
+    참고 :
+    https://dev-note-97.tistory.com/278
+    https://www.zerocho.com/category/JavaScript/post/59a8e9cb15ac0000182794fa
+    */
+
+    /*
+      - 디바운싱 -
+
+      1. 우선 이벤트가 발생하면, timer가 존재하는지 확인한다.
+      2. timer가 기존에 존재할 경우, 새로운 timer를 만들어주기 위해 기존 timer를 삭제한다.
+      3. 새로운 timer를 만들어주고, 그 timer에 원하는 함수의 내용을 구현해준다.
+
+      let timer;
+
+      window.addEventListener('scroll', () => {
+        if(timer) clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          const scrollValue = window.pageYOffset;
+          console.log(scrollValue);
+        }, 300);
+      });
+    */
+
+    /*
+      - 쓰로틀링 -
+
+      1. 이벤트가 발생하면, timer가 이미 존재하지 않는지 확인한다. 존재할 경우, 이벤트가 바로 종료된다.
+      2. timer가 존재하지 않으므로, 새로운 timer를 만들어준다. 내부 함수는 timer를 다시 null값으로 만들 수 있도록 구현한다.
+
+      let timer;
+
+      window.addEventListener('scroll', () => {
+        if(!timer)
+
+        timer = setTimeout(() => {
+          timer = null;
+
+          const scrollValue = window.pageYOffset;
+          console.log(scrollValue);
+        }, 300);
+      });
+    */
+    let timer;
+
+    window.addEventListener('scroll', () => {
+      if(!timer) {
+        timer = setTimeout(() => {
+          timer = null;
+          console.log(timer);
+          const scrollValue = window.pageYOffset;
+          console.log(scrollValue);
+        }, 300);
+      }
+    });
+
+
+    //let timer = false;
+
+    const scroll = () => {
+
+      if (timer) return;
+      console.log(timer);
+
+      timer = setTimeout(() => {
+        const ws = window.pageYOffset;
+
+        console.log(ws);
+
+        timer = null;
+        console.log(timer);
+      }, 300);
+    }
+
+    //window.addEventListener('scroll', scroll);
+  </script>
+  <div class="scroll_dark">
+    <div></div>
+    <div class="dark"></div>
+    <div></div>
+    <div></div>
+    <div class="dark"></div>
+    <div></div>
+  </div>
+</body>
+</html>

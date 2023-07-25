@@ -62,10 +62,54 @@
       <div class="fixed_target">
         fixed 될 영역
       </div>
-    </div>
 
+      <div class="fx_menu"></div>
+    </div>
+    <style type="text/css">
+      .fx_menu { position:fixed; left:0; bottom:0px; width:100%; height:60px; background:#000; }
+    </style>
+    <script type="text/javascript">
+
+		// 하단 고정메뉴
+		var didScroll;
+		var lastScrollTop = 100;
+		var delta = 1;
+		var navbarHeight = $('.fx_menu').outerHeight();
+
+		$(window).scroll(function(event){
+			didScroll = true;
+		});
+
+		setInterval(function() {
+			if (didScroll) {
+				hasScrolled();
+				didScroll = false;
+			}
+		}, 250);
+
+		function hasScrolled() {
+			var st = $(this).scrollTop();
+			if(Math.abs(lastScrollTop - st) <= delta) return;
+			if (st > lastScrollTop && st > navbarHeight){
+			console.log("Down");
+				// Scroll Down
+				$('.fx_menu').css({'bottom':'-60px'});
+			} else {
+				// Scroll Up
+				if(st + $(window).height() < $(document).height()) {
+          console.log("up");
+					$('.fx_menu').css({'bottom':'0px'});
+				}
+			}
+			console.log('st: ' + st);
+			console.log('delta: ' + delta);
+			console.log('lastScrollTop: ' + lastScrollTop);
+			lastScrollTop = st;
+		}
+    </script>
     <div class="bottom">
-      <p class="p_Style fs_18"><b>getBoundingClientRect()</b> : Viewport의 시작지점 기준</p>
+      <p class="p_Style fs_18"><b>getBoundingClientRect()</b> : Viewport의
+         시작지점 기준</p>
       <ul class="ul_Style fs15_icon bar mb50">
         <li>const target = document.getElementById('target'); // 요소의 id 값이 target이라 가정</li>
         <li>const clientRect = target.getBoundingClientRect(); // DomRect 구하기 (각종 좌표값이 들어있는 객체)</li>
