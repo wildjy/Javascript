@@ -1,69 +1,186 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei|Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean");
-/* font-weight information thin 100, light 300, regular 400, medium 500, bold 700, black 900 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
+/*
+ * font-weight information
+ * thin 100, light 300, regular 400, medium 500, bold 700, black 900
+ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img,
+ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header,
+menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
 
-table { border: 0; border-spacing: 0; border-collapse: collapse; }
+table {
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
 
-li { list-style: none; }
+li {
+  list-style: none;
+}
 
-img, fieldset, iframe { border: 0 none; }
+img, fieldset, iframe {
+  border: 0 none;
+}
 
-img { vertical-align: top; width: auto; max-width: 100%; }
+img {
+  vertical-align: top;
+  width: auto;
+  max-width: 100%;
+}
 
-textarea { resize: none; }
+textarea {
+  resize: none;
+}
 
-input, select, textarea, button { font-size: 100%; vertical-align: top; outline: none; -webkit-appearance: none; -webkit-border-radius: 0px; }
+input, select, textarea, button {
+  font-size: 100%;
+  vertical-align: top;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
 
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
 
-address, strong, caption, cite, code, dfn, em, var { font-style: normal; font-weight: normal; }
+address, strong, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+}
 
-blockquote, q { quotes: none; }
+blockquote, q {
+  quotes: none;
+}
 
-blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
 
-body { -webkit-text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-*, *:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-input { margin: 0; padding: 0; color: #000; }
+input {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+input[type=radio] {
+  -webkit-appearance: radio;
+}
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+}
+input:disabled {
+  background: #f6f6f6;
+}
 
-input:checked[type="checkbox"] { background-color: #666; -webkit-appearance: checkbox; }
+button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
 
-input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+::-webkit-input-placeholder {
+  font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-weight: 300;
+  color: #999;
+}
 
-input[type="radio"] { -webkit-appearance: radio; }
+::-moz-placeholder {
+  font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-weight: 300;
+  color: #999;
+}
 
-input[type="checkbox"] { -webkit-appearance: checkbox; }
+:-ms-input-placeholder {
+  font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-weight: 300;
+  color: #999;
+}
 
-input:disabled { background: #f6f6f6; }
+:-moz-placeholder {
+  font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-weight: 300;
+  color: #999;
+}
 
-button { border: 0; background-color: transparent; padding: 0; cursor: pointer; outline: none; }
+a {
+  outline: none;
+  text-decoration: none;
+}
 
-::-webkit-input-placeholder { font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-weight: 300; color: #999; }
+body {
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  color: #000;
+}
 
-::-moz-placeholder { font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-weight: 300; color: #999; }
+body, input, select, textarea, button {
+  font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  letter-spacing: -0.5px;
+}
 
-:-ms-input-placeholder { font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-weight: 300; color: #999; }
+textarea {
+  resize: none;
+}
 
-:-moz-placeholder { font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-weight: 300; color: #999; }
+.blind, legend, caption {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  z-index: -1;
+  visibility: hidden;
+  left: -9999px;
+  text-indent: -9999px;
+}
 
-a { outline: none; text-decoration: none; }
-
-body { -webkit-font-smoothing: antialiased; min-width: 320px; color: #000; }
-
-body, input, select, textarea, button { font-family: "ZCOOL XiaoWei", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; line-height: 1.5; color: #666; letter-spacing: -.5px; }
-
-textarea { resize: none; }
-
-.blind, legend, caption { width: 0; height: 0; position: absolute; overflow: hidden; font-size: 0; line-height: 0; z-index: -1; visibility: hidden; left: -9999px; text-indent: -9999px; }
-
-.mt10 { margin-top: 10px !important; }
+.mt10 {
+  margin-top: 10px !important;
+}
 
 /* 2019-07-17 재영 추가 css text숨기기, 웹접근성 고려 참고 : https://yeoninim.tistory.com/m/36 */
-.hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7*/ clip: rect(1px, 1px, 1px, 1px); }
+.hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7*/
+  clip: rect(1px, 1px, 1px, 1px);
+}
 
 /* 2019-07-17 */
