@@ -1,99 +1,280 @@
-body.guide { text-align: left; }
+body.guide {
+  text-align: left;
+}
+body.guide a {
+  text-decoration: none;
+}
+body.guide #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #111;
+  background-color: #fff;
+  z-index: 5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.guide #header .logo_box {
+  float: left;
+}
+body.guide #header .logo_box:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body.guide #header .guide_logo {
+  margin: 0;
+}
+body.guide #header .guide_logo a {
+  display: block;
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+}
+body.guide #header .gnb {
+  float: right;
+}
+body.guide #header .gnb:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body.guide #header .gnb li {
+  float: left;
+  margin: 0px 10px;
+}
+body.guide #header .gnb li a {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  line-height: 18px;
+  border-radius: 14px;
+}
+body.guide #header .gnb li a.on {
+  color: #fff;
+  background-color: #111;
+}
+body.guide .open_gnb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 170px;
+  display: block;
+  width: 60px;
+  height: 69px;
+  font-size: 1px;
+  text-indent: -9999px;
+}
+body.guide .open_gnb:after, body.guide .open_gnb:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: #222;
+}
+body.guide .open_gnb:before {
+  margin-top: -8px;
+}
+body.guide .open_gnb:after {
+  margin-top: 8px;
+}
+body.guide .open_gnb span.bar {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  display: block;
+  height: 2px;
+  background-color: #222;
+}
+body.guide #contents {
+  width: 100%;
+}
+body.guide #contents:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body.guide #contents .guide_nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 100px;
+  width: 200px;
+  border-right: 1px solid #111;
+  background-color: #fff;
+  z-index: 3;
+}
+body.guide #contents .guide_contents {
+  position: relative;
+  padding: 100px 30px 30px 230px;
+}
 
-body.guide a { text-decoration: none; }
+body.guide.is-open #contents .guide_contents {
+  padding: 100px 30px 30px 30px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
 
-body.guide #header { position: fixed; top: 0; left: 0; padding: 20px 30px; width: 100%; height: auto; border-bottom: 2px solid #111; background-color: #fff; z-index: 5; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body.guide.is-open #contents .guide_nav {
+  left: -50%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
 
-body.guide #header .logo_box { float: left; }
+body.guide.is-closed #contents .guide_nav {
+  left: 0%;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 
-body.guide #header .logo_box:after { content: ""; display: block; clear: both; }
+#contents .guide_nav .nav {
+  padding: 0 30px;
+}
+#contents .guide_nav .nav li {
+  margin: 5px 0;
+}
+#contents .guide_nav .nav li a {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+#contents .guide_nav .nav li a.on {
+  color: #fff;
+  background-color: #111;
+  border-radius: 15.5px;
+}
 
-body.guide #header .guide_logo { margin: 0; }
+#contents .guide_main_tit {
+  padding-bottom: 50px;
+  font-size: 25px;
+  color: #222;
+  font-weight: 600;
+}
+#contents .guide_Area {
+  margin-bottom: 80px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #333;
+}
+#contents .guide_block {
+  margin-bottom: 50px;
+}
+#contents .guide_block h3.guide_tit {
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+}
+#contents .guide_block .more {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+}
+#contents .guide_block .more a {
+  display: block;
+  padding: 15px 0;
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  border: 1px solid #999;
+  background-color: #eee;
+}
+#contents .guide_block .more a.on {
+  color: #111;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
 
-body.guide #header .guide_logo a { display: block; font-size: 20px; color: #222; font-weight: 600; }
+.guide_box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+}
+.guide_box xmp {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 13px;
+  color: #222;
+  text-align: left;
+  line-height: 1.4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.guide_box.min {
+  height: 300px;
+}
 
-body.guide #header .gnb { float: right; }
+.view_guide {
+  margin-top: 20px;
+  padding: 25px;
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 0;
+}
+.view_guide .vg {
+  padding: 10px 0;
+  max-width: 990px;
+  margin: 10px auto 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+}
+.view_guide .vg .class_title {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #555;
+}
+.view_guide .vg .class_title b {
+  color: #222;
+}
+.view_guide .vg.at-box input[type=text] {
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+}
+.view_guide.min {
+  height: 300px;
+}
 
-body.guide #header .gnb:after { content: ""; display: block; clear: both; }
-
-body.guide #header .gnb li { float: left; margin: 0px 10px; }
-
-body.guide #header .gnb li a { display: inline-block; padding: 5px 15px; font-size: 16px; color: #222; font-weight: 600; line-height: 18px; border-radius: 14px; }
-
-body.guide #header .gnb li a.on { color: #fff; background-color: #111; }
-
-body.guide .open_gnb { position: absolute; top: 0; bottom: 0; left: 170px; display: block; width: 60px; height: 69px; font-size: 1px; text-indent: -9999px; }
-
-body.guide .open_gnb:after, body.guide .open_gnb:before { content: ""; display: block; position: absolute; top: 50%; left: 15px; right: 15px; height: 2px; background-color: #222; }
-
-body.guide .open_gnb:before { margin-top: -8px; }
-
-body.guide .open_gnb:after { margin-top: 8px; }
-
-body.guide .open_gnb span.bar { position: absolute; top: 50%; left: 15px; right: 15px; display: block; height: 2px; background-color: #222; }
-
-body.guide #contents { width: 100%; }
-
-body.guide #contents:after { content: ""; display: block; clear: both; }
-
-body.guide #contents .guide_nav { position: fixed; top: 0; bottom: 0; left: 0; padding-top: 100px; width: 200px; border-right: 1px solid #111; background-color: #fff; z-index: 3; }
-
-body.guide #contents .guide_contents { position: relative; padding: 100px 30px 30px 230px; }
-
-body.guide.is-open #contents .guide_contents { padding: 100px 30px 30px 30px; -webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
-
-body.guide.is-open #contents .guide_nav { left: -50%; -webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
-
-body.guide.is-closed #contents .guide_nav { left: 0%; -webkit-transform: translate(0, 0); transform: translate(0, 0); }
-
-#contents .guide_nav .nav { padding: 0 30px; }
-
-#contents .guide_nav .nav li { margin: 5px 0; }
-
-#contents .guide_nav .nav li a { display: inline-block; padding: 5px 10px; font-size: 15px; color: #333; font-weight: 600; }
-
-#contents .guide_nav .nav li a.on { color: #fff; background-color: #111; border-radius: 15.5px; }
-
-#contents .guide_main_tit { padding-bottom: 50px; font-size: 25px; color: #222; font-weight: 600; }
-
-#contents .guide_Area { margin-bottom: 80px; padding-bottom: 30px; border-bottom: 1px dashed #333; }
-
-#contents .guide_block { margin-bottom: 50px; }
-
-#contents .guide_block h3.guide_tit { padding-bottom: 15px; font-size: 20px; color: #222; font-weight: 600; }
-
-#contents .guide_block .more { display: none; margin-top: 15px; text-align: center; }
-
-#contents .guide_block .more a { display: block; padding: 15px 0; font-size: 15px; color: #222; font-weight: 600; border: 1px solid #999; background-color: #eee; }
-
-#contents .guide_block .more a.on { color: #111; border: 1px solid #aaa; background-color: #fff; }
-
-.guide_box { padding: 20px; border: 1px solid #ddd; overflow-y: auto; }
-
-.guide_box xmp { display: block; padding: 0; margin: 0; width: 100%; font-size: 13px; color: #222; text-align: left; line-height: 1.4; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-.guide_box.min { height: 300px; }
-
-.view_guide { margin-top: 20px; padding: 25px; border: 1px solid #333; position: relative; overflow: hidden; overflow-y: auto; z-index: 0; }
-
-.view_guide .vg { padding: 10px 0; max-width: 990px; margin: 10px auto 0; border-top: 1px dashed #ddd; border-bottom: 1px dashed #ddd; }
-
-.view_guide .vg .class_title { margin: 10px 0; font-size: 15px; color: #555; }
-
-.view_guide .vg .class_title b { color: #222; }
-
-.view_guide .vg.at-box input[type="text"] { -webkit-box-sizing: content-box !important; box-sizing: content-box !important; }
-
-.view_guide.min { height: 300px; }
-
-.guide_table { width: 100%; border-spacing: 0; border-top: 1px solid #111; border-bottom: 1px solid #111; }
-
-.guide_table thead th { text-align: center; }
-
-.guide_table th { padding: 7px 10px; font-size: 13px; color: #333; border-top: 1px solid #eee; background-color: #f4f4f4; }
-
-.guide_table td { padding: 7px 10px; font-size: 13px; color: #333; border-top: 1px solid #eee; border-left: 1px solid #eee; }
-
-.guide_table td:first-child { border-left: none; }
-
-.guide_table td.bl { border-left: 1px solid #eee; }
+.guide_table {
+  width: 100%;
+  border-spacing: 0;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+.guide_table thead th {
+  text-align: center;
+}
+.guide_table th {
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #333;
+  border-top: 1px solid #eee;
+  background-color: #f4f4f4;
+}
+.guide_table td {
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #333;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.guide_table td:first-child {
+  border-left: none;
+}
+.guide_table td.bl {
+  border-left: 1px solid #eee;
+}

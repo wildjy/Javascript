@@ -111,7 +111,6 @@
       if(!timer) {
         timer = setTimeout(() => {
           timer = null;
-          console.log(timer);
           const scrollValue = window.pageYOffset;
           console.log(scrollValue);
         }, 300);
@@ -119,24 +118,32 @@
     });
 
 
-    //let timer = false;
+    let timer1 = false;
 
     const scroll = () => {
 
-      if (timer) return;
-      console.log(timer);
+      if (timer1) return;
 
-      timer = setTimeout(() => {
+      timer1 = setTimeout(() => {
+        timer1 = null;
         const ws = window.pageYOffset;
-
         console.log(ws);
-
-        timer = null;
-        console.log(timer);
       }, 300);
     }
 
-    //window.addEventListener('scroll', scroll);
+    window.addEventListener('scroll', scroll);
+
+    function solution(s) {
+      var answer = [];
+      for (let i = 0; i < s.length; i++) {
+          let temp = s.slice(0,i);
+          answer.push(temp.includes(s[i]) ? i - temp.lastIndexOf(s[i]) : -1);
+          console.log(s[i])
+          //console.log(temp)
+      }
+      return answer;
+    }
+    solution('banana');
   </script>
   <div class="scroll_dark">
     <div></div>

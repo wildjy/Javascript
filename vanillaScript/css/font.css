@@ -1,0 +1,41 @@
+h1 {
+  position: absolute;
+  bottom: 6.94vw;
+}
+
+.font_1 small,
+.font_2 small,
+.font_3 small {
+  display: block;
+}
+
+.font_1 {
+  font-size: 16px;
+  line-height: 1.4;
+  color: red;
+}
+
+.font_2 {
+  font-size: min(5.56vw, 40px);
+  line-height: 1.67;
+  color: blue;
+}
+.font_2 small {
+  font-size: min(4.17vw, 30px);
+  line-height: 1.33;
+}
+
+.font_3 {
+  font-size: min(2.22vw, 16px);
+  line-height: 1.88;
+}
+.font_3 * {
+  color: green;
+}
+.font_3 dt {
+  font-size: min(11.11vw, 80px);
+}
+.font_3 dd li {
+  font-size: min(3.06vw, 22px);
+  line-height: 1.64;
+}

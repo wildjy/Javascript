@@ -1,0 +1,97 @@
+// 공통 scss
+@charset "utf-8";
+@use "sass:string";
+@use 'sass:map';
+@use "sass:math";
+
+$viewport: 720;
+
+
+// vw변환
+@function calcVw($size) {
+  $vw-context : calc($viewport * 0.01) * 1px;
+  $round: round(calc($size / $vw-context) * 100);
+  $vw : $round * 0.01vw;
+
+  @return $vw;
+
+  // $round: round(math.div($size * 10000, $viewport));
+  // $vw : $round * 0.01;
+  // $calcV : string.slice(#{$vw}, 1, 4) + vw;
+  // @warn $round;
+
+  // @return $calcV;
+}
+
+// font
+@mixin font($size: auto, $line: 'inherit', $type: null) {
+  @if ($type ==m) {
+    $mSize : $size;
+
+    font-size: min(calcVw($size), $mSize);
+  }
+
+  @else {
+    font-size: $size;
+  }
+
+  @if (type-of($line)==number) {
+    @if (unitless($line)) {
+      line-height: $line;
+    }
+
+    @else if($line ==null) {}
+
+    @else {
+      $round: round(math.div($line * 100, $size));
+      $cl : $round * 0.01;
+
+      line-height: $cl;
+    }
+  }
+}
+
+h1 {
+  position: absolute;
+  bottom: calcVw(50px);
+}
+
+.font_1,
+.font_2,
+.font_3 {
+  small {
+    display: block;
+  }
+}
+
+.font_1 {
+  @include font(16px, 1.4); // pc
+  color: red;
+}
+
+.font_2 {
+  @include font(40px, 1.67, m); // m
+  color: blue;
+
+  small {
+    @include font(30px, 40px, m);
+  }
+}
+
+.font_3 {
+  @include font(16px, 30px, m);
+
+  * {
+    color: green;
+  }
+
+  dt {
+    @include font(80px, null, m);
+  }
+
+  dd {
+    li {
+      @include font(22px, 1.64, m);
+    }
+  }
+}
